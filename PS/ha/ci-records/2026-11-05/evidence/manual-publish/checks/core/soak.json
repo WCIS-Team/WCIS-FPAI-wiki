@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "iterations": 100,
+  "before": {
+    "rss_kib": 26152,
+    "python_bytes": 1790989,
+    "threads": 1,
+    "fds": 4
+  },
+  "after": {
+    "rss_kib": 26152,
+    "python_bytes": 1796597,
+    "threads": 1,
+    "fds": 4
+  },
+  "gate": {
+    "runs": 103,
+    "timeouts": 0,
+    "wait_ms_total": 0,
+    "wait_ms_max": 0,
+    "running": 0,
+    "max_concurrent": 1,
+    "gate_timeout_s": 0.05
+  },
+  "notes": [
+    "Text orchestration without TTS; model/native allocator endurance is a separate device test.",
+    "RSS is sampled at the boundaries, not a peak measurement; unavailable on Windows."
+  ]
+}

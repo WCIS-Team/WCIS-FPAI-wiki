@@ -1,0 +1,8 @@
+### python
+cmd: for p in python python3 python2; do echo -n "$p: "; $p --version 2>&1 || echo na; done
+---
+python: bash: python: command not found
+na
+python3: Python 3.8.10
+python2: bash: python2: command not found
+na

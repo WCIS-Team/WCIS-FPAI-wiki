@@ -1,0 +1,15 @@
+### mtd_flash
+cmd: cat /proc/mtd 2>/dev/null; echo '---dmesg spi:'; dmesg 2>/dev/null | grep -iE 'spi|qspi|nor|flash' | head -20
+---
+dev:    size   erasesize  name
+mtd0: 00400000 00010000 "bootloader"
+mtd1: 01000000 00010000 "kernel"
+mtd2: 00000000 00010000 "rootfs"
+---dmesg spi:
+[    0.000000] Kernel command line: console=ttyPS0,115200n8 earlycon=uart8250,mmio32,0xe0004000 loglevel=8 root=/dev/mmcblk0p2 rootwait rw clk_ignore_unused mem=1024M
+[    0.176496] cpuidle: using governor menu
+[    1.887197] cadence-qspi e0000000.spi: n25q256a (32768 Kbytes)
+[    1.893061] 3 fixed-partitions partitions found on MTD device e0000000.spi.0
+[    1.900113] Creating 3 MTD partitions on "e0000000.spi.0":
+[    1.929222] dw_spi_fmsh e0021000.spi: SPI is master mode.
+[    7.853432] u-dma-buf udmabuf0: minor number   = 0

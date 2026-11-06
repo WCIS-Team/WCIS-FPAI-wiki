@@ -1,0 +1,10 @@
+{
+  "files.eol": "\n",
+  "editor.wordWrap": "on",
+  "files.exclude": {
+    "**/.obsidian/workspace.json": true
+  },
+  "foam.files.ignore": [
+    "images/**"
+  ]
+}

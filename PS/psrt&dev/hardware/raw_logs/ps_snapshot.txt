@@ -1,0 +1,35 @@
+### ps_snapshot
+cmd: ps -eo pid,ppid,user,pcpu,pmem,rss,etime,comm --sort=-pcpu 2>/dev/null | head -30; echo '---thread count:'; ps -eLf 2>/dev/null | wc -l
+---
+    PID    PPID USER     %CPU %MEM   RSS     ELAPSED COMMAND
+    180     176 root      8.7  3.1 32544       56:56 wcis_sdi_vpu_li
+   3955     159 root      8.0  0.7  7704       00:01 sshd
+   3938       1 root      3.5  0.8  8200       00:02 systemd
+    141       1 root      3.2  1.8 18392       57:00 python3
+   3968    3967 root      3.0  0.2  2516       00:01 bash
+    140       1 root      0.7  1.2 13196       57:00 python3
+     65       2 root      0.4  0.0     0       57:08 kworker/u8:1-mvx_sched
+     68       2 root      0.3  0.0     0       57:08 kworker/u8:2-mvx_sched
+   3575       2 root      0.3  0.0     0       22:53 kworker/u8:3-f0020000.mve
+     79       2 root      0.1  0.0     0       57:07 kworker/0:1H-mmc_complete
+      1       0 root      0.0  0.9  9532       57:10 systemd
+      2       0 root      0.0  0.0     0       57:10 kthreadd
+      3       2 root      0.0  0.0     0       57:10 rcu_gp
+      4       2 root      0.0  0.0     0       57:10 rcu_par_gp
+      8       2 root      0.0  0.0     0       57:10 mm_percpu_wq
+      9       2 root      0.0  0.0     0       57:10 ksoftirqd/0
+     10       2 root      0.0  0.0     0       57:10 rcu_sched
+     11       2 root      0.0  0.0     0       57:10 migration/0
+     12       2 root      0.0  0.0     0       57:10 cpuhp/0
+     13       2 root      0.0  0.0     0       57:10 cpuhp/1
+     14       2 root      0.0  0.0     0       57:10 migration/1
+     15       2 root      0.0  0.0     0       57:10 ksoftirqd/1
+     18       2 root      0.0  0.0     0       57:10 cpuhp/2
+     19       2 root      0.0  0.0     0       57:10 migration/2
+     20       2 root      0.0  0.0     0       57:10 ksoftirqd/2
+     21       2 root      0.0  0.0     0       57:10 kworker/2:0-cgroup_destroy
+     23       2 root      0.0  0.0     0       57:10 cpuhp/3
+     24       2 root      0.0  0.0     0       57:10 migration/3
+     25       2 root      0.0  0.0     0       57:10 ksoftirqd/3
+---thread count:
+109

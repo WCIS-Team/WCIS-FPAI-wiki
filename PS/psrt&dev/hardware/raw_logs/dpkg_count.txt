@@ -1,0 +1,4 @@
+### dpkg_count
+cmd: dpkg -l 2>/dev/null | wc -l
+---
+566

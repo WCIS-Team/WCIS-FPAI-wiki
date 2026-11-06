@@ -1,0 +1,6 @@
+### pci_sysfs
+cmd: ls /sys/bus/pci/devices/ 2>/dev/null; echo '---proc bus pci:'; ls /proc/bus/pci/ 2>/dev/null; echo '---pci resources:'; for d in /sys/bus/pci/devices/*; do echo "== $d"; cat $d/vendor 2>/dev/null; cat $d/device 2>/dev/null; cat $d/class 2>/dev/null; done
+---
+---proc bus pci:
+---pci resources:
+== /sys/bus/pci/devices/*

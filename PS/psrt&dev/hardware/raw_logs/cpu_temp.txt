@@ -1,0 +1,4 @@
+### cpu_temp
+cmd: for z in /sys/class/thermal/thermal_zone*/temp; do echo -n "$z: "; cat $z 2>/dev/null | awk '{print $1/1000" C"}'; done
+---
+/sys/class/thermal/thermal_zone*/temp: 

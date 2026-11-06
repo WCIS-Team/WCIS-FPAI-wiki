@@ -1,0 +1,24 @@
+PASS  the stub mirrors names that still exist in patch/q3_infer_board.py
+PASS  Qwen3 adapter reaches ready through the real worker path
+PASS  geometry is read off the graph, not off the config
+PASS  info carries the unresolved status and the active position arm
+PASS  the 件 paths the driver hard-codes are visible in info
+PASS  generate answers with the invented chain (argmax = fed + 1)
+PASS  the pre/tok events are paced and the end object is not duplicated
+PASS  every step feeds 3 fp32 = 12 B in token_dynamic_fm (#196's whole point)
+PASS  prompt: token i is fed with position i+1 (vendored run_prompt)
+PASS  decode: position == slot, no +1 (vendored run_decode)
+PASS  the cache stays contiguous -- no gap, no write above the frontier
+PASS  the reply says which slot was last written
+PASS  text in wraps with the vendored template (the stub split it back out)
+PASS  text out decodes through the tokenizer the driver loaded
+PASS  pos_rule=uniform reloads
+PASS  uniform: every step feeds slot+1, so the decode phase shifts by one
+PASS  uniform: un-shifting keeps the same contiguous cache
+PASS  a shorter graph window reloads
+PASS  running out of slots answers reason=full, not a crash
+PASS  nothing is ever fed at position 0 or position == depth (op_id 4525)
+PASS  an unknown pos_rule fails the load with its name in the error
+PASS  and the failed load leaves the slot idle
+
+22 checks passed, 0 failed

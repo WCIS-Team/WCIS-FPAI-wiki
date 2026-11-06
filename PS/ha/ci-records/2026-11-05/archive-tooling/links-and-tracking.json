@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "archive_files": 387,
+  "checked_local_links": 22,
+  "ignored_files": [],
+  "raw_git_text_attribute": "unset",
+  "wiki_validator_exit_code": 1,
+  "wiki_validator_summary": [
+    "197 problems in 130 groups"
+  ],
+  "new_page_issues": [],
+  "errors": [],
+  "scope": "New archive page, resource links and evidence attributes; unrelated existing wiki problems are retained"
+}

@@ -1,0 +1,18 @@
+{
+  "dataset": "AISHELL-1 official test set (via shenyunhang/AISHELL-1 audio + modelscope speech_asr_aishell1_testsets csv)",
+  "source_csv": "aishell1_test.csv",
+  "total_rows": 7176,
+  "sampled": 2,
+  "seed": 42,
+  "audio_root": "D:/yzd/llm/funasr/data/aishell1/data_aishell",
+  "items": [
+    {
+      "wav": "wav/test/S0914/BAC009S0914W0493.wav",
+      "text": "这一斤玛卡其实价格只有一零零多元"
+    },
+    {
+      "wav": "wav/test/S0902/BAC009S0902W0289.wav",
+      "text": "这对苹果是一个利好"
+    }
+  ]
+}

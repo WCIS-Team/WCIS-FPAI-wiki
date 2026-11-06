@@ -1,0 +1,5 @@
+### board_release
+cmd: cat /etc/fmsh* 2>/dev/null; ls /etc/*release* 2>/dev/null
+---
+/etc/lsb-release
+/etc/os-release

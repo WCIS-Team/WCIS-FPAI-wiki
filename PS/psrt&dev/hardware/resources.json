@@ -1,0 +1,450 @@
+{
+  "schema": "wcis.sop2.hardware-archive",
+  "archive_version": "1.0",
+  "document": "resources.json",
+  "purpose": "SOP 2 - memory, CPU, storage and device resource information, plus background load",
+  "collection": {
+    "collected_at_utc": "2026-10-18T21:08:24Z",
+    "board_timezone_offset": "+0000",
+    "supplementary_batches_utc": [
+      "2026-10-20T07:45:38Z",
+      "2026-10-20T07:49:07Z"
+    ],
+    "target_host": "192.168.1.113",
+    "target_user": "root",
+    "transport": "ssh",
+    "method": "read-only shell collection; no benchmark, no workload, no service termination"
+  },
+  "tooling": {
+    "transport_client": "PuTTY plink 0.85 (Windows x86_64)",
+    "transfer_client": "PuTTY pscp 0.85",
+    "board_shell": "bash on Ubuntu 20.04.4 userland",
+    "raw_logs_dir": "raw_logs/"
+  },
+  "field_status_legend": {
+    "official_spec": "official vendor specification",
+    "system_report": "value reported by the running operating system",
+    "tool_report": "value reported by the vendor toolchain",
+    "measured": "value observed on site during this collection",
+    "unverified": "not cross-checked against a second source",
+    "not_supported": "the platform does not expose the field at all",
+    "not_accessible": "the field exists but could not be read with the privileges used"
+  },
+  "cpu_resources": {
+    "core_count": {
+      "physical": 4,
+      "logical": 4,
+      "available": 4,
+      "status": "system_report",
+      "note": "Thread(s) per core = 1 and Core(s) per socket = 4, so physical, logical and available counts are all 4 - there is no SMT and no offline core",
+      "evidence": ["raw_logs/lscpu.txt", "raw_logs/cpuinfo.txt", "raw_logs/nproc.txt", "raw_logs/cpu_topology.txt"]
+    },
+    "architecture": {
+      "value": "4 x ARM Cortex-A53 (ARMv8-A), aarch64, little endian",
+      "status": "system_report",
+      "evidence": ["raw_logs/lscpu.txt", "raw_logs/cpuinfo.txt"]
+    },
+    "frequency": {
+      "value": "not_supported",
+      "status": "not_supported",
+      "note": "no cpufreq sysfs, no cpu_opp_table, no clock-frequency property; operating-points-v2 is commented out in the shipped device tree. The 1 GHz figure is 官方规格 only.",
+      "official_spec_value": "up to 1 GHz",
+      "evidence": ["raw_logs/cpu_freq.txt", "raw_logs/cpu_freq_dtb.txt", "raw_logs/cpu_clock.txt"]
+    },
+    "cache": {
+      "l1d": {
+        "capacity": "32 KB",
+        "status": "official_spec",
+        "sharing": "private per core (shared_cpu_map=1)",
+        "level": 1,
+        "type": "Data",
+        "sysfs_size_exposed": false,
+        "evidence": ["raw_logs/cache_sizes.txt", "raw_logs/cache_shared.txt"]
+      },
+      "l1i": {
+        "capacity": "32 KB",
+        "status": "official_spec",
+        "sharing": "private per core (shared_cpu_map=1)",
+        "level": 1,
+        "type": "Instruction",
+        "sysfs_size_exposed": false,
+        "evidence": ["raw_logs/cache_sizes.txt", "raw_logs/cache_shared.txt"]
+      },
+      "l2": {
+        "capacity": "1 MB",
+        "status": "official_spec",
+        "sharing": "shared by all 4 cores (shared_cpu_map=f)",
+        "level": 2,
+        "type": "Unified",
+        "sysfs_size_exposed": false,
+        "note": "the shipped DTB l2-cache node has no cache-size property, which is why the kernel publishes no size",
+        "evidence": ["raw_logs/cache_sizes.txt", "raw_logs/cache_shared.txt", "../board_extract/35_dtb_flattened_shipped.txt"]
+      },
+      "on_chip_sram": {
+        "value": "256 KB",
+        "status": "official_spec",
+        "note": "not exposed to Linux",
+        "evidence": ["../psdev.md"]
+      }
+    },
+    "topology": {
+      "numa_nodes": {
+        "value": "unknown",
+        "status": "unverified",
+        "note": "numactl absent; dmesg shows one memory node with 262144 pages, consistent with a single node but not confirmed by a topology query"
+      },
+      "sockets": {
+        "value": 1,
+        "status": "system_report"
+      }
+    },
+    "governor_and_power": {
+      "governor": {
+        "value": "not_supported",
+        "status": "not_supported",
+        "note": "no cpufreq interface, so no performance/schedule governor exists"
+      },
+      "idle_governor": {
+        "value": "menu",
+        "status": "system_report"
+      },
+      "power_management": {
+        "value": "PSCI idle states with a cpu-sleep-0 state (arm,psci-suspend-param 0x40000000, entry latency 300 us, exit 600 us, min residency 10000 us)",
+        "status": "system_report",
+        "evidence": ["../board_extract/35_dtb_flattened_shipped.txt", "raw_logs/dmesg_full.txt"]
+      },
+      "temperature": {
+        "value": "not_supported",
+        "status": "not_supported",
+        "note": "no thermal zone is exposed by the platform"
+      },
+      "power_draw": {
+        "value": "not_measured",
+        "status": "unverified",
+        "note": "the vendor specifies ~8 W typical; no measurement was performed"
+      }
+    },
+    "load": {
+      "batch_1": {
+        "load_average": "0.22 / 0.05 / 0.02",
+        "status": "measured",
+        "evidence": ["raw_logs/loadavg.txt"]
+      },
+      "batch_3": {
+        "load_average": "0.00 / 0.00 / 0.00 (uptime) - 1-minute value 0.22 at the first batch",
+        "status": "measured",
+        "note": "the board is essentially idle on average; the 8.7% figure below is a single process's share of one core, not a system-wide load",
+        "evidence": ["raw_logs/uptime.txt", "raw_logs/loadavg.txt"]
+      }
+    }
+  },
+  "memory_resources": {
+    "ram_total_kb": {
+      "value": 1017704,
+      "value_readable": "1017704 kB = 993 MiB",
+      "status": "system_report",
+      "note": "the kernel command line fixes the PS memory window at mem=1024M; dmesg reports 'Memory limited to 1024MB' and 754920K/1048576K available at boot",
+      "evidence": ["raw_logs/meminfo.txt", "raw_logs/dmesg_full.txt"]
+    },
+    "ram_available_kb": {
+      "value": 721084,
+      "value_readable": "721084 kB = 703 MiB (free -h: total 993Mi, used 222Mi, available 703Mi)",
+      "status": "measured",
+      "note": "two samples 40 s apart in batch 1 gave MemAvailable 721084 kB and 720196 kB",
+      "evidence": ["raw_logs/meminfo.txt", "raw_logs/free.txt", "raw_logs/mem_avail_sys.txt"]
+    },
+    "ram_free_kb": {
+      "value": 436136,
+      "status": "measured",
+      "note": "sample 2 in the same batch showed 413388 kB; the board is not under memory pressure",
+      "evidence": ["raw_logs/meminfo.txt", "raw_logs/mem_avail_sys.txt"]
+    },
+    "ram_type_bandwidth": {
+      "type": "DDR3 (PS side)",
+      "channels": "unknown",
+      "theoretical_bandwidth": "1600 MHz x 32 bit = 51.2 Gbps",
+      "status": "official_spec",
+      "note": "theoretical figure from the manual; the number of channels was not read out of the memory controller and no bandwidth measurement was performed",
+      "evidence": ["../board_extract/40_manual_lite_extracted.txt"]
+    },
+    "measured_bandwidth": {
+      "value": "not_measured",
+      "status": "unverified",
+      "note": "SOP 2 forbids performance runs, so no STREAM-like measurement was attempted"
+    },
+    "swap": {
+      "total": "1 GiB (1048572 kB)",
+      "used": "0 B",
+      "device": "/swapfile, file-backed, priority -2",
+      "zram": "not enabled (no /dev/zram* and no zram mount)",
+      "status": "measured",
+      "evidence": ["raw_logs/swap.txt", "raw_logs/meminfo.txt", "raw_logs/zram.txt", "raw_logs/free.txt"]
+    },
+    "cma": {
+      "total": "262144 kB (256 MiB)",
+      "free_kb": 130784,
+      "reserved_at_phys": "0x0000000030000000",
+      "status": "system_report",
+      "evidence": ["raw_logs/meminfo.txt", "raw_logs/dmesg_full.txt"]
+    },
+    "u_dma_buf_pool": {
+      "size_bytes": 134217728,
+      "phys_address": "0x0000000030100000",
+      "device": "/dev/udmabuf0 (char 242:0)",
+      "status": "measured",
+      "note": "a 128 MiB slab carved out of the CMA pool; this is the buffer path the NPU stack uses",
+      "evidence": ["raw_logs/dmesg_accel.txt", "raw_logs/dev_list.txt"]
+    },
+    "memory_limits": {
+      "cgroup": "none",
+      "overcommit": "not queried",
+      "status": "measured",
+      "note": "no cgroup memory ceiling exists on this bare board; the only memory-related limits are the ulimits (max locked memory 64 MiB, max stack 8 MiB)",
+      "evidence": ["raw_logs/cgroup_v2.txt", "raw_logs/fd_limit.txt"]
+    },
+    "shm": {
+      "shm_size": "497 MiB tmpfs on /dev/shm",
+      "shm_used": "72 KiB",
+      "status": "measured",
+      "evidence": ["raw_logs/hugepages.txt", "raw_logs/df.txt"]
+    },
+    "hugepages": {
+      "registered_sizes": ["64 kB", "2048 kB", "32768 kB", "1048576 kB"],
+      "preallocated": 0,
+      "status": "measured",
+      "evidence": ["raw_logs/hugepages.txt"]
+    }
+  },
+  "storage_resources": {
+    "root": {
+      "device": "/dev/mmcblk0p2",
+      "filesystem": "ext4",
+      "size": "26.1 GiB",
+      "used": "19-20 GiB",
+      "available": "5.1-5.5 GiB",
+      "use_percent": "78-80%",
+      "mount_options": "rw,relatime",
+      "status": "measured",
+      "note": "the root filesystem is 78-80% full. Model and experiment files should not be placed here without checking the free space; /mnt/wcis-emmc (29 GiB) is the separate volume, but it was not mounted during batch 3.",
+      "evidence": ["raw_logs/df.txt", "raw_logs/findmnt.txt", "raw_logs/emmc_mount.txt"]
+    },
+    "data_volume": {
+      "device": "/dev/mmcblk1p1",
+      "filesystem": "ext4",
+      "size": "29.1 GiB",
+      "used_batch_1": "273 MiB",
+      "available_batch_1": "29 GiB",
+      "mount_point": "/mnt/wcis-emmc",
+      "mount_options": "rw,nosuid,nodev,noexec,noatime,errors=remount-ro",
+      "status": "measured",
+      "caveat": "mounted in batch 1, not mounted in batch 3. The mount point existed but was empty and df fell back to the root filesystem.",
+      "mount_mechanism": {
+        "managed_by": "systemd oneshot unit wcis-face-storage.service (Type=oneshot, RemainAfterExit=yes, After=local-fs.target, Before=wcis-face-photo.service)",
+        "not_managed_by": "fstab - the live /etc/fstab is the vendor stub ('# UNCONFIGURED FSTAB FOR BASE SYSTEM') plus a comment pointing at the service",
+        "exec_start": "/usr/bin/python3 /root/wcis-face/tools/storage-5df5f1c1e614/mount_face_store.py --device /dev/mmcblk1p1 --mount /mnt/wcis-emmc --uuid 67104a06-74a6-4268-a124-269d1b232a28",
+        "exec_stop": "the same script with --unmount",
+        "identity_check": "mount is refused unless the partition UUID matches 67104a06-74a6-4268-a124-269d1b232a28 (LABEL WCIS_FACE, TYPE ext4)",
+        "status": "measured",
+        "evidence": ["raw_logs/emmc_mount.txt"]
+      },
+      "batch_3_absence_explanation": {
+        "verdict": "not a flaky mount - that boot never brought the eMMC up at all",
+        "boot_id": "-4, 2026-10-20 06:48:22 - 07:50:19 UTC (the collection ran at 07:49:07Z, 72 s before that boot ended)",
+        "facts": [
+          "the wcis-face-storage.service produced no journal entry at all in that boot, while every other recorded boot logs Starting / 'Personnel eMMC filesystem mounted and verified' / Finished and, at shutdown, Stopping / Stopped",
+          "the kernel log of that boot contains no mmcblk1 or ext4 mount line, while boots -5 and -3 both contain 'EXT4-fs (mmcblk1p1): mounted filesystem with ordered data mode'",
+          "that boot also lost the serial console (dev-ttyPS0.device failed with result 'timeout') and logged a stream of 'sshd: kex_exchange_identification: Connection closed by remote host' every ~10 s",
+          "it ended with 'FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.' followed by systemd-shutdown - a hard reset, not a clean shutdown"
+        ],
+        "status": "measured"
+      },
+      "board_availability_note": {
+        "fact": "the board rebooted 8 times between 06:17 and 13:12 on 2026-10-20 (journal boots -7..0) while this collection was running; the eMMC is unmounted and remounted at every one of those reboots",
+        "implication": "any later measurement on this board must record which boot it was taken in - the machine is under active work by someone else and its state is not stable across a session",
+        "status": "measured"
+      },
+      "evidence": ["raw_logs/df.txt", "raw_logs/findmnt.txt", "raw_logs/emmc_mount.txt"]
+    },
+    "sd_card": {
+      "device": "mmcblk0",
+      "media": "SD card (SDXC, high speed)",
+      "capacity": "58.4 GiB",
+      "layout": "p1 1 GiB FAT boot, p2 26.1 GiB ext4 rootfs",
+      "status": "system_report",
+      "evidence": ["raw_logs/dmesg_full.txt", "raw_logs/lsblk.txt"]
+    },
+    "emmc": {
+      "device": "mmcblk1",
+      "media": "Y2P032 eMMC",
+      "capacity": "29.1 GiB",
+      "status": "system_report",
+      "evidence": ["raw_logs/dmesg_full.txt", "raw_logs/lsblk.txt"]
+    },
+    "qspi_nor": {
+      "device": "e0000000.spi",
+      "chip": "n25q256a 256 Mbit (32768 Kbytes)",
+      "partitions": "bootloader 4 MiB, kernel 16 MiB, rootfs 0 bytes",
+      "status": "system_report",
+      "evidence": ["raw_logs/mtd_flash.txt"]
+    },
+    "pseudo_filesystems": {
+      "devtmpfs": "369 MiB",
+      "tmpfs_on_dev_shm": "497 MiB",
+      "tmpfs_on_run": "100 MiB",
+      "tmpfs_on_run_lock": "5 MiB",
+      "tmpfs_on_run_user_0": "100 MiB",
+      "cgroup_tmpfs": "497 MiB",
+      "status": "system_report",
+      "evidence": ["raw_logs/df.txt", "raw_logs/findmnt.txt"]
+    }
+  },
+  "device_resources": {
+    "npu": {
+      "device": "ZG330 iCore in the PL",
+      "dt_node": "none - grepping the flattened device tree for 'npu' / 'aiu' / 'zhuge' / 'icore' returns 0 hits",
+      "kernel_module": "none",
+      "access_path": "axi://zg330aiu?npu=0x40000000&dma=0x80000000 - two PL AXI slave windows mapped from the PS side",
+      "device_node": "none exported; there is no NPU kernel module at all",
+      "status": "measured",
+      "compute_capacity": "not_measured",
+      "compute_capacity_note": "the 8 TOPS @ INT8 / 4 TFLOPS @ FP16 / 2 TFLOPS @ TF32 figures are 官方规格 from the vendor manual. No workload was run, so the achievable throughput on this board is unknown and must not be inferred from the specification.",
+      "official_spec_value": "8 TOPS @ INT8, 4 TFLOPS @ FP16, 2 TFLOPS @ TF32",
+      "correction": "2026-10-23 (D-79): the 'device', 'driver', 'state' entries and the old 'device_node' text described the VPU (video codec), which is now recorded under the 'vpu' key below. Raw logs were left intact; only the attribution changed.",
+      "evidence": ["../board_extract/35_dtb_flattened_shipped.txt", "raw_logs/npu_dev.txt", "raw_logs/dev_list.txt", "raw_logs/inference_fw.txt"]
+    },
+    "vpu": {
+      "device": "vpu: mve@F0020000 (arm china,linlon-v5) - a video codec, not the NPU",
+      "driver": "MVX / Linlon v5276, 2 cores, nlsid 4 (mvx_dev.c:427)",
+      "kernel_module": "amvx (modinfo: 'Tiube VPU Driver')",
+      "state": "probed at ~9.5 s after boot, platform device f0020000.mve bound, kernel threads mvx_sched active",
+      "device_node": "/dev/video0 (v4l2 M2M)",
+      "firmware": "/lib/firmware/linlon-v52_v76-80-2/ - 17 codec .fwb blobs (mpeg4dec, avs2dec, vp9dec, h264enc, h264enc.prot-ver, jpegdec, avsdec, mpeg2dec, vp8enc, hevcdec, rvdec, h264dec, vp8dec, vc1dec, hevcenc, jpegenc, vp9enc)",
+      "status": "measured",
+      "correction": "2026-10-23 (D-79): moved out of the 'npu' key, where it had been filed by mistake. The collection script itself assumed MVE == NPU (collect_followup.sh:51).",
+      "evidence": ["raw_logs/dmesg_accel.txt", "raw_logs/npu_platform.txt", "raw_logs/npu_dev.txt", "raw_logs/ps_snapshot.txt", "../board_extract/58_rootfs_system_config.txt"]
+    },
+    "gpu": {
+      "device": "mali_gpu@f0000000 (arm,mali-bifrost)",
+      "driver": "Mali DDK r31p0-01eac0, GPU id 0x2, arch 7.4.0 r1p0",
+      "state": "probed, /dev/mali0 present, memory group manager active, coherency mode 31",
+      "memory": "unknown - no GPU memory size is published in sysfs and the debugfs gpuinfo path is empty",
+      "status": "measured",
+      "evidence": ["raw_logs/dmesg_accel.txt", "raw_logs/mali_gpu.txt"]
+    },
+    "fpga": {
+      "device": "fpga_manager fpga0 (FMSH FMQL FPGA Manager, e0040000.devcfg)",
+      "state": "operating - a bitstream was already loaded before collection started",
+      "occupancy": "not_measured",
+      "occupancy_note": "no utilisation report or tool output was available. The device capacities (125K logic, 78,600 LUT, 9.3 Mb BRAM, 400 DSP) are 官方规格 and describe the device, not the occupancy of the running design. Do not read them as measured usage.",
+      "status": "measured",
+      "evidence": ["raw_logs/fpga_detail.txt", "raw_logs/fpga_bitstream.txt"]
+    },
+    "dma": {
+      "controllers": "dw_dmac e004b000.dma (8 channels) and dw_axi_dmac_platform f0010000.dma (8 channels)",
+      "status": "system_report",
+      "evidence": ["raw_logs/dmesg_accel.txt"]
+    },
+    "pcie": {
+      "value": "no PCI device enumerated",
+      "status": "not_accessible",
+      "evidence": ["raw_logs/pci_sysfs.txt"]
+    }
+  },
+  "background_load": {
+    "status": "measured",
+    "collected_at_utc": "2026-10-20T07:45:38Z",
+    "evidence": ["raw_logs/ps_snapshot.txt", "raw_logs/ps.txt", "raw_logs/loadavg.txt"],
+    "total_threads": 109,
+    "competing_workloads": [
+      {
+        "process": "wcis_sdi_vpu_li",
+        "pid": 180,
+        "cpu_percent": 8.7,
+        "rss_kb": 32544,
+        "elapsed": "56:56",
+        "status": "measured",
+        "note": "the project's own SDI video pipeline was already running on the board during collection and is holding a meaningful share of one core. Any later throughput measurement on this board is taken under this background load unless it is stopped first - and SOP 2 forbids stopping other tasks."
+      },
+      {
+        "process": "python3",
+        "pid": 141,
+        "cpu_percent": 3.2,
+        "rss_kb": 18392,
+        "elapsed": "57:00",
+        "status": "measured"
+      },
+      {
+        "process": "python3",
+        "pid": 140,
+        "cpu_percent": 0.7,
+        "rss_kb": 13196,
+        "elapsed": "57:00",
+        "status": "measured"
+      }
+    ],
+    "resource_contention": {
+      "value": "CPU: a background SDI pipeline plus two python3 services are resident. Memory: ~700 MiB available of 993 MiB, so memory is not constrained. NPU: idle - no NPU workload was running. GPU: idle. FPGA: occupied by a loaded bitstream, with unknown occupancy.",
+      "status": "measured"
+    },
+    "system_services": {
+      "value": "standard Ubuntu base (systemd, ssh, cron, rsyslog, dbus, alsa-utils, unattended-upgrades) plus the board's own SDI video processes",
+      "status": "system_report",
+      "evidence": ["../board_extract/26_system_identity.txt"]
+    }
+  },
+  "collection_limitations": {
+    "status": "measured",
+    "items": [
+      {
+        "field": "CPU frequency",
+        "reason": "no cpufreq, no OPP table, no clock-frequency property in the device tree",
+        "marker": "not_supported"
+      },
+      {
+        "field": "L1/L2 cache capacity as reported by the kernel",
+        "reason": "the shipped DTB l2-cache node carries no cache-size property, so sysfs publishes no size; only the structure (level/type/sharing) is observable",
+        "marker": "not_supported"
+      },
+      {
+        "field": "CPU and GPU temperature",
+        "reason": "no thermal zone exposed by the platform",
+        "marker": "not_supported"
+      },
+      {
+        "field": "NUMA topology detail",
+        "reason": "numactl is not installed and no topology query was run",
+        "marker": "unverified"
+      },
+      {
+        "field": "FPGA design occupancy (LUT/FF/BRAM/DSP actually used)",
+        "reason": "no utilisation report or tool output available; SOP 2 forbids presenting occupancy as measured",
+        "marker": "unverified"
+      },
+      {
+        "field": "Memory type, channel count, bandwidth",
+        "reason": "the memory controller configuration was not read out and no bandwidth measurement was performed",
+        "marker": "official_spec_only"
+      },
+      {
+        "field": "PCIe link width and speed",
+        "reason": "no PCI device is enumerated and lspci is not installed",
+        "marker": "not_accessible"
+      },
+      {
+        "field": "Loaded FPGA bitstream identity",
+        "reason": "the fpga_manager firmware attribute is write-only and no bitstream metadata is published",
+        "marker": "not_accessible"
+      },
+      {
+        "field": "Board serial number and revision",
+        "reason": "no serial-number or board-name property in the device tree",
+        "marker": "unverified"
+      },
+      {
+        "field": "NPU-to-application compute capability",
+        "reason": "SOP 2 forbids running inference or benchmarks, so the NPU throughput remains the vendor specification only",
+        "marker": "not_measured"
+      }
+    ]
+  }
+}

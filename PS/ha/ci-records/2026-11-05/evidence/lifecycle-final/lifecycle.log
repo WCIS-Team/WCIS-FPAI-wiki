@@ -1,0 +1,40 @@
+PASS  GET /health
+PASS  GET /models lists mock and the two real ids
+PASS  adapter_exists is a real on-disk check
+PASS  GET /status while idle reports no pid
+PASS  POST /load(mock) reaches ready
+PASS  load reports apply_s ~= the simulated apply
+PASS  the wait did not return before the fake apply finished
+PASS  GET /status shows ready + pid + info
+PASS  GET /ping round-trips to the worker
+PASS  POST /generate returns ids + reason + text
+PASS  /status carries the last result and the id count, not the ids
+PASS  worker kept its step counter across requests
+PASS  stream=true answers ndjson: pre*3 + tok*3 + end
+PASS  /load while loaded is refused with 409
+PASS  /load evict=true replaces the incumbent
+PASS  evicted worker process is really gone (CMA only returns then)
+PASS  wait=false returns state=loading immediately
+PASS  ...and /status reaches ready on its own
+PASS  a model bug answers 500 and does not eat the session
+PASS  session survives the bug (ping alive)
+PASS  the bug is recorded as last_error
+PASS  worker suicide surfaces as an error
+PASS  suicide frees the slot instead of lying about it
+PASS  history records the exit reason and rc
+PASS  /generate with nothing loaded is 409
+PASS  a load that raises answers 500 with the worker's error
+PASS  failed load leaves the slot idle
+PASS  unknown model id is 404
+PASS  reload after the failures works
+PASS  /unload naming a different model is 409
+PASS  POST /unload reports before/after memory
+PASS  unload reports the log path for forensics
+PASS  unloaded worker process is really gone
+PASS  second /unload is a no-op, not an error
+PASS  /ping with nothing loaded answers alive=false, no exception
+PASS  worker stdout lands in a file, not a pipe
+PASS  that file already contains the worker's own lines
+PASS  no live mock workers remain after supervisor shutdown
+
+38 checks passed, 0 failed

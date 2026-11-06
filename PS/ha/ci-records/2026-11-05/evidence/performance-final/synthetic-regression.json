@@ -1,0 +1,141 @@
+{
+  "status": "regression",
+  "reason": "Comparable measurements",
+  "rows": [
+    {
+      "metric": "split-12.chain_ms.p50",
+      "baseline": 30.048949999999998,
+      "candidate": 91.14685,
+      "delta": 61.0979,
+      "percent": 203.3279033044416,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-12.chain_ms.p95",
+      "baseline": 32.9106,
+      "candidate": 99.7318,
+      "delta": 66.8212,
+      "percent": 203.03853469702773,
+      "regression": true,
+      "gated": true
+    },
+    {
+      "metric": "split-12.first_request_ms.value",
+      "baseline": 25.5953,
+      "candidate": 24.5473,
+      "delta": -1.0480000000000018,
+      "percent": -4.094501724926068,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-12.split_ms.p50",
+      "baseline": 0.03795,
+      "candidate": 1.1138499999999998,
+      "delta": 1.0758999999999999,
+      "percent": 2835.046113306983,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-12.split_ms.p95",
+      "baseline": 0.0566,
+      "candidate": 1.1698,
+      "delta": 1.1132,
+      "percent": 1966.7844522968198,
+      "regression": true,
+      "gated": true
+    },
+    {
+      "metric": "split-20-16k.chain_ms.p50",
+      "baseline": 24.04285,
+      "candidate": 73.12855,
+      "delta": 49.0857,
+      "percent": 204.15924068901984,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-20-16k.chain_ms.p95",
+      "baseline": 26.7414,
+      "candidate": 81.2242,
+      "delta": 54.4828,
+      "percent": 203.7395199952134,
+      "regression": true,
+      "gated": true
+    },
+    {
+      "metric": "split-20-16k.first_request_ms.value",
+      "baseline": 22.8331,
+      "candidate": 25.725,
+      "delta": 2.8918999999999997,
+      "percent": 12.665384901743518,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-20-16k.split_ms.p50",
+      "baseline": 0.0332,
+      "candidate": 1.0996,
+      "delta": 1.0664,
+      "percent": 3212.0481927710844,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-20-16k.split_ms.p95",
+      "baseline": 0.045,
+      "candidate": 1.135,
+      "delta": 1.09,
+      "percent": 2422.2222222222226,
+      "regression": true,
+      "gated": true
+    },
+    {
+      "metric": "split-20.chain_ms.p50",
+      "baseline": 61.07995,
+      "candidate": 184.23985,
+      "delta": 123.1599,
+      "percent": 201.63719845874138,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-20.chain_ms.p95",
+      "baseline": 71.5843,
+      "candidate": 215.7529,
+      "delta": 144.16860000000003,
+      "percent": 201.39695436010413,
+      "regression": true,
+      "gated": true
+    },
+    {
+      "metric": "split-20.first_request_ms.value",
+      "baseline": 139.7293,
+      "candidate": 164.0128,
+      "delta": 24.283500000000004,
+      "percent": 17.378960604540353,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-20.split_ms.p50",
+      "baseline": 0.0354,
+      "candidate": 1.1062,
+      "delta": 1.0708,
+      "percent": 3024.8587570621467,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-20.split_ms.p95",
+      "baseline": 0.0473,
+      "candidate": 1.1419,
+      "delta": 1.0946,
+      "percent": 2314.1649048625795,
+      "regression": true,
+      "gated": true
+    }
+  ]
+}

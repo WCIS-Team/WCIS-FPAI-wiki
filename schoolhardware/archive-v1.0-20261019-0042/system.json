@@ -1,0 +1,31 @@
+{
+  "_meta": {
+    "collected_at_local": "2026-10-19T00:42:25.6946215+08:00",
+    "collected_at_utc": "2026-10-18T16:42:25.6946215Z",
+    "timezone": "China Standard Time (08:00:00)",
+    "collector": "hw_collect.ps1 (SOP 2 - MOD)",
+    "archive_version": "1.0",
+    "tool_powershell": "5.1.26100.9711",
+    "tool_wmi_cim": "Get-CimInstance / Get-ComputerInfo",
+    "host": "Win11-HV1",
+    "os_caption": "Microsoft Windows 11 专业工作站版"
+  },
+  "os": {
+    "os_name": "Microsoft Windows 11 专业工作站版",
+    "os_version": "10.0.26200",
+    "os_build": "26200",
+    "os_arch": "64 位",
+    "kernel": "Windows NT 10.0.26200 (build 26200)",
+    "product_type": 1,
+    "install_date": "2025-03-10T01:38:16Z",
+    "last_boot_utc": "2026-10-13T19:32:50.024Z",
+    "local_datetime": "2026-10-18T16:42:29.899Z",
+    "system_dir": "C:\\WINDOWS\\system32",
+    "registered_user": "SuRongbin",
+    "container_runtime": "not_detected",
+    "container_note": "no container runtime detected on this guest (unverified)",
+    "current_user": "WIN11-HV1\\YiZhidi",
+    "is_admin": false,
+    "source": "system_report"
+  }
+}

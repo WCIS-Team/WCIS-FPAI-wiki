@@ -1,0 +1,79 @@
+# 本仓库＝WCIS 的文档库，从主库 WCIS-FPAI 拆出为子模块（决策 D-63）。
+# 主库的 .gitignore 不跨子模块生效，所以这里必须自带同一批硬闸：
+# 体积类按大小挡（D-21），凭据载体按名字挡（D-39），Obsidian 会话状态与插件本体不入库（D-59/D-61）。
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+
+# Obsidian：共享配置（.obsidian/*.json）照常入库，只挡每人的会话状态与插件本体
+**/.obsidian/workspace.json
+**/.obsidian/workspace-mobile.json
+**/.obsidian/graph.json
+**/.obsidian/cache
+**/.obsidian/plugins/
+**/.obsidian/*.old
+
+# large binaries kept out of the doc set by size, not by secrecy (D-21):
+# force-add with `git add -f <path>` when one genuinely belongs in the repo
+*.tar
+*.7z
+*.zip
+*.rar
+*.iso
+*.img
+*.bit
+*.hdf
+
+# local scaffolding
+/build-notes/
+
+# FPGA build outputs
+build-x86/
+build-arm/
+board-pkg/
+sim.out
+*.vcd
+
+# python caches
+__pycache__/
+*.pyc
+
+# Site build: site/content/ is assembled from this repository by
+# site/make-content.py on every run, qbuild/ is the Quartz checkout and
+# public/ the generated HTML. None of it is ever committed (D-64).
+site/content/
+site/content-test/
+/qbuild/
+/public/
+
+# 取证提取件（board_extract/）整目录入库（决策 D-39）：体积类规则在这里开例外，
+# 但三件凭据载体仍按名字挡住、永不进仓库（[[板端提取件台账]] 第 4 节）
+**/board_extract/**
+**/10_etc.tar.gz
+**/11_root_home_vendor.tar.gz
+**/53_rc_local_and_login.txt
+
+# PL/FPGA/4compile/＝位流编译工作区：厂商解包件＋工程中间产物，实测 1,648 件／438.6 MiB
+# （单件最大的是 ip_patch/database/artix7.rtd 60.4 MiB，上面按扩展名的体积类规则挡不住它）。
+# 她 2026-10-31 裁定这个目录不跟踪。同内容的 6 件出厂二进制正本仍在库里
+# PL/FPGA/FPGArt/BIT 与 PL/FPGA/FPGArt/BOOT_Gen，没有因为搬动而从仓库里消失。
+/PL/FPGA/4compile/
+
+# agentpreview/AGENTS.md 里写死了一颗现役的 GitHub Personal Access Token，
+# 全库 HEAD 里目前没有任何一件带它，推上去就会成为第一处。
+# 她 2026-10-31 裁定 `agentpreview/` 入库，但凭据不进库——具名挡这一件，
+# 同目录另 5 件照常入库。要入库得先把 token 剔除或换成链接。
+/agentpreview/AGENTS.md
+
+# official/ ＝ 外部资料集中区（厂商手册/教程、CSDN/知乎/eeworld 转载、
+# ModelScope 模型卡与官方仓库原文、飞书导出表等）。
+# 2026-11-06 从 PL/PS/man/repo2WCIS 抽出集中存放：只在本机保留作证据，
+# 不随公开仓发布。目录内容整体挡住，只放行一份文件名索引（不含正文）。
+/official/*
+!/official/INDEX.md
+
+# emmc 取证原始数据：本机留存，不入库（2026-11-06）
+/PS/psrt&dev/hardware/emmc/data/

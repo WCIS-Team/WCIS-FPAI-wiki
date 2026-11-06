@@ -1,0 +1,69 @@
+﻿
+
+Caption                      : Microsoft Hyper-V 视频
+Description                  : Microsoft Hyper-V 视频
+InstallDate                  : 
+Name                         : Microsoft Hyper-V 视频
+Status                       : OK
+Availability                 : 3
+ConfigManagerErrorCode       : 0
+ConfigManagerUserConfig      : False
+CreationClassName            : Win32_VideoController
+DeviceID                     : VideoController1
+ErrorCleared                 : 
+ErrorDescription             : 
+LastErrorCode                : 
+PNPDeviceID                  : VMBUS\{DA0A7802-E377-4AAC-8E77-0558EB1073F8}\{5620E0C7-8062-4DCE-AEB7-520C7EF76171}
+PowerManagementCapabilities  : 
+PowerManagementSupported     : 
+StatusInfo                   : 
+SystemCreationClassName      : Win32_ComputerSystem
+SystemName                   : WIN11-HV1
+MaxNumberControlled          : 
+ProtocolSupported            : 
+TimeOfLastReset              : 
+AcceleratorCapabilities      : 
+CapabilityDescriptions       : 
+CurrentBitsPerPixel          : 32
+CurrentHorizontalResolution  : 1024
+CurrentNumberOfColors        : 4294967296
+CurrentNumberOfColumns       : 0
+CurrentNumberOfRows          : 0
+CurrentRefreshRate           : 1
+CurrentScanMode              : 4
+CurrentVerticalResolution    : 768
+MaxMemorySupported           : 
+MaxRefreshRate               : 64
+MinRefreshRate               : 64
+NumberOfVideoPages           : 
+VideoMemoryType              : 2
+VideoProcessor               : 
+NumberOfColorPlanes          : 
+VideoArchitecture            : 5
+VideoMode                    : 
+AdapterCompatibility         : Microsoft
+AdapterDACType               : 
+AdapterRAM                   : 
+ColorTableEntries            : 
+DeviceSpecificPens           : 
+DitherType                   : 0
+DriverDate                   : 2006/6/21 8:00:00
+DriverVersion                : 10.0.26100.1150
+ICMIntent                    : 
+ICMMethod                    : 
+InfFilename                  : wvmbusvideo.inf
+InfSection                   : HyperVideo_Install
+InstalledDisplayDrivers      : 
+Monochrome                   : False
+ReservedSystemPaletteEntries : 
+SpecificationVersion         : 
+SystemPaletteEntries         : 
+VideoModeDescription         : 1024 x 768 x 4294967296 种颜色
+PSComputerName               : 
+CimClass                     : root/cimv2:Win32_VideoController
+CimInstanceProperties        : {Caption, Description, InstallDate, Name...}
+CimSystemProperties          : Microsoft.Management.Infrastructure.CimSystemProperties
+
+
+
+

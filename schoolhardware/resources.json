@@ -1,0 +1,229 @@
+﻿{
+    "_meta":  {
+                  "collected_at_local":  "2026-10-20T16:14:00.7796862+08:00",
+                  "collected_at_utc":  "2026-10-20T08:14:00.7955223Z",
+                  "timezone":  "China Standard Time (08:00)",
+                  "collector":  "hw_collect_v2.ps1 (SOP 2 - MOD, corrected re-collection)",
+                  "archive_version":  "1.1",
+                  "tool_powershell":  "5.1.26100.9711",
+                  "tool_wmi_cim":  "Get-CimInstance / Get-ComputerInfo / Get-Volume",
+                  "host":  "WIN11-HV1"
+              },
+    "cpu":  {
+                "count_physical_packages":  1,
+                "manufacturer":  "AuthenticAMD",
+                "name":  "AMD EPYC 9654 96-Core Processor                ",
+                "architecture":  9,
+                "address_width":  64,
+                "num_cores_total":  24,
+                "num_logical_total":  24,
+                "num_available_env":  24,
+                "num_available_dotnet":  24,
+                "max_clock_mhz":  2400,
+                "current_clock_mhz":  2400,
+                "l2_cache_kb":  24576,
+                "l3_cache_kb":  98304,
+                "socket":  "None",
+                "revision":  4353,
+                "family":  107,
+                "virtualization_firmware":  true,
+                "numa_nodes":  0,
+                "source":  "system_report"
+            },
+    "memory":  {
+                   "total_physical_bytes":  134216568832,
+                   "total_physical_gib":  125,
+                   "os_total_visible_bytes":  134216568832,
+                   "os_free_bytes":  113465757696,
+                   "os_free_gib":  105.67,
+                   "module_count":  3,
+                   "modules":  [
+                                   {
+                                       "bank":  "None",
+                                       "locator":  "M0001",
+                                       "capacity_gib":  3.88,
+                                       "speed_mhz":  null,
+                                       "memory_type":  0,
+                                       "manufacturer":  "Microsoft Corporation",
+                                       "part_number":  "None"
+                                   },
+                                   {
+                                       "bank":  "None",
+                                       "locator":  "M0002",
+                                       "capacity_gib":  59.5,
+                                       "speed_mhz":  null,
+                                       "memory_type":  0,
+                                       "manufacturer":  "Microsoft Corporation",
+                                       "part_number":  "None"
+                                   },
+                                   {
+                                       "bank":  "None",
+                                       "locator":  "M0003",
+                                       "capacity_gib":  61.62,
+                                       "speed_mhz":  null,
+                                       "memory_type":  0,
+                                       "manufacturer":  "Microsoft Corporation",
+                                       "part_number":  "None"
+                                   }
+                               ],
+                   "swap_total_bytes":  8589934592,
+                   "swap_total_mib":  8192,
+                   "zram_enabled":  "not_supported",
+                   "cgroup_memory_limit":  "not_applicable",
+                   "cpu_l2_cache_kb":  24576,
+                   "cpu_l3_cache_kb":  98304,
+                   "source":  "system_report"
+               },
+    "storage":  {
+                    "volumes":  [
+                                    {
+                                        "drive":  "C",
+                                        "filesystem":  "NTFS",
+                                        "size_gib":  125.99,
+                                        "free_gib":  15.5,
+                                        "health":  "Healthy"
+                                    },
+                                    {
+                                        "drive":  "D",
+                                        "filesystem":  "NTFS",
+                                        "size_gib":  1999.98,
+                                        "free_gib":  1752.09,
+                                        "health":  "Healthy"
+                                    }
+                                ],
+                    "physical_disks":  [
+                                           {
+                                               "model":  "Virtual Disk",
+                                               "media_type":  "Unspecified",
+                                               "bus_type":  "SAS",
+                                               "size_gib":  127
+                                           },
+                                           {
+                                               "model":  "Virtual Disk",
+                                               "media_type":  "Unspecified",
+                                               "bus_type":  "SAS",
+                                               "size_gib":  2000
+                                           }
+                                       ],
+                    "model_disk_note":  "model/experiment file disk not auto-detected on this guest; record manually if applicable",
+                    "source":  "system_report"
+                },
+    "accelerators":  {
+                         "gpus":  [
+                                      {
+                                          "name":  "Microsoft Hyper-V 视频",
+                                          "adapter_ram_mib":  null,
+                                          "driver_version":  "10.0.26100.1150",
+                                          "driver_date":  "2006-06-21T08:00:00.0000000+08:00",
+                                          "video_processor":  null,
+                                          "pnp_id":  "VMBUS\\{DA0A7802-E377-4AAC-8E77-0558EB1073F8}\\{5620E0C7-8062-4DCE-AEB7-520C7EF76171}",
+                                          "status":  "OK"
+                                      }
+                                  ],
+                         "npu_devices":  [
+
+                                         ],
+                         "fpga_tools":  "not_detected",
+                         "fpga_note":  "FPGA resource figures require vendor tool reports (Vivado/Quartus); none executed per SOP",
+                         "source":  "system_report",
+                         "gpu_passthrough":  false,
+                         "note":  "Only the Hyper-V synthetic video adapter is present; nvidia-smi was not found, so no discrete GPU/NPU passthrough."
+                     },
+    "runtime_limits":  {
+                           "cpu_affinity_current_process":  16777215,
+                           "current_process_threads":  46,
+                           "process_count":  356,
+                           "service_count":  321,
+                           "max_file_descriptors":  "not_applicable",
+                           "background_load_top_cpu":  [
+                                                           {
+                                                               "name":  "WindowsTerminal",
+                                                               "cpu_s":  12733.922,
+                                                               "id":  13540
+                                                           },
+                                                           {
+                                                               "name":  "Life115",
+                                                               "cpu_s":  6082.578,
+                                                               "id":  8048
+                                                           },
+                                                           {
+                                                               "name":  "MSPCManagerService",
+                                                               "cpu_s":  1216.828,
+                                                               "id":  5808
+                                                           },
+                                                           {
+                                                               "name":  "bash",
+                                                               "cpu_s":  981.625,
+                                                               "id":  5804
+                                                           },
+                                                           {
+                                                               "name":  "ssh",
+                                                               "cpu_s":  671.688,
+                                                               "id":  16120
+                                                           },
+                                                           {
+                                                               "name":  "mihomo-windows-amd64-v3",
+                                                               "cpu_s":  414.344,
+                                                               "id":  2268
+                                                           },
+                                                           {
+                                                               "name":  "explorer",
+                                                               "cpu_s":  204.562,
+                                                               "id":  8692
+                                                           },
+                                                           {
+                                                               "name":  "msedgewebview2",
+                                                               "cpu_s":  68.594,
+                                                               "id":  11372
+                                                           }
+                                                       ],
+                           "background_load_top_mem":  [
+                                                           {
+                                                               "name":  "Memory Compression",
+                                                               "ws_mb":  1270,
+                                                               "id":  3096
+                                                           },
+                                                           {
+                                                               "name":  "WindowsTerminal",
+                                                               "ws_mb":  891,
+                                                               "id":  13540
+                                                           },
+                                                           {
+                                                               "name":  "explorer",
+                                                               "ws_mb":  584,
+                                                               "id":  8692
+                                                           },
+                                                           {
+                                                               "name":  "svchost",
+                                                               "ws_mb":  537,
+                                                               "id":  2876
+                                                           },
+                                                           {
+                                                               "name":  "explorer",
+                                                               "ws_mb":  396,
+                                                               "id":  9500
+                                                           },
+                                                           {
+                                                               "name":  "DeepSeek Harness",
+                                                               "ws_mb":  363,
+                                                               "id":  15912
+                                                           },
+                                                           {
+                                                               "name":  "MsMpEng",
+                                                               "ws_mb":  333,
+                                                               "id":  7256
+                                                           },
+                                                           {
+                                                               "name":  "Life115",
+                                                               "ws_mb":  313,
+                                                               "id":  8048
+                                                           }
+                                                       ],
+                           "other_experiments_competing":  "unverified",
+                           "permission_limits":  {
+                                                     "current_user":  "WIN11-HV1\\yizhidi",
+                                                     "is_admin":  false
+                                                 },
+                           "source":  "tool_report"
+                       }
+}

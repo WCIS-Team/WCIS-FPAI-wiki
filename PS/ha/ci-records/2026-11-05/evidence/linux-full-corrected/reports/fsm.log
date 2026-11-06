@@ -1,0 +1,21 @@
+============================================================
+DialogueFSM 单测 —— python 3.8.10
+============================================================
+[ok] wake→listening 
+[ok] speech_end→thinking/run_asr 
+[ok] asr_done 自环且 run_llm 
+[ok] llm_done→speaking/start_tts 
+[ok] tts_done→idle 
+[ok] 已到 speaking 
+[ok] barge_in→listening/stop_tts_and_listen 
+[ok] 非法事件不迁移 
+[ok] listening 下 barge_in 忽略 
+[ok] 任意状态 error→error 
+[ok] error reset→idle 
+[ok] thinking 下 reset→idle 
+[ok] listening 未超时 
+[ok] listening 超时→idle 
+[ok] thinking 超时→error 
+[ok] history 记录迁移 
+------------------------------------------------------------
+通过 16 / 16

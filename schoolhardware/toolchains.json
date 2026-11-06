@@ -1,0 +1,69 @@
+{
+    "_meta":  {
+                  "collected_at_local":  "2026-10-20T16:14:00.7796862+08:00",
+                  "collected_at_utc":  "2026-10-20T08:14:00.7955223Z",
+                  "timezone":  "China Standard Time (08:00)",
+                  "collector":  "hw_collect_v2.ps1 (SOP 2 - MOD, corrected re-collection)",
+                  "archive_version":  "1.1",
+                  "tool_powershell":  "5.1.26100.9711",
+                  "tool_wmi_cim":  "Get-CimInstance / Get-ComputerInfo / Get-Volume",
+                  "host":  "WIN11-HV1"
+              },
+    "msys2":  {
+                  "installed":  true,
+                  "path":  "D:/yzd/MSYS2",
+                  "active_prefix":  "mingw64",
+                  "native_target":  "x86_64-w64-mingw32",
+                  "native_version":  "cc.exe (Rev6, Built by MSYS2 project) 16.2.0\r",
+                  "native_bin":  "D:\\yzd\\MSYS2\\mingw64\\bin\\cc.exe",
+                  "prefixes_scanned":  [
+                                           "clang64",
+                                           "clangarm64",
+                                           "dev",
+                                           "etc",
+                                           "home",
+                                           "installerResources",
+                                           "mingw32",
+                                           "mingw64",
+                                           "opt",
+                                           "tmp",
+                                           "ucrt64",
+                                           "usr",
+                                           "var"
+                                       ],
+                  "prefixes_with_compilers":  ["mingw64"],
+                  "note":  "clang64/clangarm64/mingw32/ucrt64/usr bin dirs exist but contain no gcc/g++/clang/cc/cpp; only mingw64/bin is populated with compilers."
+              },
+    "cross_toolchains":  [
+                             {
+                                 "exe":  "aarch64-none-linux-gnu-gcc.exe",
+                                 "path":  "D:\\yzd\\tools\\cross\\gcc-arm-10.3-2021.07-mingw-w64-i686-aarch64-none-linux-gnu\\bin\\aarch64-none-linux-gnu-gcc.exe",
+                                 "target":  "aarch64-none-linux-gnu"
+                             }
+                         ],
+    "cross_in_path":  false,
+    "build_tools_path":  {
+                             "make":  null,
+                             "cmake":  null,
+                             "ninja":  null,
+                             "meson":  null,
+                             "autoconf":  null,
+                             "automake":  null,
+                             "pkg-config":  null,
+                             "gdb":  null,
+                             "git":  null,
+                             "python":  "C:\\Users\\YiZhidi\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe",
+                             "python3":  "C:\\Users\\YiZhidi\\AppData\\Local\\Microsoft\\WindowsApps\\python3.exe",
+                             "perl":  null,
+                             "go":  null,
+                             "node":  null,
+                             "rustc":  null,
+                             "cargo":  null,
+                             "pacman":  null,
+                             "winget":  "C:\\Users\\YiZhidi\\AppData\\Local\\Microsoft\\WindowsApps\\winget.exe",
+                             "choco":  null
+                         },
+    "package_managers":  [
+                             "winget"
+                         ]
+}

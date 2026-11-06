@@ -1,0 +1,36 @@
+﻿=== MSYS2 compilers (probe by full path) ===
+cc.exe @ D:\yzd\MSYS2\mingw64\bin\cc.exe
+  target=x86_64-w64-mingw32
+  version=cc.exe (Rev6, Built by MSYS2 project) 16.2.0
+cpp.exe @ D:\yzd\MSYS2\mingw64\bin\cpp.exe
+  target=x86_64-w64-mingw32
+  version=cpp.exe (Rev6, Built by MSYS2 project) 16.2.0
+g++.exe @ D:\yzd\MSYS2\mingw64\bin\g++.exe
+  target=x86_64-w64-mingw32
+  version=g++.exe (Rev6, Built by MSYS2 project) 16.2.0
+gcc.exe @ D:\yzd\MSYS2\mingw64\bin\gcc.exe
+  target=x86_64-w64-mingw32
+  version=gcc.exe (Rev6, Built by MSYS2 project) 16.2.0
+=== Cross toolchains (probe by full path) ===
+aarch64-none-linux-gnu-gcc.exe @ D:\yzd\tools\cross\gcc-arm-10.3-2021.07-mingw-w64-i686-aarch64-none-linux-gnu\bin\aarch64-none-linux-gnu-gcc.exe
+  target=aarch64-none-linux-gnu
+=== Build tools on PATH ===
+make = 
+cmake = 
+ninja = 
+meson = 
+autoconf = 
+automake = 
+pkg-config = 
+gdb = 
+git = 
+python = C:\Users\YiZhidi\AppData\Local\Microsoft\WindowsApps\python.exe
+python3 = C:\Users\YiZhidi\AppData\Local\Microsoft\WindowsApps\python3.exe
+perl = 
+go = 
+node = 
+rustc = 
+cargo = 
+pacman = 
+winget = C:\Users\YiZhidi\AppData\Local\Microsoft\WindowsApps\winget.exe
+choco = 

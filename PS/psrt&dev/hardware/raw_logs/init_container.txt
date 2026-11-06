@@ -1,0 +1,9 @@
+### init_container
+cmd: echo 'cgroup1:'; head -3 /proc/1/cgroup 2>/dev/null; echo '---dockerenv:'; ls -la /.dockerenv 2>/dev/null || echo 'no /.dockerenv'; echo '---1.mountinfo:'; grep -E 'docker|kubepods|containerd' /proc/1/mountinfo 2>/dev/null | head -3 || echo 'no container markers'
+---
+cgroup1:
+1:name=systemd:/init.scope
+0::/init.scope
+---dockerenv:
+no /.dockerenv
+---1.mountinfo:

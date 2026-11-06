@@ -1,0 +1,24 @@
+# HA4FPAI performance
+
+Result: **regression**
+
+Comparable measurements
+
+Source: `27b8a1f76cd576d24db478fc9bcab196f9d25caf`; dirty: `True`
+
+| Metric | Baseline | Candidate | Change | Gate |
+|---|---:|---:|---:|---|
+| split-12.chain_ms.p50 | 25.8658 | 26.3305 | +1.80% | observe |
+| split-12.chain_ms.p95 | 33.1872 | 39.6727 | +19.54% | REGRESSION |
+| split-12.first_request_ms.value | 28.3980 | 31.3111 | +10.26% | observe |
+| split-12.split_ms.p50 | 0.0281 | 0.0399 | +41.99% | observe |
+| split-12.split_ms.p95 | 0.1165 | 0.0481 | -58.71% | pass |
+| split-20.chain_ms.p50 | 66.0334 | 60.9102 | -7.76% | observe |
+| split-20.chain_ms.p95 | 71.4125 | 70.6865 | -1.02% | pass |
+| split-20.first_request_ms.value | 241.6471 | 143.4161 | -40.65% | observe |
+| split-20.split_ms.p50 | 0.0356 | 0.0282 | -20.79% | observe |
+| split-20.split_ms.p95 | 0.0843 | 0.0631 | -25.15% | pass |
+
+Negative change means faster for latency; verify the metric's direction for other units.
+A gate fails only when the regression exceeds both its relative and absolute tolerances.
+All raw samples, conditions, source hashes and correctness checks remain in the JSON artifact.

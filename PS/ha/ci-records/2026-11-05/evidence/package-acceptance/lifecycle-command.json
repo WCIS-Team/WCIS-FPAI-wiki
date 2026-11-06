@@ -1,0 +1,5 @@
+{
+  "exit_code": 0,
+  "stdout": "{\"ok\": true, \"report\": \"/workenv/ha4fpai-ci/package-e4f23e04a303/lifecycle.json\", \"checks\": 14}\n",
+  "stderr": ""
+}

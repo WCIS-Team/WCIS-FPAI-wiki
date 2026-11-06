@@ -1,0 +1,298 @@
+{
+  "schema": "wcis.sop2.hardware-archive",
+  "archive_version": "1.0",
+  "document": "system.json",
+  "purpose": "SOP 2 - operating system, kernel, system architecture and resource limits",
+  "collection": {
+    "collected_at_utc": "2026-10-18T21:08:24Z",
+    "board_timezone_offset": "+0000",
+    "supplementary_batches_utc": [
+      "2026-10-20T07:45:38Z",
+      "2026-10-20T07:49:07Z"
+    ],
+    "target_host": "192.168.1.113",
+    "target_user": "root",
+    "transport": "ssh",
+    "method": "read-only shell collection; no config change, no reboot, no service kill, no benchmark"
+  },
+  "tooling": {
+    "transport_client": "PuTTY plink 0.85 (Windows x86_64)",
+    "transfer_client": "PuTTY pscp 0.85",
+    "board_shell": "bash on Ubuntu 20.04.4 userland",
+    "raw_logs_dir": "raw_logs/"
+  },
+  "field_status_legend": {
+    "official_spec": "official vendor specification",
+    "system_report": "value reported by the running operating system",
+    "tool_report": "value reported by a vendor or third-party tool",
+    "measured": "value observed on site during this collection",
+    "unverified": "not cross-checked against a second source",
+    "not_supported": "the platform does not expose the field at all",
+    "not_accessible": "the field exists but could not be read with the privileges used"
+  },
+  "operating_system": {
+    "name": {
+      "value": "Ubuntu",
+      "status": "system_report",
+      "evidence": ["raw_logs/os_release.txt"]
+    },
+    "distribution": {
+      "value": "Ubuntu 20.04.4 LTS (Focal Fossa), codename focal",
+      "status": "system_report",
+      "evidence": ["raw_logs/os_release.txt"]
+    },
+    "architecture": {
+      "value": "aarch64 / arm64",
+      "status": "system_report",
+      "evidence": ["raw_logs/uname.txt", "raw_logs/lscpu.txt", "raw_logs/dmesg_full.txt"]
+    },
+    "base_image": {
+      "value": "vendor SD image (Ubuntu 20.04.4 userland), identical to the /mnt/wcroot snapshot archived in ../board_extract/",
+      "status": "system_report",
+      "note": "hostname, machine-id and os-release in the live board match ../board_extract/26_system_identity.txt exactly",
+      "evidence": ["raw_logs/hostname.txt", "raw_logs/machine_id.txt", "raw_logs/os_release.txt"]
+    },
+    "boot_time": {
+      "value": "up 10:45 at the moment of the first batch (2026-10-18T21:08:24Z); /proc/uptime 38708.70 s idle 154355.11 s",
+      "status": "system_report",
+      "evidence": ["raw_logs/uptime.txt"]
+    },
+    "boot_device": {
+      "value": "root=/dev/mmcblk0p2 (ext4 on the 58.4 GiB SD card)",
+      "status": "system_report",
+      "evidence": ["raw_logs/dmesg_full.txt", "../board_extract/37_boot_uEnv.txt"]
+    },
+    "boot_config": {
+      "value": "console=ttyPS0,115200n8 earlycon=uart8250,mmio32,0xe0004000 loglevel=8 root=/dev/mmcblk0p2 rootwait rw clk_ignore_unused mem=1024M",
+      "status": "system_report",
+      "note": "mem=1024M is what fixes the PS memory window at 1 GiB; clk_ignore_unused suppresses unused-clock warnings",
+      "evidence": ["raw_logs/dmesg_full.txt", "../board_extract/37_boot_uEnv.txt"]
+    },
+    "init_system": {
+      "value": "systemd (PID 1)",
+      "status": "system_report",
+      "evidence": ["raw_logs/ps_snapshot.txt", "raw_logs/dmesg_full.txt"]
+    }
+  },
+  "kernel": {
+    "release": {
+      "value": "5.4.52",
+      "status": "system_report",
+      "evidence": ["raw_logs/uname.txt", "raw_logs/kernel.txt"]
+    },
+    "sdk_version": {
+      "value": "5.4.52-fmsh-sdk-v2025.04",
+      "status": "system_report",
+      "note": "the full build string embedded in the kernel banner; the vendor SDK release is v2025.04",
+      "evidence": ["raw_logs/dmesg_full.txt"]
+    },
+    "build": {
+      "value": "Linux version 5.4.52 (fmsh@fmsh-virtual-machine) (gcc version 7.5.0 (Linaro GCC 7.5-2019.12)) #3 SMP Fri Mar 13 13:44:29 CST 2026",
+      "status": "system_report",
+      "evidence": ["raw_logs/kernel.txt", "raw_logs/dmesg_full.txt"]
+    },
+    "build_date": {
+      "value": "2026-03-13 13:44:29 CST",
+      "status": "system_report",
+      "evidence": ["raw_logs/kernel.txt"]
+    },
+    "toolchain": {
+      "value": "gcc 7.5.0 (Linaro GCC 7.5-2019.12)",
+      "status": "system_report",
+      "note": "the kernel was built with the vendor toolchain; the userspace compiler on the board is Ubuntu gcc 9.4.0 (see software.json)",
+      "evidence": ["raw_logs/kernel.txt"]
+    },
+    "boot_protocol": {
+      "value": "PSCI v1.1, standard v0.2 function IDs, SMC calling convention v1.0",
+      "status": "system_report",
+      "evidence": ["raw_logs/dmesg_full.txt"]
+    },
+    "config_options_of_interest": {
+      "value": "CONFIG_ARM64_VA_BITS / page size 2048 kB huge pages configured; hugetlbfs mounted at /dev/hugepages with pagesize=2M; CMA 256 MiB reserved at 0x30000000; arm64 detected by systemd",
+      "status": "system_report",
+      "evidence": ["raw_logs/dmesg_full.txt", "raw_logs/findmnt.txt", "raw_logs/meminfo.txt"]
+    },
+    "console": {
+      "value": "ttyPS0, 115200 8N1",
+      "status": "system_report",
+      "evidence": ["raw_logs/dmesg_full.txt", "../board_extract/37_boot_uEnv.txt"]
+    }
+  },
+  "containerisation": {
+    "container_runtime": {
+      "value": "none",
+      "status": "measured",
+      "evidence": ["raw_logs/init_container.txt"]
+    },
+    "container_image": {
+      "value": "not_applicable",
+      "status": "measured"
+    },
+    "markers_checked": {
+      "value": "/.dockerenv absent; no docker/kubepods/containerd entries in /proc/1/mountinfo; PID 1 cgroup is /init.scope",
+      "status": "measured",
+      "evidence": ["raw_logs/init_container.txt"]
+    },
+    "implication": {
+      "value": "all values in this archive describe the bare board itself, not a container view. There is no host layer to distinguish from.",
+      "status": "measured"
+    }
+  },
+  "privilege_context": {
+    "user": {
+      "value": "root (uid 0)",
+      "status": "system_report",
+      "evidence": ["raw_logs/dev_list.txt", "raw_logs/ps_snapshot.txt"]
+    },
+    "accessible_scope": {
+      "value": "full read access to /proc, /sys, /dev and the root filesystem; no access was refused by permissions during collection",
+      "status": "measured",
+      "note": "the few fields that came back empty are absent from the platform, not blocked by permissions"
+    },
+    "other_accounts_on_board": {
+      "value": "one non-root user 'fmsh' (uid 1000) exists in /etc/passwd",
+      "status": "system_report",
+      "note": "read from the archived image snapshot, not re-read live; no credential material was collected",
+      "evidence": ["../board_extract/26_system_identity.txt"]
+    }
+  },
+  "resource_limits": {
+    "cgroup_memory_limit": {
+      "value": "none",
+      "status": "measured",
+      "note": "neither the cgroup v1 nor the cgroup v2 memory.max / memory.high files exist; the process sits in systemd scope user-0.slice/session-N.scope with no memory ceiling",
+      "evidence": ["raw_logs/cgroup_self.txt", "raw_logs/cgroup_v2.txt", "raw_logs/findmnt.txt"]
+    },
+    "cgroup_cpu_limit": {
+      "value": "none",
+      "status": "measured",
+      "note": "no cgroup cpu.max / cpu.cfs_quota_us; no cpufreq either, so there is no quota and no frequency scaling on this board",
+      "evidence": ["raw_logs/cgroup_v2.txt", "raw_logs/cpu_freq.txt"]
+    },
+    "cgroup_pids_limit": {
+      "value": "none",
+      "status": "measured",
+      "evidence": ["raw_logs/cgroup_v2.txt"]
+    },
+    "cpu_affinity": {
+      "value": "not_applicable - no affinity mask was set for the collection session, and no cpuset restriction exists",
+      "status": "measured",
+      "note": "the cgroup cpuset controller is not present in /proc/self/cgroup",
+      "evidence": ["raw_logs/cgroup_self.txt", "raw_logs/cgroup_v2.txt"]
+    },
+    "ulimit_open_files": {
+      "soft": 1024,
+      "hard": 1048576,
+      "status": "system_report",
+      "evidence": ["raw_logs/ulimit.txt", "raw_logs/fd_limit.txt"]
+    },
+    "ulimit_max_processes": {
+      "soft": 2948,
+      "hard": 2948,
+      "status": "system_report",
+      "evidence": ["raw_logs/ulimit.txt", "raw_logs/fd_limit.txt"]
+    },
+    "ulimit_max_locked_memory": {
+      "value_bytes": 67108864,
+      "status": "system_report",
+      "evidence": ["raw_logs/fd_limit.txt"]
+    },
+    "ulimit_stack_size": {
+      "value_bytes": 8388608,
+      "status": "system_report",
+      "evidence": ["raw_logs/fd_limit.txt"]
+    },
+    "kernel_file_max": {
+      "value": 9223372036854775807,
+      "status": "system_report",
+      "evidence": ["raw_logs/fd_limit.txt"]
+    },
+    "kernel_threads_max": {
+      "value": 5897,
+      "status": "system_report",
+      "evidence": ["raw_logs/nproc_limits.txt"]
+    },
+    "kernel_pid_max": {
+      "value": 4194304,
+      "status": "system_report",
+      "evidence": ["raw_logs/nproc_limits.txt"]
+    },
+    "net_somaxconn": {
+      "value": 4096,
+      "status": "system_report",
+      "evidence": ["raw_logs/nproc_limits.txt"]
+    },
+    "shared_memory_shm": {
+      "value": "tmpfs on /dev/shm, 497 MiB (half of RAM), 72 KiB used at the time of batch 3",
+      "status": "measured",
+      "evidence": ["raw_logs/hugepages.txt", "raw_logs/df.txt"]
+    },
+    "hugepages": {
+      "value": "size classes registered (64kB, 2048kB, 32768kB, 1048576kB) but no huge page is preallocated (free = 0 in every class)",
+      "status": "measured",
+      "evidence": ["raw_logs/hugepages.txt", "raw_logs/meminfo.txt"]
+    },
+    "cma": {
+      "total": "256 MiB reserved at physical 0x30000000",
+      "free_kb": 130784,
+      "status": "system_report",
+      "note": "the u-dma-buf driver carved a 128 MiB buffer out of the CMA pool (phys 0x30100000, size 134217728) for the NPU DMA path",
+      "evidence": ["raw_logs/dmesg_full.txt", "raw_logs/dmesg_accel.txt", "raw_logs/meminfo.txt"]
+    }
+  },
+  "network_configuration": {
+    "interface": {
+      "value": "eth0, MAC ae:59:f4:2d:3a:99, MTU 1500, state UP, carrier 1, qdisc mq",
+      "status": "measured",
+      "evidence": ["raw_logs/net_link.txt", "raw_logs/net_sysfs.txt"]
+    },
+    "ipv4": {
+      "value": "192.168.1.113/24",
+      "status": "measured",
+      "evidence": ["raw_logs/net_addr.txt"]
+    },
+    "ipv6": {
+      "value": "fe80::ac59:f4:ff:fe2d:3a99/64 (link-local only)",
+      "status": "measured",
+      "evidence": ["raw_logs/net_addr.txt"]
+    },
+    "default_route": {
+      "value": "via 192.168.1.1 dev eth0; on-link route 192.168.1.0/24",
+      "status": "measured",
+      "evidence": ["raw_logs/net_route.txt"]
+    },
+    "dns": {
+      "value": "systemd-resolved stub resolver on 127.0.0.53 (no upstream server listed in /etc/resolv.conf)",
+      "status": "measured",
+      "evidence": ["raw_logs/net_route.txt"]
+    },
+    "other_interfaces": {
+      "value": "can0 (down), sit0 (IPv6 tunnel, down), lo",
+      "status": "measured",
+      "evidence": ["raw_logs/net_link.txt"]
+    },
+    "link_negotiation": {
+      "value": "100 Mb/s Full Duplex, MII, auto-negotiation on, link detected yes",
+      "status": "measured",
+      "note": "the driver logged 'Link is Up - 100Mbps/Full - flow control rx/tx' at boot. 1000baseT is supported and advertised by the MAC, but the link partner advertises only 10/100.",
+      "evidence": ["raw_logs/net_ethtool.txt", "raw_logs/dmesg_full.txt"]
+    }
+  },
+  "time_and_clock": {
+    "board_timezone": {
+      "value": "+0000 (board clock runs in UTC)",
+      "status": "measured",
+      "evidence": ["raw_logs/collect_time.txt", "raw_logs/collect_tz.txt"]
+    },
+    "clocksource": {
+      "value": "arch_sys_counter",
+      "status": "system_report",
+      "evidence": ["raw_logs/cpu_clock.txt", "raw_logs/clocksource.txt"]
+    },
+    "ntp_state": {
+      "value": "unknown",
+      "status": "unverified",
+      "note": "systemd-timesyncd is present in the image, but synchronisation state was not queried"
+    }
+  }
+}

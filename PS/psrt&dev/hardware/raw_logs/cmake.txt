@@ -1,0 +1,4 @@
+### cmake
+cmd: cmake --version 2>&1 | head -1 || echo 'cmake na'
+---
+cmake version 3.16.3

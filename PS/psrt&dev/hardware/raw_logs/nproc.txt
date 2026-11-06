@@ -1,0 +1,4 @@
+### nproc
+cmd: nproc
+---
+4

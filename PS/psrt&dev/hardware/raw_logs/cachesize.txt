@@ -1,0 +1,10 @@
+### cachesize
+cmd: for c in /sys/devices/system/cpu/cpu0/cache/index*/size /sys/devices/system/cpu/cpu0/cache/index*/level /sys/devices/system/cpu/cpu0/cache/index*/type; do echo -n "$c: "; cat $c 2>/dev/null || echo na; done
+---
+/sys/devices/system/cpu/cpu0/cache/index*/size: na
+/sys/devices/system/cpu/cpu0/cache/index0/level: 1
+/sys/devices/system/cpu/cpu0/cache/index1/level: 1
+/sys/devices/system/cpu/cpu0/cache/index2/level: 2
+/sys/devices/system/cpu/cpu0/cache/index0/type: Data
+/sys/devices/system/cpu/cpu0/cache/index1/type: Instruction
+/sys/devices/system/cpu/cpu0/cache/index2/type: Unified

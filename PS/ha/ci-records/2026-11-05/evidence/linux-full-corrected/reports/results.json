@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "profile": "full",
+  "environment": {
+    "device_id": "549b9500faeb",
+    "system": "Linux",
+    "architecture": "x86_64",
+    "python": "3.8.10",
+    "implementation": "CPython",
+    "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+    "cpus": 16
+  },
+  "source": {
+    "commit": null,
+    "dirty": null
+  },
+  "checks": [
+    {
+      "id": "source-validation",
+      "status": "passed",
+      "files": 73,
+      "seconds": 2.2250166070007253
+    },
+    {
+      "id": "contracts",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 2.99474969599396,
+      "log": "contracts.log",
+      "message": "",
+      "test_methods": 7
+    },
+    {
+      "id": "infrastructure",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.7704365179961314,
+      "log": "infrastructure.log",
+      "message": "",
+      "test_methods": 7
+    },
+    {
+      "id": "split",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.4826004980131984,
+      "log": "split.log",
+      "message": "",
+      "test_methods": null
+    },
+    {
+      "id": "fsm",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.0665267309959745,
+      "log": "fsm.log",
+      "message": "",
+      "test_methods": null
+    },
+    {
+      "id": "npu-lifecycle",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 7.999573825989501,
+      "log": "npu-lifecycle.log",
+      "message": "",
+      "test_methods": null
+    },
+    {
+      "id": "npu-adapter",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 2.3761971130006714,
+      "log": "npu-adapter.log",
+      "message": "",
+      "test_methods": null
+    },
+    {
+      "id": "npu-q3-adapter",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 4.9488746040005935,
+      "log": "npu-q3-adapter.log",
+      "message": "",
+      "test_methods": null
+    },
+    {
+      "id": "host-soak",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.41743546599172987,
+      "log": "host-soak.log",
+      "message": "",
+      "test_methods": null
+    },
+    {
+      "id": "calibration",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 6.616195864000474,
+      "log": "calibration.log",
+      "message": "",
+      "test_methods": null
+    }
+  ]
+}

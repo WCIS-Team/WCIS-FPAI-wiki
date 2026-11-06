@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "collected_at_local": "2026-10-19T00:42:25.6946215+08:00",
+    "collected_at_utc": "2026-10-18T16:42:25.6946215Z",
+    "timezone": "China Standard Time (08:00:00)",
+    "collector": "hw_collect.ps1 (SOP 2 - MOD)",
+    "archive_version": "1.0",
+    "tool_powershell": "5.1.26100.9711",
+    "tool_wmi_cim": "Get-CimInstance / Get-ComputerInfo",
+    "host": "Win11-HV1",
+    "os_caption": "Microsoft Windows 11 专业工作站版"
+  },
+  "software": {
+    "python": {
+      "command": "python / python3",
+      "path": "C:\\Users\\YiZhidi\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe (Windows Store redirector)",
+      "version": null,
+      "note": "Only the Microsoft Store redirector stub is on PATH; no real Python interpreter is installed. Not usable for collection/benchmarks."
+    },
+    "pip_packages": "not_found",
+    "cpp_compiler": "not_found",
+    "msys2_gcc": "not_installed_at_D:/yzd/MSYS2/usr/bin",
+    "msys2_gpp": "not_installed_at_D:/yzd/MSYS2/usr/bin",
+    "package_managers": [
+      "pip(none)"
+    ],
+    "cuda": "not_found",
+    "dotnet": 533509,
+    "inference_frameworks": {},
+    "env_relevant": {
+      "CUDA_VISIBLE_DEVICES": null,
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "PYTHONPATH": null,
+      "CONDA_DEFAULT_ENV": null
+    },
+    "source": "tool_report"
+  }
+}

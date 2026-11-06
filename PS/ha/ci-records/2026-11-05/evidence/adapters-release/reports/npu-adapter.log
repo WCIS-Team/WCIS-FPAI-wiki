@@ -1,0 +1,14 @@
+PASS  ERNIE adapter reaches ready through the real worker path
+PASS  info carries the engine's geometry (attribute names match e41_chatd)
+PASS  info reports the 现役 policy numbers
+PASS  the imported engine is the stub, seen through the paths its env resolved
+PASS  generate answers the daemon's end object
+PASS  the end event is not duplicated into the stream
+PASS  a bare request reaches the engine as the 现役 configuration
+PASS  defaults from the registry reach the engine when the request omits them
+PASS  text in is encoded board-side (e41_tok) and answered with ids + text
+PASS  params override the env that e41_chatd reads at import
+PASS  max_slots raises the policy gate (task #24's entry point)
+PASS  the engine was actually called with those settings
+
+12 checks passed, 0 failed

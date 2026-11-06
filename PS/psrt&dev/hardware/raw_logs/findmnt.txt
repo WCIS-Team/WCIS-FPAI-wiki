@@ -1,0 +1,21 @@
+### findmnt
+cmd: findmnt
+---
+TARGET                       SOURCE         FSTYPE    OPTIONS
+/                            /dev/mmcblk0p2 ext4      rw,relatime
+|-/dev                       devtmpfs       devtmpfs  rw,relatime,size=377460k,nr_inodes=94365,mode=755
+| |-/dev/shm                 tmpfs          tmpfs     rw,nosuid,nodev
+| |-/dev/pts                 devpts         devpts    rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000
+| |-/dev/mqueue              mqueue         mqueue    rw,nosuid,nodev,noexec,relatime
+| `-/dev/hugepages           hugetlbfs      hugetlbfs rw,relatime,pagesize=2M
+|-/sys                       sysfs          sysfs     rw,nosuid,nodev,noexec,relatime
+| |-/sys/fs/cgroup           tmpfs          tmpfs     ro,nosuid,nodev,noexec,mode=755
+| | |-/sys/fs/cgroup/unified cgroup2        cgroup2   rw,nosuid,nodev,noexec,relatime,nsdelegate
+| | `-/sys/fs/cgroup/systemd cgroup         cgroup    rw,nosuid,nodev,noexec,relatime,xattr,name=systemd
+| |-/sys/kernel/debug        debugfs        debugfs   rw,nosuid,nodev,noexec,relatime
+| `-/sys/kernel/config       configfs       configfs  rw,nosuid,nodev,noexec,relatime
+|-/proc                      proc           proc      rw,nosuid,nodev,noexec,relatime
+|-/run                       tmpfs          tmpfs     rw,nosuid,nodev,size=101772k,mode=755
+| |-/run/lock                tmpfs          tmpfs     rw,nosuid,nodev,noexec,relatime,size=5120k
+| `-/run/user/0              tmpfs          tmpfs     rw,nosuid,nodev,relatime,size=101768k,mode=700
+`-/mnt/wcis-emmc             /dev/mmcblk1p1 ext4      rw,nosuid,nodev,noexec,noatime,errors=remount-ro

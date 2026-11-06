@@ -1,0 +1,11 @@
+{
+  "command": [
+    "podman",
+    "cp",
+    "zgbuild:/workenv/ha4fpai-ci/full",
+    "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full-corrected\\reports"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

@@ -1,0 +1,4 @@
+### lspci
+cmd: lspci 2>/dev/null || echo 'lspci not installed (not_supported)'
+---
+lspci not installed (not_supported)

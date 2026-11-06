@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "input_unchanged": true,
+  "checks": [
+    {
+      "id": "paired",
+      "expected": 0,
+      "actual": 0,
+      "stdout": "# HA4FPAI performance\n\nResult: **passed**\n\nComparable measurements\n\nSource: `None`; dirty: `None`\n\n| Metric | Baseline | Candidate | Change | Gate |\n|---|---:|---:|---:|---|\n| process.peak_rss_kib.value | 52604.0000 | 52500.0000 | -0.20% | observe |\n| split-12.chain_ms.p50 | 56.2910 | 56.3934 | +0.18% | observe |\n| split-12.chain_ms.p95 | 69.8038 | 66.5276 | -4.69% | pass |\n| split-12.first_request_ms.value | 54.0898 | 70.6818 | +30.67% | observe |\n| split-12.split_ms.p50 | 0.0534 | 0.0535 | +0.05% | observe |\n| split-12.split_ms.p95 | 0.0924 | 0.0745 | -19.45% | pass |\n| split-20-16k.chain_ms.p50 | 55.5318 | 51.7465 | -6.82% | observe |\n| split-20-16k.chain_ms.p95 | 75.9464 | 70.6401 | -6.99% | pass |\n| split-20-16k.first_request_ms.value | 56.5230 | 46.8911 | -17.04% | observe |\n| split-20-16k.split_ms.p50 | 0.0503 | 0.0500 | -0.57% | observe |\n| split-20-16k.split_ms.p95 | 0.0720 | 0.0744 | +3.41% | pass |\n| split-20.chain_ms.p50 | 156.2358 | 111.1907 | -28.83% | observe |\n| split-20.chain_ms.p95 | 241.2691 | 179.2383 | -25.71% | pass |\n| split-20.first_request_ms.value | 318.0718 | 346.0392 | +8.79% | observe |\n| split-20.split_ms.p50 | 0.0659 | 0.0549 | -16.59% | observe |\n| split-20.split_ms.p95 | 0.1508 | 0.0907 | -39.84% | pass |\n\nNegative change means faster for latency; verify the metric's direction for other units.\nA gate fails only when the regression exceeds both its relative and absolute tolerances.\nAll raw samples, conditions, source hashes and correctness checks remain in the JSON artifact.\n\n",
+      "stderr": ""
+    },
+    {
+      "id": "regression",
+      "expected": 1,
+      "actual": 1,
+      "stdout": "# HA4FPAI performance\n\nResult: **regression**\n\nSource fingerprints are unchanged; assess runtime/load variation before attributing the measured regression to code\n\nSource: `None`; dirty: `None`\n\n| Metric | Baseline | Candidate | Change | Gate |\n|---|---:|---:|---:|---|\n| process.peak_rss_kib.value | 52604.0000 | 52500.0000 | -0.20% | observe |\n| split-12.chain_ms.p50 | 56.2910 | 169.8730 | +201.78% | observe |\n| split-12.chain_ms.p95 | 69.8038 | 210.4114 | +201.43% | REGRESSION |\n| split-12.first_request_ms.value | 54.0898 | 70.6818 | +30.67% | observe |\n| split-12.split_ms.p50 | 0.0534 | 1.1603 | +2071.03% | observe |\n| split-12.split_ms.p95 | 0.0924 | 1.2773 | +1281.84% | REGRESSION |\n| split-20-16k.chain_ms.p50 | 55.5318 | 167.5955 | +201.80% | observe |\n| split-20-16k.chain_ms.p95 | 75.9464 | 228.8393 | +201.32% | REGRESSION |\n| split-20-16k.first_request_ms.value | 56.5230 | 46.8911 | -17.04% | observe |\n| split-20-16k.split_ms.p50 | 0.0503 | 1.1510 | +2186.69% | observe |\n| split-20-16k.split_ms.p95 | 0.0720 | 1.2159 | +1589.55% | REGRESSION |\n| split-20.chain_ms.p50 | 156.2358 | 469.7073 | +200.64% | observe |\n| split-20.chain_ms.p95 | 241.2691 | 724.8072 | +200.41% | REGRESSION |\n| split-20.first_request_ms.value | 318.0718 | 346.0392 | +8.79% | observe |\n| split-20.split_ms.p50 | 0.0659 | 1.1976 | +1718.27% | observe |\n| split-20.split_ms.p95 | 0.1508 | 1.4524 | +863.10% | REGRESSION |\n\nNegative change means faster for latency; verify the metric's direction for other units.\nA gate fails only when the regression exceeds both its relative and absolute tolerances.\nAll raw samples, conditions, source hashes and correctness checks remain in the JSON artifact.\n\n",
+      "stderr": ""
+    },
+    {
+      "id": "incomparable",
+      "expected": 2,
+      "actual": 2,
+      "stdout": "# HA4FPAI performance\n\nResult: **incomparable**\n\nConditions differ: environment\n\nSource: `None`; dirty: `None`\n\n| Metric | Baseline | Candidate | Change | Gate |\n|---|---:|---:|---:|---|\n| process.peak_rss_kib.value | �� | 52500.0000 | �� | not comparable |\n| split-12.chain_ms.p50 | �� | 56.3934 | �� | not comparable |\n| split-12.chain_ms.p95 | �� | 66.5276 | �� | not comparable |\n| split-12.first_request_ms.value | �� | 70.6818 | �� | not comparable |\n| split-12.split_ms.p50 | �� | 0.0535 | �� | not comparable |\n| split-12.split_ms.p95 | �� | 0.0745 | �� | not comparable |\n| split-20-16k.chain_ms.p50 | �� | 51.7465 | �� | not comparable |\n| split-20-16k.chain_ms.p95 | �� | 70.6401 | �� | not comparable |\n| split-20-16k.first_request_ms.value | �� | 46.8911 | �� | not comparable |\n| split-20-16k.split_ms.p50 | �� | 0.0500 | �� | not comparable |\n| split-20-16k.split_ms.p95 | �� | 0.0744 | �� | not comparable |\n| split-20.chain_ms.p50 | �� | 111.1907 | �� | not comparable |\n| split-20.chain_ms.p95 | �� | 179.2383 | �� | not comparable |\n| split-20.first_request_ms.value | �� | 346.0392 | �� | not comparable |\n| split-20.split_ms.p50 | �� | 0.0549 | �� | not comparable |\n| split-20.split_ms.p95 | �� | 0.0907 | �� | not comparable |\n\nNegative change means faster for latency; verify the metric's direction for other units.\nA gate fails only when the regression exceeds both its relative and absolute tolerances.\nAll raw samples, conditions, source hashes and correctness checks remain in the JSON artifact.\n\n",
+      "stderr": ""
+    },
+    {
+      "id": "no-baseline",
+      "expected": 0,
+      "actual": 0,
+      "stdout": "# HA4FPAI performance\n\nResult: **no-baseline**\n\nMeasured candidate; no speedup claim without a baseline\n\nSource: `None`; dirty: `None`\n\n| Metric | Baseline | Candidate | Change | Gate |\n|---|---:|---:|---:|---|\n| process.peak_rss_kib.value | �� | 52500.0000 | �� | no baseline |\n| split-12.chain_ms.p50 | �� | 56.3934 | �� | no baseline |\n| split-12.chain_ms.p95 | �� | 66.5276 | �� | no baseline |\n| split-12.first_request_ms.value | �� | 70.6818 | �� | no baseline |\n| split-12.split_ms.p50 | �� | 0.0535 | �� | no baseline |\n| split-12.split_ms.p95 | �� | 0.0745 | �� | no baseline |\n| split-20-16k.chain_ms.p50 | �� | 51.7465 | �� | no baseline |\n| split-20-16k.chain_ms.p95 | �� | 70.6401 | �� | no baseline |\n| split-20-16k.first_request_ms.value | �� | 46.8911 | �� | no baseline |\n| split-20-16k.split_ms.p50 | �� | 0.0500 | �� | no baseline |\n| split-20-16k.split_ms.p95 | �� | 0.0744 | �� | no baseline |\n| split-20.chain_ms.p50 | �� | 111.1907 | �� | no baseline |\n| split-20.chain_ms.p95 | �� | 179.2383 | �� | no baseline |\n| split-20.first_request_ms.value | �� | 346.0392 | �� | no baseline |\n| split-20.split_ms.p50 | �� | 0.0549 | �� | no baseline |\n| split-20.split_ms.p95 | �� | 0.0907 | �� | no baseline |\n\nNegative change means faster for latency; verify the metric's direction for other units.\nA gate fails only when the regression exceeds both its relative and absolute tolerances.\nAll raw samples, conditions, source hashes and correctness checks remain in the JSON artifact.\n\n",
+      "stderr": ""
+    },
+    {
+      "id": "parameters",
+      "expected": 0,
+      "actual": 0,
+      "stdout": "# HA4FPAI performance\n\nResult: **passed**\n\nDeployed configuration changed; explicitly accepted for this experiment; parameter tradeoff with identical input and source; inspect chunk count and audio duration\n\nSource: `None`; dirty: `None`\n\n| Metric | Baseline | Candidate | Change | Gate |\n|---|---:|---:|---:|---|\n| chain_ms.p50 | 56.3934 | 51.7465 | -8.24% | observe |\n| chain_ms.p95 | 66.5276 | 70.6401 | +6.18% | pass |\n| first_request_ms.value | 70.6818 | 46.8911 | -33.66% | observe |\n| split_ms.p50 | 0.0535 | 0.0500 | -6.40% | observe |\n| split_ms.p95 | 0.0745 | 0.0744 | -0.05% | pass |\n\nNegative change means faster for latency; verify the metric's direction for other units.\nA gate fails only when the regression exceeds both its relative and absolute tolerances.\nAll raw samples, conditions, source hashes and correctness checks remain in the JSON artifact.\n\n## Parameter experiment\n\nMock TTS duration depends on chunking. This comparison shows parameter cost and output size, not speech quality.\n\n| Condition/output | Baseline | Candidate |\n|---|---|---|\n| parameters | {'id': 'split-12', 'max_chars': 12, 'out_rate': 16000} | {'id': 'split-20-16k', 'max_chars': 20, 'out_rate': 16000} |\n| chunks | 6 | 4 |\n| frames | 79678 | 70079 |\n| audio_rate | 16000 | 16000 |\n\n",
+      "stderr": ""
+    },
+    {
+      "id": "refuse-overwrite",
+      "expected": 2,
+      "actual": 2,
+      "stdout": "",
+      "stderr": "usage: report.py [-h] --candidate CANDIDATE [--baseline BASELINE]\n                 [--config CONFIG] [--gates GATES] [--allow-config-change]\n                 --output OUTPUT\nreport.py: error: Report output would overwrite an input file; choose a different prefix\n"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "command": [
+    "podman",
+    "exec",
+    "wcis-py38",
+    "python3",
+    "-I",
+    "-B",
+    "-X",
+    "utf8",
+    "/work/repos/HA4FPAI/ci/run.py",
+    "--profile",
+    "full",
+    "--output",
+    "/workenv/ha4fpai-ci/full"
+  ],
+  "exit_code": 0,
+  "stdout": "Validated 74 Python files against Python 3.8 grammar\nPASSED contracts (5.54s)\nPASSED infrastructure (1.02s)\nPASSED split (0.68s)\nPASSED fsm (0.12s)\nPASSED npu-lifecycle (8.30s)\nPASSED host-soak (0.77s)\nPASSED calibration (11.77s)\nCI full: passed; /workenv/ha4fpai-ci/full\n",
+  "stderr": ""
+}

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/mnt/s/work/WCIS/repos/HA4FPAI/lang/npuserv/tests/adapter_stub_check.py", line 32, in <module>
+    import e41_tok                                       # noqa: E402  (verifies the board tokenizer on PC)
+ModuleNotFoundError: No module named 'e41_tok'

@@ -1,0 +1,22 @@
+### dt_serial
+cmd: for p in serial-number model board-name; do echo -n "$p: "; cat /proc/device-tree/$p 2>/dev/null | tr '\0' ' '; echo; done; echo '---dt root:'; ls /proc/device-tree/ 2>/dev/null | head -40
+---
+serial-number: 
+model: FMQLMP FMQL100TAI 
+board-name: 
+---dt root:
+#address-cells
+#size-cells
+aliases
+amba-apu@0
+chosen
+compatible
+cpus
+dcc
+idle-states
+memory@0
+model
+name
+psci
+timer
+udmabuf@0

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<title>校机边缘 AI 全栈基准大盘（TTS/ASR/FunASR/LLM/人脸识别 · CPU-only · 中英混语专项）</title>
+<style>
+ body{font-family:'Segoe UI','Microsoft YaHei',sans-serif;margin:0;background:#f5f7fb;color:#1c2733}
+ .wrap{max-width:1280px;margin:0 auto;padding:28px 20px 60px}
+ h1{font-size:26px;margin:8px 0 4px} h2{font-size:18px;color:#2a4d8f;border-left:4px solid #4a7cf7;padding-left:10px;margin:34px 0 14px}
+ h3{font-size:16px;color:#173a63;margin:26px 0 8px}
+ .sub{font-size:11px;color:#76869b;font-weight:400}
+ .hint{font-size:12.5px;color:#5a6b82;background:#eef3fb;border-radius:6px;padding:8px 12px;line-height:1.6}
+ .env{background:#fff;border:1px solid #dde6f5;border-radius:10px;padding:14px 18px;font-size:13.5px;line-height:1.8;margin:14px 0}
+ table{border-collapse:collapse;width:100%;background:#fff;font-size:12.8px;margin:10px 0 6px;box-shadow:0 1px 4px rgba(30,60,120,.08);border-radius:8px;overflow:hidden}
+ th{background:#2a4d8f;color:#fff;padding:8px 7px;text-align:left;font-weight:600;font-size:12px}
+ td{padding:7px;border-bottom:1px solid #e8eef7;vertical-align:top}
+ tr:nth-child(even) td{background:#f8fafd}
+ .na{color:#b9c4d4} .note{font-size:11.5px;color:#6b7c94}
+ .card{background:#fff;border-radius:10px;padding:14px 18px;margin:14px 0;border:1px solid #dde6f5}
+ .bar{background:#eef2f9;border-radius:4px;height:12px;min-width:30px;display:inline-block;vertical-align:middle}
+ .barfill{height:12px;border-radius:4px}
+ .kpis{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0}
+ .kpi{flex:1;min-width:180px;background:#fff;border:1px solid #dde6f5;border-radius:10px;padding:12px 16px}
+ .kpi b{font-size:22px;color:#2a4d8f;display:block} .kpi span{font-size:12px;color:#5a6b82}
+ .badge{display:inline-block;background:#e6f4ea;color:#1e7d45;border-radius:20px;padding:1px 10px;font-size:11.5px;font-weight:600}
+ .badge.warn{background:#fdf0e3;color:#b35c1a}
+</style></head><body><div class="wrap">
+<h1>校机边缘 AI 全栈基准大盘</h1>
+<div class="sub">实时 TTS · 常见 ASR · FunASR 组合矩阵 · &lt;1B 边缘 LLM · 人脸识别（MobileFaceNet+ArcFace） — 全部仅 CPU 实测，中英混语专项</div>
+<div class="env">
+<p><b>测试机</b>：校机 Win11-HV1 · AMD EPYC 9654（24 逻辑核 @2.4GHz 基频）· 125GB RAM · 仅 CPU（禁用 GPU）· D 盘 1.8TB
+<b>· 测试集</b>：24 条 16k 标准音频（纯中 8 / 纯英 8 / 中英夹杂 8，总时长 77.78s，TTS 按基准文本合成，形成 文本→音频→转写→CER/WER 闭环）+ 8 题中英混语 LLM 问答集 + 人脸识别素材（face_a/b/c 证件照、AI 合成人脸、街道场景，1080p/640p 双档）
+<b>· 线程扫描</b>：每单元独立进程多档实测（TTS/ASR/FunASR/LLM T∈{1,2,4,8,24}，人脸识别 T∈{1,2,4,8}），canonical=4 线程（人脸识别 8 线程）
+<b>· 日期</b>：2026-10-12</p></div>
+<div class="kpis">
+ <div class="kpi"><b>35</b><span>被测单元（TTS 11 / sherpa-onnx ASR 6 / FunASR 10 / LLM 7 / 人脸识别 1，另 CosyVoice 1 单元如实记录失败）</span></div>
+ <div class="kpi"><b>174</b><span>线程档位 × 单元实测（多数 T∈{1,2,4,8,24}，人脸识别 T∈{1,2,4,8}，每档含内存/CPU 采样）</span></div>
+ <div class="kpi"><b>3 类</b><span>中英混语测试集：纯中 8 / 纯英 8 / 中英夹杂 8，正确率可计算（CER/WER/hyCER 闭环）</span></div>
+ <div class="kpi"><b>7/7</b><span>边缘 LLM 在 -c 2048 下峰值工作集均 &lt;2GB（最紧：Llama-3.2-1B = 1.29GB）</span></div>
+</div>
+<h3>① 实时 TTS（sherpa-onnx / MeloTTS / ChatTTS，CPU-only，24 条全集）</h3>
+<p class="hint">指标：<b>syn_rtf</b>=音频时长/墙钟（&gt;1 即快于实时，越大越快；&lt;1 即慢于实时，如实报告）；加载时间=进程内首次加载耗时；内存=实测进程峰值工作集（GetProcessMemoryInfo 口径）。速比=T 档相对单线程。4c_2.0 列为估算值（口径见 §5）。</p>
+<table><thead><tr><th>单元（语言）</th><th>模型大小</th><th>加载</th><th>加载增量</th><th>峰值WS</th><th>syn_rtf<br>@4T</th><th>单线程<br>基线</th><th>加速比<br>4/8/24T</th><th>估算<br>4c2.0G</th><th>备注</th></tr></thead>
+<tbody><tr>
+<td><b>fanchen_c</b><br><span class="sub">sherpa-onnx-vits-zh-hf-fanchen-C</span></td>
+<td>131 MB</td>
+<td>1.550 s</td>
+<td>174 MB</td>
+<td>311 MB</td>
+<td>5.18×</td>
+<td>1.78×</td>
+<td>3.08 / 4.49 / 3.96</td>
+<td>4.57×</td>
+<td class="note"></td></tr><tr>
+<td><b>vctk</b><br><span class="sub">sherpa-onnx-vits-vctk</span></td>
+<td>119 MB</td>
+<td>1.715 s</td>
+<td>175 MB</td>
+<td>270 MB</td>
+<td>5.10×</td>
+<td>1.68×</td>
+<td>3.13 / 4.67 / 3.44</td>
+<td>4.36×</td>
+<td class="note">benign lexicon 'Unknown token' warnings observed, non-fatal.</td></tr><tr>
+<td><b>melo</b><br><span class="sub">sherpa-onnx-vits-melo-tts-zh_en</span></td>
+<td>182 MB</td>
+<td>4.667 s</td>
+<td>283 MB</td>
+<td>422 MB</td>
+<td>4.29×</td>
+<td>1.45×</td>
+<td>3.06 / 4.51 / 4.04</td>
+<td>3.69×</td>
+<td class="note">Mixed-language key unit: melo-zh_en synthesizes zh+en+code-mixed text; English words produced audio (qualitative; no acoustic CER available offline).</td></tr><tr>
+<td><b>aishell3</b><br><span class="sub">sherpa-onnx-vits-zh-aishell3</span></td>
+<td>290 MB</td>
+<td>4.093 s</td>
+<td>350 MB</td>
+<td>446 MB</td>
+<td>8.96×</td>
+<td>3.20×</td>
+<td>2.96 / 3.79 / 3.55</td>
+<td>7.88×</td>
+<td class="note">aishell3 为中文语料训练的中文模型，无英文版（sherpa-onnx 亦无 aishell3-en）；英文对照由 vctk-en 与 piper-en 覆盖，未用替代模型冒充。</td></tr><tr>
+<td><b>kokoro</b><br><span class="sub">sherpa-onnx-kokoro-multi-lang-v1_1</span></td>
+<td>390 MB</td>
+<td>3.287 s</td>
+<td>421 MB</td>
+<td>574 MB</td>
+<td>2.52×</td>
+<td>1.00×</td>
+<td>2.31 / 2.77 / 2.81</td>
+<td>1.94×</td>
+<td class="note">kokoro v1.1-zh is Chinese-only; English/mixed clips fail at generate() and are counted in failed_clips (not synthesized).</td></tr><tr>
+<td><b>piper</b><br><span class="sub">sherpa-onnx-piper-en_US-lessac-medium</span></td>
+<td>60 MB</td>
+<td>1.827 s</td>
+<td>99 MB</td>
+<td>458 MB</td>
+<td>25.45×</td>
+<td>11.67×</td>
+<td>2.51 / 2.63 / 2.18</td>
+<td>24.39×</td>
+<td class="note"></td></tr><tr>
+<td><b>piper_zh</b><br><span class="sub">vits-piper-zh_CN-huayan-medium</span></td>
+<td>60 MB</td>
+<td>1.139 s</td>
+<td>105 MB</td>
+<td>258 MB</td>
+<td>27.96×</td>
+<td>11.12×</td>
+<td>1.97 / 2.44 / 2.24</td>
+<td>18.21×</td>
+<td class="note">Chinese-only piper voice (espeak-ng-data cmn_dict reused). en WER=1.0 (English read as Chinese syllables); mixed hyCER~0.34. Very fast CPU syn_rtf~28x T=4; speedup from measured per-T syn_rtf (unit JSON thread_sweep)</td></tr><tr>
+<td><b>chattts</b><br><span class="sub">ChatTTS-zh-en (2noise/ChatTTS)</span></td>
+<td>1215 MB</td>
+<td>4.056 s</td>
+<td>664 MB</td>
+<td>1681 MB</td>
+<td>0.32×</td>
+<td>0.32×</td>
+<td>1.02 / 1.03 / 1.00</td>
+<td>0.27×</td>
+<td class="note">zh+en colloquial TTS; English read correctly (wer_en~0.04-0.08); speedup from measured per-T syn_rtf (unit JSON thread_sweep)</td></tr><tr>
+<td><b>melotts</b><br><span class="sub">MeloTTS-zh(zh_en mixed)</span></td>
+<td>340 MB</td>
+<td>11.053 s</td>
+<td>1250 MB</td>
+<td>5385 MB</td>
+<td>0.80×</td>
+<td>0.20×</td>
+<td>4.15 / 5.60 / 12.68</td>
+<td>0.69×</td>
+<td class="note">Mixed-language key unit. Canonical T=4 syn_rtf=0.80 (slightly slower than realtime); reaches 2.5x realtime at T=24. Strong thread scaling (4.1x@T4,12.7x@T24). Quality excellent: zh CER~0, English read correctly (wer_en 0.03-0.044), mixed hyCER~0.07-0.11 (English words Python/software/install/RAM pronounced clearly). 22/24 clips ok (mx_02,mx_05 empty). Built from local source with --no-deps onto ChatTTS torch venv; weights via hf-mirror. sherpa-onnx equivalent 'melo' row also present.; speedup from measured per-T syn_rtf (unit JSON thread_sweep)</td></tr><tr>
+<td><b>ekho</b><br><span class="sub">espeak-ng phoneme)</span></td>
+<td><span class="na">—</span> MB</td>
+<td>29.400 s</td>
+<td><span class="na">—</span> MB</td>
+<td>4 MB</td>
+<td><span class="na">—</span>×</td>
+<td><span class="na">—</span>×</td>
+<td><span class="na">—</span> / <span class="na">—</span> / <span class="na">—</span></td>
+<td><span class="na">—</span>×</td>
+<td class="note">Windows precompiled pkg downloaded OK (30.8MB); exe is Inno Setup installer. Silent install (NSIS /S & Inno /VERYSILENT) hangs = UAC elevation cannot be answered in non-interactive ssh; payload extraction via bsdtar & 7-Zip 26.04 both fail. No ekho.exe obtained => no benchmark/wav. (Src build also failed: Linux autotools+festival/portaudio.) Mandarin/Cantonese-only; not substituted.</td></tr><tr>
+<td><b>summertts</b><br><span class="sub">SummerTTS single_speaker_fast+english_fast</span></td>
+<td>80 MB</td>
+<td><span class="na">—</span> s</td>
+<td><span class="na">—</span> MB</td>
+<td>4 MB</td>
+<td><span class="na">—</span>×</td>
+<td><span class="na">—</span>×</td>
+<td><span class="na">—</span> / <span class="na">—</span> / <span class="na">—</span></td>
+<td><span class="na">—</span>×</td>
+<td class="note">Compiled with mingw gcc16.2/cmake; bundled old glog/gflags need POSIX-only headers absent on Windows (fnmatch.h,ucontext.h,syscall.h,sys/utsname.h) + generated config.h; project tested only on Ubuntu. No binary => no benchmark. Weights vendored but unusable.</td></tr></tbody></table>
+<h3>② sherpa-onnx ASR（6 单元，全部 0 失败）</h3>
+<p class="hint">指标：<b>rtf</b>=墙钟/音频时长（越小越快）；e2e=单条平均端到端延迟（音频均值 3.24s × rtf）；正确率：zh→CER、en→WER、mixed→hyCER，越小越好；整体=1−平均错误率。TTS 合成闭环（文本→音频→转写→指标），24 条全集。内存均为实测（GetProcessMemoryInfo 口径）。</p>
+<table><thead><tr><th>单元（语言）</th><th>大小</th><th>rtf<br>@4T</th><th>e2e<br>ms</th><th>加载</th><th>加载增量<br>MB</th><th>峰值WS<br>MB</th><th>整体<br>正确率</th><th>zh<br>CER</th><th>en<br>WER</th><th>mixed<br>hyCER</th><th>估算 rtf<br>4c2.0G</th><th>备注</th></tr></thead>
+<tbody><tr>
+<td><b>paraformer_zh</b><br><span class="sub">sherpa-onnx-paraformer-zh-2023-09-14 (int8)</span></td>
+<td>232 MB</td>
+<td>0.032</td>
+<td>105 ms</td>
+<td>1.229 s</td>
+<td>298 MB</td>
+<td>337 MB</td>
+<td>93.6%</td>
+<td>0.0185</td>
+<td>0.1024</td>
+<td>0.0698</td>
+<td>0.039<span class="sub"> </span></td>
+<td class="note"></td></tr><tr>
+<td><b>streaming_zipformer_zh_en</b><br><span class="sub">sherpa-onnx-streaming-zipformer-bilingual-zh-en-2023-02-20 (int8)</span></td>
+<td>189 MB</td>
+<td>0.048</td>
+<td>156 ms</td>
+<td>1.383 s</td>
+<td>253 MB</td>
+<td>282 MB</td>
+<td>29.0%</td>
+<td>0.9096</td>
+<td>0.7520</td>
+<td>0.4672</td>
+<td>0.058<span class="sub"> 单线程主导</span></td>
+<td class="note"></td></tr><tr>
+<td><b>whisper_tiny</b><br><span class="sub">sherpa-onnx-whisper-tiny (int8, multilingual)</span></td>
+<td>99 MB</td>
+<td>0.056</td>
+<td>180 ms</td>
+<td>0.412 s</td>
+<td>148 MB</td>
+<td>268 MB</td>
+<td>40.9%</td>
+<td>0.7192</td>
+<td>0.6090</td>
+<td>0.4449</td>
+<td>0.067<span class="sub"> </span></td>
+<td class="note"></td></tr><tr>
+<td><b>whisper_small</b><br><span class="sub">sherpa-onnx-whisper-small (int8, multilingual)</span></td>
+<td>358 MB</td>
+<td>0.270</td>
+<td>874 ms</td>
+<td>4.688 s</td>
+<td>520 MB</td>
+<td>816 MB</td>
+<td>41.2%</td>
+<td>0.5265</td>
+<td>0.9167</td>
+<td>0.3220</td>
+<td>0.324<span class="sub"> </span></td>
+<td class="note"></td></tr><tr>
+<td><b>sense_voice</b><br><span class="sub">sherpa-onnx-sense-voice-zh-en-ja-ko-yue-2024-07-17 (int8)</span></td>
+<td>228 MB</td>
+<td>0.039</td>
+<td>127 ms</td>
+<td>1.258 s</td>
+<td>304 MB</td>
+<td>345 MB</td>
+<td>92.7%</td>
+<td>0.0835</td>
+<td>0.0139</td>
+<td>0.1220</td>
+<td>0.047<span class="sub"> </span></td>
+<td class="note"></td></tr><tr>
+<td><b>moonshine_tiny</b><br><span class="sub">sherpa-onnx-moonshine-tiny-en-int8</span></td>
+<td>118 MB</td>
+<td>0.019</td>
+<td>60 ms</td>
+<td>0.736 s</td>
+<td>161 MB</td>
+<td>206 MB</td>
+<td>-8.2%</td>
+<td>2.1691</td>
+<td>0.0573</td>
+<td>1.0193</td>
+<td>0.028<span class="sub"> 单线程主导</span></td>
+<td class="note"></td></tr></tbody></table>
+<h3>③ FunASR 组合矩阵（funasr 1.4.16 / torch 2.6.0 CPU，modelscope 模型）</h3>
+<p class="hint">VAD=fsmn-vad 分段；LID=SenseVoice 内置语种标签逐段判定（modelscope 无独立 zh-en LID 模型，已如实记录）；"流式"为 paraformer-online（一次性喂整段+is_final，流式模型的固有口径退化已在单元 notes 注明）。10 组合单元全部实测，内存为实测（GetProcessMemoryInfo 口径）。</p>
+<table><thead><tr><th>组合单元</th><th>rtf<br>@4T</th><th>e2e ms</th><th>加载</th><th>加载增量<br>MB</th><th>峰值WS<br>MB</th><th>整体<br>正确率</th><th>zh CER</th><th>en WER</th><th>mixed<br>hyCER</th><th>线程特性</th></tr></thead>
+<tbody><tr>
+<td><b>pfns</b><br><span class="sub">paraformer 非流式</span></td>
+<td>0.061</td>
+<td>199 ms</td>
+<td>8.810 s</td>
+<td>2852 MB</td>
+<td>3026 MB</td>
+<td>93.6%</td>
+<td>0.0185</td>
+<td>0.1024</td>
+<td>0.0698</td>
+<td class="note">单线程主导</td></tr><tr>
+<td><b>pfns_vad</b><br><span class="sub">+VAD</span></td>
+<td>0.066</td>
+<td>213 ms</td>
+<td>9.585 s</td>
+<td>2848 MB</td>
+<td>3024 MB</td>
+<td>91.2%</td>
+<td>0.0185</td>
+<td>0.1771</td>
+<td>0.0698</td>
+<td class="note">单线程主导</td></tr><tr>
+<td><b>pfns_lid</b><br><span class="sub">+LID</span></td>
+<td>0.142</td>
+<td>462 ms</td>
+<td>11.979 s</td>
+<td>4524 MB</td>
+<td>4699 MB</td>
+<td>93.6%</td>
+<td>0.0185</td>
+<td>0.1024</td>
+<td>0.0698</td>
+<td class="note">单线程主导</td></tr><tr>
+<td><b>pfns_vad_lid</b><br><span class="sub">+VAD+LID</span></td>
+<td>0.141</td>
+<td>458 ms</td>
+<td>22.870 s</td>
+<td>4607 MB</td>
+<td>4781 MB</td>
+<td>91.2%</td>
+<td>0.0185</td>
+<td>0.1771</td>
+<td>0.0698</td>
+<td class="note">单线程主导</td></tr><tr>
+<td><b>pfs</b><br><span class="sub">paraformer 流式</span></td>
+<td>0.187</td>
+<td>605 ms</td>
+<td>8.497 s</td>
+<td>2856 MB</td>
+<td>3031 MB</td>
+<td>61.9%</td>
+<td>0.6315</td>
+<td>0.2312</td>
+<td>0.2814</td>
+<td class="note">单线程主导</td></tr><tr>
+<td><b>pfs_vad</b><br><span class="sub">+VAD</span></td>
+<td>0.201</td>
+<td>653 ms</td>
+<td>9.431 s</td>
+<td>2856 MB</td>
+<td>3031 MB</td>
+<td>62.2%</td>
+<td>0.6123</td>
+<td>0.2450</td>
+<td>0.2773</td>
+<td class="note">单线程主导</td></tr><tr>
+<td><b>pfs_vad_lid</b><br><span class="sub">+VAD+LID</span></td>
+<td>0.259</td>
+<td>838 ms</td>
+<td>28.094 s</td>
+<td>4538 MB</td>
+<td>4714 MB</td>
+<td>59.9%</td>
+<td>0.6810</td>
+<td>0.2450</td>
+<td>0.2773</td>
+<td class="note">单线程主导</td></tr><tr>
+<td><b>sv</b><br><span class="sub">SenseVoice</span></td>
+<td>0.076</td>
+<td>247 ms</td>
+<td>8.516 s</td>
+<td>2973 MB</td>
+<td>3148 MB</td>
+<td>94.8%</td>
+<td>0.0746</td>
+<td>0.0000</td>
+<td>0.0799</td>
+<td class="note">单线程主导</td></tr><tr>
+<td><b>sv_vad</b><br><span class="sub">+VAD</span></td>
+<td>0.081</td>
+<td>264 ms</td>
+<td>9.034 s</td>
+<td>2957 MB</td>
+<td>3132 MB</td>
+<td>94.6%</td>
+<td>0.0746</td>
+<td>0.0000</td>
+<td>0.0868</td>
+<td class="note">单线程主导</td></tr><tr>
+<td><b>sv_vad_lid</b><br><span class="sub">+VAD+LID</span></td>
+<td>0.081</td>
+<td>263 ms</td>
+<td>8.913 s</td>
+<td>2965 MB</td>
+<td>3141 MB</td>
+<td>94.6%</td>
+<td>0.0746</td>
+<td>0.0000</td>
+<td>0.0868</td>
+<td class="note">单线程主导</td></tr></tbody></table>
+<h3>④ 边缘 LLM（llama.cpp b11540，GGUF Q4_K_M 为主，-c 2048，CPU-only）</h3>
+<p class="hint">首 token=prompt 处理后首个 token 延迟；生成=生成阶段 t/s；QA 综合=8 题中英混语问答 4 维 rubric（事实/指令/混语/流畅，0–5）均值；mixed_lang 为其混语维度。峰值 WS 与加载增量均为实测（子进程 GetProcessMemoryInfo，20ms 轮询）。</p>
+<table><thead><tr><th>模型（量化）</th><th>文件</th><th>加载</th><th>首token<br>@4T</th><th>生成 t/s<br>@4T</th><th>单线程<br>t/s</th><th>加速比<br>8/24T</th><th>加载增量<br>MB</th><th>峰值WS<br>MB</th><th>RAM&lt;2G</th><th>QA综合</th><th>混语维度</th><th>备注</th></tr></thead>
+<tbody><tr>
+<td><b>qwen25_05b_q4km</b><br><span class="sub">Qwen2.5-0.5B-Instruct · Q4_K_M</span></td>
+<td>469 MB</td>
+<td>8.531 s</td>
+<td>587 ms</td>
+<td>88.3</td>
+<td>36.3</td>
+<td>3.65 / 1.58</td>
+<td>462 MB</td>
+<td>492 MB</td>
+<td>✅ &lt;2GB</td>
+<td>4.19</td>
+<td>4.00</td>
+<td class="note">QA 4-dim rubric avg 0-5; -c 2048 context</td></tr><tr>
+<td><b>qwen2_05b_q4km</b><br><span class="sub">Qwen2-0.5B-Instruct · Q4_K_M</span></td>
+<td>379 MB</td>
+<td>7.774 s</td>
+<td>575 ms</td>
+<td>85.7</td>
+<td>36.6</td>
+<td>3.16 / 0.99</td>
+<td>459 MB</td>
+<td>489 MB</td>
+<td>✅ &lt;2GB</td>
+<td>4.12</td>
+<td>3.88</td>
+<td class="note">QA 4-dim rubric avg 0-5; -c 2048 context</td></tr><tr>
+<td><b>qwen3_06b_q4km</b><br><span class="sub">Qwen3-0.6B-Instruct · Q4_K_M</span></td>
+<td>378 MB</td>
+<td>6.798 s</td>
+<td>490 ms</td>
+<td>89.4</td>
+<td>52.6</td>
+<td>2.25 / 1.15</td>
+<td>655 MB</td>
+<td>685 MB</td>
+<td>✅ &lt;2GB</td>
+<td>4.56</td>
+<td>4.50</td>
+<td class="note">QA 4-dim rubric avg 0-5; -c 2048 context</td></tr><tr>
+<td><b>smol2_360m_q4km</b><br><span class="sub">SmolLM2-360M-Instruct · Q4_K_M</span></td>
+<td>258 MB</td>
+<td>5.752 s</td>
+<td>564 ms</td>
+<td>115.8</td>
+<td>48.5</td>
+<td>3.09 / 0.71</td>
+<td>303 MB</td>
+<td>333 MB</td>
+<td>✅ &lt;2GB</td>
+<td>2.47</td>
+<td>2.12</td>
+<td class="note">QA 4-dim rubric avg 0-5; -c 2048 context</td></tr><tr>
+<td><b>smol2_135m_q4km</b><br><span class="sub">SmolLM2-135M-Instruct · Q4_K_M</span></td>
+<td>101 MB</td>
+<td>1.651 s</td>
+<td>219 ms</td>
+<td>244.6</td>
+<td>110.9</td>
+<td>2.94 / 0.70</td>
+<td>123 MB</td>
+<td>153 MB</td>
+<td>✅ &lt;2GB</td>
+<td>1.53</td>
+<td>1.50</td>
+<td class="note">QA 4-dim rubric avg 0-5; -c 2048 context</td></tr><tr>
+<td><b>llama32_1b_q4km</b><br><span class="sub">Llama-3.2-1B-Instruct · Q4_K_M</span></td>
+<td>770 MB</td>
+<td>6.421 s</td>
+<td>748 ms</td>
+<td>65.0</td>
+<td>29.6</td>
+<td>2.67 / 2.48</td>
+<td>1294 MB</td>
+<td>1324 MB</td>
+<td>✅ &lt;2GB</td>
+<td>4.44</td>
+<td>4.38</td>
+<td class="note">QA 4-dim rubric avg 0-5; -c 2048 context</td></tr><tr>
+<td><b>qwen25_05b_q80</b><br><span class="sub">Qwen2.5-0.5B-Instruct · Q8_0</span></td>
+<td>644 MB</td>
+<td>4.813 s</td>
+<td>544 ms</td>
+<td>79.7</td>
+<td>34.8</td>
+<td>3.10 / 1.82</td>
+<td>560 MB</td>
+<td>590 MB</td>
+<td>✅ &lt;2GB</td>
+<td>4.19</td>
+<td>4.00</td>
+<td class="note">QA 4-dim rubric avg 0-5; -c 2048 context</td></tr></tbody></table>
+<h3>⑤ 人脸识别（MobileFaceNet+ArcFace 512d · YuNet 检测 · 仅 CPU 实测）</h3>
+<p class="hint">检测=YuNet（cv2.FaceDetectorYN，与第一阶段 SFace 基准同一检测器）；识别=MobileFaceNet w600k_mbf 512d（onnxruntime 1.20.1 CPUExecutionProvider；cv2.FaceRecognizerSF 硬编码 SFace-128d 专用前处理，不适用 512d，选型已注明）；对齐=ArcFace 5 点模板→112×112，BGR (x−127.5)/128，L2 归一；阈值 cos&gt;0.35。延迟=检测+对齐+特征全链路 mean（T=8，30 次采样）；内存=GetProcessMemoryInfo 实测（加载增量+峰值工作集）；模糊极限 1080p σ10 成功/σ12 失败、640p σ3 成功/σ4 失败（与 SFace 完全同分界），检测 σ≥20 失败；对照 SFace align+feat 10.47ms→MobileFaceNet 7.73ms（更小更快）。</p>
+<table><thead><tr><th>单元</th><th>模型权重</th><th>全链路延迟<br>1080p @8T</th><th>全链路延迟<br>640p @8T</th><th>加载增量<br>MB</th><th>峰值WS<br>MB</th><th>身份判定<br>正确率</th><th>单线程<br>基线 ms</th><th>加速比<br>4/8T</th><th>估算延迟<br>4c2.0G</th><th>备注</th></tr></thead>
+<tbody><tr>
+<td><b>vision_faces_mobilefacenet</b><br><span class="sub">YuNet(0.22MB)+MobileFaceNet-w600k-mbf-512d(12.99MB)</span></td>
+<td>13.21 MB</td>
+<td>100.750 ms</td>
+<td>23.370 ms</td>
+<td>30 MB</td>
+<td>402 MB</td>
+<td>100.0%</td>
+<td>172.940 ms</td>
+<td>1.29 / 1.68</td>
+<td>160.788 ms</td>
+<td class="note">Recognizer via ORT 1.20.1 (not FaceRecognizerSF which is SFace-128d-specific); detector reused from stage-1. align_feature 7.73ms vs SFace 10.47ms. Blur boundaries identical to SFace: recog ok sigma<=10(1080p)/<=3(640p), fail at 12/4; detection fails sigma>=20 both. Same-person cos face_b=0.421/face_c=0.503 (>0.35 thr); cross-person einstein=0.036/curie=-0.162. Source hf-mirror immich-app/buffalo_s. Estimates: 4c2.0G=160.8ms, 6c2.5G=111.6ms, 8c3.0G=82.2ms (1080p EST).; threads_canonical=8; blur fail sigma 12(1080p)/4(640p); identity 4/4 correct@cos>0.35; estimates 4c2.0G=160.8 6c2.5G=111.6 8c3.0G=82.2ms(1080p,EST)</td></tr></tbody></table>
+<h3>⑥ 线程扫描与跨 CPU 延迟估算（基于实测单线程基线，全量见 cpu_scaling.json）</h3>
+<p class="hint">换算公式（scaling_method.md v1.0）：延迟类 L_est=L1×(<i>f</i><sub>校机</sub>/<i>f</i><sub>目标</sub>)÷speedup_eff；吞吐类取倒数。speedup_eff=min(目标核数档实测加速比, 平台饱和帽)；6 核档在实测 T4/T8 间线性内插。校机 EPYC 9654 基频 2.4GHz。适用边界：同为 x86-64 AVX2 级 CPU；时钟线性仅对计算受限算子成立，访存密集算子实际低于时钟比；升压/功耗/超线程不建模。<b>全部为估算值，非实测。</b></p>
+<table><thead><tr><th>单元（指标）</th><th>单线程基线<br>(校机实测)</th><th>4核 2.0GHz<br>笔记本</th><th>6核 2.5GHz<br>台式机</th><th>8核 3.0GHz<br>台式机</th><th>峰值WS<br>MB(校机)</th><th>多核收益判定</th></tr></thead>
+<tbody><tr><td><b>melotts</b><br><span class="sub">tts · syn_rtf</span></td>
+<td>0.198</td>
+<td>0.685</td><td>1.006</td><td>1.386</td>
+<td>5385 MB</td>
+<td class="note"></td></tr><tr><td><b>chattts</b><br><span class="sub">tts · syn_rtf</span></td>
+<td>0.319</td>
+<td>0.272</td><td>0.341</td><td>0.411</td>
+<td>1681 MB</td>
+<td class="note">⚠ 单线程主导</td></tr><tr><td><b>piper_zh</b><br><span class="sub">tts · syn_rtf</span></td>
+<td>11.121</td>
+<td>18.212</td><td>25.498</td><td>33.876</td>
+<td>258 MB</td>
+<td class="note"></td></tr><tr><td><b>melo</b><br><span class="sub">tts · syn_rtf</span></td>
+<td>1.446</td>
+<td>3.687</td><td>5.702</td><td>8.154</td>
+<td>422 MB</td>
+<td class="note"></td></tr><tr><td><b>piper</b><br><span class="sub">tts · syn_rtf</span></td>
+<td>11.673</td>
+<td>24.385</td><td>31.236</td><td>38.389</td>
+<td>458 MB</td>
+<td class="note"></td></tr><tr><td><b>paraformer_zh</b><br><span class="sub">asr_sherpa · rtf</span></td>
+<td>0.062</td>
+<td>0.039</td><td>0.029</td><td>0.023</td>
+<td>337 MB</td>
+<td class="note"></td></tr><tr><td><b>sense_voice</b><br><span class="sub">asr_sherpa · rtf</span></td>
+<td>0.071</td>
+<td>0.047</td><td>0.034</td><td>0.026</td>
+<td>345 MB</td>
+<td class="note"></td></tr><tr><td><b>whisper_tiny</b><br><span class="sub">asr_sherpa · rtf</span></td>
+<td>0.102</td>
+<td>0.067</td><td>0.049</td><td>0.038</td>
+<td>268 MB</td>
+<td class="note"></td></tr><tr><td><b>whisper_small</b><br><span class="sub">asr_sherpa · rtf</span></td>
+<td>0.461</td>
+<td>0.324</td><td>0.242</td><td>0.190</td>
+<td>816 MB</td>
+<td class="note"></td></tr><tr><td><b>pfns</b><br><span class="sub">funasr · rtf</span></td>
+<td>0.065</td>
+<td>0.074</td><td>0.059</td><td>0.049</td>
+<td>3026 MB</td>
+<td class="note">⚠ 单线程主导</td></tr><tr><td><b>sv</b><br><span class="sub">funasr · rtf</span></td>
+<td>0.078</td>
+<td>0.091</td><td>0.073</td><td>0.060</td>
+<td>3148 MB</td>
+<td class="note">⚠ 单线程主导</td></tr><tr><td><b>qwen25_05b_q4km</b><br><span class="sub">llm · tokens_per_s</span></td>
+<td>36.300</td>
+<td>73.125</td><td>114.776</td><td>165.775</td>
+<td>492 MB</td>
+<td class="note"></td></tr><tr><td><b>qwen3_06b_q4km</b><br><span class="sub">llm · tokens_per_s</span></td>
+<td>52.640</td>
+<td>81.875</td><td>112.818</td><td>147.950</td>
+<td>685 MB</td>
+<td class="note"></td></tr><tr><td><b>llama32_1b_q4km</b><br><span class="sub">llm · tokens_per_s</span></td>
+<td>29.560</td>
+<td>54.867</td><td>75.422</td><td>98.713</td>
+<td>1324 MB</td>
+<td class="note"></td></tr><tr><td><b>smol2_135m_q4km</b><br><span class="sub">llm · tokens_per_s</span></td>
+<td>110.910</td>
+<td>207.133</td><td>299.391</td><td>407.837</td>
+<td>153 MB</td>
+<td class="note"></td></tr><tr><td><b>vision_faces_mobilefacenet</b><br><span class="sub">vision · full_pipeline_1080p_ms</span></td>
+<td>172.940</td>
+<td>160.788</td><td>111.632</td><td>82.168</td>
+<td>402 MB</td>
+<td class="note"></td></tr></tbody></table>
+<h3>⑦ 失败与限制记录（全部如实，无伪造数据）</h3>
+<table><thead><tr><th>单元</th><th>情况</th><th>原因/口径</th><th>处置</th></tr></thead><tbody><tr><td>funasr · tts_cosyvoice</td><td>CosyVoice-300M（5.5GB，已下载）</td><td>funasr 1.4.16 的 AutoModel 未注册 CosyVoice（funasr 仅覆盖 ASR/VAD/LID；TTS 属独立 cosyvoice 包），加载抛 RuntimeError('model is not registered')</td><td>单元 JSON tts_cosyvoice.json 已如实记录 load_error；本任务 TTS 域由 6 个 sherpa-onnx TTS 单元覆盖</td></tr><tr><td>asr_sherpa · streaming_zipformer</td><td>流式 zipformer 双语（190MB int8）</td><td>一次性喂整段（is_final=True）时 zh CER 0.91、overall 0.29——流式模型固有口径退化（缺左向上下文），非故障；其 rtf/首分段延迟仍有效</td><td>已在单元 notes 注明口径</td></tr><tr><td>asr_sherpa · moonshine_tiny</td><td>moonshine-tiny-en（仅英语）</td><td>zh/mixed 正确率差属模型语言范围限制（en WER 0.057 正常）；T=24 线程回退 0.36×</td><td>照实记录</td></tr><tr><td>tts · kokoro</td><td>kokoro v1.1-zh（中文向）</td><td>8 条 en/mixed clip 生成失败（ZeroDivisionError，espeak 固定 zh 语音无法音素化英文）；zh 8 条正常</td><td>按 clip 捕获计入 failed_clips，未伪造</td></tr><tr><td>tts · vctk</td><td>vits-vctk</td><td>良性 lexicon 'Unknown token' 告警，非致命</td><td>—</td></tr><tr><td>tts · aishell3</td><td>sherpa-onnx-vits-zh-aishell3</td><td>aishell3 为中文语料训练的中文模型，无英文版（sherpa-onnx 亦无 aishell3-en）</td><td>结果如实注明，未用替代模型冒充；英文对照由 vctk-en 与 piper-en 覆盖</td></tr><tr><td>tts · ekho</td><td>eKho（hgneng，C 中文 TTS，普通话/粤语）</td><td>UNMEASURED（两条路径均受阻）：① 源码编译失败——上游为 Linux autotools，Windows 仅 NSIS/VS 工程，依赖 festival/portaudio；② 官方 Windows 预编译包（ekho-espeak-8.7.zip 30.8MB 下载成功）实为 Inno Setup 安装器，需交互式 UAC 提权，非交互 ssh 无法安装，bsdtar/7z 均解不开载荷</td><td>完整尝试链已记录 ekho.json；未用替代模型冒充；需图形会话手动安装或免安装便携 exe 方可实测</td></tr><tr><td>tts · summertts</td><td>SummerTTS（huakunyang，C++ VITS，中英文）</td><td>BUILD_FAILED：源码与模型 .bin 齐全（zh 80MB/en 62MB），mingw gcc16.2+cmake 编译 4 轮；根因=内置旧 glog/gflags 在 _WIN32 下依赖 Linux-only 头（fnmatch.h/ucontext.h/syscall.h/sys/utsname.h）+ autotools 生成 config.h；项目自述仅 Ubuntu 测试</td><td>补 stub 后仍失败，按失败政策如实记录</td></tr><tr><td>funasr · pfs_vad</td><td>流式 paraformer + 原生 vad_model 链</td><td>funasr 内部 TypeError(list/int) 崩溃，改为手动 VAD 分段后跑通</td><td>已修复并重跑</td></tr></tbody></table>
+<div class="card"><h3 style="margin-top:0">⑧ 关键结论与选型建议</h3>
+<ul style="font-size:13.5px;line-height:2;color:#33455c">
+<li><b>中英混语 ASR 首选 SenseVoiceSmall</b>：en WER 0.000（8 条英文全对）、mixed hyCER 0.080、zh CER 0.075，整体 0.927，rtf 0.076 与 paraformer 相当；且自带 LID 语言标签。</li>
+<li><b>纯中文 ASR 首选 paraformer-zh</b>：zh CER 0.0185（全场最低），整体 0.936；流式场景用 paraformer-online（须按 chunk 喂入，一次性整段会退化）。</li>
+<li><b>TTS：sherpa-onnx 系全部快于实时（syn_rtf 2.5×~28×）</b>；中英混语首选 <b>MeloTTS-zh（torch，混语质量全场最佳：zh CER≈0、en WER 0.044、mixed hyCER 0.069）</b>，但 4 线程仅 0.80×（略慢于实时），强线程扩展至 24T 达 12.7×/2.5×实时；sherpa-onnx 端口 vits-melo-tts-zh_en（'melo' 单元）4.29× 且 24/24 成功；ChatTTS（口语化）中英均能正确读但 CPU 仅 0.32×（慢 3.1×）且自回归解码无线程扩展；中文用 aishell3/fanchen/piper_zh（27.96× 极快，中文 CER 0.0096）；英文最快 piper（25.5×）；kokoro-v1.1-zh 仅限中文；aishell3 无英文版（英文对照由 vctk-en/piper-en 覆盖）。</li>
+<li><b>FunASR 组合矩阵</b>：VAD 开关引入 ~8% rtf 开销且英文 WER 0.10→0.18（分段切词误差）；LID 链路由手动 VAD→SenseVoice→ASR 实现，rtf 翻倍（多一次前向）、峰值内存 +1.7GB；torch 推理 4 线程即饱和，多核无收益（单线程主导）。</li>
+<li><b>边缘 LLM（RAM&lt;2GB）</b>：Qwen3-0.6B Q4_K_M 综合最佳（QA 4.56，685MB，89 t/s）；Llama-3.2-1B 混语最稳但峰值 1.29GB 最紧；SmolLM2 中文能力差（135M 仅 1.53 分）。默认上下文下 Qwen3/Llama 的 KV cache 会到 5GB，边缘部署必须限制 -c 2048。</li>
+<li><b>人脸识别（MobileFaceNet w600k_mbf 512d + YuNet）</b>：全链路 1080p 100.75ms / 640p 23.37ms（T=8，30 次采样）；特征提取 7.73ms 优于 SFace 10.47ms；模糊极限与 SFace 完全同分界（1080p σ10 成功/σ12 失败、640p σ3/σ4）；同人 cos 0.42/0.50、跨人 0.04/−0.16，阈值 0.35 清晰可分（身份判定 4/4 正确）；峰值 WS 402MB（含框架开销）；多核收益有限（8T 仅 1.68×，检测器 OpenCV DNN 单算子主导），估算 8 核 3.0GHz 台式机 1080p 全链路 ≈82ms（ESTIMATE）。VRAM 代理：权重 13MB + 激活 &lt;5MB + ORT 上下文 0.3–0.5GB。</li>
+<li><b>线程扫描</b>：onnxruntime（sherpa-onnx）T=8 达峰（3.8–4.7×），T=24 回落；torch（FunASR）4T 饱和；llama.cpp 8T 最佳（2.25–3.65×），24T 过订阅退化；人脸识别 8T 仅 1.68×（检测算子单线程主导）。跨 CPU 估算见 cpu_scaling.json（基于实测单线程基线）。</li>
+<li><b>校机系统坑（已修复并记录）</b>：系统 MSVCP140.dll v14.23 过旧致原生组件段错误，用 14.50 运行时修复；onnxruntime 仅 1.20.1 可用；torch 2.14.1 DLL 初始化失败需 2.6.0+cpu；sentencepiece 0.2.2 段错误需 0.2.0；hf-mirror/modelscope 为可用下载源（HF 直连被校网拦）。</li>
+</ul></div>
+<p style="font-size:12px;color:#8a97ab;margin-top:30px">数据文件：benchmark_overview.csv（35 单元统一口径对比表，含内存列）· cpu_scaling.json（每单元实测单线程基线+加速比曲线+三场景估算）· 各域 <code>results/{tts,asr_sherpa,funasr,llm,vision}/&lt;unit&gt;.json</code> 全量明细。<br>校机原始日志（2026-10-19 变更）：<code>bench_ai</code> 整树 123,774 件 / 24,627,398,155 B 已按实况判为纯测试件，原地改名收进 <code>D:/yzd/tmp/_del1019/bench_ai/</code>（同卷改名、逐件数与字节复核全等，未进回收站——D: 回收站上限 104,447 MB、已占 90,437,520,997 B，剩余不足 24.6 GB，硬塞会让 Windows 先永久清掉最旧条目）；其中 <code>*/out/raw/</code> 的 249 件文本留底在开发机 <code>S:\apps\llm\agentwork\_bairescue.tgz</code>（1,042 件 / 8,004,830 B，md5 <code>fa210efa3615373bc6cc42dbaeb0760c</code>）。</p>
+</div></body></html>

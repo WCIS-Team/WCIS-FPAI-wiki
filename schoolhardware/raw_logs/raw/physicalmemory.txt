@@ -1,0 +1,128 @@
+﻿
+
+Caption               : 物理内存
+Description           : 物理内存
+InstallDate           : 
+Name                  : 物理内存
+Status                : 
+CreationClassName     : Win32_PhysicalMemory
+Manufacturer          : Microsoft Corporation
+Model                 : 
+OtherIdentifyingInfo  : 
+PartNumber            : None
+PoweredOn             : 
+SerialNumber          : None
+SKU                   : 
+Tag                   : Physical Memory 0
+Version               : 
+HotSwappable          : 
+Removable             : 
+Replaceable           : 
+FormFactor            : 0
+BankLabel             : None
+Capacity              : 4160749568
+DataWidth             : 
+InterleavePosition    : 0
+MemoryType            : 0
+PositionInRow         : 
+Speed                 : 
+TotalWidth            : 
+Attributes            : 0
+ConfiguredClockSpeed  : 0
+ConfiguredVoltage     : 0
+DeviceLocator         : M0001
+InterleaveDataDepth   : 0
+MaxVoltage            : 0
+MinVoltage            : 0
+SMBIOSMemoryType      : 2
+TypeDetail            : 4
+PSComputerName        : 
+CimClass              : root/cimv2:Win32_PhysicalMemory
+CimInstanceProperties : {Caption, Description, InstallDate, Name...}
+CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
+
+Caption               : 物理内存
+Description           : 物理内存
+InstallDate           : 
+Name                  : 物理内存
+Status                : 
+CreationClassName     : Win32_PhysicalMemory
+Manufacturer          : Microsoft Corporation
+Model                 : 
+OtherIdentifyingInfo  : 
+PartNumber            : None
+PoweredOn             : 
+SerialNumber          : None
+SKU                   : 
+Tag                   : Physical Memory 1
+Version               : 
+HotSwappable          : 
+Removable             : 
+Replaceable           : 
+FormFactor            : 0
+BankLabel             : None
+Capacity              : 63887638528
+DataWidth             : 
+InterleavePosition    : 0
+MemoryType            : 0
+PositionInRow         : 
+Speed                 : 
+TotalWidth            : 
+Attributes            : 0
+ConfiguredClockSpeed  : 0
+ConfiguredVoltage     : 0
+DeviceLocator         : M0002
+InterleaveDataDepth   : 0
+MaxVoltage            : 0
+MinVoltage            : 0
+SMBIOSMemoryType      : 2
+TypeDetail            : 4
+PSComputerName        : 
+CimClass              : root/cimv2:Win32_PhysicalMemory
+CimInstanceProperties : {Caption, Description, InstallDate, Name...}
+CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
+
+Caption               : 物理内存
+Description           : 物理内存
+InstallDate           : 
+Name                  : 物理内存
+Status                : 
+CreationClassName     : Win32_PhysicalMemory
+Manufacturer          : Microsoft Corporation
+Model                 : 
+OtherIdentifyingInfo  : 
+PartNumber            : None
+PoweredOn             : 
+SerialNumber          : None
+SKU                   : 
+Tag                   : Physical Memory 2
+Version               : 
+HotSwappable          : 
+Removable             : 
+Replaceable           : 
+FormFactor            : 0
+BankLabel             : None
+Capacity              : 66169339904
+DataWidth             : 
+InterleavePosition    : 0
+MemoryType            : 0
+PositionInRow         : 
+Speed                 : 
+TotalWidth            : 
+Attributes            : 0
+ConfiguredClockSpeed  : 0
+ConfiguredVoltage     : 0
+DeviceLocator         : M0003
+InterleaveDataDepth   : 0
+MaxVoltage            : 0
+MinVoltage            : 0
+SMBIOSMemoryType      : 2
+TypeDetail            : 4
+PSComputerName        : 
+CimClass              : root/cimv2:Win32_PhysicalMemory
+CimInstanceProperties : {Caption, Description, InstallDate, Name...}
+CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
+
+
+
+

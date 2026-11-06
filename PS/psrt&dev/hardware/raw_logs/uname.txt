@@ -1,0 +1,4 @@
+### uname
+cmd: uname -a
+---
+Linux U.FMSH 5.4.52 #3 SMP Fri Mar 13 13:44:29 CST 2026 aarch64 aarch64 aarch64 GNU/Linux

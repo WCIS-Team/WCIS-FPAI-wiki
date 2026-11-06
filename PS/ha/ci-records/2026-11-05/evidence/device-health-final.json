@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "status": "failed",
+  "context": {
+    "kind": "device-health",
+    "environment": {
+      "device_id": "U.FMSH",
+      "architecture": "aarch64",
+      "python": "3.8.10",
+      "kernel": "5.4.52"
+    },
+    "workload_sha256": "a49408618de1060e9356312d2b0f7164c457457cccd4d0784031e0d548e6001f",
+    "configuration_sha256": "18a344ac15642cb9aee66e3690eb46b1eda27bbeed8edd8f40066f9ff9cf762a",
+    "harness_sha256": "6121d833ebfc08acda1ff1ce810c87d7c9ad9a588d392bd60dc28c9bbfc6e73d"
+  },
+  "source_files": {},
+  "configuration_files": {
+    "config/server.yaml": "3803db5368a48b366f086670e619ed6a927fc5e751b84f4e85bd74b187ab7ee8",
+    "config/split.yaml": "e6cd3506b79749bf24d7d3d440d5c59ae89e60b320ec9cd1d39a443442fe07ec"
+  },
+  "checks": [
+    {
+      "id": "source-fingerprint",
+      "status": "failed",
+      "error_type": "FileNotFoundError"
+    },
+    {
+      "id": "vision",
+      "status": "disabled"
+    },
+    {
+      "id": "lang/health",
+      "status": "passed"
+    },
+    {
+      "id": "lang/components",
+      "status": "passed"
+    },
+    {
+      "id": "wake-info",
+      "status": "passed"
+    },
+    {
+      "id": "asr-info",
+      "status": "passed"
+    },
+    {
+      "id": "tts-info",
+      "status": "passed"
+    },
+    {
+      "id": "required-processes",
+      "status": "failed",
+      "error_type": "ProcessLookupError"
+    },
+    {
+      "id": "tts-short",
+      "status": "not-run",
+      "reason": "health mode"
+    },
+    {
+      "id": "asr-file",
+      "status": "not-run",
+      "reason": "health mode"
+    },
+    {
+      "id": "source-missing-at-end",
+      "status": "failed"
+    }
+  ],
+  "metrics": {
+    "lang/health.health_ms": {
+      "value": 33.979656
+    },
+    "lang/components.health_ms": {
+      "value": 23.753785
+    }
+  },
+  "samples": {},
+  "resources_before": {
+    "processes": [],
+    "rss_kib": 0,
+    "cpu_ticks": 0,
+    "pattern_counts": {
+      "/mnt/data/lang/server/app.py": 0,
+      "/mnt/data/lang/server/wyoming_gateway.py": 0
+    }
+  },
+  "resources_after": {
+    "processes": [],
+    "rss_kib": 0,
+    "cpu_ticks": 0,
+    "pattern_counts": {
+      "/mnt/data/lang/server/app.py": 0,
+      "/mnt/data/lang/server/wyoming_gateway.py": 0
+    }
+  },
+  "correctness": {
+    "contracts": [
+      {
+        "id": "source-fingerprint",
+        "status": "failed"
+      },
+      {
+        "id": "vision",
+        "status": "disabled"
+      },
+      {
+        "id": "lang/health",
+        "status": "passed"
+      },
+      {
+        "id": "lang/components",
+        "status": "passed"
+      },
+      {
+        "id": "wake-info",
+        "status": "passed"
+      },
+      {
+        "id": "asr-info",
+        "status": "passed"
+      },
+      {
+        "id": "tts-info",
+        "status": "passed"
+      },
+      {
+        "id": "required-processes",
+        "status": "failed"
+      },
+      {
+        "id": "tts-short",
+        "status": "not-run"
+      },
+      {
+        "id": "asr-file",
+        "status": "not-run"
+      },
+      {
+        "id": "source-missing-at-end",
+        "status": "failed"
+      }
+    ]
+  },
+  "notes": [
+    "Health is liveness/contract evidence, not a model accuracy or physical I/O acceptance test.",
+    "Inference uses deployed services; cloud model/provider drift can affect results."
+  ]
+}

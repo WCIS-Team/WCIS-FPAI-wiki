@@ -1,0 +1,16 @@
+test_FM08_missing_nonfinite_and_incomparable (__main__.Infrastructure.test_FM08_missing_nonfinite_and_incomparable) ... ok
+test_FM08_regression_and_tolerances (__main__.Infrastructure.test_FM08_regression_and_tolerances) ... ok
+test_FM08_report_outputs_cannot_replace_inputs (__main__.Infrastructure.test_FM08_report_outputs_cannot_replace_inputs) ... ok
+test_FM09_http_contract_redirect_and_allowlist (__main__.Infrastructure.test_FM09_http_contract_redirect_and_allowlist) ... ok
+test_FM09_ssh_identity_transport_and_cleanup (__main__.Infrastructure.test_FM09_ssh_identity_transport_and_cleanup) ... ok
+test_FM09_wyoming_complete_and_truncated_frames (__main__.Infrastructure.test_FM09_wyoming_complete_and_truncated_frames) ... ok
+test_FM10_corpus_cer_and_bad_inference (__main__.Infrastructure.test_FM10_corpus_cer_and_bad_inference) ... ok
+test_FM14_adapter_pin_requires_gitlink (__main__.Infrastructure.test_FM14_adapter_pin_requires_gitlink) ... ok
+test_FM14_config_change_is_explicit_and_html_is_escaped (__main__.Infrastructure.test_FM14_config_change_is_explicit_and_html_is_escaped) ... ok
+test_FM14_parameter_experiment_has_explicit_output_contract (__main__.Infrastructure.test_FM14_parameter_experiment_has_explicit_output_contract) ... ok
+test_FM15_partial_evidence_drift_restart_and_memory (__main__.Infrastructure.test_FM15_partial_evidence_drift_restart_and_memory) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.541s
+
+OK

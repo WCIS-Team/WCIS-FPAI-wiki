@@ -1,0 +1,35 @@
+### platform_devices
+cmd: ls /sys/bus/platform/devices/ 2>/dev/null
+---
+Fixed MDIO bus.0
+amba-apu@0
+amba-apu@0:mali_mgm
+amba-apu@0:usbphy0
+cpufreq-dt
+e0000000.spi
+e0003000.gpio
+e0003100.gpio
+e0003200.gpio
+e0003400.gpio
+e0004000.serial
+e0005000.can
+e0021000.spi
+e0026000.slcr
+e0029000.ddr_umc
+e0040000.devcfg
+e0041000.smc
+e0043000.dwmmc
+e0044000.dwmmc
+e0045000.usb
+e0047000.ethernet
+e004b000.dma
+f0000000.mali_gpu
+f0010000.dma
+f0020000.mve
+f9000000.cci
+f9010000.pmu
+psci
+reg-dummy
+serial8250
+timer
+udmabuf@0

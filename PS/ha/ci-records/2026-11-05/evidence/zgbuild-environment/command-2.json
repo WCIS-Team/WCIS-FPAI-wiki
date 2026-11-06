@@ -1,0 +1,13 @@
+{
+  "command": [
+    "podman",
+    "exec",
+    "zgbuild",
+    "python3",
+    "-I",
+    "/workenv/ha4fpai-ci/environment.py"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"system\": \"Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.29\",\n  \"python\": \"3.8.10 (default, Mar 18 2025, 20:04:55) \\n[GCC 9.4.0]\",\n  \"cwd\": \"/\",\n  \"tools\": {\n    \"python\": null,\n    \"py\": null,\n    \"docker\": null,\n    \"podman\": null,\n    \"wsl\": null,\n    \"go\": null,\n    \"deno\": null,\n    \"actionlint\": null,\n    \"git\": \"/usr/bin/git\",\n    \"ssh\": null\n  },\n  \"numpy_available\": true\n}\n",
+  "stderr": ""
+}

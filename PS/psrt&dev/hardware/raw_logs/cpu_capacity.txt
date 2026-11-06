@@ -1,0 +1,7 @@
+### cpu_capacity
+cmd: for c in /sys/devices/system/cpu/cpu0/capacity /sys/devices/system/cpu/cpu0/capacity_orig; do echo -n "$c: "; cat $c 2>/dev/null || echo na; done; echo '---cpu_capacity_dmips:'; cat /sys/devices/system/cpu/cpu0/cpu_capacity_dmips 2>/dev/null || echo na
+---
+/sys/devices/system/cpu/cpu0/capacity: na
+/sys/devices/system/cpu/cpu0/capacity_orig: na
+---cpu_capacity_dmips:
+na

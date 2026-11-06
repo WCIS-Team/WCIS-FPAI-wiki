@@ -1,0 +1,327 @@
+﻿
+Name                                         Status DisplayName                                                     
+----                                         ------ -----------                                                     
+AarSvc_1916b4b7                             Stopped Agent Activation Runtime_1916b4b7                               
+AarSvc_1c0d1907                             Stopped Agent Activation Runtime_1c0d1907                               
+AarSvc_45fd07                               Stopped Agent Activation Runtime_45fd07                                 
+ADPSvc                                      Stopped 聚合数据平台服务                                                        
+ALG                                         Stopped Application Layer Gateway Service                               
+ANSYS, Inc. License Manager CVD             Running ANSYS, Inc. License Manager CVD                                 
+ANSYSLicensingTomcat                        Running ANSYS Licensing Tomcat                                          
+AppIDSvc                                    Stopped Application Identity                                            
+Appinfo                                     Running Application Information                                         
+AppMgmt                                     Running Application Management                                          
+AppReadiness                                Stopped App Readiness                                                   
+AppVClient                                  Stopped Microsoft App-V Client                                          
+AppXSvc                                     Stopped AppX Deployment Service (AppXSVC)                               
+ApxSvc                                      Stopped Windows 虚拟音频设备代理服务                                              
+AssignedAccessManagerSvc                    Stopped AssignedAccessManager 服务                                        
+AudioEndpointBuilder                        Running Windows Audio Endpoint Builder                                  
+Audiosrv                                    Running Windows Audio                                                   
+autotimesvc                                 Stopped 手机网络时间                                                          
+AxInstSV                                    Stopped ActiveX Installer (AxInstSV)                                    
+BcastDVRUserService_1916b4b7                Stopped GameDVR 和广播用户服务_1916b4b7                                        
+BcastDVRUserService_1c0d1907                Stopped GameDVR 和广播用户服务_1c0d1907                                        
+BcastDVRUserService_45fd07                  Stopped GameDVR 和广播用户服务_45fd07                                          
+BDESVC                                      Stopped BitLocker Drive Encryption Service                              
+BFE                                         Running Base Filtering Engine                                           
+BITS                                        Running Background Intelligent Transfer Service                         
+BluetoothUserService_1916b4b7               Stopped 蓝牙用户支持服务_1916b4b7                                               
+BluetoothUserService_1c0d1907               Stopped 蓝牙用户支持服务_1c0d1907                                               
+BluetoothUserService_45fd07                 Stopped 蓝牙用户支持服务_45fd07                                                 
+BrokerInfrastructure                        Running Background Tasks Infrastructure Service                         
+BTAGService                                 Stopped 蓝牙音频网关服务                                                        
+BthAvctpSvc                                 Stopped AVCTP 服务                                                        
+bthserv                                     Stopped 蓝牙支持服务                                                          
+camsvc                                      Running 功能访问管理器服务                                                       
+CaptureService_1916b4b7                     Stopped CaptureService_1916b4b7                                         
+CaptureService_1c0d1907                     Stopped CaptureService_1c0d1907                                         
+CaptureService_45fd07                       Stopped CaptureService_45fd07                                           
+cbdhsvc_1916b4b7                            Running 剪贴板用户服务_1916b4b7                                                
+cbdhsvc_1c0d1907                            Running 剪贴板用户服务_1c0d1907                                                
+cbdhsvc_45fd07                              Running 剪贴板用户服务_45fd07                                                  
+CDPSvc                                      Running 连接设备平台服务                                                        
+CDPUserSvc_1916b4b7                         Running 连接设备平台用户服务_1916b4b7                                             
+CDPUserSvc_1c0d1907                         Running 连接设备平台用户服务_1c0d1907                                             
+CDPUserSvc_45fd07                           Running 连接设备平台用户服务_45fd07                                               
+CertPropSvc                                 Running Certificate Propagation                                         
+ClipSVC                                     Stopped Client License Service (ClipSVC)                                
+CloudBackupRestoreSvc_1916b4b7              Stopped 云备份和还原服务_1916b4b7                                               
+CloudBackupRestoreSvc_1c0d1907              Stopped 云备份和还原服务_1c0d1907                                               
+CloudBackupRestoreSvc_45fd07                Stopped 云备份和还原服务_45fd07                                                 
+cloudidsvc                                  Stopped Microsoft 云标识服务                                                 
+CodexSandboxService.OpenAI.Codex            Stopped ChatGPT                                                         
+COMSysApp                                   Stopped COM+ System Application                                         
+ConsentUxUserSvc_1916b4b7                   Stopped ConsentUX 用户服务_1916b4b7                                         
+ConsentUxUserSvc_1c0d1907                   Stopped ConsentUX 用户服务_1c0d1907                                         
+ConsentUxUserSvc_45fd07                     Stopped ConsentUX 用户服务_45fd07                                           
+CoreMessagingRegistrar                      Running CoreMessaging                                                   
+CredentialEnrollmentManagerUserSvc_1916b4b7 Stopped CredentialEnrollmentManagerUserSvc_1916b4b7                     
+CredentialEnrollmentManagerUserSvc_1c0d1907 Stopped CredentialEnrollmentManagerUserSvc_1c0d1907                     
+CredentialEnrollmentManagerUserSvc_45fd07   Stopped CredentialEnrollmentManagerUserSvc_45fd07                       
+CryptSvc                                    Running Cryptographic Services                                          
+CscService                                  Stopped Offline Files                                                   
+DcomLaunch                                  Running DCOM Server Process Launcher                                    
+dcsvc                                       Stopped 已声明的配置(DC)服务                                                    
+defragsvc                                   Stopped Optimize drives                                                 
+DeviceAssociationBrokerSvc_1916b4b7         Stopped DeviceAssociationBroker_1916b4b7                                
+DeviceAssociationBrokerSvc_1c0d1907         Stopped DeviceAssociationBroker_1c0d1907                                
+DeviceAssociationBrokerSvc_45fd07           Stopped DeviceAssociationBroker_45fd07                                  
+DeviceAssociationService                    Running Device Association Service                                      
+DeviceInstall                               Stopped Device Install Service                                          
+DevicePickerUserSvc_1916b4b7                Stopped DevicePicker_1916b4b7                                           
+DevicePickerUserSvc_1c0d1907                Stopped DevicePicker_1c0d1907                                           
+DevicePickerUserSvc_45fd07                  Stopped DevicePicker_45fd07                                             
+DevicesFlowUserSvc_1916b4b7                 Running DevicesFlow_1916b4b7                                            
+DevicesFlowUserSvc_1c0d1907                 Stopped DevicesFlow_1c0d1907                                            
+DevicesFlowUserSvc_45fd07                   Stopped DevicesFlow_45fd07                                              
+DevQueryBroker                              Running DevQuery Background Discovery Broker                            
+Dhcp                                        Running DHCP Client                                                     
+diagsvc                                     Stopped Diagnostic Execution Service                                    
+DiagTrack                                   Running Connected User Experiences and Telemetry                        
+DialogBlockingService                       Stopped DialogBlockingService                                           
+DispBrokerDesktopSvc                        Running 显示策略服务                                                          
+DisplayEnhancementService                   Running 显示增强服务                                                          
+DmEnrollmentSvc                             Stopped 设备管理注册服务                                                        
+dmwappushservice                            Stopped 设备管理无线应用程序协议 (WAP) 推送消息路由服务                                     
+Dnscache                                    Running DNS Client                                                      
+DoSvc                                       Running Delivery Optimization                                           
+dot3svc                                     Stopped Wired AutoConfig                                                
+DPS                                         Running Diagnostic Policy Service                                       
+DsmSvc                                      Stopped Device Setup Manager                                            
+DsSvc                                       Running Data Sharing Service                                            
+DusmSvc                                     Running 数据使用量                                                           
+EapHost                                     Stopped Extensible Authentication Protocol                              
+edgeupdate                                  Stopped Microsoft Edge Update Service (edgeupdate)                      
+edgeupdatem                                 Stopped Microsoft Edge Update Service (edgeupdatem)                     
+EFS                                         Stopped Encrypting File System (EFS)                                    
+embeddedmode                                Stopped 嵌入模式                                                            
+EntAppSvc                                   Stopped Enterprise App Management Service                               
+EventLog                                    Running Windows Event Log                                               
+EventSystem                                 Running COM+ Event System                                               
+fdPHost                                     Stopped Function Discovery Provider Host                                
+FDResPub                                    Running Function Discovery Resource Publication                         
+fhsvc                                       Stopped File History Service                                            
+FontCache                                   Running Windows Font Cache Service                                      
+FrameServer                                 Stopped Windows Camera Frame Server                                     
+FrameServerMonitor                          Stopped Windows Camera Frame Server Monitor                             
+GameInputSvc                                Stopped GameInput Service                                               
+Genuine Platform Service(v4)                Running Genuine Platform Service(v4)                                    
+gpsvc                                       Running Group Policy Client                                             
+GraphicsPerfSvc                             Stopped GraphicsPerfSvc                                                 
+hidserv                                     Stopped Human Interface Device Service                                  
+hpatchmon                                   Stopped Hotpatch Monitoring Service                                     
+HvHost                                      Stopped HV 主机服务                                                         
+icssvc                                      Stopped Windows 移动热点服务                                                  
+IKEEXT                                      Stopped IKE and AuthIP IPsec Keying Modules                             
+InstallService                              Running Microsoft Store 安装服务                                            
+InventorySvc                                Running 清单和兼容性评估服务                                                      
+iphlpsvc                                    Running IP Helper                                                       
+IpxlatCfgSvc                                Stopped IP 转换配置服务                                                       
+IsolationSession                            Stopped IsolationSession                                                
+IsoSessionCore                              Stopped IsoSessionCore                                                  
+KeyIso                                      Running CNG Key Isolation                                               
+KtmRm                                       Stopped KtmRm for Distributed Transaction Coordinator                   
+LanmanServer                                Running Server                                                          
+LanmanWorkstation                           Running Workstation                                                     
+lfsvc                                       Running Geolocation Service                                             
+LicenseManager                              Running Windows 许可证管理器服务                                                
+lltdsvc                                     Stopped Link-Layer Topology Discovery Mapper                            
+lmhosts                                     Running TCP/IP NetBIOS Helper                                           
+LocalKdc                                    Stopped Kerberos 本地密钥发行中心                                               
+LSM                                         Running Local Session Manager                                           
+LxpSvc                                      Stopped 语言体验服务                                                          
+MapsBroker                                  Stopped Downloaded Maps Manager                                         
+McmSvc                                      Stopped 移动连接管理服务                                                        
+McpManagementService                        Stopped McpManagementService                                            
+MDCoreSvc                                   Running Microsoft Defender Core 服务                                      
+MessagingService_1916b4b7                   Stopped MessagingService_1916b4b7                                       
+MessagingService_1c0d1907                   Stopped MessagingService_1c0d1907                                       
+MessagingService_45fd07                     Stopped MessagingService_45fd07                                         
+MicrosoftEdgeElevationService               Stopped Microsoft Edge Elevation Service (MicrosoftEdgeElevationService)
+midisrv                                     Stopped Windows MIDI 服务                                                 
+mpssvc                                      Running Windows Defender Firewall                                       
+MSDTC                                       Stopped Distributed Transaction Coordinator                             
+MSiSCSI                                     Stopped Microsoft iSCSI Initiator Service                               
+msiserver                                   Stopped Windows Installer                                               
+MsKeyboardFilter                            Stopped Microsoft 键盘筛选器                                                 
+MsMpiLaunchSvc                              Stopped MS-MPI Launch Service                                           
+NaturalAuthentication                       Stopped 自然身份验证                                                          
+NcaSvc                                      Stopped Network Connectivity Assistant                                  
+NcbService                                  Running Network Connection Broker                                       
+NcdAutoSetup                                Running Network Connected Devices Auto-Setup                            
+Netlogon                                    Stopped Netlogon                                                        
+Netman                                      Stopped Network Connections                                             
+netprofm                                    Running Network List Service                                            
+NetSetupSvc                                 Running Network Setup Service                                           
+NetTcpPortSharing                           Stopped Net.Tcp Port Sharing Service                                    
+NgcCtnrSvc                                  Stopped Microsoft Passport Container                                    
+NgcSvc                                      Stopped Microsoft Passport                                              
+NlaSvc                                      Stopped 网络位置感知                                                          
+NPSMSvc_1916b4b7                            Running 正在播放会话管理器服务_1916b4b7                                            
+NPSMSvc_1c0d1907                            Stopped 正在播放会话管理器服务_1c0d1907                                            
+NPSMSvc_45fd07                              Running 正在播放会话管理器服务_45fd07                                              
+nsi                                         Running Network Store Interface Service                                 
+OneSyncSvc_1916b4b7                         Stopped 同步主机_1916b4b7                                                   
+OneSyncSvc_1c0d1907                         Stopped 同步主机_1c0d1907                                                   
+OneSyncSvc_45fd07                           Stopped 同步主机_45fd07                                                     
+P9RdrService_1916b4b7                       Stopped P9RdrService_1916b4b7                                           
+P9RdrService_1c0d1907                       Stopped P9RdrService_1c0d1907                                           
+P9RdrService_45fd07                         Stopped P9RdrService_45fd07                                             
+PcaSvc                                      Running Program Compatibility Assistant Service                         
+PCManager Service Store                     Running Microsoft PC Manager Service                                    
+PeerDistSvc                                 Stopped BranchCache                                                     
+PenService_1916b4b7                         Stopped PenService_1916b4b7                                             
+PenService_1c0d1907                         Stopped PenService_1c0d1907                                             
+PenService_45fd07                           Stopped PenService_45fd07                                               
+PerfHost                                    Stopped Performance Counter DLL Host                                    
+PhoneSvc                                    Stopped Phone Service                                                   
+PimIndexMaintenanceSvc_1916b4b7             Running Contact Data_1916b4b7                                           
+PimIndexMaintenanceSvc_1c0d1907             Running Contact Data_1c0d1907                                           
+PimIndexMaintenanceSvc_45fd07               Running Contact Data_45fd07                                             
+pla                                         Stopped Performance Logs & Alerts                                       
+PlugPlay                                    Running Plug and Play                                                   
+PolicyAgent                                 Running IPsec Policy Agent                                              
+Power                                       Running Power                                                           
+PrintDeviceConfigurationService             Stopped 打印设备配置服务                                                        
+PrintNotify                                 Stopped Printer Extensions and Notifications                            
+PrintScanBrokerService                      Stopped PrintScanBrokerService                                          
+PrintWorkflowUserSvc_1916b4b7               Stopped PrintWorkflow_1916b4b7                                          
+PrintWorkflowUserSvc_1c0d1907               Stopped PrintWorkflow_1c0d1907                                          
+PrintWorkflowUserSvc_45fd07                 Stopped PrintWorkflow_45fd07                                            
+ProfSvc                                     Running User Profile Service                                            
+PushToInstall                               Stopped Windows PushToInstall 服务                                        
+QWAVE                                       Stopped Quality Windows Audio Video Experience                          
+RasAuto                                     Stopped Remote Access Auto Connection Manager                           
+RasMan                                      Running Remote Access Connection Manager                                
+refsdedupsvc                                Stopped ReFS 重复数据删除服务                                                   
+RemoteAccess                                Stopped Routing and Remote Access                                       
+RemoteRegistry                              Stopped Remote Registry                                                 
+RetailDemo                                  Stopped 零售演示服务                                                          
+RmSvc                                       Running 无线电管理服务                                                         
+RpcEptMapper                                Running RPC Endpoint Mapper                                             
+RpcLocator                                  Stopped Remote Procedure Call (RPC) Locator                             
+RpcSs                                       Running Remote Procedure Call (RPC)                                     
+SamSs                                       Running Security Accounts Manager                                       
+SCardSvr                                    Stopped Smart Card                                                      
+ScDeviceEnum                                Stopped Smart Card Device Enumeration Service                           
+Schedule                                    Running Task Scheduler                                                  
+SCPolicySvc                                 Stopped Smart Card Removal Policy                                       
+SDRSVC                                      Stopped Windows 备份                                                      
+seclogon                                    Stopped Secondary Logon                                                 
+SecurityHealthService                       Running Windows 安全中心服务                                                  
+SEMgrSvc                                    Stopped 付款和 NFC/SE 管理器                                                  
+SENS                                        Running System Event Notification Service                               
+Sense                                       Stopped Windows Defender Advanced Threat Protection Service             
+SensorDataService                           Stopped Sensor Data Service                                             
+SensorService                               Running Sensor Service                                                  
+SensrSvc                                    Stopped Sensor Monitoring Service                                       
+SessionEnv                                  Running Remote Desktop Configuration                                    
+SharedAccess                                Stopped Internet Connection Sharing (ICS)                               
+ShellHWDetection                            Running Shell Hardware Detection                                        
+shpamsvc                                    Stopped Shared PC Account Manager                                       
+smphost                                     Running Microsoft Storage Spaces SMP                                    
+SmsRouter                                   Stopped Microsoft Windows SMS 路由器服务。                                    
+SNMPTrap                                    Stopped SNMP 陷阱                                                         
+Spooler                                     Running Print Spooler                                                   
+sppsvc                                      Stopped Software Protection                                             
+SSDPSRV                                     Running SSDP Discovery                                                  
+ssh-agent                                   Stopped OpenSSH Authentication Agent                                    
+SstpSvc                                     Running Secure Socket Tunneling Protocol Service                        
+StateRepository                             Running State Repository Service                                        
+StiSvc                                      Stopped Windows Image Acquisition (WIA)                                 
+StorSvc                                     Running Storage Service                                                 
+svsvc                                       Stopped Spot Verifier                                                   
+swprv                                       Running Microsoft Software Shadow Copy Provider                         
+SysMain                                     Running SysMain                                                         
+SystemEventsBroker                          Running System Events Broker                                            
+TapiSrv                                     Stopped Telephony                                                       
+TermService                                 Running Remote Desktop Services                                         
+TextInputManagementService                  Running Text Input Management Service                                   
+Themes                                      Running Themes                                                          
+TieringEngineService                        Stopped Storage Tiers Management                                        
+TimeBrokerSvc                               Running Time Broker                                                     
+TokenBroker                                 Running Web 账户管理器                                                       
+TrkWks                                      Running Distributed Link Tracking Client                                
+TroubleshootingSvc                          Stopped 建议疑难解答服务                                                        
+TrustedInstaller                            Running Windows Modules Installer                                       
+tzautoupdate                                Stopped 自动时区更新程序                                                        
+UdkUserSvc_1916b4b7                         Running Udk 用户服务_1916b4b7                                               
+UdkUserSvc_1c0d1907                         Running Udk 用户服务_1c0d1907                                               
+UdkUserSvc_45fd07                           Running Udk 用户服务_45fd07                                                 
+UevAgentService                             Stopped User Experience Virtualization Service                          
+UmRdpService                                Running Remote Desktop Services UserMode Port Redirector                
+UnistoreSvc_1916b4b7                        Running User Data Storage_1916b4b7                                      
+UnistoreSvc_1c0d1907                        Running User Data Storage_1c0d1907                                      
+UnistoreSvc_45fd07                          Running User Data Storage_45fd07                                        
+upnphost                                    Stopped UPnP Device Host                                                
+UserDataSvc_1916b4b7                        Running User Data Access_1916b4b7                                       
+UserDataSvc_1c0d1907                        Running User Data Access_1c0d1907                                       
+UserDataSvc_45fd07                          Running User Data Access_45fd07                                         
+UserManager                                 Running User Manager                                                    
+UsoSvc                                      Running 更新 Orchestrator 服务                                              
+VaultSvc                                    Running Credential Manager                                              
+vds                                         Stopped Virtual Disk                                                    
+vmicguestinterface                          Stopped Hyper-V Guest Service Interface                                 
+vmicheartbeat                               Running Hyper-V Heartbeat Service                                       
+vmickvpexchange                             Running Hyper-V Data Exchange Service                                   
+vmicrdv                                     Running Hyper-V 远程桌面虚拟化服务                                               
+vmicshutdown                                Running Hyper-V Guest Shutdown Service                                  
+vmictimesync                                Running Hyper-V Time Synchronization Service                            
+vmicvmsession                               Stopped Hyper-V PowerShell Direct Service                               
+vmicvss                                     Running Hyper-V 卷影复制请求程序                                                
+VSS                                         Running Volume Shadow Copy                                              
+W32Time                                     Running Windows Time                                                    
+WaaSMedicSvc                                Stopped WaaSMedicSvc                                                    
+WalletService                               Stopped WalletService                                                   
+WarpJITSvc                                  Stopped Warp JIT Service                                                
+wbengine                                    Stopped Block Level Backup Engine Service                               
+WbioSrvc                                    Stopped Windows Biometric Service                                       
+Wcmsvc                                      Running Windows Connection Manager                                      
+wcncsvc                                     Running Windows Connect Now - Config Registrar                          
+WdiServiceHost                              Running Diagnostic Service Host                                         
+WdiSystemHost                               Running Diagnostic System Host                                          
+WdNisSvc                                    Running Microsoft Defender 防病毒网络检查服务                                    
+WebClient                                   Running WebClient                                                       
+webthreatdefsvc                             Running Web 威胁防御服务                                                      
+webthreatdefusersvc_1916b4b7                Running Web 威胁防御用户服务_1916b4b7                                           
+webthreatdefusersvc_1c0d1907                Running Web 威胁防御用户服务_1c0d1907                                           
+webthreatdefusersvc_45fd07                  Running Web 威胁防御用户服务_45fd07                                             
+Wecsvc                                      Stopped Windows Event Collector                                         
+WEPHOSTSVC                                  Stopped Windows Encryption Provider Host Service                        
+wercplsupport                               Stopped Problem Reports Control Panel Support                           
+WerSvc                                      Stopped Windows Error Reporting Service                                 
+WFDSConMgrSvc                               Stopped WLAN Direct 服务连接管理器服务                                           
+whesvc                                      Running Windows 健康状况和优化体验                                               
+WiaRpc                                      Stopped Still Image Acquisition Events                                  
+WinDefend                                   Running Microsoft Defender 防病毒服务                                        
+WinHttpAutoProxySvc                         Running WinHTTP Web Proxy Auto-Discovery Service                        
+Winmgmt                                     Running Windows Management Instrumentation                              
+WinRM                                       Stopped Windows Remote Management (WS-Management)                       
+wisvc                                       Stopped Windows 预览体验成员服务                                                
+WlanSvc                                     Stopped WLAN AutoConfig                                                 
+wlidsvc                                     Stopped Microsoft Account Sign-in Assistant                             
+wlpasvc                                     Stopped 本地配置文件助手服务                                                      
+WManSvc                                     Stopped Windows 管理服务                                                    
+wmiApSrv                                    Stopped WMI Performance Adapter                                         
+WMPNetworkSvc                               Stopped Windows Media Player Network Sharing Service                    
+workfolderssvc                              Stopped Work Folders                                                    
+WpcMonSvc                                   Stopped 家长控制                                                            
+WPDBusEnum                                  Stopped Portable Device Enumerator Service                              
+WpnService                                  Running Windows 推送通知系统服务                                                
+WpnUserService_1916b4b7                     Running Windows Push Notifications User Service_1916b4b7                
+WpnUserService_1c0d1907                     Running Windows Push Notifications User Service_1c0d1907                
+WpnUserService_45fd07                       Running Windows Push Notifications User Service_45fd07                  
+WSAIFabricSvc                               Running Windows AI 组件主机                                                 
+wscsvc                                      Running 安全中心                                                            
+WSearch                                     Running Windows Search                                                  
+wuauserv                                    Stopped Windows 更新                                                      
+wuqisvc                                     Running Microsoft 使用情况和质量见解                                             
+WwanSvc                                     Stopped WWAN AutoConfig                                                 
+XblAuthManager                              Stopped Xbox Live 身份验证管理器                                               
+XblGameSave                                 Stopped Xbox Live 游戏保存                                                  
+XboxGipSvc                                  Stopped Xbox Accessory Management Service                               
+XboxNetApiSvc                               Stopped Xbox Live 网络服务                                                  
+
+
+

@@ -1,0 +1,550 @@
+{
+  "branch": "ci/manual-only-20261104T215939",
+  "worktree": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checkout-20261104T215939",
+  "base": "0700532ba143ef920cf59a1be4e9ee3d6631c103",
+  "target": "origin/master",
+  "selected": [
+    ".github/actionlint.yaml",
+    ".github/workflows/adapters.yml",
+    ".github/workflows/ci.yml",
+    ".github/workflows/device.yml",
+    ".github/workflows/lang-linux-package.yml",
+    ".github/workflows/performance.yml",
+    "AGENTS.md",
+    "README.md",
+    "ci/actions.py",
+    "ci/bench.py",
+    "ci/calibrate.py",
+    "ci/common.py",
+    "ci/config.json",
+    "ci/device.example.json",
+    "ci/device.package.json",
+    "ci/device_probe.py",
+    "ci/experiment.py",
+    "ci/fixtures/asr-zh.json",
+    "ci/fixtures/asr-zh.wav.b64",
+    "ci/fixtures/mock.yaml",
+    "ci/package_check.py",
+    "ci/remote.py",
+    "ci/report.py",
+    "ci/requirements-adapters.txt",
+    "ci/run.py",
+    "ci/soak.py",
+    "ci/tests/test_contracts.py",
+    "ci/tests/test_infrastructure.py",
+    "docs/CI-FAILURE-MODES.md",
+    "docs/CI-VALIDATION.md",
+    "docs/CI.md",
+    "docs/ci-references.md",
+    "lang/config-examples/online.yaml",
+    "lang/kws/router.py",
+    "lang/npuserv/README.md",
+    "lang/npuserv/adapter_lib.py",
+    "lang/npuserv/models.json",
+    "lang/npuserv/server.py",
+    "lang/npuserv/tests/adapter_stub_check.py",
+    "lang/npuserv/tests/lifecycle_check.py",
+    "lang/npuserv/tests/mock_adapter.py",
+    "lang/npuserv/tests/q3_adapter_stub_check.py",
+    "lang/npuserv/wire.py",
+    "lang/packaging/linux/README.md",
+    "lang/packaging/linux/build_deb.py",
+    "lang/packaging/linux/ci_test.py",
+    "lang/packaging/linux/debian/control.in",
+    "lang/packaging/linux/debian/postinst",
+    "lang/packaging/linux/debian/postrm",
+    "lang/packaging/linux/debian/preinst",
+    "lang/packaging/linux/debian/prerm",
+    "lang/packaging/linux/install.sh",
+    "lang/packaging/linux/model_install.py",
+    "lang/packaging/linux/models.json",
+    "lang/packaging/linux/prepare_wheels.py",
+    "lang/packaging/linux/requirements-amd64.lock",
+    "lang/packaging/linux/requirements-arm64.lock",
+    "lang/packaging/linux/systemd/lang-server-http.service",
+    "lang/packaging/linux/systemd/lang-server-loop.service",
+    "lang/packaging/linux/systemd/lang-server-model-download.service",
+    "lang/packaging/linux/systemd/lang-server-voice.service",
+    "lang/server/app.py",
+    "lang/server/backends/__init__.py",
+    "lang/server/backends/asr.py",
+    "lang/server/backends/audioio.py",
+    "lang/server/backends/front.py",
+    "lang/server/backends/kws_route.py",
+    "lang/server/backends/llm.py",
+    "lang/server/backends/rms.py",
+    "lang/server/backends/router.py",
+    "lang/server/backends/spk.py",
+    "lang/server/backends/text.py",
+    "lang/server/backends/tts.py",
+    "lang/server/cfg.py",
+    "lang/server/core.py",
+    "lang/server/fsm.py",
+    "lang/server/loop.py",
+    "lang/server/tools/wyoming_probe.py",
+    "lang/server/wyoming_gateway.py",
+    "lang/split/__init__.py",
+    "lang/split/cli.py",
+    "lang/split/legacy_tiers.py",
+    "lang/split/selftest.py",
+    "lang/split/tts_split.py"
+  ],
+  "differences": [
+    {
+      "path": ".github/actionlint.yaml",
+      "state": "new",
+      "bytes": 51
+    },
+    {
+      "path": ".github/workflows/adapters.yml",
+      "state": "new",
+      "bytes": 2501
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "state": "new",
+      "bytes": 2752
+    },
+    {
+      "path": ".github/workflows/device.yml",
+      "state": "new",
+      "bytes": 3489
+    },
+    {
+      "path": ".github/workflows/lang-linux-package.yml",
+      "state": "modified",
+      "bytes": 6179
+    },
+    {
+      "path": ".github/workflows/performance.yml",
+      "state": "new",
+      "bytes": 3919
+    },
+    {
+      "path": "README.md",
+      "state": "modified",
+      "bytes": 11455
+    },
+    {
+      "path": "boards/console.py",
+      "state": "modified",
+      "bytes": 35927
+    },
+    {
+      "path": "ci/actions.py",
+      "state": "new",
+      "bytes": 6762
+    },
+    {
+      "path": "ci/bench.py",
+      "state": "new",
+      "bytes": 5772
+    },
+    {
+      "path": "ci/calibrate.py",
+      "state": "new",
+      "bytes": 5629
+    },
+    {
+      "path": "ci/common.py",
+      "state": "new",
+      "bytes": 5383
+    },
+    {
+      "path": "ci/config.json",
+      "state": "new",
+      "bytes": 2134
+    },
+    {
+      "path": "ci/device.example.json",
+      "state": "new",
+      "bytes": 1791
+    },
+    {
+      "path": "ci/device.package.json",
+      "state": "new",
+      "bytes": 1646
+    },
+    {
+      "path": "ci/device_probe.py",
+      "state": "new",
+      "bytes": 22901
+    },
+    {
+      "path": "ci/experiment.py",
+      "state": "new",
+      "bytes": 3666
+    },
+    {
+      "path": "ci/fixtures/asr-zh.json",
+      "state": "new",
+      "bytes": 543
+    },
+    {
+      "path": "ci/fixtures/asr-zh.wav.b64",
+      "state": "new",
+      "bytes": 316477
+    },
+    {
+      "path": "ci/fixtures/mock.yaml",
+      "state": "new",
+      "bytes": 494
+    },
+    {
+      "path": "ci/package_check.py",
+      "state": "new",
+      "bytes": 7084
+    },
+    {
+      "path": "ci/remote.py",
+      "state": "new",
+      "bytes": 7825
+    },
+    {
+      "path": "ci/report.py",
+      "state": "new",
+      "bytes": 11691
+    },
+    {
+      "path": "ci/requirements-adapters.txt",
+      "state": "new",
+      "bytes": 94
+    },
+    {
+      "path": "ci/run.py",
+      "state": "new",
+      "bytes": 9033
+    },
+    {
+      "path": "ci/soak.py",
+      "state": "new",
+      "bytes": 3582
+    },
+    {
+      "path": "ci/tests/test_contracts.py",
+      "state": "new",
+      "bytes": 9963
+    },
+    {
+      "path": "ci/tests/test_infrastructure.py",
+      "state": "new",
+      "bytes": 20555
+    },
+    {
+      "path": "docs/CI-FAILURE-MODES.md",
+      "state": "new",
+      "bytes": 7303
+    },
+    {
+      "path": "docs/CI-VALIDATION.md",
+      "state": "new",
+      "bytes": 10527
+    },
+    {
+      "path": "docs/CI.md",
+      "state": "new",
+      "bytes": 22101
+    },
+    {
+      "path": "docs/ci-references.md",
+      "state": "new",
+      "bytes": 5859
+    },
+    {
+      "path": "klar/klar_executor.py",
+      "state": "modified",
+      "bytes": 27138
+    },
+    {
+      "path": "lang/kws/router.py",
+      "state": "new",
+      "bytes": 5610
+    },
+    {
+      "path": "lang/npuserv/tests/adapter_stub_check.py",
+      "state": "modified",
+      "bytes": 9834
+    },
+    {
+      "path": "lang/npuserv/tests/lifecycle_check.py",
+      "state": "modified",
+      "bytes": 12709
+    },
+    {
+      "path": "lang/npuserv/tests/q3_adapter_stub_check.py",
+      "state": "modified",
+      "bytes": 16132
+    },
+    {
+      "path": "lang/packaging/linux/README.md",
+      "state": "modified",
+      "bytes": 10493
+    },
+    {
+      "path": "lang/packaging/linux/ci_test.py",
+      "state": "modified",
+      "bytes": 16327
+    },
+    {
+      "path": "lang/packaging/linux/debian/postinst",
+      "state": "modified",
+      "bytes": 5040
+    },
+    {
+      "path": "lang/packaging/linux/requirements-amd64.lock",
+      "state": "modified",
+      "bytes": 2896
+    },
+    {
+      "path": "lang/packaging/linux/requirements-arm64.lock",
+      "state": "modified",
+      "bytes": 2897
+    },
+    {
+      "path": "lang/server/app.py",
+      "state": "modified",
+      "bytes": 19807
+    },
+    {
+      "path": "lang/server/backends/__init__.py",
+      "state": "modified",
+      "bytes": 3477
+    },
+    {
+      "path": "lang/server/backends/front.py",
+      "state": "modified",
+      "bytes": 21628
+    },
+    {
+      "path": "lang/server/backends/kws_route.py",
+      "state": "new",
+      "bytes": 1280
+    },
+    {
+      "path": "lang/server/backends/rms.py",
+      "state": "new",
+      "bytes": 2590
+    },
+    {
+      "path": "lang/server/backends/router.py",
+      "state": "modified",
+      "bytes": 5143
+    },
+    {
+      "path": "lang/server/backends/spk.py",
+      "state": "new",
+      "bytes": 15169
+    },
+    {
+      "path": "lang/server/backends/tts.py",
+      "state": "modified",
+      "bytes": 8857
+    },
+    {
+      "path": "lang/server/cfg.py",
+      "state": "modified",
+      "bytes": 6903
+    },
+    {
+      "path": "lang/server/core.py",
+      "state": "modified",
+      "bytes": 25421
+    }
+  ],
+  "base_commit": "0700532 ci: build and validate Ubuntu 20.04 lang packages\n .github/workflows/lang-linux-package.yml           | 146 +++++++++\n .gitignore                                         |   8 +\n lang/README.md                                     |   4 +-\n lang/config-examples/online.yaml                   |  63 ++++\n lang/config/online.yaml                            |  63 ----\n lang/packaging/linux/README.md                     | 102 ++++++\n lang/packaging/linux/build_deb.py                  | 193 ++++++++++++\n lang/packaging/linux/ci_test.py                    | 345 +++++++++++++++++++++\n lang/packaging/linux/debian/control.in             |  10 +\n lang/packaging/linux/debian/postinst               | 116 +++++++\n lang/packaging/linux/debian/postrm                 |  35 +++\n lang/packaging/linux/debian/preinst                |  24 ++\n lang/packaging/linux/debian/prerm                  |  16 +\n lang/packaging/linux/install.sh                    |  96 ++++++\n lang/packaging/linux/model_install.py              | 111 +++++++\n lang/packaging/linux/models.json                   |  11 +\n lang/packaging/linux/prepare_wheels.py             | 218 +++++++++++++\n lang/packaging/linux/requirements-amd64.lock       |  32 ++\n lang/packaging/linux/requirements-arm64.lock       |  32 ++\n .../linux/systemd/lang-server-http.service         |  29 ++\n .../linux/systemd/lang-server-loop.service         |  29 ++\n .../systemd/lang-server-model-download.service     |  33 ++\n .../linux/systemd/lang-server-voice.service        |  29 ++\n lang/server/loop.py                                |   6 +-\n 24 files changed, 1685 insertions(+), 66 deletions(-)\n",
+  "original_staged": "D\tlang/config/online.yaml\n",
+  "copied": [
+    ".github/actionlint.yaml",
+    ".github/workflows/adapters.yml",
+    ".github/workflows/ci.yml",
+    ".github/workflows/device.yml",
+    ".github/workflows/lang-linux-package.yml",
+    ".github/workflows/performance.yml",
+    "AGENTS.md",
+    "README.md",
+    "ci/actions.py",
+    "ci/bench.py",
+    "ci/calibrate.py",
+    "ci/common.py",
+    "ci/config.json",
+    "ci/device.example.json",
+    "ci/device.package.json",
+    "ci/device_probe.py",
+    "ci/experiment.py",
+    "ci/fixtures/asr-zh.json",
+    "ci/fixtures/asr-zh.wav.b64",
+    "ci/fixtures/mock.yaml",
+    "ci/package_check.py",
+    "ci/remote.py",
+    "ci/report.py",
+    "ci/requirements-adapters.txt",
+    "ci/run.py",
+    "ci/soak.py",
+    "ci/tests/test_contracts.py",
+    "ci/tests/test_infrastructure.py",
+    "docs/CI-FAILURE-MODES.md",
+    "docs/CI-VALIDATION.md",
+    "docs/CI.md",
+    "docs/ci-references.md",
+    "lang/kws/router.py",
+    "lang/npuserv/tests/adapter_stub_check.py",
+    "lang/npuserv/tests/lifecycle_check.py",
+    "lang/npuserv/tests/q3_adapter_stub_check.py",
+    "lang/packaging/linux/README.md",
+    "lang/packaging/linux/ci_test.py",
+    "lang/packaging/linux/debian/postinst",
+    "lang/packaging/linux/requirements-amd64.lock",
+    "lang/packaging/linux/requirements-arm64.lock",
+    "lang/server/app.py",
+    "lang/server/backends/__init__.py",
+    "lang/server/backends/front.py",
+    "lang/server/backends/kws_route.py",
+    "lang/server/backends/rms.py",
+    "lang/server/backends/router.py",
+    "lang/server/backends/spk.py",
+    "lang/server/backends/tts.py",
+    "lang/server/cfg.py",
+    "lang/server/core.py"
+  ],
+  "snapshot_status": " M .github/workflows/lang-linux-package.yml\n M README.md\n M lang/npuserv/tests/adapter_stub_check.py\n M lang/npuserv/tests/lifecycle_check.py\n M lang/npuserv/tests/q3_adapter_stub_check.py\n M lang/packaging/linux/README.md\n M lang/packaging/linux/ci_test.py\n M lang/packaging/linux/debian/postinst\n M lang/packaging/linux/requirements-amd64.lock\n M lang/packaging/linux/requirements-arm64.lock\n M lang/server/app.py\n M lang/server/backends/__init__.py\n M lang/server/backends/front.py\n M lang/server/backends/router.py\n M lang/server/backends/tts.py\n M lang/server/cfg.py\n M lang/server/core.py\n?? .github/actionlint.yaml\n?? .github/workflows/adapters.yml\n?? .github/workflows/ci.yml\n?? .github/workflows/device.yml\n?? .github/workflows/performance.yml\n?? AGENTS.md\n?? ci/actions.py\n?? ci/bench.py\n?? ci/calibrate.py\n?? ci/common.py\n?? ci/config.json\n?? ci/device.example.json\n?? ci/device.package.json\n?? ci/device_probe.py\n?? ci/experiment.py\n?? ci/fixtures/asr-zh.json\n?? ci/fixtures/asr-zh.wav.b64\n?? ci/fixtures/mock.yaml\n?? ci/package_check.py\n?? ci/remote.py\n?? ci/report.py\n?? ci/requirements-adapters.txt\n?? ci/run.py\n?? ci/soak.py\n?? ci/tests/test_contracts.py\n?? ci/tests/test_infrastructure.py\n?? docs/CI-FAILURE-MODES.md\n?? docs/CI-VALIDATION.md\n?? docs/CI.md\n?? docs/ci-references.md\n?? lang/kws/router.py\n?? lang/server/backends/kws_route.py\n?? lang/server/backends/rms.py\n?? lang/server/backends/spk.py\n",
+  "groups": {
+    "manual": [
+      ".github/actionlint.yaml",
+      ".github/workflows/adapters.yml",
+      ".github/workflows/ci.yml",
+      ".github/workflows/device.yml",
+      ".github/workflows/lang-linux-package.yml",
+      ".github/workflows/performance.yml",
+      "AGENTS.md"
+    ],
+    "runtime": [
+      "lang/kws/router.py",
+      "lang/server/app.py",
+      "lang/server/backends/__init__.py",
+      "lang/server/backends/front.py",
+      "lang/server/backends/kws_route.py",
+      "lang/server/backends/rms.py",
+      "lang/server/backends/router.py",
+      "lang/server/backends/spk.py",
+      "lang/server/backends/tts.py",
+      "lang/server/cfg.py",
+      "lang/server/core.py"
+    ],
+    "package": [
+      "lang/packaging/linux/README.md",
+      "lang/packaging/linux/ci_test.py",
+      "lang/packaging/linux/debian/postinst"
+    ],
+    "checks": [
+      "README.md",
+      "ci/actions.py",
+      "ci/bench.py",
+      "ci/calibrate.py",
+      "ci/common.py",
+      "ci/config.json",
+      "ci/device.example.json",
+      "ci/device.package.json",
+      "ci/device_probe.py",
+      "ci/experiment.py",
+      "ci/fixtures/asr-zh.json",
+      "ci/fixtures/asr-zh.wav.b64",
+      "ci/fixtures/mock.yaml",
+      "ci/package_check.py",
+      "ci/remote.py",
+      "ci/report.py",
+      "ci/requirements-adapters.txt",
+      "ci/run.py",
+      "ci/soak.py",
+      "ci/tests/test_contracts.py",
+      "ci/tests/test_infrastructure.py",
+      "docs/CI-FAILURE-MODES.md",
+      "docs/CI-VALIDATION.md",
+      "docs/CI.md",
+      "docs/ci-references.md",
+      "lang/npuserv/tests/adapter_stub_check.py",
+      "lang/npuserv/tests/lifecycle_check.py",
+      "lang/npuserv/tests/q3_adapter_stub_check.py"
+    ]
+  },
+  "staged_paths": [
+    ".github/actionlint.yaml",
+    ".github/workflows/adapters.yml",
+    ".github/workflows/ci.yml",
+    ".github/workflows/device.yml",
+    ".github/workflows/lang-linux-package.yml",
+    ".github/workflows/performance.yml",
+    "AGENTS.md",
+    "README.md",
+    "ci/actions.py",
+    "ci/bench.py",
+    "ci/calibrate.py",
+    "ci/common.py",
+    "ci/config.json",
+    "ci/device.example.json",
+    "ci/device.package.json",
+    "ci/device_probe.py",
+    "ci/experiment.py",
+    "ci/fixtures/asr-zh.json",
+    "ci/fixtures/asr-zh.wav.b64",
+    "ci/fixtures/mock.yaml",
+    "ci/package_check.py",
+    "ci/remote.py",
+    "ci/report.py",
+    "ci/requirements-adapters.txt",
+    "ci/run.py",
+    "ci/soak.py",
+    "ci/tests/test_contracts.py",
+    "ci/tests/test_infrastructure.py",
+    "docs/CI-FAILURE-MODES.md",
+    "docs/CI-VALIDATION.md",
+    "docs/CI.md",
+    "docs/ci-references.md",
+    "lang/kws/router.py",
+    "lang/npuserv/tests/adapter_stub_check.py",
+    "lang/npuserv/tests/lifecycle_check.py",
+    "lang/npuserv/tests/q3_adapter_stub_check.py",
+    "lang/packaging/linux/README.md",
+    "lang/packaging/linux/ci_test.py",
+    "lang/packaging/linux/debian/postinst",
+    "lang/server/app.py",
+    "lang/server/backends/__init__.py",
+    "lang/server/backends/front.py",
+    "lang/server/backends/kws_route.py",
+    "lang/server/backends/rms.py",
+    "lang/server/backends/router.py",
+    "lang/server/backends/spk.py",
+    "lang/server/backends/tts.py",
+    "lang/server/cfg.py",
+    "lang/server/core.py"
+  ],
+  "staged_stat": " .github/actionlint.yaml                     |   3 +\n .github/workflows/adapters.yml              |  76 +++++\n .github/workflows/ci.yml                    |  91 ++++++\n .github/workflows/device.yml                |  99 +++++++\n .github/workflows/lang-linux-package.yml    |  24 +-\n .github/workflows/performance.yml           |  95 ++++++\n AGENTS.md                                   |   8 +\n README.md                                   |   3 +\n ci/actions.py                               | 135 +++++++++\n ci/bench.py                                 | 111 +++++++\n ci/calibrate.py                             |  92 ++++++\n ci/common.py                                | 131 +++++++++\n ci/config.json                              |  40 +++\n ci/device.example.json                      |  46 +++\n ci/device.package.json                      |  30 ++\n ci/device_probe.py                          | 429 ++++++++++++++++++++++++++++\n ci/experiment.py                            |  75 +++++\n ci/fixtures/asr-zh.json                     |  13 +\n ci/fixtures/asr-zh.wav.b64                  |   1 +\n ci/fixtures/mock.yaml                       |  32 +++\n ci/package_check.py                         | 137 +++++++++\n ci/remote.py                                | 148 ++++++++++\n ci/report.py                                | 189 ++++++++++++\n ci/requirements-adapters.txt                |   2 +\n ci/run.py                                   | 173 +++++++++++\n ci/soak.py                                  |  84 ++++++\n ci/tests/test_contracts.py                  | 203 +++++++++++++\n ci/tests/test_infrastructure.py             | 352 +++++++++++++++++++++++\n docs/CI-FAILURE-MODES.md                    |  44 +++\n docs/CI-VALIDATION.md                       |  84 ++++++\n docs/CI.md                                  | 220 ++++++++++++++\n docs/ci-references.md                       |  27 ++\n lang/kws/router.py                          | 132 +++++++++\n lang/npuserv/tests/adapter_stub_check.py    |   2 +-\n lang/npuserv/tests/lifecycle_check.py       |  12 +-\n lang/npuserv/tests/q3_adapter_stub_check.py |   2 +-\n lang/packaging/linux/README.md              |  36 +++\n lang/packaging/linux/ci_test.py             |   6 +-\n lang/packaging/linux/debian/postinst        |  11 +-\n lang/server/app.py                          | 106 ++++++-\n lang/server/backends/__init__.py            |   7 +\n lang/server/backends/front.py               |  47 +--\n lang/server/backends/kws_route.py           |  37 +++\n lang/server/backends/rms.py                 |  68 +++++\n lang/server/backends/router.py              |   9 +\n lang/server/backends/spk.py                 | 333 +++++++++++++++++++++\n lang/server/backends/tts.py                 |   5 +-\n lang/server/cfg.py                          |  15 +-\n lang/server/core.py                         | 186 +++++++++++-\n 49 files changed, 4152 insertions(+), 59 deletions(-)\n",
+  "critical_package_diff": "diff --git a/lang/packaging/linux/debian/postinst b/lang/packaging/linux/debian/postinst\nindex 4a65213..0b3de67 100644\n--- a/lang/packaging/linux/debian/postinst\n+++ b/lang/packaging/linux/debian/postinst\n@@ -112,5 +112,14 @@ if [ -d /run/systemd/system ]; then\n             </dev/null >/dev/null 2>&1 || true) &\n     fi\n fi\n-printf '%s\\n' 'lang-server configured online; set ASR/LLM authentication in online.yaml or /etc/lang-server/lang-server.env.'\n+printf '%s\\n' \\\n+    'lang-server configured ONLINE; local models are not loaded or tested.' \\\n+    'Set ASR/LLM authentication in online.yaml or /etc/lang-server/lang-server.env.' \\\n+    'Services: lang-server-http (18091), lang-server-voice (10300/10301/10302), lang-server-loop (microphone/speaker).' \\\n+    'Background download: lang-server-model-download; only ASR/KWS/Silero-VAD/Matcha-TTS/Vocos files are managed.' \\\n+    'NOT PROVIDED BY THIS PACKAGE: Ekho native engine/voice data; ERNIE/Qwen2/Qwen3 NPU artifacts, drivers and iCraft runtime.' \\\n+    'Ekho requires a compatible prebuilt ARM64 kit plus matching voice data, or an off-board native/cross build.' \\\n+    'NPU LLM weights require iCraft target-model compilation or compatible precompiled artifacts; C/C++ components may additionally require ARM64 cross-compilation.' \\\n+    'Python drivers do not themselves require cross-compilation. Never compile or run model validation on the board during installation.' \\\n+    'See /usr/share/doc/lang-server/README.md for asset sources, build prerequisites and coverage limits.'\n exit 0\n",
+  "commits": [
+    {
+      "group": "manual",
+      "commit": "16795a57aedc74071fe8ed2b95cbce6970a14734",
+      "message": "ci: require manual workflow dispatch [skip ci]",
+      "output": "[ci/manual-only-20261104T215939 16795a5] ci: require manual workflow dispatch [skip ci]\n 7 files changed, 386 insertions(+), 10 deletions(-)\n create mode 100644 .github/actionlint.yaml\n create mode 100644 .github/workflows/adapters.yml\n create mode 100644 .github/workflows/ci.yml\n create mode 100644 .github/workflows/device.yml\n create mode 100644 .github/workflows/performance.yml\n create mode 100644 AGENTS.md\n"
+    },
+    {
+      "group": "runtime",
+      "commit": "45f8cc3eeb9e8dcdde8e2aeb896f87e88737683d",
+      "message": "feat: align language stages with verification contracts [skip ci]",
+      "output": "[ci/manual-only-20261104T215939 45f8cc3] feat: align language stages with verification contracts [skip ci]\n 11 files changed, 905 insertions(+), 40 deletions(-)\n create mode 100644 lang/kws/router.py\n create mode 100644 lang/server/backends/kws_route.py\n create mode 100644 lang/server/backends/rms.py\n create mode 100644 lang/server/backends/spk.py\n"
+    },
+    {
+      "group": "package",
+      "commit": "93a8e5fa2ed2b18bbea0d8a450a67da565df0008",
+      "message": "build: clarify packaged assets and preserve repeatable fixtures [skip ci]",
+      "output": "[ci/manual-only-20261104T215939 93a8e5f] build: clarify packaged assets and preserve repeatable fixtures [skip ci]\n 3 files changed, 50 insertions(+), 3 deletions(-)\n"
+    },
+    {
+      "group": "checks",
+      "commit": "c6702855eb229a6e5543db4812887c8628ccb739",
+      "message": "test: add offline CI, device probes and performance reports [skip ci]",
+      "output": "[ci/manual-only-20261104T215939 c670285] test: add offline CI, device probes and performance reports [skip ci]\n 28 files changed, 2811 insertions(+), 6 deletions(-)\n create mode 100644 ci/actions.py\n create mode 100644 ci/bench.py\n create mode 100644 ci/calibrate.py\n create mode 100644 ci/common.py\n create mode 100644 ci/config.json\n create mode 100644 ci/device.example.json\n create mode 100644 ci/device.package.json\n create mode 100644 ci/device_probe.py\n create mode 100644 ci/experiment.py\n create mode 100644 ci/fixtures/asr-zh.json\n create mode 100644 ci/fixtures/asr-zh.wav.b64\n create mode 100644 ci/fixtures/mock.yaml\n create mode 100644 ci/package_check.py\n create mode 100644 ci/remote.py\n create mode 100644 ci/report.py\n create mode 100644 ci/requirements-adapters.txt\n create mode 100644 ci/run.py\n create mode 100644 ci/soak.py\n create mode 100644 ci/tests/test_contracts.py\n create mode 100644 ci/tests/test_infrastructure.py\n create mode 100644 docs/CI-FAILURE-MODES.md\n create mode 100644 docs/CI-VALIDATION.md\n create mode 100644 docs/CI.md\n create mode 100644 docs/ci-references.md\n"
+    }
+  ],
+  "head": "c6702855eb229a6e5543db4812887c8628ccb739",
+  "final_stat": " .github/actionlint.yaml                     |   3 +\n .github/workflows/adapters.yml              |  76 +++++\n .github/workflows/ci.yml                    |  91 ++++++\n .github/workflows/device.yml                |  99 +++++++\n .github/workflows/lang-linux-package.yml    |  24 +-\n .github/workflows/performance.yml           |  95 ++++++\n AGENTS.md                                   |   8 +\n README.md                                   |   3 +\n ci/actions.py                               | 135 +++++++++\n ci/bench.py                                 | 111 +++++++\n ci/calibrate.py                             |  92 ++++++\n ci/common.py                                | 131 +++++++++\n ci/config.json                              |  40 +++\n ci/device.example.json                      |  46 +++\n ci/device.package.json                      |  30 ++\n ci/device_probe.py                          | 429 ++++++++++++++++++++++++++++\n ci/experiment.py                            |  75 +++++\n ci/fixtures/asr-zh.json                     |  13 +\n ci/fixtures/asr-zh.wav.b64                  |   1 +\n ci/fixtures/mock.yaml                       |  32 +++\n ci/package_check.py                         | 137 +++++++++\n ci/remote.py                                | 148 ++++++++++\n ci/report.py                                | 189 ++++++++++++\n ci/requirements-adapters.txt                |   2 +\n ci/run.py                                   | 173 +++++++++++\n ci/soak.py                                  |  84 ++++++\n ci/tests/test_contracts.py                  | 203 +++++++++++++\n ci/tests/test_infrastructure.py             | 352 +++++++++++++++++++++++\n docs/CI-FAILURE-MODES.md                    |  44 +++\n docs/CI-VALIDATION.md                       |  84 ++++++\n docs/CI.md                                  | 220 ++++++++++++++\n docs/ci-references.md                       |  27 ++\n lang/kws/router.py                          | 132 +++++++++\n lang/npuserv/tests/adapter_stub_check.py    |   2 +-\n lang/npuserv/tests/lifecycle_check.py       |  12 +-\n lang/npuserv/tests/q3_adapter_stub_check.py |   2 +-\n lang/packaging/linux/README.md              |  36 +++\n lang/packaging/linux/ci_test.py             |   6 +-\n lang/packaging/linux/debian/postinst        |  11 +-\n lang/server/app.py                          | 106 ++++++-\n lang/server/backends/__init__.py            |   7 +\n lang/server/backends/front.py               |  47 +--\n lang/server/backends/kws_route.py           |  37 +++\n lang/server/backends/rms.py                 |  68 +++++\n lang/server/backends/router.py              |   9 +\n lang/server/backends/spk.py                 | 333 +++++++++++++++++++++\n lang/server/backends/tts.py                 |   5 +-\n lang/server/cfg.py                          |  15 +-\n lang/server/core.py                         | 186 +++++++++++-\n 49 files changed, 4152 insertions(+), 59 deletions(-)\n"
+}

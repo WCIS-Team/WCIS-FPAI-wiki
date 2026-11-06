@@ -1,0 +1,28 @@
+# HA4FPAI performance
+
+Result: **no-baseline**
+
+Measured candidate; no speedup claim without a baseline
+
+Source: `None`; dirty: `None`
+
+| Metric | Baseline | Candidate | Change | Gate |
+|---|---:|---:|---:|---|
+| asr-file.cer.p50 | — | 0.0000 | — | no baseline |
+| asr-file.cer.p95 | — | 0.0000 | — | no baseline |
+| asr-file.latency_ms.p50 | — | 1617.5508 | — | no baseline |
+| asr-file.latency_ms.p95 | — | 1789.7006 | — | no baseline |
+| asr-file.rtf.p50 | — | 0.6543 | — | no baseline |
+| asr-file.rtf.p95 | — | 0.7240 | — | no baseline |
+| lang/components.health_ms.value | — | 24.1082 | — | no baseline |
+| lang/health.health_ms.value | — | 39.0103 | — | no baseline |
+| services.rss_growth_kib.value | — | 0.0000 | — | no baseline |
+| services.rss_kib.value | — | 80948.0000 | — | no baseline |
+| tts-short.latency_ms.p50 | — | 1895.0925 | — | no baseline |
+| tts-short.latency_ms.p95 | — | 2233.5518 | — | no baseline |
+| tts-short.rtf.p50 | — | 0.7666 | — | no baseline |
+| tts-short.rtf.p95 | — | 0.9035 | — | no baseline |
+
+Negative change means faster for latency; verify the metric's direction for other units.
+A gate fails only when the regression exceeds both its relative and absolute tolerances.
+All raw samples, conditions, source hashes and correctness checks remain in the JSON artifact.

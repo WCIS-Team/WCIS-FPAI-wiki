@@ -1,0 +1,29 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>HA4FPAI performance</title><style>body{font:16px system-ui;max-width:1080px;margin:40px auto;padding:0 24px;color:#172033}pre{white-space:pre-wrap;background:#f1f5f9;padding:20px;border-radius:8px}.metric{margin:24px 0}.metric div{display:flex;align-items:center;gap:12px;margin:6px 0}i{display:inline-block;height:18px;border-radius:3px}h1{font-size:28px}</style><h1>HA4FPAI performance: no-baseline</h1><p>Measured candidate; no speedup claim without a baseline</p><pre># HA4FPAI performance
+
+Result: **no-baseline**
+
+Measured candidate; no speedup claim without a baseline
+
+Source: `None`; dirty: `None`
+
+| Metric | Baseline | Candidate | Change | Gate |
+|---|---:|---:|---:|---|
+| asr-file.cer.p50 | — | 0.0000 | — | no baseline |
+| asr-file.cer.p95 | — | 0.0000 | — | no baseline |
+| asr-file.latency_ms.p50 | — | 2394.3665 | — | no baseline |
+| asr-file.latency_ms.p95 | — | 3302.7491 | — | no baseline |
+| asr-file.rtf.p50 | — | 0.9686 | — | no baseline |
+| asr-file.rtf.p95 | — | 1.3361 | — | no baseline |
+| lang/components.health_ms.value | — | 17.5649 | — | no baseline |
+| lang/health.health_ms.value | — | 46.2638 | — | no baseline |
+| services.rss_growth_kib.value | — | 0.0000 | — | no baseline |
+| services.rss_kib.value | — | 80948.0000 | — | no baseline |
+| tts-short.latency_ms.p50 | — | 1878.7137 | — | no baseline |
+| tts-short.latency_ms.p95 | — | 1898.7817 | — | no baseline |
+| tts-short.rtf.p50 | — | 0.7600 | — | no baseline |
+| tts-short.rtf.p95 | — | 0.7681 | — | no baseline |
+
+Negative change means faster for latency; verify the metric&#x27;s direction for other units.
+A gate fails only when the regression exceeds both its relative and absolute tolerances.
+All raw samples, conditions, source hashes and correctness checks remain in the JSON artifact.
+</pre></html>

@@ -1,0 +1,32 @@
+{
+  "status": "no-baseline",
+  "reason": "Measured candidate; no speedup claim without a baseline",
+  "rows": [],
+  "gates": {
+    "chain_ms.p95": {
+      "direction": "lower",
+      "relative": 0.15,
+      "absolute": 5.0
+    },
+    "split_ms.p95": {
+      "direction": "lower",
+      "relative": 0.2,
+      "absolute": 0.05
+    }
+  },
+  "comparison_tool_sha256": "15253e0fff85e1760d3cab819c57b0d0ad580f61db4407f176d9ff7b91b2e132",
+  "conditions": {
+    "kind": "host-mock",
+    "environment": {
+      "device_id": "549b9500faeb",
+      "system": "Linux",
+      "architecture": "x86_64",
+      "python": "3.8.10",
+      "implementation": "CPython",
+      "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+      "cpus": 16
+    },
+    "workload_sha256": "a957682e9cfa09ace7855e8f1512638a0bcfa484c13204886140385a9811310e",
+    "harness_sha256": "966de4df53320d435e7c010a9ac00232fce6b386cebe19e928fcdb44aa7e3204"
+  }
+}

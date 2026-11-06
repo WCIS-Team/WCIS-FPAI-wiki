@@ -1,0 +1,4 @@
+### fpga_bridge
+cmd: ls /sys/class/fpga_region/ 2>/dev/null; for r in /sys/class/fpga_region/*; do echo "== $r"; cat $r/ compat 2>/dev/null; done
+---
+== /sys/class/fpga_region/*

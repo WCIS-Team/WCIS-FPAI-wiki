@@ -1,0 +1,16 @@
+{
+  "version": "1.7.7",
+  "status": "passed",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "sha256": "7f12f1801bca3d480d67aaf7774f4c2a6359a3ca8eebe382c95c10c9704aa731",
+  "root": "D:\\yzd\\workenv\\ha4fpai-ci\\ha4fpai-ci-lint-f96bf350fa05\\checkout-b6b7cdf07897",
+  "files": [
+    "D:\\yzd\\workenv\\ha4fpai-ci\\ha4fpai-ci-lint-f96bf350fa05\\checkout-b6b7cdf07897\\.github\\workflows\\adapters.yml",
+    "D:\\yzd\\workenv\\ha4fpai-ci\\ha4fpai-ci-lint-f96bf350fa05\\checkout-b6b7cdf07897\\.github\\workflows\\ci.yml",
+    "D:\\yzd\\workenv\\ha4fpai-ci\\ha4fpai-ci-lint-f96bf350fa05\\checkout-b6b7cdf07897\\.github\\workflows\\device.yml",
+    "D:\\yzd\\workenv\\ha4fpai-ci\\ha4fpai-ci-lint-f96bf350fa05\\checkout-b6b7cdf07897\\.github\\workflows\\lang-linux-package.yml",
+    "D:\\yzd\\workenv\\ha4fpai-ci\\ha4fpai-ci-lint-f96bf350fa05\\checkout-b6b7cdf07897\\.github\\workflows\\performance.yml"
+  ]
+}

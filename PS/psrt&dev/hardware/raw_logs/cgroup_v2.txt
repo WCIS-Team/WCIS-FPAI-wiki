@@ -1,0 +1,14 @@
+### cgroup_v2
+cmd: for f in /sys/fs/cgroup/unified/memory.max /sys/fs/cgroup/unified/memory.high /sys/fs/cgroup/unified/cpu.max /sys/fs/cgroup/unified/pids.max /sys/fs/cgroup/memory.max /sys/fs/cgroup/memory.high /sys/fs/cgroup/cpu.max /sys/fs/cgroup/pids.max; do echo -n "$f: "; cat $f 2>/dev/null || echo na; done; echo '---self cgroup v2:'; cat /proc/self/cgroup
+---
+/sys/fs/cgroup/unified/memory.max: na
+/sys/fs/cgroup/unified/memory.high: na
+/sys/fs/cgroup/unified/cpu.max: na
+/sys/fs/cgroup/unified/pids.max: na
+/sys/fs/cgroup/memory.max: na
+/sys/fs/cgroup/memory.high: na
+/sys/fs/cgroup/cpu.max: na
+/sys/fs/cgroup/pids.max: na
+---self cgroup v2:
+1:name=systemd:/user.slice/user-0.slice/session-18.scope
+0::/user.slice/user-0.slice/session-18.scope

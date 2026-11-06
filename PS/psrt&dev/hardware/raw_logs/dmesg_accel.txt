@@ -1,0 +1,37 @@
+### dmesg_accel
+cmd: dmesg 2>/dev/null | grep -iE 'mve|linlon|arm china|china|mali|bifrost|amvx|zg330|icore|npu|fpga|axi|dma'
+---
+[    0.000000]   DMA32 zone: 3584 pages used for memmap
+[    0.000000]   DMA32 zone: 0 pages reserved
+[    0.000000]   DMA32 zone: 262144 pages, LIFO batch:63
+[    0.157037] DMA: preallocated 256 KiB pool for atomic allocations
+[    1.515754] dw_dmac e004b000.dma: DesignWare DMA Controller, 8 channels
+[    1.589258] FPGA manager framework
+[    1.764690] dw_axi_dmac_platform f0010000.dma: Every channel has independent irq number
+[    1.773257] dw_axi_dmac_platform f0010000.dma: DesignWare AXI DMA Controller, 8 channels
+[    1.850194] misc dma_buf_te: dma_buf_te ready
+[    1.854912] physical-memory-group-manager amba-apu@0:mali_mgm: Memory group manager probed successfully
+[    1.994139] fmql-dwmac e0047000.ethernet: DMA HW capability register supported
+[    2.389005] dwc2 e0045000.usb: host_dma is enable.
+[    2.393806] dwc2 e0045000.usb: g_dma is enable.
+[    2.398343] dwc2 e0045000.usb: g_dma_desc is enable.
+[    2.510186] dw_mmc e0043000.dwmmc: Using external DMA controller.
+[    2.641883] fpga_manager fpga0: FMSH FMQL FPGA Manager registered
+[    2.831782] ttyPS0 - failed to request DMA
+[    7.577770] input: Lenovo MCP01 Consumer Control as /devices/platform/amba-apu@0/e0045000.usb/usb1/1-1/1-1.2/1-1.2:1.0/0003:17EF:A03B.0001/input/input0
+[    7.655746] input: Lenovo MCP01 as /devices/platform/amba-apu@0/e0045000.usb/usb1/1-1/1-1.2/1-1.2:1.0/0003:17EF:A03B.0001/input/input1
+[    7.667996] hid-generic 0003:17EF:A03B.0001: input: USB HID v1.10 Device [Lenovo MCP01] on usb-e0045000.usb-1.2/input0
+[    7.791314] u_dma_buf: loading out-of-tree module taints kernel.
+[    7.848239] u-dma-buf udmabuf0: driver version = 3.2.5
+[    7.853414] u-dma-buf udmabuf0: major number   = 242
+[    7.853432] u-dma-buf udmabuf0: minor number   = 0
+[    7.863208] u-dma-buf udmabuf0: phys address   = 0x0000000030100000
+[    7.869517] u-dma-buf udmabuf0: buffer size    = 134217728
+[    7.880567] u-dma-buf udmabuf@0: driver installed.
+[    9.090259] mali f0000000.mali_gpu: Kernel DDK version r31p0-01eac0
+[    9.096860] mali f0000000.mali_gpu: GPU identified as 0x2 arch 7.4.0 r1p0 status 0
+[    9.104637] mali f0000000.mali_gpu: No priority control manager is configured
+[    9.111800] mali f0000000.mali_gpu: Memory group manager successfully loaded
+[    9.118897] mali f0000000.mali_gpu: Using coherency mode 31 set from dtb
+[    9.126443] mali f0000000.mali_gpu: Probed as mali0
+[    9.523771] MVX dev: Linlon v5276 identified. cores=2, nlsid=4, id=0. (mvx_dev.c:427)

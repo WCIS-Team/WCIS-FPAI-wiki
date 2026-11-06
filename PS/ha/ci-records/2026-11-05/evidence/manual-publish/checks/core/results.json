@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "profile": "full",
+  "environment": {
+    "device_id": "549b9500faeb",
+    "system": "Linux",
+    "architecture": "x86_64",
+    "python": "3.8.10",
+    "implementation": "CPython",
+    "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+    "cpus": 16
+  },
+  "source": {
+    "commit": null,
+    "dirty": null
+  },
+  "external_sources": {},
+  "checks": [
+    {
+      "id": "source-validation",
+      "status": "passed",
+      "files": 72,
+      "seconds": 1.9410610140039353
+    },
+    {
+      "id": "contracts",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 4.505964943993604,
+      "log": "contracts.log",
+      "message": "",
+      "test_methods": 7
+    },
+    {
+      "id": "infrastructure",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 10.715455676996498,
+      "log": "infrastructure.log",
+      "message": "",
+      "test_methods": 11
+    },
+    {
+      "id": "split",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 3.002121404002537,
+      "log": "split.log",
+      "message": "",
+      "test_methods": null
+    },
+    {
+      "id": "fsm",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.27674998200382106,
+      "log": "fsm.log",
+      "message": "",
+      "test_methods": null
+    },
+    {
+      "id": "npu-lifecycle",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 10.72868649099837,
+      "log": "npu-lifecycle.log",
+      "message": "",
+      "test_methods": null
+    },
+    {
+      "id": "host-soak",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.8496424500044668,
+      "log": "host-soak.log",
+      "message": "",
+      "test_methods": null
+    },
+    {
+      "id": "calibration",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 18.677388704993064,
+      "log": "calibration.log",
+      "message": "",
+      "test_methods": null
+    }
+  ]
+}

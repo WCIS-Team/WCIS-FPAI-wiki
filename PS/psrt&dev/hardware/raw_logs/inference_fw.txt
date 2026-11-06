@@ -1,0 +1,16 @@
+### inference_fw
+cmd: ls /usr/lib/ 2>/dev/null | grep -iE 'icraft|npu|zg|fpai|tensor' ; echo '---'; ldconfig -p 2>/dev/null | grep -iE 'icraft|npu|zg|fpai' | head -20
+---
+---
+	libsocketzg330aiu.so (libc6,AArch64) => /lib/aarch64-linux-gnu/libsocketzg330aiu.so
+	libmockzg330.so (libc6,AArch64) => /lib/aarch64-linux-gnu/libmockzg330.so
+	libicraft_zg330backend.so (libc6,AArch64) => /lib/aarch64-linux-gnu/libicraft_zg330backend.so
+	libicraft_xrt.so (libc6,AArch64) => /lib/aarch64-linux-gnu/libicraft_xrt.so
+	libicraft_xir_serialize_flatbuffers.so (libc6,AArch64) => /lib/aarch64-linux-gnu/libicraft_xir_serialize_flatbuffers.so
+	libicraft_xir.so (libc6,AArch64) => /lib/aarch64-linux-gnu/libicraft_xir.so
+	libicraft_utils.so (libc6,AArch64) => /lib/aarch64-linux-gnu/libicraft_utils.so
+	libicraft_pl_sim.so (libc6,AArch64) => /lib/aarch64-linux-gnu/libicraft_pl_sim.so
+	libicraft_hostbackend.so (libc6,AArch64) => /lib/aarch64-linux-gnu/libicraft_hostbackend.so
+	libicraft_buyibackend.so (libc6,AArch64) => /lib/aarch64-linux-gnu/libicraft_buyibackend.so
+	libcustomop.DetPostZG.so (libc6,AArch64) => /lib/aarch64-linux-gnu/libcustomop.DetPostZG.so
+	libaxizg330aiu.so (libc6,AArch64) => /lib/aarch64-linux-gnu/libaxizg330aiu.so

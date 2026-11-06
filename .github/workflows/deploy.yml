@@ -1,0 +1,190 @@
+name: Build and publish wiki site
+
+# This workflow runs inside the document repository itself, so every page commit
+# rebuilds the site - no pointer bump and no cross-repository token (D-65).
+#
+# ⚠ 2026-11-02: this workflow is currently DISABLED on purpose (GitHub state
+# `disabled_manually`, workflow id 390042843) - pushes to main no longer build or
+# deploy the site, and manual workflow_dispatch is blocked too. The decision record
+# is D-1793566627 in wiki/archive/开发管理/状态源与决策记录.md. To resume: enable the
+# workflow (Settings -> Actions -> Workflows -> Build and publish wiki site) or
+# `PUT /repos/{owner}/{repo}/actions/workflows/390042843/enable`; no commit is
+# needed, and the PUBLISH gate described below applies again once re-enabled.
+#
+# Quartz is not vendored: the pinned upstream tag is fetched at build time, the
+# content folder is assembled from this repository's tree by site/make-content.py,
+# and only the generated site is uploaded. Nothing under site/content or qbuild
+# is ever committed.
+#
+# Publishing is gated by the repository variable PUBLISH (Settings -> Actions ->
+# Variables). Absent or any value other than `false` publishes; set it to `false`
+# to keep building but stop deploying, which leaves the site frozen on its last
+# deployment with every existing URL still reachable. To stop the build itself
+# (and the Actions minutes it costs) disable this workflow
+# (Settings -> Actions -> Workflows); to take the live URL away, unpublish the
+# Pages site (Settings -> Pages).
+#
+# v5.0.0 loads plugins from Git, pinned in quartz.lock.json, so site/quartz.lock.json
+# is a trimmed copy of the tag's own lockfile (only the 34 plugins the config enables)
+# and site/quartz.config.yaml keeps that tag's `github:` source form.
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  QUARTZ_REF: v5.0.0
+  NODE_VERSION: "22"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Page dates come from git history (make-content.py walks it), so a shallow
+      # or empty checkout silently turns every page into the build date. Fail here
+      # instead of shipping a site with wrong dates.
+      - name: Check the history arrived
+        run: |
+          test -f README.md || { echo "::error::README.md is missing - the checkout did not get the document tree"; exit 1; }
+          echo "commits reachable: $(git rev-list --count HEAD)"
+          echo "markdown tracked: $(git ls-files '*.md' | wc -l)"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch Quartz at the pinned tag
+        run: git clone --branch "$QUARTZ_REF" --depth 1 https://github.com/jackyzha0/quartz.git qbuild
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: |
+            qbuild/package-lock.json
+            site/quartz.lock.json
+
+      - name: Install Quartz dependencies
+        working-directory: qbuild
+        run: npm ci
+
+      # Each plugin is a separate Git repo that ships no compiled output, so the
+      # first run clones 35 repos and runs npm install + npm run build in each.
+      # That is the slow part; cache it keyed on the pinned versions. The save is a
+      # separate always() step because a failed job does not save actions/cache.
+      - name: Restore built plugins
+        id: plugin-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: qbuild/.quartz
+          key: quartz-plugins-${{ env.QUARTZ_REF }}-${{ hashFiles('site/quartz.lock.json') }}
+          restore-keys: quartz-plugins-${{ env.QUARTZ_REF }}-
+
+      - name: Place site config and assemble content
+        run: |
+          cp site/quartz.config.yaml qbuild/quartz.config.yaml
+          cp site/quartz.lock.json qbuild/quartz.lock.json
+          rm -rf qbuild/content
+          python -X utf8 site/make-content.py --dest qbuild/content
+
+      - name: Build site
+        id: build
+        working-directory: qbuild
+        run: |
+          npx quartz plugin install
+          npx quartz plugin resolve
+          npx quartz build -v
+
+      # One page aborts the whole build, so the useful signal is which page and
+      # which plugin. This drops the failing page, rebuilds, and repeats: pages
+      # that come out clean afterwards were collateral, not the cause.
+      - name: Diagnostic - locate the failing page
+        if: failure() && steps.build.outcome == 'failure'
+        working-directory: qbuild
+        run: |
+          set +e
+          echo "DIAG call sites of fromCodePoint:"
+          grep -rl "fromCodePoint" .quartz/plugins 2>/dev/null | head -20
+          for i in 1 2 3 4 5; do
+            rm -rf public-diag
+            out=$(npx quartz build -o public-diag 2>&1)
+            lines=$(printf '%s\n' "$out" | grep 'Failed to process' | sort -u)
+            if [ -z "$lines" ]; then
+              echo "DIAG attempt $i: no page failed"
+              printf '%s\n' "$out" | tail -25
+              break
+            fi
+            echo "DIAG attempt $i failing pages:"
+            printf '%s\n' "$lines"
+            f=$(printf '%s\n' "$lines" | head -1 | sed 's/.*markdown `*\([^`]*\)`*:.*/\1/' | tr -d '`')
+            if [ -f "$f" ]; then
+              echo "DIAG repr of $f"
+              python3 -c "import sys;print(repr(open(sys.argv[1],encoding='utf-8').read())[:900])" "$f"
+              rm -f "$f"
+            else
+              echo "DIAG cannot locate $f, stopping"
+              printf '%s\n' "$out" | tail -25
+              break
+            fi
+          done
+
+      - name: Save built plugins
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: qbuild/.quartz
+          key: ${{ steps.plugin-cache.outputs.cache-primary-key }}
+
+      # Deny-all robots.txt, noindex tag on every page, sitemap removed, and the
+      # body text taken out of the search index so the sidebar loads titles only.
+      # GitHub Pages has no way to send X-Robots-Tag, so the tags are all the
+      # signal the site can give. Advisory: they stop obedient crawlers, not
+      # determined ones.
+      - name: Harden and trim output
+        run: python -X utf8 site/harden-site.py qbuild/public
+
+      - name: Upload site bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: wiki-site
+          path: qbuild/public
+
+      # PUBLISH is a repository variable (Settings -> Actions -> Variables).
+      # The test is written as `!= 'false'`, not `== 'true'`, so an absent
+      # variable publishes: the switch can only be turned off on purpose.
+      # Off means the Pages artifact is never uploaded and the deploy job is
+      # skipped, so the site keeps serving its last successful deployment.
+      # Existing URLs stay reachable; nothing here can 404 them. Only
+      # unpublishing the Pages site (or setting the source to None) does that.
+      - name: Upload Pages artifact
+        if: vars.PUBLISH != 'false'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: qbuild/public
+
+  deploy:
+    needs: build
+    if: vars.PUBLISH != 'false'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,8 @@
+### cgroup_self
+cmd: cat /proc/self/cgroup; echo '---mem limit:'; for f in /sys/fs/cgroup/memory/memory.limit_in_bytes /sys/fs/cgroup/memory.max; do echo -n "$f: "; cat $f 2>/dev/null || echo na; done
+---
+1:name=systemd:/user.slice/user-0.slice/session-85.scope
+0::/user.slice/user-0.slice/session-85.scope
+---mem limit:
+/sys/fs/cgroup/memory/memory.limit_in_bytes: na
+/sys/fs/cgroup/memory.max: na

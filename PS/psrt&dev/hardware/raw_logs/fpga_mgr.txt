@@ -1,0 +1,7 @@
+### fpga_mgr
+cmd: ls /sys/class/fpga_manager/ 2>/dev/null; echo '---'; for d in /sys/class/fpga_manager/*; do echo -n "$d/state: "; cat $d/state 2>/dev/null; echo; done
+---
+fpga0
+---
+/sys/class/fpga_manager/fpga0/state: operating
+

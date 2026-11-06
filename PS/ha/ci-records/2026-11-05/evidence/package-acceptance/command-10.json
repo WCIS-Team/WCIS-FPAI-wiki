@@ -1,0 +1,12 @@
+{
+  "command": [
+    "podman",
+    "cp",
+    "wcis-lang-package-test:/workenv/ha4fpai-ci/package-e4f23e04a303/lifecycle.json",
+    "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\package-acceptance\\lifecycle.json"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

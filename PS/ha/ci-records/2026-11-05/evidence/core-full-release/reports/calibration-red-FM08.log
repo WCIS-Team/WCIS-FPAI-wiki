@@ -1,0 +1,17 @@
+test_FM08_regression_and_tolerances (__main__.Infrastructure) ... FAIL
+
+======================================================================
+FAIL: test_FM08_regression_and_tolerances (__main__.Infrastructure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workenv/ha4fpai-ci/full/calibration-source-3962d9a9c0b0/ci/tests/test_infrastructure.py", line 52, in test_FM08_regression_and_tolerances
+    self.assertEqual(report.compare(measurement(value), baseline, self.gates)["status"], expected)
+AssertionError: 'passed' != 'regression'
+- passed
++ regression
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (failures=1)

@@ -1,0 +1,103 @@
+﻿
+
+ClassName                        : MSFT_PhysicalDisk
+Usage                            : Auto-Select
+OperationalStatus                : OK
+UniqueIdFormat                   : FCPH Name
+HealthStatus                     : Healthy
+BusType                          : SAS
+CannotPoolReason                 : Insufficient Capacity
+SupportedUsages                  : {Auto-Select, Manual-Select, Hot Spare, Retired...}
+MediaType                        : Unspecified
+SpindleSpeed                     : 0
+ObjectId                         : {1}\\WIN11-HV1\root/Microsoft/Windows/Storage/Providers_v2\SPACES_PhysicalDisk.Objec
+                                   tId="{3bf66802-fced-11ef-89cc-806e6f6e6963}:PD:{46ffcee6-9467-57f2-da6e-906f12863f6c
+                                   }"
+PassThroughClass                 : 
+PassThroughIds                   : 
+PassThroughNamespace             : 
+PassThroughServer                : 
+UniqueId                         : 60022480A4A02AA2E3C7DC27E6B01A99
+Description                      : 
+FriendlyName                     : Msft Virtual Disk
+Manufacturer                     : Msft
+Model                            : Virtual Disk
+OperationalDetails               : 
+PhysicalLocation                 : Integrated : Bus 0 : Device 64676 : Function 22411 : Adapter 0 : Port 0 : Target 0 :
+                                    LUN 0
+SerialNumber                     : 
+AdapterSerialNumber              : 
+AllocatedSize                    : 136364163072
+CanPool                          : False
+DeviceId                         : 0
+EnclosureNumber                  : 
+FirmwareVersion                  : 1.0
+FruId                            : 
+IsIndicationEnabled              : False
+IsPartial                        : True
+LogicalSectorSize                : 512
+OtherCannotPoolReasonDescription : 
+PartNumber                       : 
+PhysicalSectorSize               : 4096
+Size                             : 136365211648
+SlotNumber                       : 
+SoftwareVersion                  : 
+StoragePoolUniqueId              : 
+VirtualDiskFootprint             : 0
+PSComputerName                   : 
+CimClass                         : root/microsoft/windows/storage:MSFT_PhysicalDisk
+CimInstanceProperties            : {ObjectId, PassThroughClass, PassThroughIds, PassThroughNamespace...}
+CimSystemProperties              : Microsoft.Management.Infrastructure.CimSystemProperties
+
+ClassName                        : MSFT_PhysicalDisk
+Usage                            : Auto-Select
+OperationalStatus                : OK
+UniqueIdFormat                   : FCPH Name
+HealthStatus                     : Healthy
+BusType                          : SAS
+CannotPoolReason                 : Insufficient Capacity
+SupportedUsages                  : {Auto-Select, Manual-Select, Hot Spare, Retired...}
+MediaType                        : Unspecified
+SpindleSpeed                     : 0
+ObjectId                         : {1}\\WIN11-HV1\root/Microsoft/Windows/Storage/Providers_v2\SPACES_PhysicalDisk.Objec
+                                   tId="{3bf66802-fced-11ef-89cc-806e6f6e6963}:PD:{9b32c3a5-4940-0ce3-2abb-93a96479a37d
+                                   }"
+PassThroughClass                 : 
+PassThroughIds                   : 
+PassThroughNamespace             : 
+PassThroughServer                : 
+UniqueId                         : 600224801D8ABB9FB9050FEE2057AE7C
+Description                      : 
+FriendlyName                     : Msft Virtual Disk
+Manufacturer                     : Msft
+Model                            : Virtual Disk
+OperationalDetails               : 
+PhysicalLocation                 : Integrated : Bus 0 : Device 64676 : Function 22411 : Adapter 0 : Port 0 : Target 0 :
+                                    LUN 1
+SerialNumber                     : 
+AdapterSerialNumber              : 
+AllocatedSize                    : 2147482599424
+CanPool                          : False
+DeviceId                         : 1
+EnclosureNumber                  : 
+FirmwareVersion                  : 1.0
+FruId                            : 
+IsIndicationEnabled              : False
+IsPartial                        : True
+LogicalSectorSize                : 512
+OtherCannotPoolReasonDescription : 
+PartNumber                       : 
+PhysicalSectorSize               : 4096
+Size                             : 2147483648000
+SlotNumber                       : 
+SoftwareVersion                  : 
+StoragePoolUniqueId              : 
+VirtualDiskFootprint             : 0
+PSComputerName                   : 
+CimClass                         : root/microsoft/windows/storage:MSFT_PhysicalDisk
+CimInstanceProperties            : {ObjectId, PassThroughClass, PassThroughIds, PassThroughNamespace...}
+CimSystemProperties              : Microsoft.Management.Infrastructure.CimSystemProperties
+
+
+
+

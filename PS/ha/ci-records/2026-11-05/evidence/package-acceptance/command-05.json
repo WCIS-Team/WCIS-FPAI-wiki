@@ -1,0 +1,13 @@
+{
+  "command": [
+    "podman",
+    "inspect",
+    "wcis-lang-package-test",
+    "--format",
+    "{{.State.Status}} {{json .Config.Cmd}}"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "stdout": "exited [\"infinity\"]\n",
+  "stderr": ""
+}

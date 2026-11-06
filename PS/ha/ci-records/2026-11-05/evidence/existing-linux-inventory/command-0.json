@@ -1,0 +1,14 @@
+{
+  "command": [
+    "wsl",
+    "-d",
+    "Ubuntu",
+    "--",
+    "python3",
+    "-I",
+    "/mnt/s/work/WCIS/workenv/ha4fpai-ci/validation-environment.py"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"system\": \"Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.43\",\n  \"python\": \"3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]\",\n  \"cwd\": \"/mnt/s/apps/llm/agentwork\",\n  \"tools\": {\n    \"python\": null,\n    \"py\": null,\n    \"docker\": null,\n    \"podman\": null,\n    \"wsl\": null,\n    \"go\": null,\n    \"deno\": null,\n    \"actionlint\": null,\n    \"git\": \"/usr/bin/git\",\n    \"ssh\": \"/usr/bin/ssh\"\n  },\n  \"numpy_available\": false\n}\n",
+  "stderr": ""
+}

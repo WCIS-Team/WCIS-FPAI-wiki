@@ -1,0 +1,38 @@
+### pip
+cmd: python3 -m pip --version 2>&1; echo '---list---'; python3 -m pip list 2>/dev/null | head -80
+---
+pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.8)
+---list---
+Package             Version             
+------------------- --------------------
+attrs               22.1.0              
+certifi             2019.11.28          
+chardet             3.0.4               
+dbus-python         1.2.16              
+distro              1.4.0               
+distro-info         0.23ubuntu1         
+exceptiongroup      1.0.0               
+icraft              3.39.0              
+idna                2.8                 
+iniconfig           1.1.1               
+numpy               1.23.0              
+opencv-python       4.6.0.66            
+packaging           21.3                
+Pillow              9.3.0               
+pip                 20.0.2              
+pluggy              1.0.0               
+PyGObject           3.36.0              
+pyparsing           3.0.9               
+pytest              7.2.0               
+python-apt          2.0.0+ubuntu0.20.4.8
+requests            2.22.0              
+requests-unixsocket 0.2.0               
+setuptools          45.2.0              
+six                 1.14.0              
+ssh-import-id       5.10                
+tflite-runtime      2.10.0              
+tokenizers          0.13.3              
+tomli               2.0.1               
+unattended-upgrades 0.1                 
+urllib3             1.25.8              
+wheel               0.34.2              

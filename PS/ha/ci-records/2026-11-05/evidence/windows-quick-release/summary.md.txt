@@ -1,0 +1,9 @@
+# HA4FPAI quick: passed
+
+| Suite | Status | Seconds | Log |
+|---|---|---:|---|
+| source-validation | passed | 0.51 |  |
+| contracts | passed | 3.93 | contracts.log |
+| infrastructure | passed | 1.92 | infrastructure.log |
+| split | passed | 0.68 | split.log |
+| fsm | passed | 0.14 | fsm.log |

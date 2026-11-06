@@ -1,0 +1,4 @@
+### storage_detail
+cmd: cat /sys/block/mmcblk0/device/{name,type,manfid,oemid,serial,fwrev,date} 2>/dev/null; echo '---mmc1:'; cat /sys/block/mmcblk1/device/{name,type,manfid,oemid,serial,fwrev,date} 2>/dev/null
+---
+---mmc1:

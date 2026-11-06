@@ -1,0 +1,38 @@
+### fpga_detail
+cmd: for a in state name firmware status; do echo -n "$a: "; cat /sys/class/fpga_manager/fpga0/$a 2>/dev/null || echo na; done; echo '---firmware dir:'; ls -R /sys/firmware 2>/dev/null | head -30
+---
+state: operating
+name: FMSH FMQL FPGA Manager
+firmware: na
+status: na
+---firmware dir:
+/sys/firmware:
+devicetree
+fdt
+
+/sys/firmware/devicetree:
+base
+
+/sys/firmware/devicetree/base:
+#address-cells
+#size-cells
+aliases
+amba-apu@0
+chosen
+compatible
+cpus
+dcc
+idle-states
+memory@0
+model
+name
+psci
+timer
+udmabuf@0
+
+/sys/firmware/devicetree/base/aliases:
+ethernet0
+ethernet1
+mmc0
+name
+serial0

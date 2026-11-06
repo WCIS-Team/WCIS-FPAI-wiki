@@ -1,0 +1,12 @@
+### df
+cmd: df -h
+---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        26G   19G  5.5G  78% /
+devtmpfs        369M     0  369M   0% /dev
+tmpfs           497M     0  497M   0% /dev/shm
+tmpfs           100M  108K  100M   1% /run
+tmpfs           5.0M     0  5.0M   0% /run/lock
+tmpfs           497M     0  497M   0% /sys/fs/cgroup
+/dev/mmcblk1p1   30G  273M   29G   1% /mnt/wcis-emmc
+tmpfs           100M     0  100M   0% /run/user/0

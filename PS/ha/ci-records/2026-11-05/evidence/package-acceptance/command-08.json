@@ -1,0 +1,12 @@
+{
+  "command": [
+    "podman",
+    "cp",
+    "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\package-acceptance\\dist-amd64\\lang-server_0.1.0+ci.20261105_amd64.deb",
+    "wcis-lang-package-test:/workenv/ha4fpai-ci/package-e4f23e04a303/package.deb"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

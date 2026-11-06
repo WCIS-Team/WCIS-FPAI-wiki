@@ -1,0 +1,7 @@
+### npu_platform
+cmd: ls /sys/bus/platform/devices/ 2>/dev/null | grep -iE 'mve|china|npu|zg|icore|amvx|axidma|dma'
+---
+e004b000.dma
+f0010000.dma
+f0020000.mve
+udmabuf@0

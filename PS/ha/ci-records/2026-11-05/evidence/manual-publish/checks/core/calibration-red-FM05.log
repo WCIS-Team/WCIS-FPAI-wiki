@@ -1,0 +1,18 @@
+test_FM05_gate_timeout_and_exception_release (__main__.Contracts) ... ERROR
+
+======================================================================
+ERROR: test_FM05_gate_timeout_and_exception_release (__main__.Contracts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/s/work/WCIS/workenv/ha4fpai-ci/manual-publish/checks/core/calibration-source-8f1412eb617a/ci/tests/test_contracts.py", line 139, in test_FM05_gate_timeout_and_exception_release
+    with self.chain.admit():
+  File "/usr/lib/python3.8/contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "/mnt/s/work/WCIS/workenv/ha4fpai-ci/manual-publish/checks/core/calibration-source-8f1412eb617a/lang/server/core.py", line 218, in admit
+    raise GateTimeout("准入闸超时：并发上限 %d，等了 %.0f s"
+core.GateTimeout: 准入闸超时：并发上限 1，等了 0 s
+
+----------------------------------------------------------------------
+Ran 1 test in 0.141s
+
+FAILED (errors=1)

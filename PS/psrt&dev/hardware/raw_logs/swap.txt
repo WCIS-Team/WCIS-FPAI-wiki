@@ -1,0 +1,8 @@
+### swap
+cmd: swapon --show 2>/dev/null; echo '---'; cat /proc/swaps
+---
+NAME      TYPE  SIZE USED PRIO
+/swapfile file 1024M   0B   -2
+---
+Filename				Type		Size	Used	Priority
+/swapfile                               file		1048572	0	-2

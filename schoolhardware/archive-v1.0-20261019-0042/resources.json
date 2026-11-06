@@ -1,0 +1,228 @@
+{
+  "_meta": {
+    "collected_at_local": "2026-10-19T00:42:25.6946215+08:00",
+    "collected_at_utc": "2026-10-18T16:42:25.6946215Z",
+    "timezone": "China Standard Time (08:00:00)",
+    "collector": "hw_collect.ps1 (SOP 2 - MOD)",
+    "archive_version": "1.0",
+    "tool_powershell": "5.1.26100.9711",
+    "tool_wmi_cim": "Get-CimInstance / Get-ComputerInfo",
+    "host": "Win11-HV1",
+    "os_caption": "Microsoft Windows 11 专业工作站版"
+  },
+  "cpu": {
+    "count_physical_packages": 1,
+    "manufacturer": "AuthenticAMD",
+    "name": "AMD EPYC 9654 96-Core Processor                ",
+    "architecture": 9,
+    "address_width": 64,
+    "num_cores_total": 24,
+    "num_logical_total": 24,
+    "num_available_env": 24,
+    "num_available_dotnet": 24,
+    "max_clock_mhz": 2400,
+    "current_clock_mhz": 2400,
+    "l2_cache_kb": 24576,
+    "l3_cache_kb": 98304,
+    "socket": "None",
+    "revision": 4353,
+    "family": 107,
+    "virtualization_firmware": true,
+    "numa_nodes": 0,
+    "source": "system_report"
+  },
+  "memory": {
+    "total_physical_bytes": 134216568832,
+    "total_physical_gib": 125,
+    "os_total_visible_bytes": 134216568832,
+    "os_free_bytes": 92059258880,
+    "os_free_gib": 85.74,
+    "module_count": 3,
+    "modules": [
+      {
+        "bank": "None",
+        "locator": "M0001",
+        "capacity_gib": 3.88,
+        "speed_mhz": null,
+        "memory_type": 0,
+        "manufacturer": "Microsoft Corporation",
+        "part_number": "None"
+      },
+      {
+        "bank": "None",
+        "locator": "M0002",
+        "capacity_gib": 59.5,
+        "speed_mhz": null,
+        "memory_type": 0,
+        "manufacturer": "Microsoft Corporation",
+        "part_number": "None"
+      },
+      {
+        "bank": "None",
+        "locator": "M0003",
+        "capacity_gib": 61.62,
+        "speed_mhz": null,
+        "memory_type": 0,
+        "manufacturer": "Microsoft Corporation",
+        "part_number": "None"
+      }
+    ],
+    "swap_total_bytes": 8589934592,
+    "swap_total_mib": 8192,
+    "zram_enabled": "not_supported",
+    "cgroup_memory_limit": "not_applicable",
+    "cpu_l2_cache_kb": 24576,
+    "cpu_l3_cache_kb": 98304,
+    "source": "system_report"
+  },
+  "storage": {
+    "volumes": [
+      {
+        "drive": "C",
+        "filesystem": "NTFS",
+        "size_gib": 125.99,
+        "free_gib": 16.54,
+        "health": "Healthy"
+      },
+      {
+        "drive": "D",
+        "filesystem": "NTFS",
+        "size_gib": 1999.98,
+        "free_gib": 1713.7,
+        "health": "Healthy"
+      }
+    ],
+    "physical_disks": [
+      {
+        "model": "Microsoft Virtual Disk",
+        "media_type": "Fixed hard disk media",
+        "bus_type": "SCSI",
+        "size_gib": 127
+      },
+      {
+        "model": "Microsoft Virtual Disk",
+        "media_type": "Fixed hard disk media",
+        "bus_type": "SCSI",
+        "size_gib": 2000
+      }
+    ],
+    "model_disk_note": "model/experiment file disk not auto-detected on this guest; record manually if applicable",
+    "source": "system_report"
+  },
+  "accelerators": {
+    "gpus": [
+      {
+        "name": "Microsoft Hyper-V 视频",
+        "adapter_ram_mib": null,
+        "driver_version": "10.0.26100.1150",
+        "driver_date": "2006-06-21T00:00:00Z",
+        "video_processor": null,
+        "pnp_id": "VMBUS\\{DA0A7802-E377-4AAC-8E77-0558EB1073F8}\\{5620E0C7-8062-4DCE-AEB7-520C7EF76171}",
+        "status": "OK"
+      }
+    ],
+    "npu_devices": [],
+    "fpga_tools": "not_detected",
+    "fpga_note": "FPGA resource figures require vendor tool reports (Vivado/Quartus); none executed per SOP",
+    "source": "system_report",
+    "gpu_passthrough": false,
+    "note": "Only the Hyper-V synthetic video adapter is present; nvidia-smi was not found, so no discrete GPU/NPU passthrough. FPGA resource figures require vendor tools (Vivado/Quartus) and were not executed per SOP."
+  },
+  "runtime_limits": {
+    "cpu_affinity_current_process": 16777215,
+    "current_process_threads": 43,
+    "process_count": 407,
+    "service_count": 321,
+    "max_file_descriptors": "not_applicable",
+    "background_load_top_cpu": [
+      {
+        "name": "WindowsTerminal",
+        "cpu_s": 7779.96875,
+        "id": 13540
+      },
+      {
+        "name": "Life115",
+        "cpu_s": 4795.34375,
+        "id": 8048
+      },
+      {
+        "name": "MSPCManagerService",
+        "cpu_s": 838.921875,
+        "id": 5808
+      },
+      {
+        "name": "bash",
+        "cpu_s": 541.109375,
+        "id": 5804
+      },
+      {
+        "name": "ssh",
+        "cpu_s": 409.453125,
+        "id": 16120
+      },
+      {
+        "name": "explorer",
+        "cpu_s": 129.125,
+        "id": 8692
+      },
+      {
+        "name": "OpenCode",
+        "cpu_s": 68.484375,
+        "id": 6372
+      },
+      {
+        "name": "explorer",
+        "cpu_s": 61.40625,
+        "id": 6856
+      }
+    ],
+    "background_load_top_mem": [
+      {
+        "name": "MsMpEng",
+        "ws_mb": 636,
+        "id": 7256
+      },
+      {
+        "name": "explorer",
+        "ws_mb": 600,
+        "id": 8692
+      },
+      {
+        "name": "fdtd-solutions",
+        "ws_mb": 557,
+        "id": 11184
+      },
+      {
+        "name": "svchost",
+        "ws_mb": 548,
+        "id": 2876
+      },
+      {
+        "name": "Life115",
+        "ws_mb": 459,
+        "id": 8048
+      },
+      {
+        "name": "explorer",
+        "ws_mb": 436,
+        "id": 9500
+      },
+      {
+        "name": "fdtd-solutions",
+        "ws_mb": 420,
+        "id": 12088
+      },
+      {
+        "name": "ChatGPT",
+        "ws_mb": 400,
+        "id": 29668
+      }
+    ],
+    "other_experiments_competing": "unverified",
+    "permission_limits": {
+      "current_user": "WIN11-HV1\\YiZhidi",
+      "is_admin": false
+    },
+    "source": "tool_report"
+  }
+}

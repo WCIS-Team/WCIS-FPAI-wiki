@@ -1,0 +1,17 @@
+{
+  "command": [
+    "podman",
+    "exec",
+    "zgbuild",
+    "python3",
+    "-I",
+    "-B",
+    "/mnt/s/work/WCIS/repos/HA4FPAI/ci/bench.py",
+    "--output",
+    "/mnt/s/work/WCIS/workenv/ha4fpai-ci/performance-linux-release/baseline.json"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "stdout": "Benchmark: 10 metrics; output=/mnt/s/work/WCIS/workenv/ha4fpai-ci/performance-linux-release/baseline.json\n",
+  "stderr": ""
+}

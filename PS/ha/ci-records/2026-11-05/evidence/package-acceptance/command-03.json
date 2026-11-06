@@ -1,0 +1,23 @@
+{
+  "command": [
+    "podman",
+    "exec",
+    "zgbuild",
+    "python3",
+    "-I",
+    "-B",
+    "/mnt/s/work/WCIS/repos/HA4FPAI/lang/packaging/linux/build_deb.py",
+    "--architecture",
+    "amd64",
+    "--version",
+    "0.1.0+ci.20261105",
+    "--wheelhouse",
+    "/mnt/s/work/WCIS/workenv/lang-linux-package/wheelhouse-amd64",
+    "--output",
+    "/mnt/s/work/WCIS/workenv/ha4fpai-ci/package-acceptance/dist-amd64"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "stdout": "{\"artifact\": \"/mnt/s/work/WCIS/workenv/ha4fpai-ci/package-acceptance/dist-amd64/lang-server_0.1.0+ci.20261105_amd64.deb\", \"bytes\": 36614176, \"sha256\": \"cfe0615f005f0c64d00848b27dcd071f9af0b64cbc1e311964a91cbd7ff2a6e8\"}\n{\"artifact\": \"/mnt/s/work/WCIS/workenv/ha4fpai-ci/package-acceptance/dist-amd64/lang-server_0.1.0+ci.20261105_amd64_ubuntu20.04.tar.gz\", \"bytes\": 36633022, \"sha256\": \"0d8819de02eed50d919773963271298203027d4379983911ac9198cc695c1208\"}\nstaging=/mnt/s/work/WCIS/workenv/ha4fpai-ci/package-acceptance/stage-amd64-20261104T185518432213\n",
+  "stderr": ""
+}

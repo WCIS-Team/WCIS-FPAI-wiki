@@ -1,0 +1,14 @@
+# HA4FPAI full: failed
+
+| Suite | Status | Seconds | Log |
+|---|---|---:|---|
+| source-validation | passed | 0.96 |  |
+| contracts | passed | 3.09 | contracts.log |
+| infrastructure | passed | 0.77 | infrastructure.log |
+| split | passed | 0.47 | split.log |
+| fsm | passed | 0.07 | fsm.log |
+| npu-lifecycle | passed | 8.00 | npu-lifecycle.log |
+| npu-adapter | failed | 0.12 | npu-adapter.log |
+| npu-q3-adapter | failed | 0.42 | npu-q3-adapter.log |
+| host-soak | passed | 0.47 | host-soak.log |
+| calibration | passed | 6.91 | calibration.log |

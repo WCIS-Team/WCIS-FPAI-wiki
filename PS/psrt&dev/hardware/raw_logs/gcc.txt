@@ -1,0 +1,8 @@
+### gcc
+cmd: gcc --version 2>&1 | head -1; echo '---g++:'; g++ --version 2>&1 | head -1; echo '---cc:'; cc --version 2>&1 | head -1
+---
+gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0
+---g++:
+g++ (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0
+---cc:
+cc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0

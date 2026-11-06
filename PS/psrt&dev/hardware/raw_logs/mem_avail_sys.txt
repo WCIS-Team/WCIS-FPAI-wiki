@@ -1,0 +1,9 @@
+### mem_avail_sys
+cmd: cat /proc/meminfo | grep -E 'MemTotal|MemFree|MemAvailable|Buffers|Cached'
+---
+MemTotal:        1017704 kB
+MemFree:          413388 kB
+MemAvailable:     720196 kB
+Buffers:           69696 kB
+Cached:           291688 kB
+SwapCached:            0 kB

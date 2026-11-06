@@ -1,0 +1,14 @@
+### hugepages
+cmd: ls /sys/kernel/mm/hugepages/ 2>/dev/null; for d in /sys/kernel/mm/hugepages/*; do echo -n "$d free: "; cat $d/free_hugepages 2>/dev/null; echo -n ' size: '; cat $d/hugepagesize 2>/dev/null; done; echo '---shm:'; df -h /dev/shm 2>/dev/null
+---
+hugepages-1048576kB
+hugepages-2048kB
+hugepages-32768kB
+hugepages-64kB
+/sys/kernel/mm/hugepages/hugepages-1048576kB free: 0
+ size: /sys/kernel/mm/hugepages/hugepages-2048kB free: 0
+ size: /sys/kernel/mm/hugepages/hugepages-32768kB free: 0
+ size: /sys/kernel/mm/hugepages/hugepages-64kB free: 0
+ size: ---shm:
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           497M   72K  497M   1% /dev/shm

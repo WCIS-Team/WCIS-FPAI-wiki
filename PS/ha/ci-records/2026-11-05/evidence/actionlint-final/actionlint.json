@@ -1,0 +1,15 @@
+{
+  "version": "1.7.7",
+  "status": "failed",
+  "exit_code": 1,
+  "stdout": ".github\\workflows\\ci.yml:67:0: could not parse as YAML: yaml: line 67: mapping values are not allowed in this context [syntax-check]\n   |\n67 |         run: python -I -m pip install --disable-pip-version-check --only-binary=:all: -r ci/requirements-full.txt\n   | \n.github\\workflows\\lang-linux-package.yml:35:11: error while parsing reusable workflow \"./.github/workflows/ci.yml\": yaml: line 67: mapping values are not allowed in this context [expression]\n   |\n35 |     uses: ./.github/workflows/ci.yml\n   |           ^~~~~~~~~~~~~~~~~~~~~~~~~~\n",
+  "stderr": "",
+  "sha256": "7f12f1801bca3d480d67aaf7774f4c2a6359a3ca8eebe382c95c10c9704aa731",
+  "root": "D:\\yzd\\workenv\\ha4fpai-ci\\ha4fpai-ci-lint-2dadd5ddf924\\checkout-2c31ca66993b",
+  "files": [
+    "D:\\yzd\\workenv\\ha4fpai-ci\\ha4fpai-ci-lint-2dadd5ddf924\\checkout-2c31ca66993b\\.github\\workflows\\ci.yml",
+    "D:\\yzd\\workenv\\ha4fpai-ci\\ha4fpai-ci-lint-2dadd5ddf924\\checkout-2c31ca66993b\\.github\\workflows\\device.yml",
+    "D:\\yzd\\workenv\\ha4fpai-ci\\ha4fpai-ci-lint-2dadd5ddf924\\checkout-2c31ca66993b\\.github\\workflows\\lang-linux-package.yml",
+    "D:\\yzd\\workenv\\ha4fpai-ci\\ha4fpai-ci-lint-2dadd5ddf924\\checkout-2c31ca66993b\\.github\\workflows\\performance.yml"
+  ]
+}

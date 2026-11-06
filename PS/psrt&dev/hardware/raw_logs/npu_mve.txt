@@ -1,0 +1,5 @@
+### npu_mve
+cmd: ls -d /proc/device-tree/mve* 2>/dev/null; for d in /proc/device-tree/mve*; do echo "== $d"; ls $d 2>/dev/null; echo -n 'status: '; cat $d/status 2>/dev/null; echo; done
+---
+== /proc/device-tree/mve*
+status: 

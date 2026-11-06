@@ -1,0 +1,31 @@
+### icraft_backend
+cmd: icraft --help 2>&1 | head -20; echo '---icraft devices:'; icraft device list 2>&1 | head -20 || true
+---
+使用说明: 
+
+	打印帮助信息：
+		icraft --help
+
+	打印版本信息：
+		icraft --version
+
+	标准用法：
+		icraft <command> [config.toml] [<--flag> [<args>]] [--dry_run]
+			command指代必填的命令名，将实际调用环境变量内的icraft-command可执行程序
+			config.toml指代可选的存放键值对的文件
+			flag指代可选的键值对的键
+			args指代可选的键值对的值，一个键可以对应任意个值
+			使用dry_run参数可以打印CLI解析出的完整命令行
+---icraft devices:
+[2K[10/20/26 07:49:08.127] [F] [37m[2mStack trace (most recent call last):
+#5    Object "/usr/bin/icraft", at 0x557a20a0ef, in _start
+#4    Object "/lib/aarch64-linux-gnu/libc.so.6", at 0x7f8060be0f, in __libc_start_main
+#3    Object "/usr/bin/icraft", at 0x557a209cd7, in main
+#2    Object "/usr/bin/icraft", at 0x557a21efdf, in getComb(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > >&)
+#1    Object "/usr/bin/icraft", at 0x557a21eae3, in parseToml(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+#0    Object "/lib/aarch64-linux-gnu/libicraft_utils.so", at 0x7f809c52c7, in icraft::detail::LogExcept::Entry::finalize()
+[0m
+[31mException occurs at line 59 in file /home/gitlab-runner/builds/36oFVAdZ/0/icraft/Icraft-Build/build/linux-aarch64-release/_deps/icraft-cli-src/source/utils.cpp[0m
+[31m[7mException info : Check failed: (std::filesystem::exists(filePath)) is false
+未找到指定的toml文件: list[0m
+

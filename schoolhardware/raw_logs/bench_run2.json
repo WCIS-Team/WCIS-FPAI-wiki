@@ -1,0 +1,12 @@
+{
+  "benchmark": "bench_cpu.c (mingw64 gcc -O2 -fopenmp)",
+  "nthreads": 24,
+  "cpu": {
+    "matrix_size": 512,
+    "single_thread": { "seconds": 0.0403, "gflops": 6.664 },
+    "all_threads":   { "seconds": 0.0051, "gflops": 52.252, "threads": 24 }
+  },
+  "memory": { "array_mb": 256, "seconds": 0.5201, "gbps": 30.97 },
+  "disk": { "file_mb": 256, "write_mbps": 3840.2, "read_mbps": 7469.2, "path": "D:\yzd\bench_tmp.bin" },
+  "note": "moderate bounded single-shot measurements; no stress/soak test was performed"
+}

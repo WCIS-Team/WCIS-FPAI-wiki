@@ -1,0 +1,11 @@
+### dpkg_vendor
+cmd: dpkg -l 2>/dev/null | grep -iE 'fmsh|icraft|zg330|mali|amvx|npu|fpga|fpa' | head -40
+---
+ii  customop                       3.39.0                              arm64        This is Icraft CustomOp for arm64
+ii  gpg                            2.2.19-3ubuntu2.5                   arm64        GNU Privacy Guard -- minimalist public key operations
+ii  icraft                         3.39.0                              arm64        This is Icraft for arm64
+ii  icraftmdzthirdparty            0.1.1                               arm64        This is IcraftMdzThirdParty for arm64
+ii  libavdevice58:arm64            7:4.2.7-0ubuntu0.1                  arm64        FFmpeg library for handling input and output devices - runtime files
+ii  libmnl0:arm64                  1.0.4-2                             arm64        minimalistic Netlink communication library
+ii  libxi6:arm64                   2:1.7.10-0ubuntu1                   arm64        X11 Input extension library
+ii  systemd-timesyncd              245.4-4ubuntu3.20                   arm64        minimalistic service to synchronize local time with NTP servers

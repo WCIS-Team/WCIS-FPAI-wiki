@@ -1,0 +1,43 @@
+﻿{
+    "_meta":  {
+                  "collected_at_local":  "2026-10-20T16:14:00.7796862+08:00",
+                  "collected_at_utc":  "2026-10-20T08:14:00.7955223Z",
+                  "timezone":  "China Standard Time (08:00)",
+                  "collector":  "hw_collect_v2.ps1 (SOP 2 - MOD, corrected re-collection)",
+                  "archive_version":  "1.1",
+                  "tool_powershell":  "5.1.26100.9711",
+                  "tool_wmi_cim":  "Get-CimInstance / Get-ComputerInfo / Get-Volume",
+                  "host":  "WIN11-HV1"
+              },
+    "identity":  {
+                     "hostname":  "WIN11-HV1",
+                     "machine_id_anon":  "WIN11-HV1|9814-1958-9337-5547-4672-2147-65",
+                     "manufacturer":  "Microsoft Corporation",
+                     "model":  "Virtual Machine",
+                     "system_type":  "x64-based PC",
+                     "chassis_type":  [
+                                          3
+                                      ],
+                     "bios_version":  "VRTUAL - 1",
+                     "bios_serial":  "9814-1958-9337-5547-4672-2147-65",
+                     "board_product":  "Virtual Machine",
+                     "board_mfgr":  "Microsoft Corporation",
+                     "device_class":  "vm_confirmed",
+                     "source":  "system_report",
+                     "hypervisor_present":  true,
+                     "note":  "Hyper-V virtual machine (Manufacturer=Microsoft Corporation, Model=Virtual Machine, BIOS=VRTUAL-1, HypervisorPresent=True). The CPU model string (AMD EPYC 9654 96-Core) is the HOST CPU exposed to the guest; this VM is assigned 24 vCPUs. Memory is reported as 3 virtual DIMMs."
+                 },
+    "hardware_summary":  {
+                             "cpu_summary":  {
+                                                 "name":  "AMD EPYC 9654 96-Core Processor                ",
+                                                 "cores":  24,
+                                                 "logical":  24,
+                                                 "arch":  9
+                                             },
+                             "memory_gib":  125,
+                             "gpus":  [
+                                          "Microsoft Hyper-V 视频"
+                                      ],
+                             "source":  "system_report"
+                         }
+}

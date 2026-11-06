@@ -1,0 +1,60 @@
+{
+  "collected_at": "2026-11-04T17:26:15.780738+00:00",
+  "directory": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\upstreams-fcd18c6d5095",
+  "repositories": [
+    {
+      "repository": "home-assistant/core",
+      "workflows": [],
+      "errors": [
+        "<urlopen error timed out>"
+      ],
+      "default_branch": "dev",
+      "archived": false
+    },
+    {
+      "repository": "FABBricate-IT-Solutions/klar-ha-nlu",
+      "workflows": [],
+      "errors": [
+        "<urlopen error timed out>"
+      ]
+    },
+    {
+      "repository": "home-assistant/intents",
+      "workflows": [],
+      "errors": [
+        "<urlopen error timed out>"
+      ],
+      "default_branch": "main",
+      "archived": false
+    },
+    {
+      "repository": "esphome/esphome",
+      "workflows": [],
+      "errors": [
+        "<urlopen error timed out>"
+      ]
+    },
+    {
+      "repository": "hanxi/xiaomusic",
+      "workflows": [],
+      "errors": [
+        "main: <urlopen error timed out>"
+      ],
+      "default_branch": "main",
+      "archived": true,
+      "branch_tips": {
+        "main": "e159329b3fabff97a9a6cafa9e149eda4d31b3b6"
+      },
+      "branch_scan_truncated": false
+    },
+    {
+      "repository": "yihong0618/xiaogpt",
+      "workflows": [],
+      "errors": [
+        "<urlopen error timed out>"
+      ],
+      "default_branch": "main",
+      "archived": false
+    }
+  ]
+}

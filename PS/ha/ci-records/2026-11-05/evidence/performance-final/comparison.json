@@ -1,0 +1,141 @@
+{
+  "status": "regression",
+  "reason": "Comparable measurements",
+  "rows": [
+    {
+      "metric": "split-12.chain_ms.p50",
+      "baseline": 30.048949999999998,
+      "candidate": 27.6981,
+      "delta": -2.3508499999999977,
+      "percent": -7.823401483246495,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-12.chain_ms.p95",
+      "baseline": 32.9106,
+      "candidate": 38.8719,
+      "delta": 5.961299999999994,
+      "percent": 18.113616889391242,
+      "regression": true,
+      "gated": true
+    },
+    {
+      "metric": "split-12.first_request_ms.value",
+      "baseline": 25.5953,
+      "candidate": 24.5473,
+      "delta": -1.0480000000000018,
+      "percent": -4.094501724926068,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-12.split_ms.p50",
+      "baseline": 0.03795,
+      "candidate": 0.039099999999999996,
+      "delta": 0.0011499999999999982,
+      "percent": 3.030303030303026,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-12.split_ms.p95",
+      "baseline": 0.0566,
+      "candidate": 0.0546,
+      "delta": -0.001999999999999995,
+      "percent": -3.5335689045936305,
+      "regression": false,
+      "gated": true
+    },
+    {
+      "metric": "split-20-16k.chain_ms.p50",
+      "baseline": 24.04285,
+      "candidate": 24.92145,
+      "delta": 0.8785999999999987,
+      "percent": 3.6543088693728016,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-20-16k.chain_ms.p95",
+      "baseline": 26.7414,
+      "candidate": 28.2833,
+      "delta": 1.5419000000000018,
+      "percent": 5.765965880619571,
+      "regression": false,
+      "gated": true
+    },
+    {
+      "metric": "split-20-16k.first_request_ms.value",
+      "baseline": 22.8331,
+      "candidate": 25.725,
+      "delta": 2.8918999999999997,
+      "percent": 12.665384901743518,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-20-16k.split_ms.p50",
+      "baseline": 0.0332,
+      "candidate": 0.033299999999999996,
+      "delta": 9.999999999999593e-05,
+      "percent": 0.30120481927709614,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-20-16k.split_ms.p95",
+      "baseline": 0.045,
+      "candidate": 0.0512,
+      "delta": 0.006200000000000004,
+      "percent": 13.777777777777787,
+      "regression": false,
+      "gated": true
+    },
+    {
+      "metric": "split-20.chain_ms.p50",
+      "baseline": 61.07995,
+      "candidate": 62.09925,
+      "delta": 1.0193000000000012,
+      "percent": 1.6687963889950814,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-20.chain_ms.p95",
+      "baseline": 71.5843,
+      "candidate": 69.1758,
+      "delta": -2.4085000000000036,
+      "percent": -3.3645645763107326,
+      "regression": false,
+      "gated": true
+    },
+    {
+      "metric": "split-20.first_request_ms.value",
+      "baseline": 139.7293,
+      "candidate": 164.0128,
+      "delta": 24.283500000000004,
+      "percent": 17.378960604540353,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-20.split_ms.p50",
+      "baseline": 0.0354,
+      "candidate": 0.035250000000000004,
+      "delta": -0.00014999999999999736,
+      "percent": -0.4237288135593146,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-20.split_ms.p95",
+      "baseline": 0.0473,
+      "candidate": 0.0477,
+      "delta": 0.0003999999999999976,
+      "percent": 0.8456659619450265,
+      "regression": false,
+      "gated": true
+    }
+  ]
+}

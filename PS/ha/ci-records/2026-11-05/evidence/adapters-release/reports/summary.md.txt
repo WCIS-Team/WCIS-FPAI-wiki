@@ -1,0 +1,14 @@
+# HA4FPAI adapters: passed
+
+| Suite | Status | Seconds | Log |
+|---|---|---:|---|
+| source-validation | passed | 0.69 |  |
+| contracts | passed | 3.60 | contracts.log |
+| infrastructure | passed | 0.92 | infrastructure.log |
+| split | passed | 0.63 | split.log |
+| fsm | passed | 0.12 | fsm.log |
+| npu-lifecycle | passed | 8.00 | npu-lifecycle.log |
+| npu-adapter | passed | 2.53 | npu-adapter.log |
+| npu-q3-adapter | passed | 5.10 | npu-q3-adapter.log |
+| host-soak | passed | 0.82 | host-soak.log |
+| calibration | passed | 8.41 | calibration.log |

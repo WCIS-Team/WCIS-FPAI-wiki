@@ -1,0 +1,13 @@
+{
+  "command": [
+    "podman",
+    "exec",
+    "wcis-py38",
+    "mkdir",
+    "-p",
+    "/workenv/ha4fpai-ci"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

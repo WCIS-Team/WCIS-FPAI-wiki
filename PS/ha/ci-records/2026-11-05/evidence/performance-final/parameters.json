@@ -1,0 +1,76 @@
+{
+  "status": "passed",
+  "reason": "Deployed configuration changed; explicitly accepted for this experiment; parameter tradeoff with identical input and source; inspect chunk count and audio duration",
+  "rows": [
+    {
+      "metric": "chain_ms.p50",
+      "baseline": 27.6981,
+      "candidate": 24.92145,
+      "delta": -2.77665,
+      "percent": -10.02469483466375,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "chain_ms.p95",
+      "baseline": 38.8719,
+      "candidate": 28.2833,
+      "delta": -10.588599999999996,
+      "percent": -27.239728441367667,
+      "regression": false,
+      "gated": true
+    },
+    {
+      "metric": "first_request_ms.value",
+      "baseline": 24.5473,
+      "candidate": 25.725,
+      "delta": 1.1777000000000015,
+      "percent": 4.797676322854251,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split_ms.p50",
+      "baseline": 0.039099999999999996,
+      "candidate": 0.033299999999999996,
+      "delta": -0.0058,
+      "percent": -14.83375959079284,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split_ms.p95",
+      "baseline": 0.0546,
+      "candidate": 0.0512,
+      "delta": -0.0034000000000000002,
+      "percent": -6.227106227106227,
+      "regression": false,
+      "gated": true
+    }
+  ],
+  "experiment": {
+    "baseline": {
+      "parameters": {
+        "id": "split-12",
+        "max_chars": 12,
+        "out_rate": 16000
+      },
+      "chunks": 6,
+      "frames": 79678,
+      "audio_rate": 16000,
+      "text": "好的，这是自检回复。第二句用来切分。最后来一句长一点的，看看分词器会不会把它切开，给 TTS 留几个小块。"
+    },
+    "candidate": {
+      "parameters": {
+        "id": "split-20-16k",
+        "max_chars": 20,
+        "out_rate": 16000
+      },
+      "chunks": 4,
+      "frames": 70079,
+      "audio_rate": 16000,
+      "text": "好的，这是自检回复。第二句用来切分。最后来一句长一点的，看看分词器会不会把它切开，给 TTS 留几个小块。"
+    },
+    "note": "Mock TTS duration depends on chunking. This comparison shows parameter cost and output size, not speech quality."
+  }
+}

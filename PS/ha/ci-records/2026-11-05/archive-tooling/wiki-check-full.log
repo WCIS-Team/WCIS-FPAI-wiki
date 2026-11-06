@@ -1,0 +1,132 @@
+PL/FPGA/FPGArt/06_Gitee_FMQL100TAI芯片算力分析_docx抽取.md  H1 does not match file name
+PL/FPGA/FPGArt/30TAI使用教程.md  first line is not an H1
+PL/FPGA/FPGArt/B组_eeworld_FM33LG0开发板测评_开发环境先行_tid1186265.md  H1 does not match file name
+PL/FPGA/FPGArt/B组_知乎_国产复旦微FMQL45教程_Procise应用流程_p643315308.md  H1 does not match file name
+PL/FPGA/FPGArt/JFMKits.ippatch.md:50  bare HTML-looking placeholder <Xilinx 载体型号>
+PL/FPGA/FPGArt/JFMKits.ippatch.md  first line is not an H1
+PL/FPGA/FPGArt/Procise_Headless无GUI操作指南.md  H1 does not match file name
+PL/FPGA/FPGArt/Procise仿真链路与器件库加密.md:96  unresolved wikilink [[注意事项]]
+PL/FPGA/SDI转HDMI转换器.md  first line is not an H1
+PL/MOD/161206601-【FPAI开发】超详细！YOLO26适配FPAI芯片部署过程详解！.md  H1 does not match file name
+PL/MOD/asr/asr魔改.md  first line is not an H1
+PL/MOD/llm/Qwen3-Instruct按Qwen2配方迁移.md:17,55,59,61  missing section #六、板上运行侧要改什么（B：直读厂商 qwen2_infer_decode_only_axi.py） in [[Qwen3按厂商Qwen2配方迁移]]
+PL/MOD/llm/Qwen3按厂商Qwen2配方迁移.md  H1 does not match file name
+PL/MOD/modrt/tutorial-runtime/examples/Example1_compile/TensorFlow2Onnx/0_yolov3/README.md  duplicated page name (wikilinks become ambiguous)
+PL/MOD/modrt/tutorial-runtime/examples/Example1_compile/TensorFlow2Onnx/0_yolov3/mAP/extra/README.md  duplicated page name (wikilinks become ambiguous)
+PL/plvid.md  H1 does not match file name
+PS/Backend/Models.md  first line is not an H1
+PS/Backend/mods/audio/2026-10-19 FunASR-MOSS ASR CPU Benchmark/README.md  duplicated page name (wikilinks become ambiguous)
+PS/Backend/mods/audio/2026-10-19 FunASR-MOSS ASR CPU Benchmark/summary_table.md  first line is not an H1
+PS/Backend/mods/audio/2026-10-20/已装清单.md  H1 does not match file name
+PS/Backend/mods/audio/2026-10-20/无权重清单.md  H1 does not match file name
+PS/Backend/mods/audio/ARM CPU TTS性能测试.md:1381  unresolved wikilink [[0.0, 66.84]]
+PS/Backend/mods/audio/ARM CPU TTS性能测试.md:1384  unresolved wikilink [[0.0, 66.86]]
+PS/Backend/mods/audio/ARM CPU TTS性能测试.md:1387  unresolved wikilink [[0.0, 66.87]]
+PS/Backend/mods/audio/ARM CPU TTS性能测试.md:1531  unresolved wikilink [[组件选型与复用边界]]
+PS/Backend/mods/audio/whisper.md  first line is not an H1
+PS/OrchestrationLayer/intro.md  first line is not an H1
+PS/OrchestrationLayer/router.md  first line is not an H1
+PS/board_extract/README.md  duplicated page name (wikilinks become ambiguous)
+PS/emmc/01-结论汇总.md  H1 does not match file name
+PS/emmc/02-硬件与数据通路.md  H1 does not match file name
+PS/emmc/03-寄存器证据.md  H1 does not match file name
+PS/emmc/04-性能实测.md  H1 does not match file name
+PS/emmc/05-DMA启用方案.md  H1 does not match file name
+PS/emmc/06-磁盘清理清单.md  H1 does not match file name
+PS/emmc/07-踩坑与注意事项.md  H1 does not match file name
+PS/emmc/README.md  duplicated page name (wikilinks become ambiguous)
+PS/hardware/板子（除芯片）.md:97  missing section #4.2 平台参数表（在板端执行命令后回填） in [[交叉编译环节]]
+PS/hardware/板子（除芯片）.md:76,80,82,134  unresolved wikilink [[板级管线详图]]
+PS/hardware/板子（除芯片）.md:81,134  unresolved wikilink [[组件选型与复用边界]]
+PS/hardware/板载接口与内核改造收纳进dev.md  H1 does not match file name
+PS/hardware/板载接口与内核改造收纳进dev.md:146,450  unresolved wikilink [[板级管线详图]]
+PS/hardware/芯片.md:24  unresolved wikilink [[板级管线详图]]
+PS/hardware/芯片.md:27,28,40  unresolved wikilink [[组件选型与复用边界]]
+PS/psdev.md  H1 does not match file name
+PS/psdev.md:38,38,88  bare HTML-looking placeholder <br>
+README.md  duplicated page name (wikilinks become ambiguous)
+SOP/FPGA Verilator长跑仿真流程.md  H1 does not match file name
+SOP/MOD/ASR CPU-only Benchmark SOP.md  H1 does not match file name
+SOP/MOD/modproc.md  first line is not an H1
+SOP/MOD/硬件与基础运行环境信息采集.md  H1 does not match file name
+SOP/MOD/硬件与基础运行环境信息采集执行.md  first line is not an H1
+SOP/MOD/视觉模型测试.md:279  unresolved wikilink [[组件选型与复用边界]]
+SOP/bitproc.md  first line is not an H1
+SOP/录音转写按项目相关性筛选SOP.md:12,75  unresolved wikilink [[record]]
+SOP/目标驱动的 skill or SOP 检索.md  H1 does not match file name
+agentpreview/AGENTS.md:171  missing section #4. 找什么东西去哪（全 Wiki 唯一一张分流表） in [[清单]]
+agentpreview/AGENTS.md:140  missing section #D-61 · 撤销 D-60 的 docx-dump 目录：man 整目录免校验、站点侧改用文件名挡转档，两棵 RAW_DIRS 解耦 in [[状态源与决策记录]]
+archive/01-项目概述.md  H1 does not match file name
+archive/01-项目概述.md:54  unresolved wikilink [[07-组件选型]]
+archive/01-项目概述.md:6,55,56  unresolved wikilink [[08-硬件平台与资料]]
+archive/01-项目概述.md:30,61  unresolved wikilink [[09-开发计划]]
+archive/01-项目概述.md:61  unresolved wikilink [[11-待验证清单]]
+archive/02-系统架构.md  H1 does not match file name
+archive/03-板级管线详图.md  H1 does not match file name
+archive/03-板级管线详图.md:520  unresolved wikilink [[07-组件选型]]
+archive/03-板级管线详图.md:500,538  unresolved wikilink [[08-硬件平台与资料]]
+archive/04-视觉链路.md  H1 does not match file name
+archive/04-视觉链路.md:48  unresolved wikilink [[07-组件选型]]
+archive/04-视觉链路.md:3,48  unresolved wikilink [[09-开发计划]]
+archive/04-视觉链路.md:38  unresolved wikilink [[11-待验证清单]]
+archive/05-音频链路.md  H1 does not match file name
+archive/05-音频链路.md:25,71  unresolved wikilink [[07-组件选型]]
+archive/05-音频链路.md:3  unresolved wikilink [[09-开发计划]]
+archive/05-音频链路.md:32  unresolved wikilink [[11-待验证清单]]
+archive/06-身份认证与意图路由.md  H1 does not match file name
+archive/06-身份认证与意图路由.md:10,48  unresolved wikilink [[07-组件选型]]
+archive/06-身份认证与意图路由.md:10  unresolved wikilink [[09-开发计划]]
+archive/06-身份认证与意图路由.md:12,48  unresolved wikilink [[11-待验证清单]]
+archive/开发管理/任务卡与台账规范.md:199  unresolved wikilink [[组件选型与复用边界]]
+archive/开发管理/实施路线/1-NPU模型部署.md:77,81,139,177,182  unresolved wikilink [[组件选型与复用边界]]
+archive/开发管理/实施路线/3-FPGA组件下沉/3-FPGA组件下沉.md:22,77  unresolved wikilink [[组件选型与复用边界]]
+archive/开发管理/实施路线/3-FPGA组件下沉/3-FPGA组件下沉.md:149  unresolved wikilink [[能力与学习进度]]
+archive/开发管理/实施路线/3-FPGA组件下沉/全链路逻辑基线.md:117,198  unresolved wikilink [[板级管线详图]]
+archive/开发管理/实施路线/3-FPGA组件下沉/全链路逻辑基线.md:144,198  unresolved wikilink [[组件选型与复用边界]]
+archive/开发管理/实施路线/3-FPGA组件下沉/算子缺口处理.md:245,317  unresolved wikilink [[组件选型与复用边界]]
+archive/开发管理/排期与分工.md:138  unresolved wikilink [[能力与学习进度]]
+archive/开发管理/状态源与决策记录.md:175,201,430,756,778  unresolved wikilink [[Home]]
+archive/开发管理/状态源与决策记录.md:310,318,339,354,362,363  unresolved wikilink [[中途遇到的问题]]
+archive/开发管理/状态源与决策记录.md:310,318  unresolved wikilink [[操作记录]]
+archive/开发管理/状态源与决策记录.md:312,312,315,362  unresolved wikilink [[板级管线详图]]
+archive/开发管理/状态源与决策记录.md:270,277,312,314,315,318  unresolved wikilink [[组件选型与复用边界]]
+archive/开发管理/状态源与决策记录.md:319  unresolved wikilink [[能力与学习进度]]
+archive/开发管理/状态源与决策记录.md:227,314,343,1346,1352  unresolved wikilink [[项目概述]]
+archive/开发管理/赛前讨论录音记录.md:76  unresolved wikilink [[Home]]
+archive/开发管理/赛前讨论录音记录.md:83  unresolved wikilink [[板级管线详图]]
+archive/开发管理/赛前讨论录音记录.md:84,89,97  unresolved wikilink [[组件选型与复用边界]]
+archive/开发管理/赛前讨论录音记录.md:5,101  unresolved wikilink [[能力与学习进度]]
+archive/开发管理/迁移说明(1).md  H1 does not match file name
+archive/开发管理/风险与完成判据.md:26  unresolved wikilink [[操作记录]]
+archive/开发管理/风险与完成判据.md:141,205  unresolved wikilink [[组件选型与复用边界]]
+archive/开发管理/风险与完成判据.md:242  unresolved wikilink [[能力与学习进度]]
+archive/开发管理/验证与交付.md:105  unresolved wikilink [[操作记录]]
+mainchain/cloud.md  first line is not an H1
+mainchain/s2s.md  first line is not an H1
+notes.md  first line is not an H1
+todo/FPGA自研模块清单.md:237  unresolved wikilink [[板级管线详图]]
+todo/FPGA自研模块清单.md:162,237  unresolved wikilink [[组件选型与复用边界]]
+todo/FPGA自研模块清单.md:237  unresolved wikilink [[能力与学习进度]]
+todo/PS-PL_AXI_HP口与复位语义.md:4  unresolved wikilink [[注意事项]]
+todo/better/验证方法学.md:4,252  unresolved wikilink [[能力与学习进度]]
+todo/dev/io待测放sop.md  H1 does not match file name
+todo/dev/io待测放sop.md:4,440  unresolved wikilink [[组件选型与复用边界]]
+todo/dev/外设与资金申报改成设备信息.md  H1 does not match file name
+todo/dev/外设与资金申报改成设备信息.md:202  unresolved wikilink [[板级管线详图]]
+todo/dev/外设与资金申报改成设备信息.md:202  unresolved wikilink [[项目概述]]
+todo/dev/接口契约与数据通路.md:213  unresolved wikilink [[板级管线详图]]
+todo/read-record.md  H1 does not match file name
+todo/todo.md  first line is not an H1
+todo/todo.md:45  unresolved wikilink [[组件选型与复用边界]]
+todo/位流构建与SDI信号检测.md:807  unresolved wikilink [[确认摄像头是否识别]]
+todo/工具链与素材进README.md  H1 does not match file name
+todo/工具链与素材进README.md:76  unresolved wikilink [[组件选型与复用边界]]
+todo/工具链与素材进README.md:30  unresolved wikilink [[能力与学习进度]]
+todo/板卡镜像实测取证.md:23  unresolved wikilink [[操作记录]]
+todo/板卡镜像实测取证.md:1085  unresolved wikilink [[板级管线详图]]
+todo/板卡镜像实测取证.md:689,1085  unresolved wikilink [[组件选型与复用边界]]
+todo/路线要更新/系统架构总览.md:344,361  unresolved wikilink [[板级管线详图]]
+todo/路线要更新/系统架构总览.md:87,361  unresolved wikilink [[组件选型与复用边界]]
+闲话.md  first line is not an H1
+---
+197 problems in 130 groups

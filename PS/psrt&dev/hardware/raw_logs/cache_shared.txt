@@ -1,0 +1,7 @@
+### cache_shared
+cmd: for i in 0 1 2 3; do p=/sys/devices/system/cpu/cpu0/cache/index$i/shared_cpu_map; echo -n "$p: "; cat $p 2>/dev/null || echo na; done
+---
+/sys/devices/system/cpu/cpu0/cache/index0/shared_cpu_map: 1
+/sys/devices/system/cpu/cpu0/cache/index1/shared_cpu_map: 1
+/sys/devices/system/cpu/cpu0/cache/index2/shared_cpu_map: f
+/sys/devices/system/cpu/cpu0/cache/index3/shared_cpu_map: na

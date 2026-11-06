@@ -1,0 +1,23 @@
+test_FM06_http_content_and_compatibility (__main__.Contracts.test_FM06_http_content_and_compatibility) ... [02:21:24] "GET /health HTTP/1.1" 200 -
+[02:21:24] "GET /components HTTP/1.1" 200 -
+[02:21:24] "GET /stats HTTP/1.1" 200 -
+[02:21:25] "POST /api/v1/chain HTTP/1.1" 200 -
+[02:21:25] "POST /api/v1/asr HTTP/1.1" 200 -
+[02:21:25] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+[02:21:25] "POST /tts HTTP/1.1" 400 -
+[02:21:25] "GET /unknown-ci-route HTTP/1.1" 200 -
+FAIL
+
+======================================================================
+FAIL: test_FM06_http_content_and_compatibility (__main__.Contracts.test_FM06_http_content_and_compatibility)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "S:\work\WCIS\workenv\ha4fpai-ci\windows-full-final\calibration-source-262c37590e70\ci\tests\test_contracts.py", line 182, in test_FM06_http_content_and_compatibility
+    with self.assertRaises(urllib.error.HTTPError) as error:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: HTTPError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.758s
+
+FAILED (failures=1)

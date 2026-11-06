@@ -1,0 +1,5 @@
+{
+  "status": "no-baseline",
+  "reason": "Measured candidate; no speedup claim without a baseline",
+  "rows": []
+}

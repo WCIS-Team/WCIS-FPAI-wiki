@@ -1,0 +1,13 @@
+*.md text eol=lf encoding=utf-8
+*.json text eol=lf encoding=utf-8
+*.mmd text eol=lf encoding=utf-8
+*.txt text eol=lf encoding=utf-8
+*.csv text eol=lf encoding=utf-8
+*.png binary
+*.jpg binary
+
+# board_extract/ 是取证原件的逐字节副本：不做任何行尾/编码转换（决策 D-39）
+board_extract/** -text
+
+# Frozen CI development evidence: preserve original bytes, including log EOLs.
+/PS/ha/ci-records/** -text

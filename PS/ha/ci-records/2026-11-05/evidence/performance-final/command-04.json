@@ -1,0 +1,18 @@
+{
+  "command": [
+    "C:\\Users\\takomi\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-I",
+    "-B",
+    "S:\\work\\WCIS\\repos\\HA4FPAI\\ci\\report.py",
+    "--baseline",
+    "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\baseline.json",
+    "--candidate",
+    "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\synthetic-regression.json",
+    "--output",
+    "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\synthetic-regression"
+  ],
+  "exit_code": 1,
+  "expected_exit_code": 1,
+  "stdout": "# HA4FPAI performance\n\nResult: **regression**\n\nComparable measurements\n\nSource: `27b8a1f76cd576d24db478fc9bcab196f9d25caf`; dirty: `True`\n\n| Metric | Baseline | Candidate | Change | Gate |\n|---|---:|---:|---:|---|\n| split-12.chain_ms.p50 | 30.0489 | 91.1469 | +203.33% | observe |\n| split-12.chain_ms.p95 | 32.9106 | 99.7318 | +203.04% | REGRESSION |\n| split-12.first_request_ms.value | 25.5953 | 24.5473 | -4.09% | observe |\n| split-12.split_ms.p50 | 0.0379 | 1.1138 | +2835.05% | observe |\n| split-12.split_ms.p95 | 0.0566 | 1.1698 | +1966.78% | REGRESSION |\n| split-20-16k.chain_ms.p50 | 24.0429 | 73.1286 | +204.16% | observe |\n| split-20-16k.chain_ms.p95 | 26.7414 | 81.2242 | +203.74% | REGRESSION |\n| split-20-16k.first_request_ms.value | 22.8331 | 25.7250 | +12.67% | observe |\n| split-20-16k.split_ms.p50 | 0.0332 | 1.0996 | +3212.05% | observe |\n| split-20-16k.split_ms.p95 | 0.0450 | 1.1350 | +2422.22% | REGRESSION |\n| split-20.chain_ms.p50 | 61.0799 | 184.2398 | +201.64% | observe |\n| split-20.chain_ms.p95 | 71.5843 | 215.7529 | +201.40% | REGRESSION |\n| split-20.first_request_ms.value | 139.7293 | 164.0128 | +17.38% | observe |\n| split-20.split_ms.p50 | 0.0354 | 1.1062 | +3024.86% | observe |\n| split-20.split_ms.p95 | 0.0473 | 1.1419 | +2314.16% | REGRESSION |\n\nNegative change means faster for latency; verify the metric's direction for other units.\nA gate fails only when the regression exceeds both its relative and absolute tolerances.\nAll raw samples, conditions, source hashes and correctness checks remain in the JSON artifact.\n\n",
+  "stderr": ""
+}

@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "events": {
+    "adapters.yml": [
+      "workflow_dispatch"
+    ],
+    "ci.yml": [
+      "workflow_dispatch",
+      "workflow_call"
+    ],
+    "device.yml": [
+      "workflow_dispatch"
+    ],
+    "lang-linux-package.yml": [
+      "workflow_dispatch"
+    ],
+    "performance.yml": [
+      "workflow_dispatch"
+    ]
+  }
+}

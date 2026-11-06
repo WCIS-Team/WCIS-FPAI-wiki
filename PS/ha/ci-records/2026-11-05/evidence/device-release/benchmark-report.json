@@ -1,0 +1,30 @@
+{
+  "status": "no-baseline",
+  "reason": "Measured candidate; no speedup claim without a baseline",
+  "rows": [],
+  "gates": {
+    "latency_ms.p95": {
+      "direction": "lower",
+      "relative": 0.2,
+      "absolute": 100.0
+    },
+    "services.rss_kib.value": {
+      "direction": "lower",
+      "relative": 0.15,
+      "absolute": 16384
+    }
+  },
+  "comparison_tool_sha256": "15253e0fff85e1760d3cab819c57b0d0ad580f61db4407f176d9ff7b91b2e132",
+  "conditions": {
+    "kind": "device-benchmark",
+    "environment": {
+      "device_id": "U.FMSH",
+      "architecture": "aarch64",
+      "python": "3.8.10",
+      "kernel": "5.4.52"
+    },
+    "workload_sha256": "1d857b86cb54f229fa55bf7bcae75f91efa1b44acac2ceb4281473b031df8bc4",
+    "configuration_sha256": "54d9f28c661f15c3cbaf8a5e5560c89ba07833fce17fb8bedaad46cab4a3f3b9",
+    "harness_sha256": "5d248ed44e0b42aae7140f05bd2e36be2b86bb842a000f95b72c3c6e18a8782a"
+  }
+}

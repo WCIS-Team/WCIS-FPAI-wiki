@@ -1,0 +1,23 @@
+host_run.ps1 run of 2026-10-20 16:14 (UTC+8), via school-guest ssh tunnel
+=== collector ===
+hw_collect_v2.ps1 (ASCII-only) -> C:/Users/YiZhidi/hw_v2/ (12 raw evidence files + 5 JSON + software_human.txt)
+=== benchmark ===
+run_bench.ps1 -> mingw64 gcc -O2 -fopenmp compile of D:/yzd/bench_cpu.c, single run -> D:/yzd/bench.json
+=== pull results ===
+bench_run1.json  (2026-10-19 three-run batch, pulled back unchanged)
+bench_run2.json
+bench_run3.json
+bench_stdout.txt (empty shell)
+bench.json       (2026-10-20 re-test single run: single 6.712 GFLOPS / 24t 55.030 GFLOPS / mem 34.35 GB/s / disk write 3886.7 read 7559.6 MB/s)
+device.json
+gcc.log          (empty shell)
+resources.json
+software_human.txt
+software.json
+system.json
+toolchains.json
+raw/ (14 text evidence files: computerinfo os processor physicalmemory physicaldisk volume videocontroller pnp_devices services processes_top nvidia_smi python pip_list toolchains_reprobe)
+
+scp exit 0. bench.json pull succeeded this round (the 10-19 host_run.log shows that round's bench.json pull failed with "No such file or directory"; that round's results live in bench_run1..3.json instead).
+
+cross_gcc_version.txt added separately after this run (aarch64-none-linux-gnu-gcc --version full string, 10.3.1 20210621).

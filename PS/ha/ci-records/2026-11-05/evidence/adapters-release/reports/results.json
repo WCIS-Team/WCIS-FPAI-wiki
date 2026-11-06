@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "profile": "adapters",
+  "environment": {
+    "device_id": "549b9500faeb",
+    "system": "Linux",
+    "architecture": "x86_64",
+    "python": "3.8.10",
+    "implementation": "CPython",
+    "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+    "cpus": 16
+  },
+  "source": {
+    "commit": null,
+    "dirty": null
+  },
+  "external_sources": {
+    "ernie": {
+      "checkout": {
+        "commit": null,
+        "dirty": null
+      },
+      "files": {
+        "board/npuserv_adapter.py": "6ed380890422365ddc3efdff54abf3cb27df0d9736741c12570e54f0c7b9b481",
+        "board/e41_tok.py": "63bd8ef0a0d1fc1bfa1bbfbb0b3679030c369ce97187dc161589909164b0b559"
+      }
+    }
+  },
+  "checks": [
+    {
+      "id": "source-validation",
+      "status": "passed",
+      "files": 74,
+      "seconds": 0.6938072690099943
+    },
+    {
+      "id": "contracts",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 3.5989900690037757,
+      "log": "contracts.log",
+      "message": "",
+      "test_methods": 7
+    },
+    {
+      "id": "infrastructure",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.9205250280065229,
+      "log": "infrastructure.log",
+      "message": "",
+      "test_methods": 10
+    },
+    {
+      "id": "split",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.6253445159964031,
+      "log": "split.log",
+      "message": "",
+      "test_methods": null
+    },
+    {
+      "id": "fsm",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.11700008300249465,
+      "log": "fsm.log",
+      "message": "",
+      "test_methods": null
+    },
+    {
+      "id": "npu-lifecycle",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 8.002890966992709,
+      "log": "npu-lifecycle.log",
+      "message": "",
+      "test_methods": null
+    },
+    {
+      "id": "npu-adapter",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 2.5278376929927617,
+      "log": "npu-adapter.log",
+      "message": "",
+      "test_methods": null
+    },
+    {
+      "id": "npu-q3-adapter",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 5.096930095998687,
+      "log": "npu-q3-adapter.log",
+      "message": "",
+      "test_methods": null
+    },
+    {
+      "id": "host-soak",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.8200601830030791,
+      "log": "host-soak.log",
+      "message": "",
+      "test_methods": null
+    },
+    {
+      "id": "calibration",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 8.411692335997941,
+      "log": "calibration.log",
+      "message": "",
+      "test_methods": null
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "checks": [
+    {
+      "id": "test_contracts",
+      "status": "green",
+      "test_methods": 7
+    },
+    {
+      "id": "test_infrastructure",
+      "status": "green",
+      "test_methods": 9
+    },
+    {
+      "id": "FM01",
+      "status": "killed",
+      "exit_code": 1,
+      "test": "Contracts.test_FM01_configuration_overlay_and_registry",
+      "file": "lang/server/cfg.py"
+    },
+    {
+      "id": "FM02",
+      "status": "killed",
+      "exit_code": 1,
+      "test": "Contracts.test_FM02_audio_and_parameter_matrix",
+      "file": "lang/split/tts_split.py"
+    },
+    {
+      "id": "FM03",
+      "status": "killed",
+      "exit_code": 1,
+      "test": "Contracts.test_FM03_wake_gate_and_silence_stop_downstream",
+      "file": "lang/server/core.py"
+    },
+    {
+      "id": "FM04",
+      "status": "killed",
+      "exit_code": 1,
+      "test": "Contracts.test_FM04_transient_persistent_oom_io_and_compound_failure",
+      "file": "lang/server/core.py"
+    },
+    {
+      "id": "FM05",
+      "status": "killed",
+      "exit_code": 1,
+      "test": "Contracts.test_FM05_gate_timeout_and_exception_release",
+      "file": "lang/server/core.py"
+    },
+    {
+      "id": "FM06",
+      "status": "killed",
+      "exit_code": 1,
+      "test": "Contracts.test_FM06_http_content_and_compatibility",
+      "file": "lang/server/app.py"
+    },
+    {
+      "id": "FM07",
+      "status": "killed",
+      "exit_code": 1,
+      "test": "Contracts.test_FM07_executor_dry_run_and_partial_outage",
+      "file": "klar/klar_executor.py"
+    },
+    {
+      "id": "FM08",
+      "status": "killed",
+      "exit_code": 1,
+      "test": "Infrastructure.test_FM08_regression_and_tolerances",
+      "file": "ci/report.py"
+    }
+  ],
+  "scratch": "/workenv/ha4fpai-ci/full/calibration-source-d5f31680ea9b",
+  "notes": [
+    "Targeted behavioral mutations demonstrate sensitivity, not exhaustive mutation coverage.",
+    "Shared working tree and device code were never mutated."
+  ]
+}

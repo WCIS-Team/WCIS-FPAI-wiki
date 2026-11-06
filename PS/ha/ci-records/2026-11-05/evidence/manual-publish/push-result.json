@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "repository": "takomitkm/HA4FPAI",
+  "remote": "origin",
+  "branch": "master",
+  "before": "0700532ba143ef920cf59a1be4e9ee3d6631c103",
+  "after": "c6702855eb229a6e5543db4812887c8628ccb739",
+  "expected": "c6702855eb229a6e5543db4812887c8628ccb739",
+  "push_exit_code": 0,
+  "push_stdout": "To https://github.com/takomitkm/HA4FPAI.git\n \tHEAD:refs/heads/master\t0700532..c670285\nDone\n",
+  "push_stderr": "",
+  "events": {
+    ".github/workflows/adapters.yml": [
+      "workflow_dispatch"
+    ],
+    ".github/workflows/ci.yml": [
+      "workflow_dispatch",
+      "workflow_call"
+    ],
+    ".github/workflows/device.yml": [
+      "workflow_dispatch"
+    ],
+    ".github/workflows/lang-linux-package.yml": [
+      "workflow_dispatch"
+    ],
+    ".github/workflows/performance.yml": [
+      "workflow_dispatch"
+    ]
+  },
+  "commit_messages": [
+    "test: add offline CI, device probes and performance reports [skip ci]",
+    "build: clarify packaged assets and preserve repeatable fixtures [skip ci]",
+    "feat: align language stages with verification contracts [skip ci]",
+    "ci: require manual workflow dispatch [skip ci]"
+  ],
+  "actions_dispatch_performed": false,
+  "original_staged_preserved": true,
+  "original_staged_after": "D\tlang/config/online.yaml\n"
+}

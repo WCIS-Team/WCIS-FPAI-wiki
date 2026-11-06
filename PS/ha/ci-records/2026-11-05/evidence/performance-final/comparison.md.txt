@@ -1,0 +1,29 @@
+# HA4FPAI performance
+
+Result: **regression**
+
+Comparable measurements
+
+Source: `27b8a1f76cd576d24db478fc9bcab196f9d25caf`; dirty: `True`
+
+| Metric | Baseline | Candidate | Change | Gate |
+|---|---:|---:|---:|---|
+| split-12.chain_ms.p50 | 30.0489 | 27.6981 | -7.82% | observe |
+| split-12.chain_ms.p95 | 32.9106 | 38.8719 | +18.11% | REGRESSION |
+| split-12.first_request_ms.value | 25.5953 | 24.5473 | -4.09% | observe |
+| split-12.split_ms.p50 | 0.0379 | 0.0391 | +3.03% | observe |
+| split-12.split_ms.p95 | 0.0566 | 0.0546 | -3.53% | pass |
+| split-20-16k.chain_ms.p50 | 24.0429 | 24.9215 | +3.65% | observe |
+| split-20-16k.chain_ms.p95 | 26.7414 | 28.2833 | +5.77% | pass |
+| split-20-16k.first_request_ms.value | 22.8331 | 25.7250 | +12.67% | observe |
+| split-20-16k.split_ms.p50 | 0.0332 | 0.0333 | +0.30% | observe |
+| split-20-16k.split_ms.p95 | 0.0450 | 0.0512 | +13.78% | pass |
+| split-20.chain_ms.p50 | 61.0799 | 62.0992 | +1.67% | observe |
+| split-20.chain_ms.p95 | 71.5843 | 69.1758 | -3.36% | pass |
+| split-20.first_request_ms.value | 139.7293 | 164.0128 | +17.38% | observe |
+| split-20.split_ms.p50 | 0.0354 | 0.0353 | -0.42% | observe |
+| split-20.split_ms.p95 | 0.0473 | 0.0477 | +0.85% | pass |
+
+Negative change means faster for latency; verify the metric's direction for other units.
+A gate fails only when the regression exceeds both its relative and absolute tolerances.
+All raw samples, conditions, source hashes and correctness checks remain in the JSON artifact.

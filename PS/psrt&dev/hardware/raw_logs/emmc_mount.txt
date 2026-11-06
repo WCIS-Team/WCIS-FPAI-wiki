@@ -1,0 +1,10 @@
+### emmc_mount
+cmd: ls -la /mnt/wcis-emmc 2>/dev/null | head -20; echo '---df:'; df -h /mnt/wcis-emmc 2>/dev/null; echo '---who mounts it:'; grep wcis /proc/mounts 2>/dev/null
+---
+total 8
+drwxr-xr-x 2 root root 4096 Oct 15 14:39 .
+drwxr-xr-x 5 fmsh fmsh 4096 Oct 19 19:41 ..
+---df:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        26G   20G  5.1G  80% /
+---who mounts it:

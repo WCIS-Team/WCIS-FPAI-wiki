@@ -1,0 +1,18 @@
+{
+  "command": [
+    "C:\\Users\\takomi\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-I",
+    "-B",
+    "S:\\work\\WCIS\\repos\\HA4FPAI\\ci\\report.py",
+    "--baseline",
+    "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-acceptance\\baseline.json",
+    "--candidate",
+    "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-acceptance\\candidate.json",
+    "--output",
+    "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-acceptance\\comparison"
+  ],
+  "exit_code": 1,
+  "expected_exit_code": 0,
+  "stdout": "# HA4FPAI performance\n\nResult: **regression**\n\nComparable measurements\n\nSource: `27b8a1f76cd576d24db478fc9bcab196f9d25caf`; dirty: `True`\n\n| Metric | Baseline | Candidate | Change | Gate |\n|---|---:|---:|---:|---|\n| split-12.chain_ms.p50 | 25.8658 | 26.3305 | +1.80% | observe |\n| split-12.chain_ms.p95 | 33.1872 | 39.6727 | +19.54% | REGRESSION |\n| split-12.first_request_ms.value | 28.3980 | 31.3111 | +10.26% | observe |\n| split-12.split_ms.p50 | 0.0281 | 0.0399 | +41.99% | observe |\n| split-12.split_ms.p95 | 0.1165 | 0.0481 | -58.71% | pass |\n| split-20.chain_ms.p50 | 66.0334 | 60.9102 | -7.76% | observe |\n| split-20.chain_ms.p95 | 71.4125 | 70.6865 | -1.02% | pass |\n| split-20.first_request_ms.value | 241.6471 | 143.4161 | -40.65% | observe |\n| split-20.split_ms.p50 | 0.0356 | 0.0282 | -20.79% | observe |\n| split-20.split_ms.p95 | 0.0843 | 0.0631 | -25.15% | pass |\n\nNegative change means faster for latency; verify the metric's direction for other units.\nA gate fails only when the regression exceeds both its relative and absolute tolerances.\nAll raw samples, conditions, source hashes and correctness checks remain in the JSON artifact.\n\n",
+  "stderr": ""
+}

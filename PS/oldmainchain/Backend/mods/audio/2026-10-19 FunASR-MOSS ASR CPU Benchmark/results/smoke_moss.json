@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "model": "moss",
+    "model_dir": "D:/yzd/llm/funasr/models/MOSS-Transcribe-Diarize",
+    "run_id": 0,
+    "python": "3.12.15",
+    "torch_threads": 4,
+    "affinity_cores": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "cpu_limit_note": "affinity 限制 4 逻辑核；每核 1GHz 属宿主机 VM 配置，guest 内无法施加，按实测频率记录",
+    "cpu_percent_definition": "psutil Process.cpu_percent，单核满载计 100%，多线程累计可超 100%",
+    "normalization": "移除全部标点与空白；保留汉字/字母/数字；未做简繁与数字转换",
+    "warmup": 2,
+    "timeout_s": 1800
+  },
+  "versions": {
+    "funasr": "1.4.16",
+    "torch": "2.14.1+cpu",
+    "transformers": "5.20.1",
+    "psutil": "7.2.2"
+  },
+  "phases": {
+    "cold_start_s": 1.529,
+    "model_load_s": 6.781,
+    "first_infer_s": 12.7776,
+    "total_wall_s": 46.564
+  },
+  "memory_cpu": {
+    "start_avg_rss_mb": 3281.0656105324074,
+    "start_peak_rss_mb": 4160.01171875,
+    "steady_avg_rss_mb": 4150.6513671875,
+    "peak_rss_mb": 4214.859375,
+    "steady_avg_cpu_pct": 393.69722222222225,
+    "steady_peak_cpu_pct": 400.5,
+    "user_cpu_s": 118.875,
+    "sys_cpu_s": 31.625,
+    "sample_count": 90,
+    "sample_interval_s": 0.5
+  },
+  "latency": {
+    "n": 2,
+    "mean_s": 8.7832,
+    "p50_s": 8.7832,
+    "p95_s": 10.1659,
+    "p99_s": 10.2888
+  },
+  "rtf": {
+    "mean": 2.1013,
+    "p50": 2.1013,
+    "p95": 2.3813,
+    "p99": 2.4062,
+    "definition": "RTF = 推理墙钟耗时 / 音频时长"
+  },
+  "throughput": {
+    "audio_sec": 8.769,
+    "steady_wall_s": 18.033,
+    "audio_sec_per_wall_sec": 0.4863,
+    "definition": "吞吐量 = 成功样本音频总时长 / 稳态墙钟总时长（含预处理与后处理）"
+  },
+  "accuracy": {
+    "cer": 0.0,
+    "wer": 0.2,
+    "S": 0,
+    "D": 0,
+    "I": 0,
+    "ref_chars": 25,
+    "ref_words": 15,
+    "success": 2,
+    "empty": 0,
+    "error": 0,
+    "timeout": 0,
+    "fail_rate": 0.0
+  },
+  "per_item": [
+    {
+      "idx": 0,
+      "wav": "BAC009S0914W0493.wav",
+      "duration_s": 5.764625,
+      "latency_s": 10.3195,
+      "rtf": 1.7901,
+      "ref": "这一斤玛卡其实价格只有一零零多元",
+      "hyp": "这一斤玛卡。其实价格只有一零零多元。",
+      "cer": 0.0,
+      "S": 0,
+      "D": 0,
+      "I": 0,
+      "ref_chars": 16,
+      "wer": 0.222222,
+      "ref_words": 9
+    },
+    {
+      "idx": 1,
+      "wav": "BAC009S0902W0289.wav",
+      "duration_s": 3.004,
+      "latency_s": 7.2469,
+      "rtf": 2.4124,
+      "ref": "这对苹果是一个利好",
+      "hyp": "这对苹果是一个利好。",
+      "cer": 0.0,
+      "S": 0,
+      "D": 0,
+      "I": 0,
+      "ref_chars": 9,
+      "wer": 0.166667,
+      "ref_words": 6
+    }
+  ]
+}

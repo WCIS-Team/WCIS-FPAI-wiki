@@ -1,0 +1,303 @@
+### dmesg
+cmd: dmesg 2>/dev/null | head -300
+---
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd034]
+[    0.000000] Linux version 5.4.52-fmsh-sdk-v2025.04 (fmsh@fmsh-virtual-machine) (gcc version 7.5.0 (Linaro GCC 7.5-2019.12)) #3 SMP Fri Mar 13 13:44:29 CST 2026
+[    0.000000] Machine model: FMQLMP FMQL100TAI
+[    0.000000] earlycon: uart8250 at MMIO32 0x00000000e0004000 (options '')
+[    0.000000] printk: bootconsole [uart8250] enabled
+[    0.000000] Memory limited to 1024MB
+[    0.000000] cma: Reserved 256 MiB at 0x0000000030000000
+[    0.000000] On node 0 totalpages: 262144
+[    0.000000]   DMA32 zone: 3584 pages used for memmap
+[    0.000000]   DMA32 zone: 0 pages reserved
+[    0.000000]   DMA32 zone: 262144 pages, LIFO batch:63
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.0
+[    0.000000] percpu: Embedded 21 pages/cpu s48088 r8192 d29736 u86016
+[    0.000000] pcpu-alloc: s48088 r8192 d29736 u86016 alloc=21*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: detected: ARM erratum 845719
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 258560
+[    0.000000] Kernel command line: console=ttyPS0,115200n8 earlycon=uart8250,mmio32,0xe0004000 loglevel=8 root=/dev/mmcblk0p2 rootwait rw clk_ignore_unused mem=1024M
+[    0.000000] Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] Memory: 754920K/1048576K available (9022K kernel code, 498K rwdata, 2596K rodata, 640K init, 285K bss, 31512K reserved, 262144K cma-reserved)
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GIC: Adjusting CPU interface base to 0x00000000f892f000
+[    0.000000] GIC: Using split EOI/Deactivate mode
+[    0.000000] random: get_random_bytes called from start_kernel+0x2ac/0x454 with crng_init=0
+[    0.000000] FMQLMP clock init
+[    0.000000] fmqlmp_clk_setup: clkc starts at ffffffc010005100
+[    0.000000] arch_timer: cp15 timer(s) running at 100.00MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x171024e7e0, max_idle_ns: 440795205315 ns
+[    0.000004] sched_clock: 56 bits at 100MHz, resolution 10ns, wraps every 4398046511100ns
+[    0.008493] Console: colour dummy device 80x25
+[    0.012979] Calibrating delay loop (skipped), value calculated using timer frequency.. 200.00 BogoMIPS (lpj=400000)
+[    0.023467] pid_max: default: 32768 minimum: 301
+[    0.028237] Mount-cache hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.035673] Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.044460] ASID allocator initialised with 32768 entries
+[    0.049945] rcu: Hierarchical SRCU implementation.
+[    0.055052] smp: Bringing up secondary CPUs ...
+[    0.059956] Detected VIPT I-cache on CPU1
+[    0.059992] CPU1: Booted secondary processor 0x0000000001 [0x410fd034]
+[    0.060354] Detected VIPT I-cache on CPU2
+[    0.060376] CPU2: Booted secondary processor 0x0000000002 [0x410fd034]
+[    0.060709] Detected VIPT I-cache on CPU3
+[    0.060731] CPU3: Booted secondary processor 0x0000000003 [0x410fd034]
+[    0.060780] smp: Brought up 1 node, 4 CPUs
+[    0.096649] SMP: Total of 4 processors activated.
+[    0.101377] CPU features: detected: 32-bit EL0 Support
+[    0.106540] CPU features: detected: CRC32 instructions
+[    0.111741] CPU: All CPU(s) started at EL2
+[    0.115872] alternatives: patching kernel code
+[    0.121227] devtmpfs: initialized
+[    0.127129] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.136927] futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+[    0.151128] NET: Registered protocol family 16
+[    0.157031] DMA: preallocated 256 KiB pool for atomic allocations
+[    0.163180] audit: initializing netlink subsys (disabled)
+[    0.168692] audit: type=2000 audit(0.112:1): state=initialized audit_enabled=0 res=1
+[    0.176492] cpuidle: using governor menu
+[    0.180659] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.196415] HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.203157] HugeTLB registered 32.0 MiB page size, pre-allocated 0 pages
+[    0.209895] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.216630] HugeTLB registered 64.0 KiB page size, pre-allocated 0 pages
+[    1.515844] dw_dmac e004b000.dma: DesignWare DMA Controller, 8 channels
+[    1.522651] iommu: Default domain type: Translated 
+[    1.527787] SCSI subsystem initialized
+[    1.531687] usbcore: registered new interface driver usbfs
+[    1.537228] usbcore: registered new interface driver hub
+[    1.542596] usbcore: registered new device driver usb
+[    1.547772] usb_phy_generic amba-apu@0:usbphy0: amba-apu@0:usbphy0 supply vcc not found, using dummy regulator
+[    1.557976] mc: Linux media interface: v0.10
+[    1.562291] videodev: Linux video capture interface: v2.00
+[    1.567825] pps_core: LinuxPPS API ver. 1 registered
+[    1.572814] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    1.581997] PTP clock support registered
+[    1.585950] EDAC MC: Ver: 3.0.0
+[    1.589356] FPGA manager framework
+[    1.592854] Advanced Linux Sound Architecture Driver Initialized.
+[    1.599554] clocksource: Switched to clocksource arch_sys_counter
+[    1.605758] VFS: Disk quotas dquot_6.6.0
+[    1.609746] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    1.621109] NET: Registered protocol family 2
+[    1.625859] tcp_listen_portaddr_hash hash table entries: 512 (order: 1, 8192 bytes, linear)
+[    1.634270] TCP established hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    1.642117] TCP bind hash table entries: 8192 (order: 5, 131072 bytes, linear)
+[    1.649489] TCP: Hash tables configured (established 8192 bind 8192)
+[    1.655949] UDP hash table entries: 512 (order: 2, 16384 bytes, linear)
+[    1.662622] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes, linear)
+[    1.669817] NET: Registered protocol family 1
+[    1.674475] RPC: Registered named UNIX socket transport module.
+[    1.680430] RPC: Registered udp transport module.
+[    1.685160] RPC: Registered tcp transport module.
+[    1.689889] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    1.697358] Initialise system trusted keyrings
+[    1.701911] workingset: timestamp_bits=62 max_order=18 bucket_order=0
+[    1.709128] NFS: Registering the id_resolver key type
+[    1.714217] Key type id_resolver registered
+[    1.718422] Key type id_legacy registered
+[    1.722460] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    1.729211] jffs2: version 2.2. (NAND) \xc2\xa9 2001-2006 Red Hat, Inc.
+[    1.735581] Key type asymmetric registered
+[    1.739705] Asymmetric key parser 'x509' registered
+[    1.744629] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 247)
+[    1.752062] io scheduler mq-deadline registered
+[    1.756617] io scheduler kyber registered
+[    1.764782] dw_axi_dmac_platform f0010000.dma: Every channel has independent irq number
+[    1.773342] dw_axi_dmac_platform f0010000.dma: DesignWare AXI DMA Controller, 8 channels
+[    1.808606] Serial: 8250/16550 driver, 10 ports, IRQ sharing disabled
+[    1.817208] printk: console [ttyPS0] disabled
+[    1.821635] e0004000.serial: ttyPS0 at MMIO 0xe0004000 (irq = 27, base_baud = 12500000) is a 16550A
+[    1.830761] printk: console [ttyPS0] enabled
+[    1.839299] printk: bootconsole [uart8250] disabled
+[    1.850255] misc dma_buf_te: dma_buf_te ready
+[    1.854972] physical-memory-group-manager amba-apu@0:mali_mgm: Memory group manager probed successfully
+[    1.868894] brd: module loaded
+[    1.876981] loop: module loaded
+[    1.880407] mtdoops: mtd device (mtddev=name/number) must be supplied
+[    1.887327] cadence-qspi e0000000.spi: n25q256a (32768 Kbytes)
+[    1.893191] 3 fixed-partitions partitions found on MTD device e0000000.spi.0
+[    1.900244] Creating 3 MTD partitions on "e0000000.spi.0":
+[    1.905739] 0x000000000000-0x000000400000 : "bootloader"
+[    1.911851] 0x000001000000-0x000002000000 : "kernel"
+[    1.917542] 0x000002000000-0x000004000000 : "rootfs"
+[    1.922515] mtd: partition "rootfs" is out of reach -- disabled
+[    1.929346] dw_spi_fmsh e0021000.spi: SPI is master mode.
+[    1.935534] libphy: Fixed MDIO Bus: probed
+[    1.940317] tun: Universal TUN/TAP device driver, 1.6
+[    1.945464] CAN device driver interface
+[    1.949306] sja1000 CAN netdevice driver
+[    1.953613] sja1000_platform e0005000.can: sja1000_platform device registered (reg_base=(____ptrval____), irq=6)
+[    1.963911] fmql-dwmac e0047000.ethernet: IRQ eth_wake_irq not found
+[    1.970272] fmql-dwmac e0047000.ethernet: IRQ eth_lpi not found
+[    1.976265] fmql-dwmac e0047000.ethernet: no reset control found
+[    1.982397] fmql-dwmac e0047000.ethernet: User ID: 0x10, Synopsys ID: 0x37
+[    1.989283] fmql-dwmac e0047000.ethernet: 	DWMAC1000
+[    1.994254] fmql-dwmac e0047000.ethernet: DMA HW capability register supported
+[    2.001483] fmql-dwmac e0047000.ethernet: RX Checksum Offload Engine supported
+[    2.008710] fmql-dwmac e0047000.ethernet: COE Type 2
+[    2.013678] fmql-dwmac e0047000.ethernet: Enhanced/Alternate descriptors
+[    2.020383] fmql-dwmac e0047000.ethernet: Enabled extended descriptors
+[    2.026916] fmql-dwmac e0047000.ethernet: Ring mode enabled
+[    2.032493] fmql-dwmac e0047000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+[    2.174882] libphy: stmmac: probed
+[    2.178297] mdio_bus stmmac-0:00: attached PHY driver [unbound] (mii_bus:phy_addr=stmmac-0:00, irq=POLL)
+[    2.187782] mdio_bus stmmac-0:01: attached PHY driver [unbound] (mii_bus:phy_addr=stmmac-0:01, irq=POLL)
+[    2.197840] dwc2 e0045000.usb: e0045000.usb supply vusb_d not found, using dummy regulator
+[    2.206151] dwc2 e0045000.usb: e0045000.usb supply vusb_a not found, using dummy regulator
+[    2.214518] dwc2 e0045000.usb: Configuration mismatch. dr_mode forced to host
+[    2.332077] dwc2 e0045000.usb: dwc2_wait_for_mode: Couldn't set host mode
+[    2.389083] dwc2 e0045000.usb: host_dma is enable.
+[    2.393883] dwc2 e0045000.usb: g_dma is enable.
+[    2.398418] dwc2 e0045000.usb: g_dma_desc is enable.
+[    2.403455] dwc2 e0045000.usb: DWC OTG Controller
+[    2.408180] dwc2 e0045000.usb: new USB bus registered, assigned bus number 1
+[    2.415250] dwc2 e0045000.usb: irq 28, io mem 0xe0045000
+[    2.420712] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.04
+[    2.428988] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.436217] usb usb1: Product: DWC OTG Controller
+[    2.440927] usb usb1: Manufacturer: Linux 5.4.52 dwc2_hsotg
+[    2.446505] usb usb1: SerialNumber: e0045000.usb
+[    2.451438] hub 1-0:1.0: USB hub found
+[    2.455217] hub 1-0:1.0: 1 port detected
+[    2.459655] usbcore: registered new interface driver cdc_acm
+[    2.465322] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    2.473373] usbcore: registered new interface driver usb-storage
+[    2.479493] i2c /dev entries driver
+[    2.483400] usbcore: registered new interface driver uvcvideo
+[    2.489152] USB Video Class driver (1.1.1)
+[    2.493572] cpu cpu0: failed to get clock: -2
+[    2.497946] cpufreq-dt: probe of cpufreq-dt failed with error -2
+[    2.504091] Synopsys Designware Multimedia Card Interface Driver
+[    2.510264] dw_mmc e0043000.dwmmc: Using external DMA controller.
+[    2.516381] dw_mmc e0043000.dwmmc: Version ID is 220a
+[    2.521463] dw_mmc e0043000.dwmmc: DW MMC controller at irq 23,32 bit host data width,32 deep fifo
+[    2.530509] mmc_host mmc0: card is polling.
+[    2.547279] mmc_host mmc0: Bus speed (slot 0) = 100000000Hz (slot req 400000Hz, actual 400000HZ div = 125)
+[    2.569621] dw_mmc e0044000.dwmmc: Using PIO mode.
+[    2.574424] dw_mmc e0044000.dwmmc: Version ID is 220a
+[    2.579505] dw_mmc e0044000.dwmmc: DW MMC controller at irq 24,32 bit host data width,32 deep fifo
+[    2.588525] mmc_host mmc1: card is non-removable.
+[    2.603341] mmc_host mmc1: Bus speed (slot 0) = 100000000Hz (slot req 400000Hz, actual 400000HZ div = 125)
+[    2.625731] ledtrig-cpu: registered to indicate activity on CPUs
+[    2.631836] usbcore: registered new interface driver usbhid
+[    2.637414] usbhid: USB HID core driver
+[    2.641602] ARM CCI_500 PMU driver probed
+[    2.641955] fpga_manager fpga0: FMSH FMQL FPGA Manager registered
+[    2.652271] usbcore: registered new interface driver snd-usb-audio
+[    2.658500] usbcore: registered new interface driver snd-ua101
+[    2.664370] usbcore: registered new interface driver snd-usb-caiaq
+[    2.670584] usbcore: registered new interface driver snd-usb-6fire
+[    2.676802] usbcore: registered new interface driver snd-usb-hiface
+[    2.683093] usbcore: registered new interface driver snd-bcd2000
+[    2.689126] usbcore: registered new interface driver snd_usb_pod
+[    2.695158] usbcore: registered new interface driver snd_usb_podhd
+[    2.701366] usbcore: registered new interface driver snd_usb_toneport
+[    2.707832] usbcore: registered new interface driver snd_usb_variax
+[    2.714136] pktgen: Packet Generator for packet performance testing. Version: 2.75
+[    2.722095] Initializing XFRM netlink socket
+[    2.726467] NET: Registered protocol family 10
+[    2.729674] mmc_host mmc0: Bus speed (slot 0) = 100000000Hz (slot req 50000000Hz, actual 50000000HZ div = 1)
+[    2.731408] Segment Routing with IPv6
+[    2.740783] mmc0: new high speed SDXC card at address 0001
+[    2.744453] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    2.750239] mmcblk0: mmc0:0001 SD 58.4 GiB 
+[    2.756182] NET: Registered protocol family 17
+[    2.761279]  mmcblk0: p1 p2
+[    2.764476] NET: Registered protocol family 15
+[    2.771722] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+[    2.784677] can: controller area network core (rev 20170425 abi 9)
+[    2.790889] NET: Registered protocol family 29
+[    2.794644] mmc_host mmc1: Bus speed (slot 0) = 100000000Hz (slot req 25000000Hz, actual 25000000HZ div = 2)
+[    2.795339] can: raw protocol (rev 20170425)
+[    2.806176] mmc1: new high speed MMC card at address 0001
+[    2.809431] can: broadcast manager protocol (rev 20170425 t)
+[    2.815151] mmcblk1: mmc1:0001 Y2P032 29.1 GiB 
+[    2.820492] can: netlink gateway (rev 20190810) max_hops=1
+[    2.825173] mmcblk1boot0: mmc1:0001 Y2P032 partition 1 4.00 MiB
+[    2.830586] Key type dns_resolver registered
+[    2.836594] mmcblk1boot1: mmc1:0001 Y2P032 partition 2 4.00 MiB
+[    2.841013] registered taskstats version 1
+[    2.850753] Loading compiled-in X.509 certificates
+[    2.864088] hctosys: unable to open rtc device (rtc0)
+[    2.869157] of_cfs_init
+[    2.871682] of_cfs_init: OK
+[    2.874554] clk: Not disabling unused clocks
+[    2.878833] ALSA device list:
+[    2.881807]   No soundcards found.
+[    2.885628] ttyPS0 - failed to request DMA
+[    2.889092] random: fast init done
+[    2.895127]  mmcblk1: p1
+[    2.907567] usb 1-1: new high-speed USB device number 2 using dwc2
+[    2.917313] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+[    2.925443] VFS: Mounted root (ext4 filesystem) on device 179:2.
+[    2.938945] devtmpfs: mounted
+[    2.942136] Freeing unused kernel memory: 640K
+[    2.946651] Run /sbin/init as init process
+[    3.119719] usb 1-1: New USB device found, idVendor=0424, idProduct=2514, bcdDevice= b.b3
+[    3.127907] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    3.135372] hub 1-1:1.0: USB hub found
+[    3.139178] hub 1-1:1.0: 4 ports detected
+[    3.431568] usb 1-1.2: new full-speed USB device number 3 using dwc2
+[    3.536774] usb 1-1.2: New USB device found, idVendor=17ef, idProduct=a03b, bcdDevice= 0.00
+[    3.545139] usb 1-1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    3.552454] usb 1-1.2: Product: MCP01
+[    3.556122] usb 1-1.2: Manufacturer: Lenovo
+[    3.560312] usb 1-1.2: SerialNumber: ACTIONS-DEV-SN1
+[    3.567837] input: Lenovo MCP01 Consumer Control as /devices/platform/amba-apu@0/e0045000.usb/usb1/1-1/1-1.2/1-1.2:1.0/0003:17EF:A03B.0001/input/input0
+[    3.639816] input: Lenovo MCP01 as /devices/platform/amba-apu@0/e0045000.usb/usb1/1-1/1-1.2/1-1.2:1.0/0003:17EF:A03B.0001/input/input1
+[    3.652083] hid-generic 0003:17EF:A03B.0001: input: USB HID v1.10 Device [Lenovo MCP01] on usb-e0045000.usb-1.2/input0
+[    3.814237] systemd[1]: System time before build time, advancing clock.
+[    4.026652] systemd[1]: systemd 245.4-4ubuntu3.20 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=hybrid)
+[    4.049528] systemd[1]: Detected architecture arm64.
+[    4.108427] systemd[1]: Set hostname to <U.FMSH>.
+[    4.638360] random: crng init done
+[    4.814428] systemd[1]: system-getty.slice: unit configures an IP firewall, but the local system does not support BPF/cgroup firewalling.
+[    4.826843] systemd[1]: (This warning is only shown for the first unit using IP firewalling.)
+[    4.835902] systemd[1]: Created slice system-getty.slice.
+[    4.851867] systemd[1]: Created slice system-modprobe.slice.
+[    4.867836] systemd[1]: Created slice system-serial\x2dgetty.slice.
+[    4.887796] systemd[1]: Created slice User and Session Slice.
+[    4.903759] systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+[    4.927720] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[    4.951715] systemd[1]: Condition check resulted in Arbitrary Executable File Formats File System Automount Point being skipped.
+[    4.963380] systemd[1]: Reached target Local Encrypted Volumes.
+[    4.979696] systemd[1]: Reached target Paths.
+[    4.995630] systemd[1]: Reached target Remote File Systems.
+[    5.011619] systemd[1]: Reached target Slices.
+[    5.027642] systemd[1]: Reached target Swap.
+[    5.043999] systemd[1]: Listening on Syslog Socket.
+[    5.059789] systemd[1]: Listening on initctl Compatibility Named Pipe.
+[    5.080133] systemd[1]: Listening on Journal Audit Socket.
+[    5.095876] systemd[1]: Listening on Journal Socket (/dev/log).
+[    5.111917] systemd[1]: Listening on Journal Socket.
+[    5.129314] systemd[1]: Mounting Huge Pages File System...
+[    5.149534] systemd[1]: Mounting POSIX Message Queue File System...
+[    5.169620] systemd[1]: Mounting Kernel Debug File System...
+[    5.187949] systemd[1]: Condition check resulted in Kernel Trace File System being skipped.
+[    5.198097] systemd[1]: Starting Journal Service...
+[    5.223524] systemd[1]: Starting Helper to synchronize boot up for ifupdown...
+[    5.247758] systemd[1]: Condition check resulted in Create list of static device nodes for the current kernel being skipped.
+[    5.261118] systemd[1]: Starting Load Kernel Module chromeos_pstore...
+[    5.279759] systemd[1]: Condition check resulted in Load Kernel Module drm being skipped.
+[    5.289974] systemd[1]: Starting Load Kernel Module efi_pstore...
+[    5.309534] systemd[1]: Starting Load Kernel Module pstore_blk...
+[    5.329593] systemd[1]: Starting Load Kernel Module pstore_zone...
+[    5.349526] systemd[1]: Starting Load Kernel Module ramoops...
+[    5.369454] systemd[1]: Condition check resulted in Set Up Additional Binary Formats being skipped.
+[    5.381799] systemd[1]: Starting Load Kernel Modules...
+[    5.405330] systemd[1]: Starting Remount Root and Kernel File Systems...
+[    5.431492] systemd[1]: Started Journal Service.
+[    5.503665] u_dma_buf: loading out-of-tree module taints kernel.

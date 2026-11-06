@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "profile": "quick",
+  "environment": {
+    "device_id": "tkmnopc",
+    "system": "Windows",
+    "architecture": "AMD64",
+    "python": "3.13.11",
+    "implementation": "CPython",
+    "cpu": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+    "cpus": 16
+  },
+  "source": {
+    "commit": "27b8a1f76cd576d24db478fc9bcab196f9d25caf",
+    "dirty": true
+  },
+  "external_sources": {},
+  "checks": [
+    {
+      "id": "source-validation",
+      "status": "passed",
+      "files": 74,
+      "seconds": 0.36064419998729136
+    },
+    {
+      "id": "contracts",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 4.273921699990751,
+      "log": "contracts.log",
+      "message": "",
+      "test_methods": 7
+    },
+    {
+      "id": "infrastructure",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 2.0796163999912096,
+      "log": "infrastructure.log",
+      "message": "",
+      "test_methods": 11
+    },
+    {
+      "id": "split",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 1.1310161000001244,
+      "log": "split.log",
+      "message": "",
+      "test_methods": null
+    },
+    {
+      "id": "fsm",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.12287239999568556,
+      "log": "fsm.log",
+      "message": "",
+      "test_methods": null
+    }
+  ]
+}

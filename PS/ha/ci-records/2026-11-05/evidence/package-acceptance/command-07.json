@@ -1,0 +1,14 @@
+{
+  "command": [
+    "podman",
+    "exec",
+    "wcis-lang-package-test",
+    "mkdir",
+    "-p",
+    "/workenv/ha4fpai-ci/package-e4f23e04a303"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

@@ -1,0 +1,123 @@
+### dmesg_tail
+cmd: dmesg 2>/dev/null | tail -120
+---
+[    2.763261] can: controller area network core (rev 20170425 abi 9)
+[    2.769476] NET: Registered protocol family 29
+[    2.773926] can: raw protocol (rev 20170425)
+[    2.778201] can: broadcast manager protocol (rev 20170425 t)
+[    2.783871] can: netlink gateway (rev 20190810) max_hops=1
+[    2.789423] Key type dns_resolver registered
+[    2.793991] registered taskstats version 1
+[    2.798103] Loading compiled-in X.509 certificates
+[    2.810268] hctosys: unable to open rtc device (rtc0)
+[    2.815333] of_cfs_init
+[    2.817854] of_cfs_init: OK
+[    2.820734] clk: Not disabling unused clocks
+[    2.825014] ALSA device list:
+[    2.827985]   No soundcards found.
+[    2.831782] ttyPS0 - failed to request DMA
+[    2.836045] Waiting for root device /dev/mmcblk0p2...
+[    3.293954] dw_mmc e0044000.dwmmc: Busy; trying anyway
+[    3.799104] mmc_host mmc1: Timeout sending command (cmd 0x202000 arg 0x0 status 0x80202000)
+[    3.814102] mmc_host mmc0: Bus speed (slot 0) = 100000000Hz (slot req 50000000Hz, actual 50000000HZ div = 1)
+[    3.823953] mmc_host mmc1: Bus speed (slot 0) = 100000000Hz (slot req 300000Hz, actual 299401HZ div = 167)
+[    3.833645] mmc0: new high speed SDXC card at address 0001
+[    3.839539] mmcblk0: mmc0:0001 SD 58.4 GiB 
+[    3.844929]  mmcblk0: p1 p2
+[    3.892693] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+[    3.900816] VFS: Mounted root (ext4 filesystem) on device 179:2.
+[    3.928605] devtmpfs: mounted
+[    3.931757] Freeing unused kernel memory: 640K
+[    4.351227] dw_mmc e0044000.dwmmc: Busy; trying anyway
+[    4.856374] mmc_host mmc1: Timeout sending command (cmd 0x202000 arg 0x0 status 0x80202000)
+[    4.878502] mmc_host mmc1: Bus speed (slot 0) = 100000000Hz (slot req 200000Hz, actual 200000HZ div = 250)
+[    4.879521] Run /sbin/init as init process
+[    4.919863] random: fast init done
+[    5.405701] dw_mmc e0044000.dwmmc: Busy; trying anyway
+[    5.910871] mmc_host mmc1: Timeout sending command (cmd 0x202000 arg 0x0 status 0x80202000)
+[    5.919256] usb 1-1: new high-speed USB device number 2 using dwc2
+[    5.938020] mmc_host mmc1: Bus speed (slot 0) = 100000000Hz (slot req 100000Hz, actual 100000HZ div = 500)
+[    5.971604] systemd[1]: System time before build time, advancing clock.
+[    6.148424] systemd[1]: systemd 245.4-4ubuntu3.20 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=hybrid)
+[    6.171317] systemd[1]: Detected architecture arm64.
+[    6.212319] systemd[1]: Set hostname to <U.FMSH>.
+[    6.464815] dw_mmc e0044000.dwmmc: Busy; trying anyway
+[    6.969988] mmc_host mmc1: Timeout sending command (cmd 0x202000 arg 0x0 status 0x80202000)
+[    7.029434] random: systemd: uninitialized urandom read (16 bytes read)
+[    7.036241] systemd[1]: system-getty.slice: unit configures an IP firewall, but the local system does not support BPF/cgroup firewalling.
+[    7.048616] systemd[1]: (This warning is only shown for the first unit using IP firewalling.)
+[    7.057674] systemd[1]: Created slice system-getty.slice.
+[    7.075544] random: systemd: uninitialized urandom read (16 bytes read)
+[    7.082425] systemd[1]: Created slice system-modprobe.slice.
+[    7.099522] random: systemd: uninitialized urandom read (16 bytes read)
+[    7.106403] systemd[1]: Created slice system-serial\x2dgetty.slice.
+[    7.123634] usb 1-1: New USB device found, idVendor=0424, idProduct=2514, bcdDevice= b.b3
+[    7.123714] systemd[1]: Created slice User and Session Slice.
+[    7.131822] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    7.132160] hub 1-1:1.0: USB hub found
+[    7.148513] hub 1-1:1.0: 4 ports detected
+[    7.163697] systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+[    7.187632] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[    7.211633] systemd[1]: Condition check resulted in Arbitrary Executable File Formats File System Automount Point being skipped.
+[    7.223315] systemd[1]: Reached target Local Encrypted Volumes.
+[    7.239581] systemd[1]: Reached target Paths.
+[    7.255547] systemd[1]: Reached target Remote File Systems.
+[    7.271535] systemd[1]: Reached target Slices.
+[    7.287551] systemd[1]: Reached target Swap.
+[    7.303888] systemd[1]: Listening on Syslog Socket.
+[    7.319684] systemd[1]: Listening on initctl Compatibility Named Pipe.
+[    7.340046] systemd[1]: Listening on Journal Audit Socket.
+[    7.355779] systemd[1]: Listening on Journal Socket (/dev/log).
+[    7.371834] systemd[1]: Listening on Journal Socket.
+[    7.389238] systemd[1]: Mounting Huge Pages File System...
+[    7.409439] systemd[1]: Mounting POSIX Message Queue File System...
+[    7.429599] systemd[1]: Mounting Kernel Debug File System...
+[    7.443505] usb 1-1.2: new full-speed USB device number 3 using dwc2
+[    7.450300] systemd[1]: Condition check resulted in Kernel Trace File System being skipped.
+[    7.460529] systemd[1]: Starting Journal Service...
+[    7.475772] systemd[1]: Condition check resulted in Create list of static device nodes for the current kernel being skipped.
+[    7.489064] systemd[1]: Starting Load Kernel Module chromeos_pstore...
+[    7.507647] systemd[1]: Condition check resulted in Load Kernel Module drm being skipped.
+[    7.517702] systemd[1]: Starting Load Kernel Module efi_pstore...
+[    7.537369] systemd[1]: Starting Load Kernel Module pstore_blk...
+[    7.548824] usb 1-1.2: New USB device found, idVendor=17ef, idProduct=a03b, bcdDevice= 0.00
+[    7.557877] usb 1-1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    7.559858] systemd[1]: Starting Load Kernel Module pstore_zone...
+[    7.565238] usb 1-1.2: Product: MCP01
+[    7.575123] usb 1-1.2: Manufacturer: Lenovo
+[    7.575129] usb 1-1.2: SerialNumber: ACTIONS-DEV-SN1
+[    7.577770] input: Lenovo MCP01 Consumer Control as /devices/platform/amba-apu@0/e0045000.usb/usb1/1-1/1-1.2/1-1.2:1.0/0003:17EF:A03B.0001/input/input0
+[    7.609557] systemd[1]: Starting Load Kernel Module ramoops...
+[    7.655746] input: Lenovo MCP01 as /devices/platform/amba-apu@0/e0045000.usb/usb1/1-1/1-1.2/1-1.2:1.0/0003:17EF:A03B.0001/input/input1
+[    7.666334] systemd[1]: Condition check resulted in Set Up Additional Binary Formats being skipped.
+[    7.667996] hid-generic 0003:17EF:A03B.0001: input: USB HID v1.10 Device [Lenovo MCP01] on usb-e0045000.usb-1.2/input0
+[    7.681719] systemd[1]: Starting Load Kernel Modules...
+[    7.713284] systemd[1]: Starting Remount Root and Kernel File Systems...
+[    7.735381] systemd[1]: Started Journal Service.
+[    7.791314] u_dma_buf: loading out-of-tree module taints kernel.
+[    7.848239] u-dma-buf udmabuf0: driver version = 3.2.5
+[    7.853414] u-dma-buf udmabuf0: major number   = 242
+[    7.853432] u-dma-buf udmabuf0: minor number   = 0
+[    7.863208] u-dma-buf udmabuf0: phys address   = 0x0000000030100000
+[    7.869517] u-dma-buf udmabuf0: buffer size    = 134217728
+[    7.880567] u-dma-buf udmabuf@0: driver installed.
+[    8.116012] systemd-journald[103]: Received client request to flush runtime journal.
+[    8.631302] random: crng init done
+[    8.634717] random: 7 urandom warning(s) missed due to ratelimiting
+[    9.090259] mali f0000000.mali_gpu: Kernel DDK version r31p0-01eac0
+[    9.096860] mali f0000000.mali_gpu: GPU identified as 0x2 arch 7.4.0 r1p0 status 0
+[    9.104637] mali f0000000.mali_gpu: No priority control manager is configured
+[    9.111800] mali f0000000.mali_gpu: Memory group manager successfully loaded
+[    9.118897] mali f0000000.mali_gpu: Using coherency mode 31 set from dtb
+[    9.125903] systemd-journald[103]: File /var/log/journal/c18338d14c3049b3ab6cdaed8c0ee749/system.journal corrupted or uncleanly shut down, renaming and replacing.
+[    9.126443] mali f0000000.mali_gpu: Probed as mali0
+[    9.523771] MVX dev: Linlon v5276 identified. cores=2, nlsid=4, id=0. (mvx_dev.c:427)
+[   11.963482] Adding 1048572k swap on /swapfile.  Priority:-2 extents:22 across:5808124k SS
+[   14.122670] fmql-dwmac e0047000.ethernet eth0: PHY [stmmac-0:00] driver [Generic PHY]
+[   14.131484] fmql-dwmac e0047000.ethernet eth0: No Safety Features support found
+[   14.131498] fmql-dwmac e0047000.ethernet eth0: No MAC Management Counters available
+[   14.131511] fmql-dwmac e0047000.ethernet eth0: IEEE 1588-2008 Advanced Timestamp supported
+[   14.131703] fmql-dwmac e0047000.ethernet eth0: registered PTP clock
+[   14.131714] fmql-dwmac e0047000.ethernet eth0: configuring for phy/rgmii link mode
+[   16.173018] fmql-dwmac e0047000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[   16.173049] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready

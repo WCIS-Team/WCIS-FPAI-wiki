@@ -1,0 +1,4 @@
+### zram
+cmd: ls /dev/zram* 2>/dev/null; echo '---'; cat /proc/mounts | grep -i zram
+---
+---

@@ -1,0 +1,20 @@
+{
+  "command": [
+    "podman",
+    "exec",
+    "--env",
+    "TMPDIR=/workenv/ha4fpai-ci/full/tmp",
+    "wcis-py38",
+    "python3",
+    "-I",
+    "-B",
+    "-X",
+    "utf8",
+    "/work/repos/HA4FPAI/lang/npuserv/tests/lifecycle_check.py"
+  ],
+  "exit_code": 0,
+  "new_checkpoint_executed": true,
+  "status": "passed",
+  "stdout": "PASS  GET /health\nPASS  GET /models lists mock and the two real ids\nPASS  adapter_exists is a real on-disk check\nPASS  GET /status while idle reports no pid\nPASS  POST /load(mock) reaches ready\nPASS  load reports apply_s ~= the simulated apply\nPASS  the wait did not return before the fake apply finished\nPASS  GET /status shows ready + pid + info\nPASS  GET /ping round-trips to the worker\nPASS  POST /generate returns ids + reason + text\nPASS  /status carries the last result and the id count, not the ids\nPASS  worker kept its step counter across requests\nPASS  stream=true answers ndjson: pre*3 + tok*3 + end\nPASS  /load while loaded is refused with 409\nPASS  /load evict=true replaces the incumbent\nPASS  evicted worker process is really gone (CMA only returns then)\nPASS  wait=false returns state=loading immediately\nPASS  ...and /status reaches ready on its own\nPASS  a model bug answers 500 and does not eat the session\nPASS  session survives the bug (ping alive)\nPASS  the bug is recorded as last_error\nPASS  worker suicide surfaces as an error\nPASS  suicide frees the slot instead of lying about it\nPASS  history records the exit reason and rc\nPASS  /generate with nothing loaded is 409\nPASS  a load that raises answers 500 with the worker's error\nPASS  failed load leaves the slot idle\nPASS  unknown model id is 404\nPASS  reload after the failures works\nPASS  /unload naming a different model is 409\nPASS  POST /unload reports before/after memory\nPASS  unload reports the log path for forensics\nPASS  unloaded worker process is really gone\nPASS  second /unload is a no-op, not an error\nPASS  /ping with nothing loaded answers alive=false, no exception\nPASS  worker stdout lands in a file, not a pipe\nPASS  that file already contains the worker's own lines\nPASS  no live mock workers remain after supervisor shutdown\n\n38 checks passed, 0 failed\n",
+  "stderr": ""
+}

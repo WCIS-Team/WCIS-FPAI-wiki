@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "S:\work\WCIS\workenv\ha4fpai-ci\host-full\calibration-source-5e932f38bc6b\ci\tests\test_contracts.py", line 24, in <module>
+    from backends import REGISTRY, audioio
+  File "S:\work\WCIS\workenv\ha4fpai-ci\host-full\calibration-source-5e932f38bc6b\lang\server\backends\__init__.py", line 18, in <module>
+    from backends.kws_route import KwsRoute
+  File "S:\work\WCIS\workenv\ha4fpai-ci\host-full\calibration-source-5e932f38bc6b\lang\server\backends\kws_route.py", line 21, in <module>
+    import router as kws_router                              # noqa: E402  lang/kws/router.py
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'router'

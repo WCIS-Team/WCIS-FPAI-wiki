@@ -1,0 +1,6 @@
+﻿# Software / toolchain summary - WIN11-HV1
+Python: C:\Users\YiZhidi\AppData\Local\Microsoft\WindowsApps\python.exe ; version= ; Only the Microsoft Store redirector stub is on PATH; no real Python interpreter is installed. Not usable for collection/benchmarks.
+dotnet: 
+MSYS2 gcc (mingw64/x86_64-w64-mingw32): cc.exe (Rev6, Built by MSYS2 project) 16.2.0
+Cross toolchains: aarch64-none-linux-gnu
+Package managers: winget

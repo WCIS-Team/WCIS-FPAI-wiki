@@ -1,0 +1,71 @@
+test_FM02_audio_and_parameter_matrix (__main__.Contracts.test_FM02_audio_and_parameter_matrix) ... 
+  test_FM02_audio_and_parameter_matrix (__main__.Contracts.test_FM02_audio_and_parameter_matrix) (cap=1) ... FAIL
+  test_FM02_audio_and_parameter_matrix (__main__.Contracts.test_FM02_audio_and_parameter_matrix) (cap=7) ... FAIL
+  test_FM02_audio_and_parameter_matrix (__main__.Contracts.test_FM02_audio_and_parameter_matrix) (cap=12) ... FAIL
+  test_FM02_audio_and_parameter_matrix (__main__.Contracts.test_FM02_audio_and_parameter_matrix) (cap=20) ... FAIL
+  test_FM02_audio_and_parameter_matrix (__main__.Contracts.test_FM02_audio_and_parameter_matrix) (cap=40) ... FAIL
+
+======================================================================
+FAIL: test_FM02_audio_and_parameter_matrix (__main__.Contracts.test_FM02_audio_and_parameter_matrix) (cap=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "S:\work\WCIS\workenv\ha4fpai-ci\windows-full-final\calibration-source-262c37590e70\ci\tests\test_contracts.py", line 78, in test_FM02_audio_and_parameter_matrix
+    self.assertEqual("".join(chunks), text)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '中' != '中文标点。EnglishURLshttps://example.com/123！中文[114 chars]123！'
+- 中
++ 中文标点。EnglishURLshttps://example.com/123！中文标点。EnglishURLshttps://example.com/123！中文标点。EnglishURLshttps://example.com/123！中文标点。EnglishURLshttps://example.com/123！
+
+
+======================================================================
+FAIL: test_FM02_audio_and_parameter_matrix (__main__.Contracts.test_FM02_audio_and_parameter_matrix) (cap=7)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "S:\work\WCIS\workenv\ha4fpai-ci\windows-full-final\calibration-source-262c37590e70\ci\tests\test_contracts.py", line 78, in test_FM02_audio_and_parameter_matrix
+    self.assertEqual("".join(chunks), text)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '中' != '中文标点。EnglishURLshttps://example.com/123！中文[114 chars]123！'
+- 中
++ 中文标点。EnglishURLshttps://example.com/123！中文标点。EnglishURLshttps://example.com/123！中文标点。EnglishURLshttps://example.com/123！中文标点。EnglishURLshttps://example.com/123！
+
+
+======================================================================
+FAIL: test_FM02_audio_and_parameter_matrix (__main__.Contracts.test_FM02_audio_and_parameter_matrix) (cap=12)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "S:\work\WCIS\workenv\ha4fpai-ci\windows-full-final\calibration-source-262c37590e70\ci\tests\test_contracts.py", line 78, in test_FM02_audio_and_parameter_matrix
+    self.assertEqual("".join(chunks), text)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '中' != '中文标点。EnglishURLshttps://example.com/123！中文[114 chars]123！'
+- 中
++ 中文标点。EnglishURLshttps://example.com/123！中文标点。EnglishURLshttps://example.com/123！中文标点。EnglishURLshttps://example.com/123！中文标点。EnglishURLshttps://example.com/123！
+
+
+======================================================================
+FAIL: test_FM02_audio_and_parameter_matrix (__main__.Contracts.test_FM02_audio_and_parameter_matrix) (cap=20)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "S:\work\WCIS\workenv\ha4fpai-ci\windows-full-final\calibration-source-262c37590e70\ci\tests\test_contracts.py", line 78, in test_FM02_audio_and_parameter_matrix
+    self.assertEqual("".join(chunks), text)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '中' != '中文标点。EnglishURLshttps://example.com/123！中文[114 chars]123！'
+- 中
++ 中文标点。EnglishURLshttps://example.com/123！中文标点。EnglishURLshttps://example.com/123！中文标点。EnglishURLshttps://example.com/123！中文标点。EnglishURLshttps://example.com/123！
+
+
+======================================================================
+FAIL: test_FM02_audio_and_parameter_matrix (__main__.Contracts.test_FM02_audio_and_parameter_matrix) (cap=40)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "S:\work\WCIS\workenv\ha4fpai-ci\windows-full-final\calibration-source-262c37590e70\ci\tests\test_contracts.py", line 78, in test_FM02_audio_and_parameter_matrix
+    self.assertEqual("".join(chunks), text)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '中' != '中文标点。EnglishURLshttps://example.com/123！中文[114 chars]123！'
+- 中
++ 中文标点。EnglishURLshttps://example.com/123！中文标点。EnglishURLshttps://example.com/123！中文标点。EnglishURLshttps://example.com/123！中文标点。EnglishURLshttps://example.com/123！
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.007s
+
+FAILED (failures=5)

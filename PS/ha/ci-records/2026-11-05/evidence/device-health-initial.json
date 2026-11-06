@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "status": "failed",
+  "error_type": "FileNotFoundError",
+  "message": "Missing fingerprint file: server/core.py"
+}

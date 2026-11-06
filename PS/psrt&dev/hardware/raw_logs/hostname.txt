@@ -1,0 +1,6 @@
+### hostname
+cmd: hostname; echo '---'; cat /etc/hostname 2>/dev/null
+---
+U.FMSH
+---
+U.FMSH

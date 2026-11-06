@@ -1,0 +1,12 @@
+{
+  "command": [
+    "podman",
+    "cp",
+    "S:\\work\\WCIS\\repos\\HA4FPAI\\lang\\packaging\\linux\\ci_test.py",
+    "wcis-lang-package-test:/workenv/ha4fpai-ci/package-e4f23e04a303/ci_test.py"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

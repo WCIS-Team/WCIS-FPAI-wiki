@@ -1,0 +1,77 @@
+test_FM04_transient_persistent_oom_io_and_compound_failure (__main__.Contracts.test_FM04_transient_persistent_oom_io_and_compound_failure) ... 
+  test_FM04_transient_persistent_oom_io_and_compound_failure (__main__.Contracts.test_FM04_transient_persistent_oom_io_and_compound_failure) (stage='llm', fault='TimeoutError', persistent=False) ... FAIL
+  test_FM04_transient_persistent_oom_io_and_compound_failure (__main__.Contracts.test_FM04_transient_persistent_oom_io_and_compound_failure) (stage='llm', fault='TimeoutError', persistent=True) ... FAIL
+  test_FM04_transient_persistent_oom_io_and_compound_failure (__main__.Contracts.test_FM04_transient_persistent_oom_io_and_compound_failure) (stage='llm', fault='OSError', persistent=False) ... FAIL
+  test_FM04_transient_persistent_oom_io_and_compound_failure (__main__.Contracts.test_FM04_transient_persistent_oom_io_and_compound_failure) (stage='llm', fault='OSError', persistent=True) ... FAIL
+  test_FM04_transient_persistent_oom_io_and_compound_failure (__main__.Contracts.test_FM04_transient_persistent_oom_io_and_compound_failure) (stage='llm', fault='MemoryError', persistent=False) ... FAIL
+  test_FM04_transient_persistent_oom_io_and_compound_failure (__main__.Contracts.test_FM04_transient_persistent_oom_io_and_compound_failure) (stage='llm', fault='MemoryError', persistent=True) ... FAIL
+test_FM04_transient_persistent_oom_io_and_compound_failure (__main__.Contracts.test_FM04_transient_persistent_oom_io_and_compound_failure) ... FAIL
+
+======================================================================
+FAIL: test_FM04_transient_persistent_oom_io_and_compound_failure (__main__.Contracts.test_FM04_transient_persistent_oom_io_and_compound_failure) (stage='llm', fault='TimeoutError', persistent=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "S:\work\WCIS\workenv\ha4fpai-ci\windows-full-final\calibration-source-262c37590e70\ci\tests\test_contracts.py", line 116, in test_FM04_transient_persistent_oom_io_and_compound_failure
+    self.assertIn(stage, first["stages_error"])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'llm' not found in {}
+
+======================================================================
+FAIL: test_FM04_transient_persistent_oom_io_and_compound_failure (__main__.Contracts.test_FM04_transient_persistent_oom_io_and_compound_failure) (stage='llm', fault='TimeoutError', persistent=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "S:\work\WCIS\workenv\ha4fpai-ci\windows-full-final\calibration-source-262c37590e70\ci\tests\test_contracts.py", line 116, in test_FM04_transient_persistent_oom_io_and_compound_failure
+    self.assertIn(stage, first["stages_error"])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'llm' not found in {}
+
+======================================================================
+FAIL: test_FM04_transient_persistent_oom_io_and_compound_failure (__main__.Contracts.test_FM04_transient_persistent_oom_io_and_compound_failure) (stage='llm', fault='OSError', persistent=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "S:\work\WCIS\workenv\ha4fpai-ci\windows-full-final\calibration-source-262c37590e70\ci\tests\test_contracts.py", line 116, in test_FM04_transient_persistent_oom_io_and_compound_failure
+    self.assertIn(stage, first["stages_error"])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'llm' not found in {}
+
+======================================================================
+FAIL: test_FM04_transient_persistent_oom_io_and_compound_failure (__main__.Contracts.test_FM04_transient_persistent_oom_io_and_compound_failure) (stage='llm', fault='OSError', persistent=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "S:\work\WCIS\workenv\ha4fpai-ci\windows-full-final\calibration-source-262c37590e70\ci\tests\test_contracts.py", line 116, in test_FM04_transient_persistent_oom_io_and_compound_failure
+    self.assertIn(stage, first["stages_error"])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'llm' not found in {}
+
+======================================================================
+FAIL: test_FM04_transient_persistent_oom_io_and_compound_failure (__main__.Contracts.test_FM04_transient_persistent_oom_io_and_compound_failure) (stage='llm', fault='MemoryError', persistent=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "S:\work\WCIS\workenv\ha4fpai-ci\windows-full-final\calibration-source-262c37590e70\ci\tests\test_contracts.py", line 116, in test_FM04_transient_persistent_oom_io_and_compound_failure
+    self.assertIn(stage, first["stages_error"])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'llm' not found in {}
+
+======================================================================
+FAIL: test_FM04_transient_persistent_oom_io_and_compound_failure (__main__.Contracts.test_FM04_transient_persistent_oom_io_and_compound_failure) (stage='llm', fault='MemoryError', persistent=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "S:\work\WCIS\workenv\ha4fpai-ci\windows-full-final\calibration-source-262c37590e70\ci\tests\test_contracts.py", line 116, in test_FM04_transient_persistent_oom_io_and_compound_failure
+    self.assertIn(stage, first["stages_error"])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'llm' not found in {}
+
+======================================================================
+FAIL: test_FM04_transient_persistent_oom_io_and_compound_failure (__main__.Contracts.test_FM04_transient_persistent_oom_io_and_compound_failure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "S:\work\WCIS\workenv\ha4fpai-ci\windows-full-final\calibration-source-262c37590e70\ci\tests\test_contracts.py", line 130, in test_FM04_transient_persistent_oom_io_and_compound_failure
+    self.assertEqual(set(result["stages_error"]), {"llm", "tts"})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'llm'
+
+----------------------------------------------------------------------
+Ran 1 test in 1.007s
+
+FAILED (failures=7)

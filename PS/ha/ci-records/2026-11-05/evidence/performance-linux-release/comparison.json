@@ -1,0 +1,177 @@
+{
+  "status": "passed",
+  "reason": "Comparable measurements",
+  "rows": [
+    {
+      "metric": "process.peak_rss_kib.value",
+      "baseline": 52604.0,
+      "candidate": 52500.0,
+      "delta": -104.0,
+      "percent": -0.19770359668466275,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-12.chain_ms.p50",
+      "baseline": 56.290991500000004,
+      "candidate": 56.3933635,
+      "delta": 0.10237199999999547,
+      "percent": 0.18186213685718336,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-12.chain_ms.p95",
+      "baseline": 69.803811,
+      "candidate": 66.527571,
+      "delta": -3.2762400000000014,
+      "percent": -4.693497322087474,
+      "regression": false,
+      "gated": true
+    },
+    {
+      "metric": "split-12.first_request_ms.value",
+      "baseline": 54.089768,
+      "candidate": 70.681793,
+      "delta": 16.592025,
+      "percent": 30.67497904594451,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-12.split_ms.p50",
+      "baseline": 0.0534465,
+      "candidate": 0.053471500000000005,
+      "delta": 2.5000000000004186e-05,
+      "percent": 0.04677574771033498,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-12.split_ms.p95",
+      "baseline": 0.092435,
+      "candidate": 0.074461,
+      "delta": -0.017974000000000004,
+      "percent": -19.44501541623844,
+      "regression": false,
+      "gated": true
+    },
+    {
+      "metric": "split-20-16k.chain_ms.p50",
+      "baseline": 55.531828000000004,
+      "candidate": 51.746478499999995,
+      "delta": -3.7853495000000095,
+      "percent": -6.816540417146018,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-20-16k.chain_ms.p95",
+      "baseline": 75.946449,
+      "candidate": 70.640143,
+      "delta": -5.306306000000006,
+      "percent": -6.986904680691531,
+      "regression": false,
+      "gated": true
+    },
+    {
+      "metric": "split-20-16k.first_request_ms.value",
+      "baseline": 56.523025,
+      "candidate": 46.891063,
+      "delta": -9.631961999999994,
+      "percent": -17.040775860810694,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-20-16k.split_ms.p50",
+      "baseline": 0.050335000000000005,
+      "candidate": 0.05005,
+      "delta": -0.00028500000000000747,
+      "percent": -0.5662064170060742,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-20-16k.split_ms.p95",
+      "baseline": 0.071966,
+      "candidate": 0.074421,
+      "delta": 0.002454999999999999,
+      "percent": 3.411333129533389,
+      "regression": false,
+      "gated": true
+    },
+    {
+      "metric": "split-20.chain_ms.p50",
+      "baseline": 156.23575649999998,
+      "candidate": 111.1907155,
+      "delta": -45.04504099999998,
+      "percent": -28.831454469259082,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-20.chain_ms.p95",
+      "baseline": 241.269075,
+      "candidate": 179.238285,
+      "delta": -62.030789999999996,
+      "percent": -25.710211721083606,
+      "regression": false,
+      "gated": true
+    },
+    {
+      "metric": "split-20.first_request_ms.value",
+      "baseline": 318.071818,
+      "candidate": 346.039219,
+      "delta": 27.967400999999995,
+      "percent": 8.792794399659764,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-20.split_ms.p50",
+      "baseline": 0.0658645,
+      "candidate": 0.054939,
+      "delta": -0.010925500000000005,
+      "percent": -16.58784322358783,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-20.split_ms.p95",
+      "baseline": 0.150806,
+      "candidate": 0.090722,
+      "delta": -0.060084,
+      "percent": -39.84191610413379,
+      "regression": false,
+      "gated": true
+    }
+  ],
+  "gates": {
+    "chain_ms.p95": {
+      "direction": "lower",
+      "relative": 0.15,
+      "absolute": 5.0
+    },
+    "split_ms.p95": {
+      "direction": "lower",
+      "relative": 0.2,
+      "absolute": 0.05
+    }
+  },
+  "comparison_tool_sha256": "15253e0fff85e1760d3cab819c57b0d0ad580f61db4407f176d9ff7b91b2e132",
+  "conditions": {
+    "kind": "host-mock",
+    "environment": {
+      "device_id": "549b9500faeb",
+      "system": "Linux",
+      "architecture": "x86_64",
+      "python": "3.8.10",
+      "implementation": "CPython",
+      "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+      "cpus": 16
+    },
+    "workload_sha256": "a957682e9cfa09ace7855e8f1512638a0bcfa484c13204886140385a9811310e",
+    "harness_sha256": "966de4df53320d435e7c010a9ac00232fce6b386cebe19e928fcdb44aa7e3204"
+  }
+}

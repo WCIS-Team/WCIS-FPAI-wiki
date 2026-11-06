@@ -1,0 +1,7 @@
+### lsmod
+cmd: lsmod 2>/dev/null
+---
+Module                  Size  Used by
+amvx                  196608  0
+mali_kbase            462848  0
+u_dma_buf              28672  0

@@ -1,0 +1,21 @@
+{
+  "command": [
+    "podman",
+    "exec",
+    "zgbuild",
+    "python3",
+    "-I",
+    "-B",
+    "/mnt/s/work/WCIS/repos/HA4FPAI/ci/package_check.py",
+    "--directory",
+    "/mnt/s/work/WCIS/workenv/ha4fpai-ci/package-acceptance/dist-amd64",
+    "--architecture",
+    "amd64",
+    "--output",
+    "/mnt/s/work/WCIS/workenv/ha4fpai-ci/package-acceptance/static-amd64.json"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "stdout": "Package static validation: passed; /mnt/s/work/WCIS/workenv/ha4fpai-ci/package-acceptance/static-amd64.json\n",
+  "stderr": ""
+}

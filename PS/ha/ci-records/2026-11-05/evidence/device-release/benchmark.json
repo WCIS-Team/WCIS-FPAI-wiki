@@ -1,0 +1,274 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "context": {
+    "kind": "device-benchmark",
+    "environment": {
+      "device_id": "U.FMSH",
+      "architecture": "aarch64",
+      "python": "3.8.10",
+      "kernel": "5.4.52"
+    },
+    "workload_sha256": "1d857b86cb54f229fa55bf7bcae75f91efa1b44acac2ceb4281473b031df8bc4",
+    "configuration_sha256": "54d9f28c661f15c3cbaf8a5e5560c89ba07833fce17fb8bedaad46cab4a3f3b9",
+    "harness_sha256": "5d248ed44e0b42aae7140f05bd2e36be2b86bb842a000f95b72c3c6e18a8782a"
+  },
+  "source_files": {
+    "server/core.py": "2671f59ee2d24f131154986370db2dbf70d7b744df5f8a89fb509cbe505c82e7",
+    "server/app.py": "053e42f0aa05fdef0e3181608936f6d5003ae45cd4193564715e22e6822fabcb",
+    "server/backends/asr.py": "ac7213b49210b09047338ffcb80fe193d83e2dc7dc8a7a1392cac73076f4fd6c",
+    "server/backends/tts.py": "a1053fa87836dcb8e9c25998d6d9d8cc87fb78b1d869e2e90a91cf524e257a78",
+    "split/tts_split.py": "e8dc8eedfe9966cb4ccb566128099fd6d31f20c6bf6a8c79ae46b902e8d16f83"
+  },
+  "configuration_files": {
+    "server.yaml": "0460a40bdc8c29684fcec9451c02929f20eec065428bc756b7756fe891f37b53",
+    "split.yaml": "e6cd3506b79749bf24d7d3d440d5c59ae89e60b320ec9cd1d39a443442fe07ec"
+  },
+  "checks": [
+    {
+      "id": "lang/health",
+      "status": "passed",
+      "observed": {
+        "service": "lang-server",
+        "config": "/etc/lang-server/config",
+        "stages": {
+          "sar": "auto",
+          "kws": "passthrough",
+          "vad": "none",
+          "asr": "remote-api",
+          "router": "none",
+          "llm": "openai",
+          "tokenizer": "tts_split",
+          "tts": "edge"
+        }
+      }
+    },
+    {
+      "id": "lang/components",
+      "status": "passed",
+      "observed": {}
+    },
+    {
+      "id": "wake-info",
+      "status": "passed"
+    },
+    {
+      "id": "asr-info",
+      "status": "passed"
+    },
+    {
+      "id": "tts-info",
+      "status": "passed"
+    },
+    {
+      "id": "tts-short",
+      "status": "passed"
+    },
+    {
+      "id": "asr-file",
+      "status": "passed"
+    }
+  ],
+  "metrics": {
+    "lang/health.health_ms": {
+      "value": 46.263848
+    },
+    "lang/components.health_ms": {
+      "value": 17.564876
+    },
+    "tts-short.latency_ms": {
+      "n": 5,
+      "mean": 1831.2561174,
+      "p50": 1878.713708,
+      "p95": 1898.781699,
+      "min": 1741.140381,
+      "max": 1898.781699
+    },
+    "tts-short.rtf": {
+      "n": 5,
+      "mean": 0.7407994002427184,
+      "p50": 0.7599974546925566,
+      "p95": 0.7681155740291261,
+      "min": 0.7043448143203883,
+      "max": 0.7681155740291261
+    },
+    "asr-file.latency_ms": {
+      "n": 5,
+      "mean": 2369.7057398,
+      "p50": 2394.366511,
+      "p95": 3302.749114,
+      "min": 1654.095756,
+      "max": 3302.749114
+    },
+    "asr-file.cer": {
+      "n": 5,
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "asr-file.rtf": {
+      "n": 5,
+      "mean": 0.9586188267799353,
+      "p50": 0.9685948669093852,
+      "p95": 1.3360635574433657,
+      "min": 0.6691325873786408,
+      "max": 1.3360635574433657
+    },
+    "services.rss_kib": {
+      "value": 80948
+    },
+    "services.rss_growth_kib": {
+      "value": 0
+    }
+  },
+  "samples": {
+    "tts-short.latency_ms": [
+      1898.781699,
+      1878.713708,
+      1882.181671,
+      1741.140381,
+      1755.463128
+    ],
+    "tts-short.rtf": [
+      0.7681155740291261,
+      0.7599974546925566,
+      0.7614003523462783,
+      0.7043448143203883,
+      0.7101388058252428
+    ],
+    "asr-file.latency_ms": [
+      3302.749114,
+      1791.55295,
+      2705.764368,
+      2394.366511,
+      1654.095756
+    ],
+    "asr-file.cer": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "asr-file.rtf": [
+      1.3360635574433657,
+      0.7247382483818771,
+      1.0945648737864078,
+      0.9685948669093852,
+      0.6691325873786408
+    ]
+  },
+  "workloads": [
+    {
+      "id": "tts-short",
+      "enabled": true,
+      "service": "lang",
+      "kind": "tts",
+      "path": "/tts",
+      "text_sha256": "cb865de5c738043e48e04f4b09ed6602b21907437bc0fe536801dd8f295d3888"
+    },
+    {
+      "id": "asr-file",
+      "enabled": true,
+      "service": "lang",
+      "kind": "asr",
+      "path": "/api/v1/asr",
+      "audio_sha256": "165f8fdbb2eccae5ed342b94d9ac95c4fd14fe84d05899fbd77e3a83a1f1947f",
+      "input_seconds": 2.472,
+      "max_cer": 0.2,
+      "expected_text_sha256": "cb865de5c738043e48e04f4b09ed6602b21907437bc0fe536801dd8f295d3888"
+    }
+  ],
+  "resources_before": {
+    "processes": [
+      {
+        "pid": 67429,
+        "rss_kib": 59376
+      },
+      {
+        "pid": 67430,
+        "rss_kib": 21572
+      }
+    ],
+    "rss_kib": 80948,
+    "cpu_ticks": 13298,
+    "pattern_counts": {
+      "/usr/lib/lang-server/lang/server/app.py": 1,
+      "/usr/lib/lang-server/lang/server/wyoming_gateway.py": 1
+    }
+  },
+  "resources_warmed": {
+    "processes": [
+      {
+        "pid": 67429,
+        "rss_kib": 59376
+      },
+      {
+        "pid": 67430,
+        "rss_kib": 21572
+      }
+    ],
+    "rss_kib": 80948,
+    "cpu_ticks": 13420,
+    "pattern_counts": {
+      "/usr/lib/lang-server/lang/server/app.py": 1,
+      "/usr/lib/lang-server/lang/server/wyoming_gateway.py": 1
+    }
+  },
+  "resources_after": {
+    "processes": [
+      {
+        "pid": 67429,
+        "rss_kib": 59376
+      },
+      {
+        "pid": 67430,
+        "rss_kib": 21572
+      }
+    ],
+    "rss_kib": 80948,
+    "cpu_ticks": 14025,
+    "pattern_counts": {
+      "/usr/lib/lang-server/lang/server/app.py": 1,
+      "/usr/lib/lang-server/lang/server/wyoming_gateway.py": 1
+    }
+  },
+  "correctness": {
+    "contracts": [
+      {
+        "id": "lang/health",
+        "status": "passed"
+      },
+      {
+        "id": "lang/components",
+        "status": "passed"
+      },
+      {
+        "id": "wake-info",
+        "status": "passed"
+      },
+      {
+        "id": "asr-info",
+        "status": "passed"
+      },
+      {
+        "id": "tts-info",
+        "status": "passed"
+      },
+      {
+        "id": "tts-short",
+        "status": "passed"
+      },
+      {
+        "id": "asr-file",
+        "status": "passed"
+      }
+    ]
+  },
+  "notes": [
+    "Health is liveness/contract evidence, not a model accuracy or physical I/O acceptance test.",
+    "Inference uses deployed services; cloud model/provider drift can affect results."
+  ]
+}

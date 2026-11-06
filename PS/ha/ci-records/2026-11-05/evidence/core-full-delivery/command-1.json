@@ -1,0 +1,11 @@
+{
+  "command": [
+    "podman",
+    "cp",
+    "wcis-py38:/workenv/ha4fpai-ci/full",
+    "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-delivery\\reports"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

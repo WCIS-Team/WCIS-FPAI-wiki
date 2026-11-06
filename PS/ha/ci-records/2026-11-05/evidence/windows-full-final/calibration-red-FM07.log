@@ -1,0 +1,29 @@
+test_FM07_executor_dry_run_and_partial_outage (__main__.Contracts.test_FM07_executor_dry_run_and_partial_outage) ... FAIL
+
+======================================================================
+FAIL: test_FM07_executor_dry_run_and_partial_outage (__main__.Contracts.test_FM07_executor_dry_run_and_partial_outage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "S:\work\WCIS\workenv\ha4fpai-ci\windows-full-final\calibration-source-262c37590e70\ci\tests\test_contracts.py", line 189, in test_FM07_executor_dry_run_and_partial_outage
+    result = klar_executor.run_direct("开始录制", dry_run=True)
+             ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "S:\work\WCIS\workenv\ha4fpai-ci\windows-full-final\calibration-source-262c37590e70\klar\klar_executor.py", line 437, in run_direct
+    ok, msg, detail = fn(slots)
+                      ~~^^^^^^^
+  File "S:\work\WCIS\workenv\ha4fpai-ci\windows-full-final\calibration-source-262c37590e70\klar\klar_executor.py", line 133, in act_record_on
+    st, d = http(BOARD["record"] + "/api/mode", "POST", {"mode": mode})
+            ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\takomi\AppData\Local\Programs\Python\Python313\Lib\unittest\mock.py", line 1169, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\takomi\AppData\Local\Programs\Python\Python313\Lib\unittest\mock.py", line 1173, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\takomi\AppData\Local\Programs\Python\Python313\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    raise effect
+AssertionError: unexpected action
+
+----------------------------------------------------------------------
+Ran 1 test in 0.007s
+
+FAILED (failures=1)

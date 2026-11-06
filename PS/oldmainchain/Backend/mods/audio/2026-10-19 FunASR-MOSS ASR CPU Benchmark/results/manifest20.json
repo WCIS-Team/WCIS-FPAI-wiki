@@ -1,0 +1,90 @@
+{
+  "dataset": "AISHELL-1 official test set (via shenyunhang/AISHELL-1 audio + modelscope speech_asr_aishell1_testsets csv)",
+  "source_csv": "aishell1_test.csv",
+  "total_rows": 7176,
+  "sampled": 20,
+  "seed": 42,
+  "audio_root": "D:/yzd/llm/funasr/data/aishell1/data_aishell",
+  "items": [
+    {
+      "wav": "wav/test/S0914/BAC009S0914W0493.wav",
+      "text": "这一斤玛卡其实价格只有一零零多元"
+    },
+    {
+      "wav": "wav/test/S0915/BAC009S0915W0257.wav",
+      "text": "而且它们两个之间是非常对立的关系"
+    },
+    {
+      "wav": "wav/test/S0901/BAC009S0901W0434.wav",
+      "text": "要有清晰的目标人文情怀和做到执着坚守"
+    },
+    {
+      "wav": "wav/test/S0765/BAC009S0765W0207.wav",
+      "text": "您如何看待政府的举债行为和债务风险"
+    },
+    {
+      "wav": "wav/test/S0907/BAC009S0907W0365.wav",
+      "text": "比赛在双方互不相让的对攻中落下了帷幕"
+    },
+    {
+      "wav": "wav/test/S0907/BAC009S0907W0313.wav",
+      "text": "但到将来互联网时代"
+    },
+    {
+      "wav": "wav/test/S0916/BAC009S0916W0418.wav",
+      "text": "应该是月初吧"
+    },
+    {
+      "wav": "wav/test/S0905/BAC009S0905W0326.wav",
+      "text": "除了之前提到的关于辐射的测试报告外"
+    },
+    {
+      "wav": "wav/test/S0905/BAC009S0905W0478.wav",
+      "text": "京华时报讯昨天下午"
+    },
+    {
+      "wav": "wav/test/S0902/BAC009S0902W0289.wav",
+      "text": "这对苹果是一个利好"
+    },
+    {
+      "wav": "wav/test/S0902/BAC009S0902W0311.wav",
+      "text": "紫光股份千九十三八在公布拓展云计算市场后"
+    },
+    {
+      "wav": "wav/test/S0902/BAC009S0902W0372.wav",
+      "text": "不过两位当事人双双否认性侵的说法"
+    },
+    {
+      "wav": "wav/test/S0902/BAC009S0902W0369.wav",
+      "text": "多年来围绕其性取向的争论一直没有停息"
+    },
+    {
+      "wav": "wav/test/S0902/BAC009S0902W0236.wav",
+      "text": "加强主要农产品优势产区加工基地建设"
+    },
+    {
+      "wav": "wav/test/S0902/BAC009S0902W0125.wav",
+      "text": "后续要加大公积金贷款的便利性"
+    },
+    {
+      "wav": "wav/test/S0766/BAC009S0766W0367.wav",
+      "text": "但是由于国籍不统一"
+    },
+    {
+      "wav": "wav/test/S0769/BAC009S0769W0163.wav",
+      "text": "相关公司股票走势"
+    },
+    {
+      "wav": "wav/test/S0769/BAC009S0769W0404.wav",
+      "text": "也等待了很长时间"
+    },
+    {
+      "wav": "wav/test/S0769/BAC009S0769W0267.wav",
+      "text": "苹果设备的用户应当注意"
+    },
+    {
+      "wav": "wav/test/S0903/BAC009S0903W0297.wav",
+      "text": "对于谋求转型发展怀揣创新型国家梦想的中国来说"
+    }
+  ]
+}

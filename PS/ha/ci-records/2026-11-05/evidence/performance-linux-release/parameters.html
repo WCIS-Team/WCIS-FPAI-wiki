@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>HA4FPAI performance</title><style>body{font:16px system-ui;max-width:1080px;margin:40px auto;padding:0 24px;color:#172033}pre{white-space:pre-wrap;background:#f1f5f9;padding:20px;border-radius:8px}.metric{margin:24px 0}.metric div{display:flex;align-items:center;gap:12px;margin:6px 0}i{display:inline-block;height:18px;border-radius:3px}h1{font-size:28px}</style><h1>HA4FPAI performance: passed</h1><p>Deployed configuration changed; explicitly accepted for this experiment; parameter tradeoff with identical input and source; inspect chunk count and audio duration</p><div class="metric"><b>chain_ms.p50</b><div>baseline <i style="width:60.0%;background:#94a3b8"></i> 56.3934</div><div>candidate <i style="width:55.1%;background:#0f766e"></i> 51.7465</div></div><div class="metric"><b>chain_ms.p95</b><div>baseline <i style="width:56.5%;background:#94a3b8"></i> 66.5276</div><div>candidate <i style="width:60.0%;background:#0f766e"></i> 70.6401</div></div><div class="metric"><b>first_request_ms.value</b><div>baseline <i style="width:60.0%;background:#94a3b8"></i> 70.6818</div><div>candidate <i style="width:39.8%;background:#0f766e"></i> 46.8911</div></div><div class="metric"><b>split_ms.p50</b><div>baseline <i style="width:60.0%;background:#94a3b8"></i> 0.0535</div><div>candidate <i style="width:56.2%;background:#0f766e"></i> 0.0500</div></div><div class="metric"><b>split_ms.p95</b><div>baseline <i style="width:60.0%;background:#94a3b8"></i> 0.0745</div><div>candidate <i style="width:60.0%;background:#0f766e"></i> 0.0744</div></div><pre># HA4FPAI performance
+
+Result: **passed**
+
+Deployed configuration changed; explicitly accepted for this experiment; parameter tradeoff with identical input and source; inspect chunk count and audio duration
+
+Source: `None`; dirty: `None`
+
+| Metric | Baseline | Candidate | Change | Gate |
+|---|---:|---:|---:|---|
+| chain_ms.p50 | 56.3934 | 51.7465 | -8.24% | observe |
+| chain_ms.p95 | 66.5276 | 70.6401 | +6.18% | pass |
+| first_request_ms.value | 70.6818 | 46.8911 | -33.66% | observe |
+| split_ms.p50 | 0.0535 | 0.0500 | -6.40% | observe |
+| split_ms.p95 | 0.0745 | 0.0744 | -0.05% | pass |
+
+Negative change means faster for latency; verify the metric&#x27;s direction for other units.
+A gate fails only when the regression exceeds both its relative and absolute tolerances.
+All raw samples, conditions, source hashes and correctness checks remain in the JSON artifact.
+
+## Parameter experiment
+
+Mock TTS duration depends on chunking. This comparison shows parameter cost and output size, not speech quality.
+
+| Condition/output | Baseline | Candidate |
+|---|---|---|
+| parameters | {&#x27;id&#x27;: &#x27;split-12&#x27;, &#x27;max_chars&#x27;: 12, &#x27;out_rate&#x27;: 16000} | {&#x27;id&#x27;: &#x27;split-20-16k&#x27;, &#x27;max_chars&#x27;: 20, &#x27;out_rate&#x27;: 16000} |
+| chunks | 6 | 4 |
+| frames | 79678 | 70079 |
+| audio_rate | 16000 | 16000 |
+</pre></html>

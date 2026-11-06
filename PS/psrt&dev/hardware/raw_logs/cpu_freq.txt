@@ -1,0 +1,7 @@
+### cpu_freq
+cmd: for f in /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_min_freq /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor; do echo -n "$f: "; cat $f 2>/dev/null || echo na; done
+---
+/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: na
+/sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq: na
+/sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_min_freq: na
+/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor: na

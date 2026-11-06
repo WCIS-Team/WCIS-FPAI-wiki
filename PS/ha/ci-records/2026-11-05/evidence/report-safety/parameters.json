@@ -1,0 +1,88 @@
+{
+  "status": "passed",
+  "reason": "Deployed configuration changed; explicitly accepted for this experiment; parameter tradeoff with identical input and source; inspect chunk count and audio duration",
+  "rows": [
+    {
+      "metric": "chain_ms.p50",
+      "baseline": 56.3933635,
+      "candidate": 51.746478499999995,
+      "delta": -4.646885000000005,
+      "percent": -8.240127404353181,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "chain_ms.p95",
+      "baseline": 66.527571,
+      "candidate": 70.640143,
+      "delta": 4.112572,
+      "percent": 6.181755831728774,
+      "regression": false,
+      "gated": true
+    },
+    {
+      "metric": "first_request_ms.value",
+      "baseline": 70.681793,
+      "candidate": 46.891063,
+      "delta": -23.790729999999996,
+      "percent": -33.65892260260007,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split_ms.p50",
+      "baseline": 0.053471500000000005,
+      "candidate": 0.05005,
+      "delta": -0.003421500000000008,
+      "percent": -6.398735775132561,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split_ms.p95",
+      "baseline": 0.074461,
+      "candidate": 0.074421,
+      "delta": -3.999999999999837e-05,
+      "percent": -0.05371939673117252,
+      "regression": false,
+      "gated": true
+    }
+  ],
+  "experiment": {
+    "baseline": {
+      "parameters": {
+        "id": "split-12",
+        "max_chars": 12,
+        "out_rate": 16000
+      },
+      "chunks": 6,
+      "frames": 79678,
+      "audio_rate": 16000,
+      "text": "好的，这是自检回复。第二句用来切分。最后来一句长一点的，看看分词器会不会把它切开，给 TTS 留几个小块。"
+    },
+    "candidate": {
+      "parameters": {
+        "id": "split-20-16k",
+        "max_chars": 20,
+        "out_rate": 16000
+      },
+      "chunks": 4,
+      "frames": 70079,
+      "audio_rate": 16000,
+      "text": "好的，这是自检回复。第二句用来切分。最后来一句长一点的，看看分词器会不会把它切开，给 TTS 留几个小块。"
+    },
+    "note": "Mock TTS duration depends on chunking. This comparison shows parameter cost and output size, not speech quality."
+  },
+  "gates": {
+    "chain_ms.p95": {
+      "direction": "lower",
+      "relative": 0.15,
+      "absolute": 5.0
+    },
+    "split_ms.p95": {
+      "direction": "lower",
+      "relative": 0.2,
+      "absolute": 0.05
+    }
+  }
+}

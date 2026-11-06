@@ -1,0 +1,16 @@
+{
+  "command": [
+    "C:\\Users\\takomi\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-I",
+    "-B",
+    "S:\\work\\WCIS\\repos\\HA4FPAI\\ci\\report.py",
+    "--candidate",
+    "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\candidate.json",
+    "--output",
+    "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\no-baseline"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "stdout": "# HA4FPAI performance\n\nResult: **no-baseline**\n\nMeasured candidate; no speedup claim without a baseline\n\nSource: `None`; dirty: `None`\n\n| Metric | Baseline | Candidate | Change | Gate |\n|---|---:|---:|---:|---|\n| process.peak_rss_kib.value | �� | 52500.0000 | �� | no baseline |\n| split-12.chain_ms.p50 | �� | 56.3934 | �� | no baseline |\n| split-12.chain_ms.p95 | �� | 66.5276 | �� | no baseline |\n| split-12.first_request_ms.value | �� | 70.6818 | �� | no baseline |\n| split-12.split_ms.p50 | �� | 0.0535 | �� | no baseline |\n| split-12.split_ms.p95 | �� | 0.0745 | �� | no baseline |\n| split-20-16k.chain_ms.p50 | �� | 51.7465 | �� | no baseline |\n| split-20-16k.chain_ms.p95 | �� | 70.6401 | �� | no baseline |\n| split-20-16k.first_request_ms.value | �� | 46.8911 | �� | no baseline |\n| split-20-16k.split_ms.p50 | �� | 0.0500 | �� | no baseline |\n| split-20-16k.split_ms.p95 | �� | 0.0744 | �� | no baseline |\n| split-20.chain_ms.p50 | �� | 111.1907 | �� | no baseline |\n| split-20.chain_ms.p95 | �� | 179.2383 | �� | no baseline |\n| split-20.first_request_ms.value | �� | 346.0392 | �� | no baseline |\n| split-20.split_ms.p50 | �� | 0.0549 | �� | no baseline |\n| split-20.split_ms.p95 | �� | 0.0907 | �� | no baseline |\n\nNegative change means faster for latency; verify the metric's direction for other units.\nA gate fails only when the regression exceeds both its relative and absolute tolerances.\nAll raw samples, conditions, source hashes and correctness checks remain in the JSON artifact.\n\n",
+  "stderr": ""
+}

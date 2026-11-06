@@ -1,0 +1,30 @@
+# HA4FPAI performance
+
+Result: **passed**
+
+Deployed configuration changed; explicitly accepted for this experiment; parameter tradeoff with identical input and source; inspect chunk count and audio duration
+
+Source: `None`; dirty: `None`
+
+| Metric | Baseline | Candidate | Change | Gate |
+|---|---:|---:|---:|---|
+| chain_ms.p50 | 56.3934 | 51.7465 | -8.24% | observe |
+| chain_ms.p95 | 66.5276 | 70.6401 | +6.18% | pass |
+| first_request_ms.value | 70.6818 | 46.8911 | -33.66% | observe |
+| split_ms.p50 | 0.0535 | 0.0500 | -6.40% | observe |
+| split_ms.p95 | 0.0745 | 0.0744 | -0.05% | pass |
+
+Negative change means faster for latency; verify the metric's direction for other units.
+A gate fails only when the regression exceeds both its relative and absolute tolerances.
+All raw samples, conditions, source hashes and correctness checks remain in the JSON artifact.
+
+## Parameter experiment
+
+Mock TTS duration depends on chunking. This comparison shows parameter cost and output size, not speech quality.
+
+| Condition/output | Baseline | Candidate |
+|---|---|---|
+| parameters | {'id': 'split-12', 'max_chars': 12, 'out_rate': 16000} | {'id': 'split-20-16k', 'max_chars': 20, 'out_rate': 16000} |
+| chunks | 6 | 4 |
+| frames | 79678 | 70079 |
+| audio_rate | 16000 | 16000 |

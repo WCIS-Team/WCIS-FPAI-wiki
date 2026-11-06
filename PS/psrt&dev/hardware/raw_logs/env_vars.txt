@@ -1,0 +1,5 @@
+### env_vars
+cmd: env | grep -iE 'npu|icore|fpga|zg|device|cuda|opencl|omp|thread|path' | sort
+---
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/0/bus
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin

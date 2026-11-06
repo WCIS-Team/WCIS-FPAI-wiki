@@ -1,0 +1,4 @@
+### numa
+cmd: numactl --hardware 2>/dev/null || echo 'numactl not installed (not_supported)'
+---
+numactl not installed (not_supported)

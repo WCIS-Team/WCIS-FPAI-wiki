@@ -1,0 +1,20 @@
+test_FM01_configuration_overlay_and_registry (__main__.Contracts.test_FM01_configuration_overlay_and_registry) ... ok
+test_FM02_audio_and_parameter_matrix (__main__.Contracts.test_FM02_audio_and_parameter_matrix) ... ok
+test_FM03_wake_gate_and_silence_stop_downstream (__main__.Contracts.test_FM03_wake_gate_and_silence_stop_downstream) ... ok
+test_FM04_transient_persistent_oom_io_and_compound_failure (__main__.Contracts.test_FM04_transient_persistent_oom_io_and_compound_failure) ... ok
+test_FM05_gate_timeout_and_exception_release (__main__.Contracts.test_FM05_gate_timeout_and_exception_release) ... ok
+test_FM06_http_content_and_compatibility (__main__.Contracts.test_FM06_http_content_and_compatibility) ... [02:05:16] "GET /health HTTP/1.1" 200 -
+[02:05:16] "GET /components HTTP/1.1" 200 -
+[02:05:16] "GET /stats HTTP/1.1" 200 -
+[02:05:16] "POST /api/v1/chain HTTP/1.1" 200 -
+[02:05:16] "POST /api/v1/asr HTTP/1.1" 200 -
+[02:05:16] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+[02:05:16] "POST /tts HTTP/1.1" 400 -
+[02:05:16] "GET /unknown-ci-route HTTP/1.1" 404 -
+ok
+test_FM07_executor_dry_run_and_partial_outage (__main__.Contracts.test_FM07_executor_dry_run_and_partial_outage) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 2.105s
+
+OK

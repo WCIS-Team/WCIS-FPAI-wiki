@@ -1,0 +1,9 @@
+{
+  "initial_aa_same_source": true,
+  "initial_aa_same_conditions": true,
+  "initial_aa_result": "regression",
+  "package_lifecycle_ok": true,
+  "arm64_static": "passed",
+  "amd64_static": "passed",
+  "device_benchmark": "passed"
+}

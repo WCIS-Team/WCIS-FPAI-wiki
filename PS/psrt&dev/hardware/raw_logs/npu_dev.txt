@@ -1,0 +1,4 @@
+### npu_dev
+cmd: ls -l /dev/ 2>/dev/null | grep -iE 'mve|npu|zg|icore|amvx'
+---
+drwxr-xr-x 2 root root       80 Mar  2  2023 input

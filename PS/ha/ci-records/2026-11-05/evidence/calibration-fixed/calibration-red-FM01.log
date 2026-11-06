@@ -1,0 +1,18 @@
+test_FM01_configuration_overlay_and_registry (__main__.Contracts.test_FM01_configuration_overlay_and_registry) ... FAIL
+
+======================================================================
+FAIL: test_FM01_configuration_overlay_and_registry (__main__.Contracts.test_FM01_configuration_overlay_and_registry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "S:\work\WCIS\workenv\ha4fpai-ci\calibration-fixed\calibration-source-e495c4dc5e3c\ci\tests\test_contracts.py", line 48, in test_FM01_configuration_overlay_and_registry
+    self.assertEqual(obj["routes"]["小克"], "我在 # 原样")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '我在' != '我在 # 原样'
+- 我在
++ 我在 # 原样
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.004s
+
+FAILED (failures=1)

@@ -1,0 +1,6 @@
+### npu_module
+cmd: lsmod 2>/dev/null | grep -iE 'mve|china|npu|zg|icore|amvx|axidma|u_dma'; echo '---modules.dep grep:'; grep -iE 'mve|china|npu|zg330' /lib/modules/5.4.52/modules.dep 2>/dev/null | head -20 || echo 'no match in modules.dep'
+---
+amvx                  196608  1
+u_dma_buf              28672  2
+---modules.dep grep:

@@ -1,0 +1,7 @@
+### pkg_mgr
+cmd: which apt apt-get dpkg yum dnf pip conda 2>/dev/null
+---
+/usr/bin/apt
+/usr/bin/apt-get
+/usr/bin/dpkg
+/usr/bin/pip

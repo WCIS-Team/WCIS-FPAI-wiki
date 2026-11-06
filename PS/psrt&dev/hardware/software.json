@@ -1,0 +1,328 @@
+{
+  "schema": "wcis.sop2.hardware-archive",
+  "archive_version": "1.0",
+  "document": "software.json",
+  "purpose": "SOP 2 - base software, drivers, firmware and runtime versions present on the board",
+  "collection": {
+    "collected_at_utc": "2026-10-18T21:08:24Z",
+    "board_timezone_offset": "+0000",
+    "supplementary_batches_utc": [
+      "2026-10-20T07:45:38Z",
+      "2026-10-20T07:49:07Z"
+    ],
+    "target_host": "192.168.1.113",
+    "target_user": "root",
+    "transport": "ssh",
+    "method": "read-only shell collection; no installation, no compilation, no inference or performance verification"
+  },
+  "tooling": {
+    "transport_client": "PuTTY plink 0.85 (Windows x86_64)",
+    "transfer_client": "PuTTY pscp 0.85",
+    "board_shell": "bash on Ubuntu 20.04.4 userland",
+    "raw_logs_dir": "raw_logs/"
+  },
+  "field_status_legend": {
+    "official_spec": "official vendor specification",
+    "system_report": "value reported by the running operating system",
+    "tool_report": "value reported by the vendor toolchain",
+    "measured": "value observed on site during this collection",
+    "unverified": "not cross-checked against a second source",
+    "not_supported": "the platform does not expose the field at all",
+    "not_accessible": "the field exists but could not be read with the privileges used"
+  },
+  "language_runtimes": {
+    "python3": {
+      "version": "3.8.10",
+      "status": "system_report",
+      "path": "/usr/bin/python3",
+      "evidence": ["raw_logs/python.txt"]
+    },
+    "python": {
+      "value": "not_present",
+      "status": "system_report",
+      "note": "there is no 'python' alias on this board; use python3 explicitly",
+      "evidence": ["raw_logs/python.txt"]
+    },
+    "python2": {
+      "value": "not_present",
+      "status": "system_report",
+      "evidence": ["raw_logs/python.txt"]
+    },
+    "pip": {
+      "version": "20.0.2 (from /usr/lib/python3/dist-packages/pip, python 3.8)",
+      "status": "system_report",
+      "evidence": ["raw_logs/pip.txt"]
+    }
+  },
+  "python_packages": {
+    "status": "system_report",
+    "evidence": ["raw_logs/pip.txt"],
+    "packages": {
+      "icraft": "3.39.0",
+      "numpy": "1.23.0",
+      "opencv-python": "4.6.0.66",
+      "Pillow": "9.3.0",
+      "tflite-runtime": "2.10.0",
+      "tokenizers": "0.13.3",
+      "pytest": "7.2.0",
+      "requests": "2.22.0",
+      "numpy_note": "numpy 1.23.0 is the last release that supports Python 3.8"
+    },
+    "note": "pip list was truncated to the first 80 lines by the collection command; the list above is the complete set of pip-visible packages in the system site-packages plus the vendor icraft package, and the full captured listing is in raw_logs/pip.txt"
+  },
+  "compilers_and_build_tools": {
+    "gcc": {
+      "version": "9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2)",
+      "status": "system_report",
+      "evidence": ["raw_logs/gcc.txt"]
+    },
+    "gpp": {
+      "version": "9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2)",
+      "status": "system_report",
+      "evidence": ["raw_logs/gcc.txt"]
+    },
+    "cc": {
+      "value": "same toolchain as gcc (9.4.0)",
+      "status": "system_report",
+      "evidence": ["raw_logs/gcc.txt"]
+    },
+    "cmake": {
+      "version": "3.16.3",
+      "status": "system_report",
+      "evidence": ["raw_logs/cmake.txt"]
+    },
+    "kernel_toolchain": {
+      "value": "gcc 7.5.0 (Linaro GCC 7.5-2019.12) - used to build the running kernel, distinct from the userspace gcc 9.4.0",
+      "status": "system_report",
+      "evidence": ["raw_logs/kernel.txt"]
+    }
+  },
+  "package_managers": {
+    "apt": {
+      "path": "/usr/bin/apt",
+      "status": "system_report"
+    },
+    "apt_get": {
+      "path": "/usr/bin/apt-get",
+      "status": "system_report"
+    },
+    "dpkg": {
+      "path": "/usr/bin/dpkg",
+      "status": "system_report",
+      "installed_package_lines": 566,
+      "evidence": ["raw_logs/dpkg_count.txt"]
+    },
+    "pip": {
+      "path": "/usr/bin/pip",
+      "status": "system_report"
+    },
+    "conda": {
+      "value": "not_present",
+      "status": "system_report"
+    },
+    "yum_dnf": {
+      "value": "not_present",
+      "status": "system_report"
+    },
+    "evidence": ["raw_logs/pkg_mgr.txt"]
+  },
+  "vendor_toolchain": {
+    "icraft_cli": {
+      "version": "Icraft v3.39.0",
+      "cli_version": "3.39.0.0-431be90(2608220046)",
+      "path": "/usr/bin/icraft",
+      "status": "tool_report",
+      "note": "the CLI build stamp embeds 2608220046, i.e. a 2026-08-22 build",
+      "evidence": ["raw_logs/icraft.txt"]
+    },
+    "icraft_deb_packages": {
+      "icraft": "3.39.0 (arm64)",
+      "customop": "3.39.0 (arm64) - 'Icraft CustomOp for arm64'",
+      "icraftmdzthirdparty": "0.1.1 (arm64)",
+      "status": "system_report",
+      "evidence": ["raw_logs/dpkg_vendor.txt"]
+    },
+    "icraft_usage": {
+      "value": "icraft <command> [config.toml] [<--flag> [<args>]] [--dry_run]",
+      "status": "tool_report",
+      "note": "'icraft device list' is not a valid subcommand and aborts with a toml-not-found stack trace. The CLI expects a config.toml; a real device probe needs a valid config, which was deliberately not created (SOP 2 collects state, it does not run inference).",
+      "evidence": ["raw_logs/icraft_backend.txt"]
+    }
+  },
+  "npu_runtime_stack": {
+    "status": "system_report",
+    "note": "the full ZG330 userspace stack is installed even though the NPU exposes no dedicated /dev node",
+    "evidence": ["raw_logs/inference_fw.txt", "raw_logs/dpkg_vendor.txt"],
+    "shared_libraries": [
+      "libicraft_zg330backend.so",
+      "libsocketzg330aiu.so",
+      "libaxizg330aiu.so",
+      "libmockzg330.so",
+      "libcustomop.DetPostZG.so",
+      "libicraft_xrt.so",
+      "libicraft_xir.so",
+      "libicraft_xir_serialize_flatbuffers.so",
+      "libicraft_utils.so",
+      "libicraft_pl_sim.so",
+      "libicraft_hostbackend.so",
+      "libicraft_buyibackend.so"
+    ],
+    "library_path": "/lib/aarch64-linux-gnu",
+    "interpretation": {
+      "value": "libicraft_zg330backend.so + libsocketzg330aiu.so + libaxizg330aiu.so are the ZG330 accelerator backend and its AXI transport; libmockzg330.so is a mock backend. The presence of a real ZG330 backend alongside a mock one is consistent with a board that carries the NPU toolchain.",
+      "status": "measured",
+      "caution": "library presence is not evidence that a model can be executed on the NPU. No inference was run (SOP 2 forbids it)."
+    }
+  },
+  "other_inference_frameworks": {
+    "tflite_runtime": {
+      "version": "2.10.0",
+      "status": "system_report",
+      "note": "CPU reference runtime installed as a pip package",
+      "evidence": ["raw_logs/pip.txt"]
+    },
+    "opencv_python": {
+      "version": "4.6.0.66",
+      "status": "system_report",
+      "evidence": ["raw_logs/pip.txt"]
+    }
+  },
+  "kernel_modules": {
+    "status": "system_report",
+    "evidence": ["raw_logs/lsmod.txt", "raw_logs/npu_module.txt"],
+    "loaded": [
+      {
+        "name": "amvx",
+        "size": 196608,
+        "used_by": 1,
+        "role": "Arm China video codec kernel driver (MVX family; modinfo: 'Tiube VPU Driver'); brings up the VPU /dev/video0 path, not the NPU. Corrected 2026-10-23 (D-79)."
+      },
+      {
+        "name": "mali_kbase",
+        "size": 462848,
+        "used_by": 0,
+        "role": "Arm Mali GPU kernel driver"
+      },
+      {
+        "name": "u_dma_buf",
+        "size": 28672,
+        "used_by": 2,
+        "role": "u-dma-buf userspace DMA buffer allocator, out-of-tree module; version 3.2.5"
+      }
+    ],
+    "built_in_or_no_module_needed": [
+      "dw_axi_dmac_platform (f0010000.dma)",
+      "dw_dmac (e004b000.dma)",
+      "mali (f0000000.mali_gpu) - Arm Mali kernel driver, DDK r31p0-01eac0",
+      "mvx / Linlon v5 NPU driver - built into the kernel image, no modules.dep entry"
+    ],
+    "note": "amvx showed used_by=0 in batch 1 and used_by=1 in batch 3, i.e. it was referenced by another module in the later snapshot"
+  },
+  "drivers": {
+    "npu_mvx": {
+      "version": "Linlon v5276 driver, identified at mvx_dev.c:427",
+      "cores": 2,
+      "nlsid": 4,
+      "status": "system_report",
+      "evidence": ["raw_logs/dmesg_accel.txt"]
+    },
+    "gpu_mali": {
+      "version": "Kernel DDK r31p0-01eac0",
+      "gpu_id": "0x2",
+      "arch": "7.4.0 r1p0",
+      "status": "system_report",
+      "evidence": ["raw_logs/dmesg_accel.txt"]
+    },
+    "dma_buf_u": {
+      "version": "u-dma-buf 3.2.5",
+      "major": 242,
+      "buffer_size_bytes": 134217728,
+      "phys_address": "0x0000000030100000",
+      "status": "system_report",
+      "evidence": ["raw_logs/dmesg_accel.txt"]
+    },
+    "ethernet": {
+      "version": "fmql-dwmac, Synopsys DWMAC1000 (Synopsys ID 0x37, User ID 0x10)",
+      "status": "system_report",
+      "evidence": ["raw_logs/dmesg_accel.txt"]
+    },
+    "usb": {
+      "version": "dwc2 (DesignWare USB2 host), host DMA / g_dma / g_dma_desc enabled",
+      "status": "system_report",
+      "evidence": ["raw_logs/dmesg_accel.txt"]
+    },
+    "mmc": {
+      "version": "dw_mmc, controller version 220a, 32-bit host data width, 32-deep fifo",
+      "status": "system_report",
+      "evidence": ["raw_logs/dmesg_full.txt"]
+    },
+    "qspi": {
+      "version": "cadence-qspi, Micron n25q256a 256 Mbit",
+      "status": "system_report",
+      "evidence": ["raw_logs/mtd_flash.txt"]
+    },
+    "fpga_manager": {
+      "version": "FMSH FMQL FPGA Manager, device e0040000.devcfg",
+      "status": "system_report",
+      "evidence": ["raw_logs/fpga_detail.txt", "raw_logs/dmesg_accel.txt"]
+    },
+    "arm_ffa_mem_group_manager": {
+      "version": "physical-memory-group-manager (amba-apu@0:mali_mgm) probed successfully",
+      "status": "system_report",
+      "evidence": ["raw_logs/dmesg_accel.txt"]
+    }
+  },
+  "firmware": {
+    "fpga_bitstream": {
+      "value": "unknown",
+      "status": "not_accessible",
+      "note": "the fpga_manager 'firmware' attribute is write-only and the loaded bitstream identity is not published in sysfs. The U-Boot load path is 'fatload mmc 0:2 ... download.bit', so the bitstream came from the FAT boot partition of the SD card.",
+      "evidence": ["raw_logs/fpga_bitstream.txt", "../board_extract/37_boot_uEnv.txt"]
+    },
+    "boot_components": {
+      "value": "BOOT.bin, Image, fmqlmp-verify.dtb, uEnv.txt on the FAT boot partition; contents captured in ../board_extract/boot_files/",
+      "status": "system_report",
+      "evidence": ["../psdev.md", "../board_extract/38_boot_fat_listing.txt"]
+    },
+    "bl31": {
+      "value": "present in the archived boot files (bl31.elf)",
+      "status": "system_report",
+      "evidence": ["../board_extract/boot_files/bl31.elf"]
+    },
+    "trust_firmware_version": {
+      "value": "unknown",
+      "status": "unverified",
+      "note": "not read from the running board"
+    }
+  },
+  "environment_variables": {
+    "status": "measured",
+    "note": "the collection filtered for device/thread/path related variables; no variable influences device visibility or thread configuration",
+    "found": {
+      "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+      "DBUS_SESSION_BUS_ADDRESS": "unix:path=/run/user/0/bus"
+    },
+    "absent": [
+      "OMP_NUM_THREADS",
+      "MKL_NUM_THREADS",
+      "OPENCL_VENDOR_PATH",
+      "CUDA_VISIBLE_DEVICES",
+      "ICRAFT_* device selection variables",
+      "LD_PRELOAD / LD_LIBRARY_PATH overrides"
+    ],
+    "evidence": ["raw_logs/env_vars.txt"]
+  },
+  "not_present_on_this_board": {
+    "status": "measured",
+    "note": "checked explicitly because their absence changes how a model has to be deployed",
+    "items": [
+      "conda / virtualenv tooling",
+      "lspci, numactl (both commands absent; their platform equivalents were used instead)",
+      "zram devices",
+      "PCIe devices (no device enumerated at all)",
+      "thermal zones",
+      "cpufreq interface"
+    ],
+    "evidence": ["raw_logs/pkg_mgr.txt", "raw_logs/numa.txt", "raw_logs/lspci.txt", "raw_logs/zram.txt", "raw_logs/pci_sysfs.txt", "raw_logs/thermal.txt", "raw_logs/cpu_freq.txt"]
+  }
+}

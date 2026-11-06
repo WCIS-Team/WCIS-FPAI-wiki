@@ -1,0 +1,329 @@
+{
+  "collected_at": "2026-11-04T21:26:51.226057+00:00",
+  "decision_id": "D-1793822208",
+  "core": {
+    "status": "passed",
+    "environment": {
+      "device_id": "ecbde54055a8",
+      "system": "Linux",
+      "architecture": "x86_64",
+      "python": "3.8.10",
+      "implementation": "CPython",
+      "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+      "cpus": 16
+    },
+    "suites": 8,
+    "unittest_methods": 18
+  },
+  "adapters": {
+    "status": "passed",
+    "suites": 10,
+    "sources": {
+      "ernie": {
+        "checkout": {
+          "commit": null,
+          "dirty": null
+        },
+        "files": {
+          "board/npuserv_adapter.py": "6ed380890422365ddc3efdff54abf3cb27df0d9736741c12570e54f0c7b9b481",
+          "board/e41_tok.py": "63bd8ef0a0d1fc1bfa1bbfbb0b3679030c369ce97187dc161589909164b0b559"
+        }
+      }
+    }
+  },
+  "windows": {
+    "status": "passed",
+    "environment": {
+      "device_id": "tkmnopc",
+      "system": "Windows",
+      "architecture": "AMD64",
+      "python": "3.13.11",
+      "implementation": "CPython",
+      "cpu": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+      "cpus": 16
+    }
+  },
+  "calibration": {
+    "status": "passed",
+    "killed": 8
+  },
+  "performance": {
+    "status": "passed",
+    "same_source": true,
+    "same_conditions": true,
+    "metrics": [
+      {
+        "metric": "process.peak_rss_kib.value",
+        "baseline": 52604.0,
+        "candidate": 52500.0,
+        "delta": -104.0,
+        "percent": -0.19770359668466275,
+        "regression": false,
+        "gated": false
+      },
+      {
+        "metric": "split-12.chain_ms.p50",
+        "baseline": 56.290991500000004,
+        "candidate": 56.3933635,
+        "delta": 0.10237199999999547,
+        "percent": 0.18186213685718336,
+        "regression": false,
+        "gated": false
+      },
+      {
+        "metric": "split-12.chain_ms.p95",
+        "baseline": 69.803811,
+        "candidate": 66.527571,
+        "delta": -3.2762400000000014,
+        "percent": -4.693497322087474,
+        "regression": false,
+        "gated": true
+      },
+      {
+        "metric": "split-12.first_request_ms.value",
+        "baseline": 54.089768,
+        "candidate": 70.681793,
+        "delta": 16.592025,
+        "percent": 30.67497904594451,
+        "regression": false,
+        "gated": false
+      },
+      {
+        "metric": "split-12.split_ms.p50",
+        "baseline": 0.0534465,
+        "candidate": 0.053471500000000005,
+        "delta": 2.5000000000004186e-05,
+        "percent": 0.04677574771033498,
+        "regression": false,
+        "gated": false
+      },
+      {
+        "metric": "split-12.split_ms.p95",
+        "baseline": 0.092435,
+        "candidate": 0.074461,
+        "delta": -0.017974000000000004,
+        "percent": -19.44501541623844,
+        "regression": false,
+        "gated": true
+      },
+      {
+        "metric": "split-20-16k.chain_ms.p50",
+        "baseline": 55.531828000000004,
+        "candidate": 51.746478499999995,
+        "delta": -3.7853495000000095,
+        "percent": -6.816540417146018,
+        "regression": false,
+        "gated": false
+      },
+      {
+        "metric": "split-20-16k.chain_ms.p95",
+        "baseline": 75.946449,
+        "candidate": 70.640143,
+        "delta": -5.306306000000006,
+        "percent": -6.986904680691531,
+        "regression": false,
+        "gated": true
+      },
+      {
+        "metric": "split-20-16k.first_request_ms.value",
+        "baseline": 56.523025,
+        "candidate": 46.891063,
+        "delta": -9.631961999999994,
+        "percent": -17.040775860810694,
+        "regression": false,
+        "gated": false
+      },
+      {
+        "metric": "split-20-16k.split_ms.p50",
+        "baseline": 0.050335000000000005,
+        "candidate": 0.05005,
+        "delta": -0.00028500000000000747,
+        "percent": -0.5662064170060742,
+        "regression": false,
+        "gated": false
+      },
+      {
+        "metric": "split-20-16k.split_ms.p95",
+        "baseline": 0.071966,
+        "candidate": 0.074421,
+        "delta": 0.002454999999999999,
+        "percent": 3.411333129533389,
+        "regression": false,
+        "gated": true
+      },
+      {
+        "metric": "split-20.chain_ms.p50",
+        "baseline": 156.23575649999998,
+        "candidate": 111.1907155,
+        "delta": -45.04504099999998,
+        "percent": -28.831454469259082,
+        "regression": false,
+        "gated": false
+      },
+      {
+        "metric": "split-20.chain_ms.p95",
+        "baseline": 241.269075,
+        "candidate": 179.238285,
+        "delta": -62.030789999999996,
+        "percent": -25.710211721083606,
+        "regression": false,
+        "gated": true
+      },
+      {
+        "metric": "split-20.first_request_ms.value",
+        "baseline": 318.071818,
+        "candidate": 346.039219,
+        "delta": 27.967400999999995,
+        "percent": 8.792794399659764,
+        "regression": false,
+        "gated": false
+      },
+      {
+        "metric": "split-20.split_ms.p50",
+        "baseline": 0.0658645,
+        "candidate": 0.054939,
+        "delta": -0.010925500000000005,
+        "percent": -16.58784322358783,
+        "regression": false,
+        "gated": false
+      },
+      {
+        "metric": "split-20.split_ms.p95",
+        "baseline": 0.150806,
+        "candidate": 0.090722,
+        "delta": -0.060084,
+        "percent": -39.84191610413379,
+        "regression": false,
+        "gated": true
+      }
+    ],
+    "parameters": "passed",
+    "synthetic_regression": "regression",
+    "synthetic_incomparable": "incomparable",
+    "no_baseline": "no-baseline"
+  },
+  "device": {
+    "status": "passed",
+    "environment": {
+      "device_id": "U.FMSH",
+      "architecture": "aarch64",
+      "python": "3.8.10",
+      "kernel": "5.4.52"
+    },
+    "metrics": {
+      "lang/health.health_ms": {
+        "value": 39.010305
+      },
+      "lang/components.health_ms": {
+        "value": 24.108184
+      },
+      "tts-short.latency_ms": {
+        "n": 5,
+        "mean": 1949.6139086,
+        "p50": 1895.092497,
+        "p95": 2233.551826,
+        "min": 1846.696254,
+        "max": 2233.551826
+      },
+      "tts-short.rtf": {
+        "n": 5,
+        "mean": 0.7886787656148867,
+        "p50": 0.7666231783980583,
+        "p95": 0.903540382686084,
+        "min": 0.7470454101941747,
+        "max": 0.903540382686084
+      },
+      "asr-file.latency_ms": {
+        "n": 5,
+        "mean": 1555.8097632,
+        "p50": 1617.550817,
+        "p95": 1789.700621,
+        "min": 1264.783391,
+        "max": 1789.700621
+      },
+      "asr-file.cer": {
+        "n": 5,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "asr-file.rtf": {
+        "n": 5,
+        "mean": 0.629372881553398,
+        "p50": 0.6543490360032362,
+        "p95": 0.7239889243527508,
+        "min": 0.5116437665857605,
+        "max": 0.7239889243527508
+      },
+      "services.rss_kib": {
+        "value": 80948
+      },
+      "services.rss_growth_kib": {
+        "value": 0
+      }
+    },
+    "workloads": [
+      {
+        "id": "tts-short",
+        "enabled": true,
+        "service": "lang",
+        "kind": "tts",
+        "path": "/tts",
+        "text_sha256": "cb865de5c738043e48e04f4b09ed6602b21907437bc0fe536801dd8f295d3888"
+      },
+      {
+        "id": "asr-file",
+        "enabled": true,
+        "service": "lang",
+        "kind": "asr",
+        "path": "/api/v1/asr",
+        "audio_sha256": "165f8fdbb2eccae5ed342b94d9ac95c4fd14fe84d05899fbd77e3a83a1f1947f",
+        "input_seconds": 2.472,
+        "max_cer": 0.2,
+        "expected_text_sha256": "cb865de5c738043e48e04f4b09ed6602b21907437bc0fe536801dd8f295d3888"
+      }
+    ],
+    "soak_status": "passed",
+    "soak_growth_kib": 0,
+    "same_pids": true,
+    "deployed_core_sha256": "2671f59ee2d24f131154986370db2dbf70d7b744df5f8a89fb509cbe505c82e7",
+    "candidate_core_sha256": "1295cb39b656a4462a65f038dc7f7aa0e7741962089ec48de7b40c703693f25c"
+  },
+  "package": {
+    "ok": true,
+    "checks": 14,
+    "final_state": "purged; user config and dummy model cache retained",
+    "arm64": {
+      "schema_version": 1,
+      "status": "passed",
+      "kind": "package-static",
+      "architecture": "arm64",
+      "version": "0.1.0+ci.20261105",
+      "files": 78,
+      "python_files": 28,
+      "wheels": 28,
+      "package_sha256": "8e6f618718fc70bf6596c210c1d882e1c7611cdd5abde3574ca126c6c22d1a07",
+      "archive_sha256": "e99275a0e2bf3976222ccc963a33c5f0d685ba1add29a7a7688077759dcecb3e",
+      "notes": [
+        "Static validation does not replace install/upgrade/remove/purge in a disposable Ubuntu container."
+      ]
+    },
+    "amd64": {
+      "schema_version": 1,
+      "status": "passed",
+      "kind": "package-static",
+      "architecture": "amd64",
+      "version": "0.1.0+ci.20261105",
+      "files": 78,
+      "python_files": 28,
+      "wheels": 28,
+      "package_sha256": "cfe0615f005f0c64d00848b27dcd071f9af0b64cbc1e311964a91cbd7ff2a6e8",
+      "archive_sha256": "0d8819de02eed50d919773963271298203027d4379983911ac9198cc695c1208",
+      "notes": [
+        "Static validation does not replace install/upgrade/remove/purge in a disposable Ubuntu container."
+      ]
+    }
+  }
+}

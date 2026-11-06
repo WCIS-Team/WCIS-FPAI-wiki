@@ -1,0 +1,11 @@
+### npu_zg330
+cmd: dmesg 2>/dev/null | grep -iE 'zg330|npu|icore' | head -40; echo '---dev---'; ls -l /dev/ | grep -iE 'zg330|npu|icore|axidma|fpga' ; echo '---sysfs---'; ls /sys/class/ 2>/dev/null | grep -iE 'npu|icore|zg'
+---
+[    3.567837] input: Lenovo MCP01 Consumer Control as /devices/platform/amba-apu@0/e0045000.usb/usb1/1-1/1-1.2/1-1.2:1.0/0003:17EF:A03B.0001/input/input0
+[    3.639816] input: Lenovo MCP01 as /devices/platform/amba-apu@0/e0045000.usb/usb1/1-1/1-1.2/1-1.2:1.0/0003:17EF:A03B.0001/input/input1
+[    3.652083] hid-generic 0003:17EF:A03B.0001: input: USB HID v1.10 Device [Lenovo MCP01] on usb-e0045000.usb-1.2/input0
+---dev---
+crw------- 1 root root  10,  61 Jan  1  1970 fpga0
+drwxr-xr-x 2 root root       80 Jan  1  1970 input
+---sysfs---
+input

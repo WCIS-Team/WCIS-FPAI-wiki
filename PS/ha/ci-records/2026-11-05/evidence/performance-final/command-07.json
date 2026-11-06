@@ -1,0 +1,23 @@
+{
+  "command": [
+    "C:\\Users\\takomi\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-I",
+    "-B",
+    "S:\\work\\WCIS\\repos\\HA4FPAI\\ci\\experiment.py",
+    "--measurement",
+    "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\candidate.json",
+    "--baseline-variant",
+    "split-12",
+    "--candidate-variant",
+    "split-20-16k",
+    "--output",
+    "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\parameters"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": [
+    0,
+    1
+  ],
+  "stdout": "# HA4FPAI performance\n\nResult: **passed**\n\nDeployed configuration changed; explicitly accepted for this experiment; parameter tradeoff with identical input and source; inspect chunk count and audio duration\n\nSource: `27b8a1f76cd576d24db478fc9bcab196f9d25caf`; dirty: `True`\n\n| Metric | Baseline | Candidate | Change | Gate |\n|---|---:|---:|---:|---|\n| chain_ms.p50 | 27.6981 | 24.9215 | -10.02% | observe |\n| chain_ms.p95 | 38.8719 | 28.2833 | -27.24% | pass |\n| first_request_ms.value | 24.5473 | 25.7250 | +4.80% | observe |\n| split_ms.p50 | 0.0391 | 0.0333 | -14.83% | observe |\n| split_ms.p95 | 0.0546 | 0.0512 | -6.23% | pass |\n\nNegative change means faster for latency; verify the metric's direction for other units.\nA gate fails only when the regression exceeds both its relative and absolute tolerances.\nAll raw samples, conditions, source hashes and correctness checks remain in the JSON artifact.\n\n## Parameter experiment\n\nMock TTS duration depends on chunking. This comparison shows parameter cost and output size, not speech quality.\n\n| Condition/output | Baseline | Candidate |\n|---|---|---|\n| parameters | {'id': 'split-12', 'max_chars': 12, 'out_rate': 16000} | {'id': 'split-20-16k', 'max_chars': 20, 'out_rate': 16000} |\n| chunks | 6 | 4 |\n| frames | 79678 | 70079 |\n| audio_rate | 16000 | 16000 |\n\n",
+  "stderr": ""
+}

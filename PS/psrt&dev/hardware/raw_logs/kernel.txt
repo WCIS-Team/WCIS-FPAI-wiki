@@ -1,0 +1,6 @@
+### kernel
+cmd: cat /proc/version; echo '---'; uname -r
+---
+Linux version 5.4.52 (fmsh@fmsh-virtual-machine) (gcc version 7.5.0 (Linaro GCC 7.5-2019.12)) #3 SMP Fri Mar 13 13:44:29 CST 2026
+---
+5.4.52

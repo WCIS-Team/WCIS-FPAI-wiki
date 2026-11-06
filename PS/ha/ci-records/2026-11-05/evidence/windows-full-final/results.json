@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "profile": "full",
+  "environment": {
+    "device_id": "tkmnopc",
+    "system": "Windows",
+    "architecture": "AMD64",
+    "python": "3.13.11",
+    "implementation": "CPython",
+    "cpu": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+    "cpus": 16
+  },
+  "source": {
+    "commit": "27b8a1f76cd576d24db478fc9bcab196f9d25caf",
+    "dirty": true
+  },
+  "checks": [
+    {
+      "id": "source-validation",
+      "status": "passed",
+      "files": 67,
+      "seconds": 0.2083173999999417
+    },
+    {
+      "id": "contracts",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 2.7681870000087656,
+      "log": "contracts.log",
+      "message": "",
+      "test_methods": 7
+    },
+    {
+      "id": "infrastructure",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 1.426847099995939,
+      "log": "infrastructure.log",
+      "message": "",
+      "test_methods": 7
+    },
+    {
+      "id": "split",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.470469799998682,
+      "log": "split.log",
+      "message": "",
+      "test_methods": null
+    },
+    {
+      "id": "fsm",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.10422510000353213,
+      "log": "fsm.log",
+      "message": "",
+      "test_methods": null
+    },
+    {
+      "id": "npu-lifecycle",
+      "status": "not-applicable",
+      "message": "Requires linux"
+    },
+    {
+      "id": "npu-adapter",
+      "status": "not-applicable",
+      "message": "Requires linux"
+    },
+    {
+      "id": "npu-q3-adapter",
+      "status": "not-applicable",
+      "message": "Requires linux"
+    },
+    {
+      "id": "host-soak",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.44243339999229647,
+      "log": "host-soak.log",
+      "message": "",
+      "test_methods": null
+    },
+    {
+      "id": "calibration",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 8.568606199987698,
+      "log": "calibration.log",
+      "message": "",
+      "test_methods": null
+    }
+  ]
+}

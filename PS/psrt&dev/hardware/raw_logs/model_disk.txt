@@ -1,0 +1,8 @@
+### model_disk
+cmd: df -h / /root 2>/dev/null; echo '---'; mount | grep -E ' / | /root '
+---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        26G   19G  5.5G  78% /
+/dev/root        26G   19G  5.5G  78% /
+---
+/dev/mmcblk0p2 on / type ext4 (rw,relatime)

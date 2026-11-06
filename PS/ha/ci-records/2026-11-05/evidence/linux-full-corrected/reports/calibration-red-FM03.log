@@ -1,0 +1,14 @@
+test_FM03_wake_gate_and_silence_stop_downstream (__main__.Contracts) ... FAIL
+
+======================================================================
+FAIL: test_FM03_wake_gate_and_silence_stop_downstream (__main__.Contracts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workenv/ha4fpai-ci/full/calibration-source-92bd340c2829/ci/tests/test_contracts.py", line 91, in test_FM03_wake_gate_and_silence_stop_downstream
+    self.assertNotIn("asr", result["stages_ms"])
+AssertionError: 'asr' unexpectedly found in {'sar': 0, 'rms': 0, 'kws': 0, 'asr': 0, 'router': 0, 'llm': 0, 'tokenizer': 0, 'tts': 16, 'mix': 137}
+
+----------------------------------------------------------------------
+Ran 1 test in 0.208s
+
+FAILED (failures=1)

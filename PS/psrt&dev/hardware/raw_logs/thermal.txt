@@ -1,0 +1,9 @@
+### thermal
+cmd: ls /sys/class/thermal/ 2>/dev/null; for z in /sys/class/thermal/thermal_zone*; do echo "== $z"; for a in type temp temp_input trip_point_0_temp; do echo -n "  $a: "; cat $z/$a 2>/dev/null || echo na; done; done; echo '---cooling:'; ls /sys/class/thermal/cooling_device* 2>/dev/null
+---
+== /sys/class/thermal/thermal_zone*
+  type: na
+  temp: na
+  temp_input: na
+  trip_point_0_temp: na
+---cooling:

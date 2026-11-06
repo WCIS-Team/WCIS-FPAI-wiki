@@ -1,0 +1,23 @@
+### cache_sizes
+cmd: for i in 0 1 2 3; do for a in level type size ways_of_associativity coherency_line_size; do p=/sys/devices/system/cpu/cpu0/cache/index$i/$a; echo -n "$p: "; cat $p 2>/dev/null || echo na; done; done
+---
+/sys/devices/system/cpu/cpu0/cache/index0/level: 1
+/sys/devices/system/cpu/cpu0/cache/index0/type: Data
+/sys/devices/system/cpu/cpu0/cache/index0/size: na
+/sys/devices/system/cpu/cpu0/cache/index0/ways_of_associativity: na
+/sys/devices/system/cpu/cpu0/cache/index0/coherency_line_size: na
+/sys/devices/system/cpu/cpu0/cache/index1/level: 1
+/sys/devices/system/cpu/cpu0/cache/index1/type: Instruction
+/sys/devices/system/cpu/cpu0/cache/index1/size: na
+/sys/devices/system/cpu/cpu0/cache/index1/ways_of_associativity: na
+/sys/devices/system/cpu/cpu0/cache/index1/coherency_line_size: na
+/sys/devices/system/cpu/cpu0/cache/index2/level: 2
+/sys/devices/system/cpu/cpu0/cache/index2/type: Unified
+/sys/devices/system/cpu/cpu0/cache/index2/size: na
+/sys/devices/system/cpu/cpu0/cache/index2/ways_of_associativity: na
+/sys/devices/system/cpu/cpu0/cache/index2/coherency_line_size: na
+/sys/devices/system/cpu/cpu0/cache/index3/level: na
+/sys/devices/system/cpu/cpu0/cache/index3/type: na
+/sys/devices/system/cpu/cpu0/cache/index3/size: na
+/sys/devices/system/cpu/cpu0/cache/index3/ways_of_associativity: na
+/sys/devices/system/cpu/cpu0/cache/index3/coherency_line_size: na

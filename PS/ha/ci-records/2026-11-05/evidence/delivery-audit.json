@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "errors": [],
+  "files": {
+    ".github/actionlint.yaml": "8658a4f2ae2fbf6fd9442557dc37cac6b610a92945ae82149b115bbfad2a4941",
+    ".github/workflows/adapters.yml": "2afbaaa067ab01ecbb6be8e570c39fd0e04d7deb75e5f3380df88ed88a3fca3b",
+    ".github/workflows/ci.yml": "6faec7f8a95e837a600b8b35c8b60afae1953c8c3a714d67e739541a9775fca6",
+    ".github/workflows/device.yml": "3f73c5e51a6330771bc1f71dce602ce48104e0ac6db6be8774b25460308cc4d0",
+    ".github/workflows/lang-linux-package.yml": "42c09875a5a86c69996a5bc2747abe88480ec26165a7d94b0153cf1fe527a97d",
+    ".github/workflows/performance.yml": "c35c03bc47bbb707459a649ca099464180ceb314d6696b29dd2661c149434baf",
+    "ci/actions.py": "d2728e22fe2546ac1be10219cd3ee29b91018e3ddff04c3044d60377e7cf3783",
+    "ci/bench.py": "33efda350124314b46df014d8369621a576b5cbecca61177b76d7739fe9eef04",
+    "ci/calibrate.py": "9e0506d43ad03c3f4fcdb3975a9425b94543273d0ac76f6618d851064563cb69",
+    "ci/common.py": "cec76baec47407ff4f7e75c07b311548833737dd451384b05508abc152bfdd4d",
+    "ci/config.json": "feddaeee3b25f1e165ce5376a8a2fbaab4241a91eb5debe6482557957c2f4203",
+    "ci/device.example.json": "d19856de396af87d89354ff7b3542f25a5f2ee16c0aee1bcedf8aa7cb93fb8e2",
+    "ci/device.package.json": "baf6c19851f67898c1033d20f436e10deeadeed7a79a19ab5aadb755963c96cb",
+    "ci/device_probe.py": "bf824c10bb8ed88181142f28c6c975a95ca8ca44441b6b4b71660ceb0d3572c9",
+    "ci/experiment.py": "b1a8732e69a6c50e879fb818cf0042c069234d3c5c0c898794870f585adb04bb",
+    "ci/fixtures/asr-zh.json": "846c5b5567754fc422293d8e8c70a00964b623349c5a84a009d7fb3bb7406fa0",
+    "ci/fixtures/asr-zh.wav.b64": "d746c00f2324a3aedac2cb0e48865ccd30a6c0a5362fdfe78e5734b9efc3e227",
+    "ci/fixtures/mock.yaml": "d99ffd9a7a497da4dcfe63178b0612fa81ce7c69899d088f7591b6be9e6d9a57",
+    "ci/package_check.py": "c78f2f2b0bf3f2da600409e1fc2ebac10c0c70a930d06ea0ff282f18c7089725",
+    "ci/remote.py": "4de4c2cea1746c7d51d36c53f2c61c75116faec0f0738827c1016386e3f608d7",
+    "ci/report.py": "ca06cb59875af556f83549550db717133e6eed0d412525c6fab7719ab9551d1d",
+    "ci/requirements-adapters.txt": "fdf4a8ccc88081dc519fbd53a07a657f0d3289ba43b90e88ba24b3083b2b79c6",
+    "ci/run.py": "ea66a8fc6d6a715331762d3881a3ddc93ab6b854bb569180bdf5b2aaf56b6e41",
+    "ci/soak.py": "1073cbb4405c402dacde8b98ce098fb3eee66d8a9f91e2691c28331ed198cc9a",
+    "ci/tests/test_contracts.py": "10380b11c46a992f9be183f46cf8c9da68fbdfc01ccd5987e3e7e49db7319945",
+    "ci/tests/test_infrastructure.py": "6fad2d094a6fe7e920eae2fe2dfe9e285c338f5f2df3027c61aff38eb070d181",
+    "docs/CI-FAILURE-MODES.md": "0596f4370f8fd38cedec289d3e9ba362f461416de2a154b51b2515de6722b47a",
+    "docs/ci-references.md": "84f8f1c89298ab08b3bf002c4f83894604969bd8baf5d155c7d3c07f5f69716a",
+    "docs/CI-VALIDATION.md": "a5f51d278d7ae02dddeefbd22cd4fb13d0c637f91300ed7091fbf708d16098a4",
+    "docs/CI.md": "20e4a635255337650a81c932ebbd73ee7bf9013fb8b68ec25a450db1e7caf50b",
+    "lang/npuserv/tests/adapter_stub_check.py": "370b491d8b45d8ace201ab62ef280b7b8ef785a6e600286acb527ee9b0861d48",
+    "lang/npuserv/tests/lifecycle_check.py": "7f834dda9055b648a8cad770b8a5bae64d83fd7a5c025e14f4d1fb10be2f8e1f",
+    "lang/npuserv/tests/q3_adapter_stub_check.py": "84949e620bc7cb3f430ba628209c32d28bdacb04bdb39fb7eda0ad5be7a5f22e",
+    "lang/packaging/linux/ci_test.py": "60b7b763b398ea405b480ea105d8e755e871cbeba2ae12c7e9c1cb795e00bcef",
+    "README.md": "7f594a3e197f1c6643afa3fa1c258f26f07deea665fa5ea1a2fb25c0b84ccba2"
+  },
+  "evidence": [
+    {
+      "file": "actionlint-publish/actionlint.json",
+      "actual": "passed",
+      "expected": "passed",
+      "sha256": "caaa178d215e6af8ba92e448e84353eeeec7071b735c69ae64fcda130d2fa611"
+    },
+    {
+      "file": "core-full-delivery/reports/results.json",
+      "actual": "passed",
+      "expected": "passed",
+      "sha256": "5f6207dc8cc78eb4582f91d237af2af6e7d7a9299fca5e7602d5214434258d61"
+    },
+    {
+      "file": "windows-quick-delivery/results.json",
+      "actual": "passed",
+      "expected": "passed",
+      "sha256": "8be9918d767680555870164a3d5d5eb623808c42ba2e6a28e859c2d7488049b5"
+    },
+    {
+      "file": "adapters-release/reports/results.json",
+      "actual": "passed",
+      "expected": "passed",
+      "sha256": "8a13a944d27837c1b4eb332ef24dd609b35ef10dd1a2a06e556db77093fe9f37"
+    },
+    {
+      "file": "core-full-delivery/reports/calibration.json",
+      "actual": "passed",
+      "expected": "passed",
+      "sha256": "0716e7451da9cf7beafcac0db241a3af659130e3dac7f574f1b4c6cc14e10fba"
+    },
+    {
+      "file": "report-safety/checks.json",
+      "actual": "passed",
+      "expected": "passed",
+      "sha256": "77353c77f60d2bed116ffc167e46083ffdd877da7444beda14f05fa80cc2a03e"
+    },
+    {
+      "file": "report-safety/comparison.json",
+      "actual": "passed",
+      "expected": "passed",
+      "sha256": "c00ba52a57320df1f23e35393b70d988e87419167b70a3c0402bea439c6e6e1e"
+    },
+    {
+      "file": "report-safety/parameters.json",
+      "actual": "passed",
+      "expected": "passed",
+      "sha256": "560d7cd7f048830bae9c069254ff862c5ef1f53950ae5935ee36bb25b1653fb4"
+    },
+    {
+      "file": "report-safety/slower-report.json",
+      "actual": "regression",
+      "expected": "regression",
+      "sha256": "4a5531fa5b322ef34a2a1ac4115ceb54f591bb8dde0694ce79e103475963aada"
+    },
+    {
+      "file": "report-safety/different-report.json",
+      "actual": "incomparable",
+      "expected": "incomparable",
+      "sha256": "d74ede6994feb0b29b1e465aa961b46d3c0efef96e96a38db72e210fff15f0f9"
+    },
+    {
+      "file": "report-safety/no-baseline.json",
+      "actual": "no-baseline",
+      "expected": "no-baseline",
+      "sha256": "7f20f352261c0a170703a2f9264edf7a70e2aed295d4fbb94a77a92dd7e86d49"
+    },
+    {
+      "file": "device-delivery/benchmark.json",
+      "actual": "passed",
+      "expected": "passed",
+      "sha256": "4e57859d3f2a38f467c41240b34a3a31d686ad6e8e7d18b8cf32940421a9f013"
+    },
+    {
+      "file": "device-delivery/short-soak.json",
+      "actual": "passed",
+      "expected": "passed",
+      "sha256": "762c43ec7a63d7d66e1c6c829dedcd74902bb2933dc4ca20f98400dcc335c80c"
+    },
+    {
+      "file": "package-acceptance/static-arm64.json",
+      "actual": "passed",
+      "expected": "passed",
+      "sha256": "ebfbf3640d3642b930c500b16a98f50dd930efb485ff82408d15fe274d03d930"
+    },
+    {
+      "file": "package-acceptance/static-amd64.json",
+      "actual": "passed",
+      "expected": "passed",
+      "sha256": "734bd5b9e3527223fcb1495b781d1f66eb2cddc5cef4adc6b3c3b4aa1c8e211e"
+    },
+    {
+      "file": "package-acceptance/lifecycle.json",
+      "actual": true,
+      "expected": true,
+      "sha256": "4e8660c07da97317bdbb58a3e46ea6e5653f711d575f39b110a6b2460d99721d"
+    },
+    {
+      "file": "lifecycle-final/result.json",
+      "actual": "passed",
+      "expected": "passed",
+      "sha256": "d1e4767f800af0d90e8fded78381dc16d6436859fdfa91d6a7c85794ba2ef012"
+    },
+    {
+      "file": "lifecycle-final/residual-calibration.json",
+      "actual": "passed",
+      "expected": "passed",
+      "sha256": "30db17390e89387777a3b040b9283e9f54ec665c319dbb8872efbd24727833bb"
+    }
+  ],
+  "head": "27b8a1f76cd576d24db478fc9bcab196f9d25caf",
+  "own_path_status": " M README.md\n M lang/npuserv/tests/adapter_stub_check.py\n M lang/npuserv/tests/lifecycle_check.py\n M lang/npuserv/tests/q3_adapter_stub_check.py\n?? .github/actionlint.yaml\n?? .github/workflows/adapters.yml\n?? .github/workflows/ci.yml\n?? .github/workflows/device.yml\n?? .github/workflows/lang-linux-package.yml\n?? .github/workflows/performance.yml\n?? ci/actions.py\n?? ci/bench.py\n?? ci/calibrate.py\n?? ci/common.py\n?? ci/config.json\n?? ci/device.example.json\n?? ci/device.package.json\n?? ci/device_probe.py\n?? ci/experiment.py\n?? ci/fixtures/asr-zh.json\n?? ci/fixtures/asr-zh.wav.b64\n?? ci/fixtures/mock.yaml\n?? ci/package_check.py\n?? ci/remote.py\n?? ci/report.py\n?? ci/requirements-adapters.txt\n?? ci/run.py\n?? ci/soak.py\n?? ci/tests/test_contracts.py\n?? ci/tests/test_infrastructure.py\n?? docs/CI-FAILURE-MODES.md\n?? docs/CI-VALIDATION.md\n?? docs/CI.md\n?? docs/ci-references.md\n?? lang/packaging/linux/ci_test.py\n",
+  "untracked_runtime_sources": [
+    "lang/kws/router.py",
+    "lang/server/backends/kws_route.py",
+    "lang/server/backends/rms.py",
+    "lang/server/backends/spk.py"
+  ],
+  "source_fingerprint": {
+    "lang/kws/router.py": "30265f855c92916762be4293d3d51617a0b3789a505e3a1c8d6bb04ea9a37d3a",
+    "lang/server/app.py": "19da82fce9b46b7bfbda306abe399e30e54751f1102d84797da520ec17299496",
+    "lang/server/backends/__init__.py": "3c97cbec8885291022d145985bdbdf3c267259f557667925ca0d87de4c6f157d",
+    "lang/server/backends/asr.py": "ac7213b49210b09047338ffcb80fe193d83e2dc7dc8a7a1392cac73076f4fd6c",
+    "lang/server/backends/audioio.py": "b8eab25e0d3f4e5a21914530a6b946bd919e7de8e018026f6e5290ea36e7f77f",
+    "lang/server/backends/front.py": "cf10659b8ccfb01a2f6c897f024c40396d9711e008daf5a21d610adc0926c10f",
+    "lang/server/backends/kws_route.py": "7bb32b9c0f1c53330f331ad435f47923c1325e3fb38024d42df1461d97523e38",
+    "lang/server/backends/llm.py": "09b6d4dc47cb2d93b80faeb1f7ae04eb1317e396056fbac219fd954cd79594b2",
+    "lang/server/backends/rms.py": "d37934636c99529a8b1e5317d6c814f7152a8c16c6e06f6bc981483fbefd34fb",
+    "lang/server/backends/router.py": "a2184f04a9d27a3d34ec2add95cc2001c97d8df2f736fd5ac78b10c85d8879bb",
+    "lang/server/backends/spk.py": "1f549ba9f2db202ecec959fbd3d66955d8ebd4de6eddba77a3fc8af663845fb2",
+    "lang/server/backends/text.py": "f52e434c50919b6005a233b90e590f9780d9371b7d26f107086b04a38cb59517",
+    "lang/server/backends/tts.py": "0c2be100fb22bd6aac904298dc45739a3e0b6029b81c7fce2d1baadc6c029b56",
+    "lang/server/cfg.py": "7f4e6be5a1a55548e1b200b6ae481826ad0a999feb881fcc2547f316391f1625",
+    "lang/server/core.py": "1295cb39b656a4462a65f038dc7f7aa0e7741962089ec48de7b40c703693f25c",
+    "lang/server/fsm.py": "7186fa92b1ec31512bcec3f684994358e0669bbb22ba6519355f27b889fa69f5",
+    "lang/server/loop.py": "8541237ab405e2e02b63d7581d39dba07e13860d7b74e18902bfa3001fb9e035",
+    "lang/server/tools/wyoming_probe.py": "9c6f19d7628f8ecb698ee7b3282d5eb07e766faa107229dc9ff7c018cf58274c",
+    "lang/server/wyoming_gateway.py": "2ac4a770d683d7c0f4fbadcaec2da1a7327f9d22ff2f3d8807f8a60a3f70bc34",
+    "lang/split/__init__.py": "536a452ca3015086282903bc099e266adc23181a7304a7fec6950757aad87e3b",
+    "lang/split/cli.py": "7ab066927581c4409367f43bcd9333d0348a22efd0dc82e8cf9ad646f2706a5d",
+    "lang/split/legacy_tiers.py": "8aefa70817a0cb122c8f212307ccaeb9c2721805167d6c3410a9b8cf1359afb8",
+    "lang/split/selftest.py": "e85eb24ac07645dbdbde26a45c60294fb14baf6031b49d83db4f0a2d932c1eda",
+    "lang/split/tts_split.py": "e8dc8eedfe9966cb4ccb566128099fd6d31f20c6bf6a8c79ae46b902e8d16f83"
+  },
+  "notes": [
+    "Existing unrelated working-tree changes were not reset, staged, committed or pushed.",
+    "Untracked runtime sources must be included with their intended business revision before CI is pushed."
+  ]
+}

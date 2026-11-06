@@ -1,0 +1,96 @@
+{
+  "status": "regression",
+  "reason": "Comparable measurements",
+  "rows": [
+    {
+      "metric": "split-12.chain_ms.p50",
+      "baseline": 25.8658,
+      "candidate": 26.3305,
+      "delta": 0.46470000000000056,
+      "percent": 1.7965808132746737,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-12.chain_ms.p95",
+      "baseline": 33.1872,
+      "candidate": 39.6727,
+      "delta": 6.485500000000002,
+      "percent": 19.542172885931933,
+      "regression": true,
+      "gated": true
+    },
+    {
+      "metric": "split-12.first_request_ms.value",
+      "baseline": 28.398,
+      "candidate": 31.3111,
+      "delta": 2.9131,
+      "percent": 10.258116768786534,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-12.split_ms.p50",
+      "baseline": 0.0281,
+      "candidate": 0.0399,
+      "delta": 0.011799999999999998,
+      "percent": 41.99288256227757,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-12.split_ms.p95",
+      "baseline": 0.1165,
+      "candidate": 0.0481,
+      "delta": -0.06840000000000002,
+      "percent": -58.71244635193134,
+      "regression": false,
+      "gated": true
+    },
+    {
+      "metric": "split-20.chain_ms.p50",
+      "baseline": 66.0334,
+      "candidate": 60.9102,
+      "delta": -5.123199999999997,
+      "percent": -7.758497972238287,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-20.chain_ms.p95",
+      "baseline": 71.4125,
+      "candidate": 70.6865,
+      "delta": -0.7259999999999991,
+      "percent": -1.016628741466829,
+      "regression": false,
+      "gated": true
+    },
+    {
+      "metric": "split-20.first_request_ms.value",
+      "baseline": 241.6471,
+      "candidate": 143.4161,
+      "delta": -98.231,
+      "percent": -40.65060164181568,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-20.split_ms.p50",
+      "baseline": 0.0356,
+      "candidate": 0.0282,
+      "delta": -0.0074,
+      "percent": -20.786516853932586,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-20.split_ms.p95",
+      "baseline": 0.0843,
+      "candidate": 0.0631,
+      "delta": -0.021199999999999997,
+      "percent": -25.14827995255041,
+      "regression": false,
+      "gated": true
+    }
+  ]
+}

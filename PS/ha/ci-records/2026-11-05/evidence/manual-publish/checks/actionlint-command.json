@@ -1,0 +1,6 @@
+{
+  "name": "actionlint",
+  "exit_code": 0,
+  "stdout": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\actionlint\\workflows.zip\nAcceptance evidence complete: S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\actionlint\n{\n  \"version\": \"1.7.7\",\n  \"status\": \"passed\",\n  \"exit_code\": 0,\n  \"stdout\": \"\",\n  \"stderr\": \"\",\n  \"sha256\": \"7f12f1801bca3d480d67aaf7774f4c2a6359a3ca8eebe382c95c10c9704aa731\",\n  \"root\": \"D:\\\\yzd\\\\workenv\\\\ha4fpai-ci\\\\ha4fpai-ci-lint-fedbd589608c\\\\checkout-9f0380934efa\",\n  \"files\": [\n    \"D:\\\\yzd\\\\workenv\\\\ha4fpai-ci\\\\ha4fpai-ci-lint-fedbd589608c\\\\checkout-9f0380934efa\\\\.github\\\\workflows\\\\adapters.yml\",\n    \"D:\\\\yzd\\\\workenv\\\\ha4fpai-ci\\\\ha4fpai-ci-lint-fedbd589608c\\\\checkout-9f0380934efa\\\\.github\\\\workflows\\\\ci.yml\",\n    \"D:\\\\yzd\\\\workenv\\\\ha4fpai-ci\\\\ha4fpai-ci-lint-fedbd589608c\\\\checkout-9f0380934efa\\\\.github\\\\workflows\\\\device.yml\",\n    \"D:\\\\yzd\\\\workenv\\\\ha4fpai-ci\\\\ha4fpai-ci-lint-fedbd589608c\\\\checkout-9f0380934efa\\\\.github\\\\workflows\\\\lang-linux-package.yml\",\n    \"D:\\\\yzd\\\\workenv\\\\ha4fpai-ci\\\\ha4fpai-ci-lint-fedbd589608c\\\\checkout-9f0380934efa\\\\.github\\\\workflows\\\\performance.yml\"\n  ]\n}\n\n\nSchool actionlint: passed\n",
+  "stderr": ""
+}

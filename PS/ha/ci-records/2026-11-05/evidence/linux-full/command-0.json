@@ -1,0 +1,20 @@
+{
+  "command": [
+    "podman",
+    "exec",
+    "zgbuild",
+    "python3",
+    "-I",
+    "-B",
+    "-X",
+    "utf8",
+    "/mnt/s/work/WCIS/repos/HA4FPAI/ci/run.py",
+    "--profile",
+    "full",
+    "--output",
+    "/workenv/ha4fpai-ci/full"
+  ],
+  "exit_code": 1,
+  "stdout": "Validated 67 Python files against Python 3.8 grammar\nPASSED contracts (3.09s)\nPASSED infrastructure (0.77s)\nPASSED split (0.47s)\nPASSED fsm (0.07s)\nPASSED npu-lifecycle (8.00s)\nFAILED npu-adapter (0.12s)\nTraceback (most recent call last):\n  File \"/mnt/s/work/WCIS/repos/HA4FPAI/lang/npuserv/tests/adapter_stub_check.py\", line 32, in <module>\n    import e41_tok                                       # noqa: E402  (verifies the board tokenizer on PC)\nModuleNotFoundError: No module named 'e41_tok'\n\nFAILED npu-q3-adapter (0.42s)\nTraceback (most recent call last):\n  File \"/mnt/s/work/WCIS/repos/HA4FPAI/lang/npuserv/tests/q3_adapter_stub_check.py\", line 383, in <module>\n    sys.exit(main())\n  File \"/mnt/s/work/WCIS/repos/HA4FPAI/lang/npuserv/tests/q3_adapter_stub_check.py\", line 260, in main\n    src = open(DRIVER, encoding=\"utf-8\").read()\nFileNotFoundError: [Errno 2] No such file or directory: '/mnt/s/work/WCIS/repos/HA4FPAI/lang/llm/Qwen3-0.6B/patch/q3_infer_board.py'\n\nPASSED host-soak (0.47s)\nPASSED calibration (6.91s)\nCI full: failed; /workenv/ha4fpai-ci/full\n",
+  "stderr": ""
+}

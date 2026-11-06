@@ -1,0 +1,31 @@
+﻿{
+    "_meta":  {
+                  "collected_at_local":  "2026-10-20T16:14:00.7796862+08:00",
+                  "collected_at_utc":  "2026-10-20T08:14:00.7955223Z",
+                  "timezone":  "China Standard Time (08:00)",
+                  "collector":  "hw_collect_v2.ps1 (SOP 2 - MOD, corrected re-collection)",
+                  "archive_version":  "1.1",
+                  "tool_powershell":  "5.1.26100.9711",
+                  "tool_wmi_cim":  "Get-CimInstance / Get-ComputerInfo / Get-Volume",
+                  "host":  "WIN11-HV1"
+              },
+    "os":  {
+               "os_name":  "Microsoft Windows 11 专业工作站版",
+               "os_version":  "10.0.26200",
+               "os_build":  "26200",
+               "os_arch":  "64-bit",
+               "kernel":  "Windows NT 10.0.26200 (build 26200)",
+               "product_type":  1,
+               "install_date":  "2025-03-10T01:38:16.0000000Z",
+               "last_boot_utc":  "2026-10-13T19:32:50.0245720Z",
+               "local_datetime":  "2026-10-20T08:14:11.2587145Z",
+               "system_dir":  "C:\\WINDOWS\\system32",
+               "registered_user":  "SuRongbin",
+               "container_runtime":  "not_detected",
+               "container_note":  "no container runtime detected on this guest (unverified)",
+               "current_user":  "WIN11-HV1\\yizhidi",
+               "is_admin":  false,
+               "source":  "system_report",
+               "os_productname_discrepancy":  "Win32_OperatingSystem.Caption=\u0027Microsoft Windows 11 专业工作站版\u0027; Get-ComputerInfo.WindowsProductName=\u0027Windows 10 Pro for Workstations\u0027. Build 26200 =\u003e Windows 11 24H2; WindowsProductName value is a known WMI quirk."
+           }
+}

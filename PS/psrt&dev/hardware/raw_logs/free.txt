@@ -1,0 +1,10 @@
+### free
+cmd: free -h; echo '---bytes---'; free -b
+---
+              total        used        free      shared  buff/cache   available
+Mem:          993Mi       222Mi       425Mi       0.0Ki       345Mi       703Mi
+Swap:         1.0Gi          0B       1.0Gi
+---bytes---
+              total        used        free      shared  buff/cache   available
+Mem:     1042128896   233811968   446554112       98304   361762816   737943552
+Swap:    1073737728           0  1073737728

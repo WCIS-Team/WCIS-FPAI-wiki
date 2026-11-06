@@ -1,0 +1,12 @@
+{
+  "command": [
+    "podman",
+    "ps",
+    "-a",
+    "--format",
+    "{{.Names}} {{.Status}}"
+  ],
+  "exit_code": 0,
+  "stdout": "zgbuild Up 14 hours\niic-osic-tools_xvnc Exited (0) 292 years ago\nexp Exited (137) 23 hours ago\nwcis-py38 Up 14 hours\nwcis-lang-package-test Exited (137) 9 hours ago\nha4fpai-klar-local Up 10 hours\n",
+  "stderr": ""
+}

@@ -1,0 +1,8 @@
+### dmesg_count
+cmd: dmesg 2>/dev/null | wc -l; echo '---last line:'; dmesg 2>/dev/null | tail -3
+---
+333
+---last line:
+[   14.131714] fmql-dwmac e0047000.ethernet eth0: configuring for phy/rgmii link mode
+[   16.173018] fmql-dwmac e0047000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[   16.173049] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready

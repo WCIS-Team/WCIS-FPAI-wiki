@@ -1,0 +1,18 @@
+{
+  "command": [
+    "C:\\Users\\takomi\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-I",
+    "-B",
+    "S:\\work\\WCIS\\repos\\HA4FPAI\\ci\\report.py",
+    "--baseline",
+    "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\baseline.json",
+    "--candidate",
+    "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\synthetic-incomparable.json",
+    "--output",
+    "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\synthetic-incomparable"
+  ],
+  "exit_code": 2,
+  "expected_exit_code": 2,
+  "stdout": "# HA4FPAI performance\n\nResult: **incomparable**\n\nConditions differ: environment\n\nSource: `None`; dirty: `None`\n\n| Metric | Baseline | Candidate | Change | Gate |\n|---|---:|---:|---:|---|\n| process.peak_rss_kib.value | �� | 52500.0000 | �� | not comparable |\n| split-12.chain_ms.p50 | �� | 56.3934 | �� | not comparable |\n| split-12.chain_ms.p95 | �� | 66.5276 | �� | not comparable |\n| split-12.first_request_ms.value | �� | 70.6818 | �� | not comparable |\n| split-12.split_ms.p50 | �� | 0.0535 | �� | not comparable |\n| split-12.split_ms.p95 | �� | 0.0745 | �� | not comparable |\n| split-20-16k.chain_ms.p50 | �� | 51.7465 | �� | not comparable |\n| split-20-16k.chain_ms.p95 | �� | 70.6401 | �� | not comparable |\n| split-20-16k.first_request_ms.value | �� | 46.8911 | �� | not comparable |\n| split-20-16k.split_ms.p50 | �� | 0.0500 | �� | not comparable |\n| split-20-16k.split_ms.p95 | �� | 0.0744 | �� | not comparable |\n| split-20.chain_ms.p50 | �� | 111.1907 | �� | not comparable |\n| split-20.chain_ms.p95 | �� | 179.2383 | �� | not comparable |\n| split-20.first_request_ms.value | �� | 346.0392 | �� | not comparable |\n| split-20.split_ms.p50 | �� | 0.0549 | �� | not comparable |\n| split-20.split_ms.p95 | �� | 0.0907 | �� | not comparable |\n\nNegative change means faster for latency; verify the metric's direction for other units.\nA gate fails only when the regression exceeds both its relative and absolute tolerances.\nAll raw samples, conditions, source hashes and correctness checks remain in the JSON artifact.\n\n",
+  "stderr": ""
+}

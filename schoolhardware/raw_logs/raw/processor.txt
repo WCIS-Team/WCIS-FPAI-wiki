@@ -1,0 +1,67 @@
+﻿
+
+Availability                            : 3
+CpuStatus                               : 1
+CurrentVoltage                          : 9
+DeviceID                                : CPU0
+ErrorCleared                            : 
+ErrorDescription                        : 
+LastErrorCode                           : 
+LoadPercentage                          : 2
+Status                                  : OK
+StatusInfo                              : 3
+AddressWidth                            : 64
+DataWidth                               : 64
+ExtClock                                : 100
+L2CacheSize                             : 24576
+L2CacheSpeed                            : 
+MaxClockSpeed                           : 2400
+PowerManagementSupported                : False
+ProcessorType                           : 3
+Revision                                : 4353
+SocketDesignation                       : None
+Version                                 : 型号 1，步进 1
+VoltageCaps                             : 
+Caption                                 : AMD64 Family 25 Model 17 Stepping 1
+Description                             : AMD64 Family 25 Model 17 Stepping 1
+InstallDate                             : 
+Name                                    : AMD EPYC 9654 96-Core Processor                
+ConfigManagerErrorCode                  : 
+ConfigManagerUserConfig                 : 
+CreationClassName                       : Win32_Processor
+PNPDeviceID                             : 
+PowerManagementCapabilities             : 
+SystemCreationClassName                 : Win32_ComputerSystem
+SystemName                              : WIN11-HV1
+CurrentClockSpeed                       : 2400
+Family                                  : 107
+OtherFamilyDescription                  : 
+Role                                    : CPU
+Stepping                                : 1
+UniqueId                                : 
+UpgradeMethod                           : 6
+Architecture                            : 9
+AssetTag                                : None
+Characteristics                         : 252
+L3CacheSize                             : 98304
+L3CacheSpeed                            : 0
+Level                                   : 25
+Manufacturer                            : AuthenticAMD
+NumberOfCores                           : 24
+NumberOfEnabledCore                     : 24
+NumberOfLogicalProcessors               : 24
+PartNumber                              : None
+ProcessorId                             : 0000000000000000
+SecondLevelAddressTranslationExtensions : False
+SerialNumber                            : None
+ThreadCount                             : 24
+VirtualizationFirmwareEnabled           : True
+VMMonitorModeExtensions                 : False
+PSComputerName                          : 
+CimClass                                : root/cimv2:Win32_Processor
+CimInstanceProperties                   : {Caption, Description, InstallDate, Name...}
+CimSystemProperties                     : Microsoft.Management.Infrastructure.CimSystemProperties
+
+
+
+

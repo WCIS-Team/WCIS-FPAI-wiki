@@ -1,0 +1,8 @@
+### nproc_limits
+cmd: cat /proc/sys/kernel/pid_max 2>/dev/null; echo '---threads-max:'; cat /proc/sys/kernel/threads-max 2>/dev/null; echo '---somaxconn:'; cat /proc/sys/net/core/somaxconn 2>/dev/null
+---
+4194304
+---threads-max:
+5897
+---somaxconn:
+4096

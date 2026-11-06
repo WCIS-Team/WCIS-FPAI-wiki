@@ -1,0 +1,26 @@
+=== collector ===
+=== benchmark ===
+=== pull results ===
+C:\WINDOWS\System32\OpenSSH\scp.exe: D:/yzd/bench.json: No such file or directory
+=== pulled into S:\work\WCIS\hardware\raw_logs ===
+S:\work\WCIS\hardware\raw_logs\raw
+S:\work\WCIS\hardware\raw_logs\device.json
+S:\work\WCIS\hardware\raw_logs\resources.json
+S:\work\WCIS\hardware\raw_logs\software_human.txt
+S:\work\WCIS\hardware\raw_logs\software.json
+S:\work\WCIS\hardware\raw_logs\system.json
+S:\work\WCIS\hardware\raw_logs\toolchains.json
+S:\work\WCIS\hardware\raw_logs\raw\computerinfo.txt
+S:\work\WCIS\hardware\raw_logs\raw\nvidia_smi.txt
+S:\work\WCIS\hardware\raw_logs\raw\os.txt
+S:\work\WCIS\hardware\raw_logs\raw\physicaldisk.txt
+S:\work\WCIS\hardware\raw_logs\raw\physicalmemory.txt
+S:\work\WCIS\hardware\raw_logs\raw\pip_list.txt
+S:\work\WCIS\hardware\raw_logs\raw\pnp_devices.txt
+S:\work\WCIS\hardware\raw_logs\raw\processes_top.txt
+S:\work\WCIS\hardware\raw_logs\raw\processor.txt
+S:\work\WCIS\hardware\raw_logs\raw\python.txt
+S:\work\WCIS\hardware\raw_logs\raw\services.txt
+S:\work\WCIS\hardware\raw_logs\raw\toolchains_reprobe.txt
+S:\work\WCIS\hardware\raw_logs\raw\videocontroller.txt
+S:\work\WCIS\hardware\raw_logs\raw\volume.txt

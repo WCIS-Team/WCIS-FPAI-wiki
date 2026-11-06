@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "kind": "package-static",
+  "architecture": "arm64",
+  "version": "0.1.0+ci.20261105",
+  "files": 78,
+  "python_files": 28,
+  "wheels": 28,
+  "package_sha256": "8e6f618718fc70bf6596c210c1d882e1c7611cdd5abde3574ca126c6c22d1a07",
+  "archive_sha256": "e99275a0e2bf3976222ccc963a33c5f0d685ba1add29a7a7688077759dcecb3e",
+  "notes": [
+    "Static validation does not replace install/upgrade/remove/purge in a disposable Ubuntu container."
+  ]
+}

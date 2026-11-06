@@ -1,0 +1,30 @@
+# HA4FPAI performance
+
+Result: **incomparable**
+
+Conditions differ: environment
+
+Source: `None`; dirty: `None`
+
+| Metric | Baseline | Candidate | Change | Gate |
+|---|---:|---:|---:|---|
+| process.peak_rss_kib.value | — | 52500.0000 | — | not comparable |
+| split-12.chain_ms.p50 | — | 56.3934 | — | not comparable |
+| split-12.chain_ms.p95 | — | 66.5276 | — | not comparable |
+| split-12.first_request_ms.value | — | 70.6818 | — | not comparable |
+| split-12.split_ms.p50 | — | 0.0535 | — | not comparable |
+| split-12.split_ms.p95 | — | 0.0745 | — | not comparable |
+| split-20-16k.chain_ms.p50 | — | 51.7465 | — | not comparable |
+| split-20-16k.chain_ms.p95 | — | 70.6401 | — | not comparable |
+| split-20-16k.first_request_ms.value | — | 46.8911 | — | not comparable |
+| split-20-16k.split_ms.p50 | — | 0.0500 | — | not comparable |
+| split-20-16k.split_ms.p95 | — | 0.0744 | — | not comparable |
+| split-20.chain_ms.p50 | — | 111.1907 | — | not comparable |
+| split-20.chain_ms.p95 | — | 179.2383 | — | not comparable |
+| split-20.first_request_ms.value | — | 346.0392 | — | not comparable |
+| split-20.split_ms.p50 | — | 0.0549 | — | not comparable |
+| split-20.split_ms.p95 | — | 0.0907 | — | not comparable |
+
+Negative change means faster for latency; verify the metric's direction for other units.
+A gate fails only when the regression exceeds both its relative and absolute tolerances.
+All raw samples, conditions, source hashes and correctness checks remain in the JSON artifact.

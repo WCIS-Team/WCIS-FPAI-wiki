@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "context": {
+    "kind": "host-mock",
+    "environment": {
+      "device_id": "tkmnopc",
+      "system": "Windows",
+      "architecture": "AMD64",
+      "python": "3.13.11",
+      "implementation": "CPython",
+      "cpu": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+      "cpus": 16
+    },
+    "workload_sha256": "e1028bfbaf362c7fe7a5700728624e554f9c7b4646fb74e81cef6c8cf9501ba0",
+    "harness_sha256": "1e407043cd0101fcd81dd0c5861eecfb5e6ab06dd8ffbef5e7c0297c903019b0"
+  },
+  "source": {
+    "commit": "27b8a1f76cd576d24db478fc9bcab196f9d25caf",
+    "dirty": true
+  },
+  "source_files": {
+    "lang/server/core.py": "1295cb39b656a4462a65f038dc7f7aa0e7741962089ec48de7b40c703693f25c",
+    "lang/server/cfg.py": "7f4e6be5a1a55548e1b200b6ae481826ad0a999feb881fcc2547f316391f1625",
+    "lang/split/tts_split.py": "e8dc8eedfe9966cb4ccb566128099fd6d31f20c6bf6a8c79ae46b902e8d16f83",
+    "lang/server/backends/__init__.py": "3c97cbec8885291022d145985bdbdf3c267259f557667925ca0d87de4c6f157d",
+    "lang/server/backends/asr.py": "ac7213b49210b09047338ffcb80fe193d83e2dc7dc8a7a1392cac73076f4fd6c",
+    "lang/server/backends/audioio.py": "b8eab25e0d3f4e5a21914530a6b946bd919e7de8e018026f6e5290ea36e7f77f",
+    "lang/server/backends/front.py": "cf10659b8ccfb01a2f6c897f024c40396d9711e008daf5a21d610adc0926c10f",
+    "lang/server/backends/kws_route.py": "7bb32b9c0f1c53330f331ad435f47923c1325e3fb38024d42df1461d97523e38",
+    "lang/server/backends/llm.py": "09b6d4dc47cb2d93b80faeb1f7ae04eb1317e396056fbac219fd954cd79594b2",
+    "lang/server/backends/rms.py": "d37934636c99529a8b1e5317d6c814f7152a8c16c6e06f6bc981483fbefd34fb",
+    "lang/server/backends/router.py": "a2184f04a9d27a3d34ec2add95cc2001c97d8df2f736fd5ac78b10c85d8879bb",
+    "lang/server/backends/spk.py": "1f549ba9f2db202ecec959fbd3d66955d8ebd4de6eddba77a3fc8af663845fb2",
+    "lang/server/backends/text.py": "f52e434c50919b6005a233b90e590f9780d9371b7d26f107086b04a38cb59517",
+    "lang/server/backends/tts.py": "0c2be100fb22bd6aac904298dc45739a3e0b6029b81c7fce2d1baadc6c029b56"
+  },
+  "metrics": {
+    "split-12.chain_ms": {
+      "n": 15,
+      "min": 23.6418,
+      "max": 42.3925,
+      "mean": 32.09729333333333,
+      "p50": 31.2388,
+      "p95": 42.3925,
+      "stdev": 6.41025363176246
+    },
+    "split-12.split_ms": {
+      "n": 15,
+      "min": 0.0261,
+      "max": 0.0777,
+      "mean": 0.0392,
+      "p50": 0.0358,
+      "p95": 0.0777,
+      "stdev": 0.01448126868948791
+    },
+    "split-12.first_request_ms": {
+      "value": 26.0013
+    },
+    "split-20.chain_ms": {
+      "n": 15,
+      "min": 56.3768,
+      "max": 82.2578,
+      "mean": 66.98814666666667,
+      "p50": 67.1529,
+      "p95": 82.2578,
+      "stdev": 7.807654930246952
+    },
+    "split-20.split_ms": {
+      "n": 15,
+      "min": 0.0264,
+      "max": 0.0443,
+      "mean": 0.03236666666666667,
+      "p50": 0.0317,
+      "p95": 0.0443,
+      "stdev": 0.005249580482104759
+    },
+    "split-20.first_request_ms": {
+      "value": 148.6629
+    }
+  },
+  "samples": {
+    "split-12.chain_ms": [
+      27.4549,
+      27.378,
+      23.6418,
+      24.6926,
+      24.9903,
+      25.1175,
+      35.9682,
+      42.3925,
+      39.2992,
+      37.9876,
+      40.6576,
+      36.4351,
+      31.2388,
+      30.4394,
+      33.7659
+    ],
+    "split-12.split_ms": [
+      0.0777,
+      0.0278,
+      0.0287,
+      0.0261,
+      0.0273,
+      0.0369,
+      0.0286,
+      0.0359,
+      0.0441,
+      0.0346,
+      0.0427,
+      0.0622,
+      0.0358,
+      0.0305,
+      0.0491
+    ],
+    "split-20.chain_ms": [
+      70.4978,
+      69.2761,
+      68.3667,
+      82.0659,
+      82.2578,
+      71.4203,
+      70.1491,
+      64.3305,
+      60.8998,
+      67.1529,
+      60.4113,
+      56.3768,
+      63.2671,
+      61.1618,
+      57.1883
+    ],
+    "split-20.split_ms": [
+      0.0331,
+      0.0398,
+      0.0321,
+      0.0317,
+      0.0305,
+      0.031,
+      0.033,
+      0.0277,
+      0.0284,
+      0.0266,
+      0.0443,
+      0.0264,
+      0.0368,
+      0.0268,
+      0.0373
+    ]
+  },
+  "correctness": {
+    "split-12": {
+      "text": "好的，这是自检回复。第二句用来切分。最后来一句长一点的，看看分词器会不会把它切开，给 TTS 留几个小块。",
+      "chunks": [
+        "好的，这是自检回复。",
+        "第二句用来切分。",
+        "最后来一句长一点的，",
+        "看看分词器会不会把它切开",
+        "，",
+        "给 TTS 留几个小块。"
+      ],
+      "audio_rate": 16000,
+      "frames": 79678
+    },
+    "split-20": {
+      "text": "好的，这是自检回复。第二句用来切分。最后来一句长一点的，看看分词器会不会把它切开，给 TTS 留几个小块。",
+      "chunks": [
+        "好的，这是自检回复。第二句用来切分。",
+        "最后来一句长一点的，",
+        "看看分词器会不会把它切开，",
+        "给 TTS 留几个小块。"
+      ],
+      "audio_rate": 48000,
+      "frames": 210237
+    }
+  },
+  "notes": [
+    "Mock ASR/LLM and sine TTS measure orchestration, not recognition or model inference.",
+    "First request excludes process import and is separate from warmed samples.",
+    "Wall-clock milliseconds use perf_counter_ns; p95 uses nearest rank."
+  ]
+}

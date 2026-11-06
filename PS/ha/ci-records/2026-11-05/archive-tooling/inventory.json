@@ -1,0 +1,1868 @@
+{
+  "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci",
+  "target": "S:\\work\\WCIS\\wiki\\PS\\ha",
+  "instructions": [
+    "S:\\work\\WCIS\\AGENTS.md",
+    "S:\\work\\WCIS\\wiki\\README.md",
+    "S:\\work\\WCIS\\wiki\\.gitignore"
+  ],
+  "target_contents": [
+    {
+      "name": "HA4FPAI与视频联合总规划.md",
+      "directory": false,
+      "bytes": 10385
+    },
+    {
+      "name": "联合人员与业务数据设计.md",
+      "directory": false,
+      "bytes": 15191
+    },
+    {
+      "name": "联合存储迁移与恢复方案.md",
+      "directory": false,
+      "bytes": 14755
+    },
+    {
+      "name": "联合实施路线与验收.md",
+      "directory": false,
+      "bytes": 12700
+    },
+    {
+      "name": "联合控制接口与视频接入.md",
+      "directory": false,
+      "bytes": 11409
+    },
+    {
+      "name": "阶段01-控制与资料层骨架.md",
+      "directory": false,
+      "bytes": 6442
+    },
+    {
+      "name": "阶段02-视频域接回与语音接线.md",
+      "directory": false,
+      "bytes": 6265
+    },
+    {
+      "name": "阶段03-受控媒体回执与迁移动作.md",
+      "directory": false,
+      "bytes": 4989
+    }
+  ],
+  "selected_files": [
+    {
+      "path": "acceptance-evidence.py",
+      "bytes": 6848
+    },
+    {
+      "path": "adapter-pin.json",
+      "bytes": 375
+    },
+    {
+      "path": "audit-delivery.py",
+      "bytes": 8337
+    },
+    {
+      "path": "capture-speech-remote.py",
+      "bytes": 1241
+    },
+    {
+      "path": "capture-speech.py",
+      "bytes": 3093
+    },
+    {
+      "path": "commit-manual-publication.py",
+      "bytes": 2073
+    },
+    {
+      "path": "container-check.py",
+      "bytes": 2171
+    },
+    {
+      "path": "delivery-audit.json",
+      "bytes": 11059
+    },
+    {
+      "path": "delivery-facts-final.json",
+      "bytes": 9242
+    },
+    {
+      "path": "delivery-facts.json",
+      "bytes": 9245
+    },
+    {
+      "path": "delivery-facts.py",
+      "bytes": 3801
+    },
+    {
+      "path": "device-benchmark-final.json",
+      "bytes": 5591
+    },
+    {
+      "path": "device-final-checks.py",
+      "bytes": 1604
+    },
+    {
+      "path": "device-health-final.json",
+      "bytes": 3302
+    },
+    {
+      "path": "device-health-initial.json",
+      "bytes": 142
+    },
+    {
+      "path": "device-package-benchmark.json",
+      "bytes": 5220
+    },
+    {
+      "path": "device-package-health.json",
+      "bytes": 3902
+    },
+    {
+      "path": "evidence-facts.json",
+      "bytes": 241
+    },
+    {
+      "path": "evidence-facts.py",
+      "bytes": 1114
+    },
+    {
+      "path": "existing-linux.py",
+      "bytes": 1693
+    },
+    {
+      "path": "host-benchmark.json",
+      "bytes": 5305
+    },
+    {
+      "path": "inspect-manual-publish.py",
+      "bytes": 2585
+    },
+    {
+      "path": "lifecycle-final.py",
+      "bytes": 1273
+    },
+    {
+      "path": "lifecycle-residual-calibration.py",
+      "bytes": 2437
+    },
+    {
+      "path": "populate-manual-publication.py",
+      "bytes": 1439
+    },
+    {
+      "path": "prepare-manual-publication.py",
+      "bytes": 2538
+    },
+    {
+      "path": "push-manual-publication.py",
+      "bytes": 3580
+    },
+    {
+      "path": "research-upstreams.py",
+      "bytes": 4277
+    },
+    {
+      "path": "school-actionlint.py",
+      "bytes": 3794
+    },
+    {
+      "path": "stage-manual-publication.py",
+      "bytes": 2505
+    },
+    {
+      "path": "validate-school.py",
+      "bytes": 1668
+    },
+    {
+      "path": "validation-environment.py",
+      "bytes": 1203
+    },
+    {
+      "path": "verify-adapter-pin-remote.py",
+      "bytes": 1991
+    },
+    {
+      "path": "verify-adapter-pin.py",
+      "bytes": 1272
+    },
+    {
+      "path": "verify-manual-publication.py",
+      "bytes": 2983
+    },
+    {
+      "path": "verify-report-safety.py",
+      "bytes": 3092
+    },
+    {
+      "path": "actionlint-corrected/actionlint.json",
+      "bytes": 785
+    },
+    {
+      "path": "actionlint-delivery/actionlint.json",
+      "bytes": 908
+    },
+    {
+      "path": "actionlint-final/actionlint.json",
+      "bytes": 1342
+    },
+    {
+      "path": "actionlint-publish/actionlint.json",
+      "bytes": 908
+    },
+    {
+      "path": "actionlint-release/actionlint.json",
+      "bytes": 171
+    },
+    {
+      "path": "adapters-release/command-0.json",
+      "bytes": 649
+    },
+    {
+      "path": "adapters-release/command-1.json",
+      "bytes": 209
+    },
+    {
+      "path": "adapters-release/reports/calibration-green-test_contracts.log",
+      "bytes": 976
+    },
+    {
+      "path": "adapters-release/reports/calibration-green-test_infrastructure.log",
+      "bytes": 896
+    },
+    {
+      "path": "adapters-release/reports/calibration-red-FM01.log",
+      "bytes": 733
+    },
+    {
+      "path": "adapters-release/reports/calibration-red-FM02.log",
+      "bytes": 3989
+    },
+    {
+      "path": "adapters-release/reports/calibration-red-FM03.log",
+      "bytes": 799
+    },
+    {
+      "path": "adapters-release/reports/calibration-red-FM04.log",
+      "bytes": 4197
+    },
+    {
+      "path": "adapters-release/reports/calibration-red-FM05.log",
+      "bytes": 964
+    },
+    {
+      "path": "adapters-release/reports/calibration-red-FM06.log",
+      "bytes": 1036
+    },
+    {
+      "path": "adapters-release/reports/calibration-red-FM07.log",
+      "bytes": 1373
+    },
+    {
+      "path": "adapters-release/reports/calibration-red-FM08.log",
+      "bytes": 745
+    },
+    {
+      "path": "adapters-release/reports/calibration.json",
+      "bytes": 2020
+    },
+    {
+      "path": "adapters-release/reports/calibration.log",
+      "bytes": 200
+    },
+    {
+      "path": "adapters-release/reports/contracts.log",
+      "bytes": 976
+    },
+    {
+      "path": "adapters-release/reports/fsm.log",
+      "bytes": 724
+    },
+    {
+      "path": "adapters-release/reports/host-soak.log",
+      "bytes": 53
+    },
+    {
+      "path": "adapters-release/reports/infrastructure.log",
+      "bytes": 896
+    },
+    {
+      "path": "adapters-release/reports/junit.xml",
+      "bytes": 1237
+    },
+    {
+      "path": "adapters-release/reports/npu-adapter.log",
+      "bytes": 794
+    },
+    {
+      "path": "adapters-release/reports/npu-lifecycle.log",
+      "bytes": 1794
+    },
+    {
+      "path": "adapters-release/reports/npu-q3-adapter.log",
+      "bytes": 1407
+    },
+    {
+      "path": "adapters-release/reports/results.json",
+      "bytes": 2681
+    },
+    {
+      "path": "adapters-release/reports/soak.json",
+      "bytes": 644
+    },
+    {
+      "path": "adapters-release/reports/split.log",
+      "bytes": 804007
+    },
+    {
+      "path": "adapters-release/reports/summary.md",
+      "bytes": 553
+    },
+    {
+      "path": "calibration-fixed/calibration-green-test_contracts.log",
+      "bytes": 1297
+    },
+    {
+      "path": "calibration-fixed/calibration-green-test_infrastructure.log",
+      "bytes": 975
+    },
+    {
+      "path": "calibration-fixed/calibration-red-FM01.log",
+      "bytes": 903
+    },
+    {
+      "path": "calibration-fixed/calibration-red-FM02.log",
+      "bytes": 5110
+    },
+    {
+      "path": "calibration-fixed/calibration-red-FM03.log",
+      "bytes": 964
+    },
+    {
+      "path": "calibration-fixed/calibration-red-FM04.log",
+      "bytes": 6523
+    },
+    {
+      "path": "calibration-fixed/calibration-red-FM05.log",
+      "bytes": 1233
+    },
+    {
+      "path": "calibration-fixed/calibration-red-FM06.log",
+      "bytes": 1196
+    },
+    {
+      "path": "calibration-fixed/calibration-red-FM07.log",
+      "bytes": 1915
+    },
+    {
+      "path": "calibration-fixed/calibration-red-FM08.log",
+      "bytes": 937
+    },
+    {
+      "path": "calibration-fixed/calibration.json",
+      "bytes": 2046
+    },
+    {
+      "path": "core-full-delivery/command-0.json",
+      "bytes": 566
+    },
+    {
+      "path": "core-full-delivery/command-1.json",
+      "bytes": 209
+    },
+    {
+      "path": "core-full-delivery/reports/calibration-green-test_contracts.log",
+      "bytes": 976
+    },
+    {
+      "path": "core-full-delivery/reports/calibration-green-test_infrastructure.log",
+      "bytes": 976
+    },
+    {
+      "path": "core-full-delivery/reports/calibration-red-FM01.log",
+      "bytes": 729
+    },
+    {
+      "path": "core-full-delivery/reports/calibration-red-FM02.log",
+      "bytes": 3969
+    },
+    {
+      "path": "core-full-delivery/reports/calibration-red-FM03.log",
+      "bytes": 795
+    },
+    {
+      "path": "core-full-delivery/reports/calibration-red-FM04.log",
+      "bytes": 4169
+    },
+    {
+      "path": "core-full-delivery/reports/calibration-red-FM05.log",
+      "bytes": 956
+    },
+    {
+      "path": "core-full-delivery/reports/calibration-red-FM06.log",
+      "bytes": 1032
+    },
+    {
+      "path": "core-full-delivery/reports/calibration-red-FM07.log",
+      "bytes": 1361
+    },
+    {
+      "path": "core-full-delivery/reports/calibration-red-FM08.log",
+      "bytes": 741
+    },
+    {
+      "path": "core-full-delivery/reports/calibration.json",
+      "bytes": 2016
+    },
+    {
+      "path": "core-full-delivery/reports/calibration.log",
+      "bytes": 200
+    },
+    {
+      "path": "core-full-delivery/reports/contracts.log",
+      "bytes": 976
+    },
+    {
+      "path": "core-full-delivery/reports/fsm.log",
+      "bytes": 724
+    },
+    {
+      "path": "core-full-delivery/reports/host-soak.log",
+      "bytes": 49
+    },
+    {
+      "path": "core-full-delivery/reports/infrastructure.log",
+      "bytes": 976
+    },
+    {
+      "path": "core-full-delivery/reports/junit.xml",
+      "bytes": 1001
+    },
+    {
+      "path": "core-full-delivery/reports/npu-lifecycle.log",
+      "bytes": 1854
+    },
+    {
+      "path": "core-full-delivery/reports/results.json",
+      "bytes": 1938
+    },
+    {
+      "path": "core-full-delivery/reports/soak.json",
+      "bytes": 644
+    },
+    {
+      "path": "core-full-delivery/reports/split.log",
+      "bytes": 804007
+    },
+    {
+      "path": "core-full-delivery/reports/summary.md",
+      "bytes": 444
+    },
+    {
+      "path": "core-full-release/command-0.json",
+      "bytes": 566
+    },
+    {
+      "path": "core-full-release/command-1.json",
+      "bytes": 208
+    },
+    {
+      "path": "core-full-release/reports/calibration-green-test_contracts.log",
+      "bytes": 976
+    },
+    {
+      "path": "core-full-release/reports/calibration-green-test_infrastructure.log",
+      "bytes": 896
+    },
+    {
+      "path": "core-full-release/reports/calibration-red-FM01.log",
+      "bytes": 729
+    },
+    {
+      "path": "core-full-release/reports/calibration-red-FM02.log",
+      "bytes": 3969
+    },
+    {
+      "path": "core-full-release/reports/calibration-red-FM03.log",
+      "bytes": 794
+    },
+    {
+      "path": "core-full-release/reports/calibration-red-FM04.log",
+      "bytes": 4169
+    },
+    {
+      "path": "core-full-release/reports/calibration-red-FM05.log",
+      "bytes": 956
+    },
+    {
+      "path": "core-full-release/reports/calibration-red-FM06.log",
+      "bytes": 1032
+    },
+    {
+      "path": "core-full-release/reports/calibration-red-FM07.log",
+      "bytes": 1361
+    },
+    {
+      "path": "core-full-release/reports/calibration-red-FM08.log",
+      "bytes": 741
+    },
+    {
+      "path": "core-full-release/reports/calibration.json",
+      "bytes": 2016
+    },
+    {
+      "path": "core-full-release/reports/calibration.log",
+      "bytes": 200
+    },
+    {
+      "path": "core-full-release/reports/contracts.log",
+      "bytes": 976
+    },
+    {
+      "path": "core-full-release/reports/fsm.log",
+      "bytes": 724
+    },
+    {
+      "path": "core-full-release/reports/host-soak.log",
+      "bytes": 49
+    },
+    {
+      "path": "core-full-release/reports/infrastructure.log",
+      "bytes": 896
+    },
+    {
+      "path": "core-full-release/reports/junit.xml",
+      "bytes": 1001
+    },
+    {
+      "path": "core-full-release/reports/npu-lifecycle.log",
+      "bytes": 1794
+    },
+    {
+      "path": "core-full-release/reports/results.json",
+      "bytes": 1936
+    },
+    {
+      "path": "core-full-release/reports/soak.json",
+      "bytes": 644
+    },
+    {
+      "path": "core-full-release/reports/split.log",
+      "bytes": 804007
+    },
+    {
+      "path": "core-full-release/reports/summary.md",
+      "bytes": 444
+    },
+    {
+      "path": "device-delivery/benchmark-report.html",
+      "bytes": 1965
+    },
+    {
+      "path": "device-delivery/benchmark-report.json",
+      "bytes": 921
+    },
+    {
+      "path": "device-delivery/benchmark-report.md",
+      "bytes": 1364
+    },
+    {
+      "path": "device-delivery/benchmark.json",
+      "bytes": 6397
+    },
+    {
+      "path": "device-delivery/short-soak-manifest.json",
+      "bytes": 2102
+    },
+    {
+      "path": "device-delivery/short-soak.json",
+      "bytes": 6192
+    },
+    {
+      "path": "device-delivery/soak-report.html",
+      "bytes": 1965
+    },
+    {
+      "path": "device-delivery/soak-report.json",
+      "bytes": 916
+    },
+    {
+      "path": "device-delivery/soak-report.md",
+      "bytes": 1364
+    },
+    {
+      "path": "device-release/benchmark-report.html",
+      "bytes": 1965
+    },
+    {
+      "path": "device-release/benchmark-report.json",
+      "bytes": 921
+    },
+    {
+      "path": "device-release/benchmark-report.md",
+      "bytes": 1364
+    },
+    {
+      "path": "device-release/benchmark.json",
+      "bytes": 6402
+    },
+    {
+      "path": "device-release/short-soak-manifest.json",
+      "bytes": 2102
+    },
+    {
+      "path": "device-release/short-soak.json",
+      "bytes": 6195
+    },
+    {
+      "path": "device-release/soak-report.html",
+      "bytes": 1965
+    },
+    {
+      "path": "device-release/soak-report.json",
+      "bytes": 916
+    },
+    {
+      "path": "device-release/soak-report.md",
+      "bytes": 1364
+    },
+    {
+      "path": "existing-container-inventory/command-0.json",
+      "bytes": 540
+    },
+    {
+      "path": "existing-container-inventory-final/command-0.json",
+      "bytes": 763
+    },
+    {
+      "path": "existing-linux-inventory/command-0.json",
+      "bytes": 714
+    },
+    {
+      "path": "existing-linux-inventory/command-1.json",
+      "bytes": 364
+    },
+    {
+      "path": "host-full/calibration-green-test_contracts.log",
+      "bytes": 703
+    },
+    {
+      "path": "host-full/calibration.json",
+      "bytes": 137
+    },
+    {
+      "path": "host-full/calibration.log",
+      "bytes": 0
+    },
+    {
+      "path": "host-full/contracts.log",
+      "bytes": 1317
+    },
+    {
+      "path": "host-full/fsm.log",
+      "bytes": 746
+    },
+    {
+      "path": "host-full/host-soak.log",
+      "bytes": 67
+    },
+    {
+      "path": "host-full/infrastructure.log",
+      "bytes": 987
+    },
+    {
+      "path": "host-full/junit.xml",
+      "bytes": 1378
+    },
+    {
+      "path": "host-full/results.json",
+      "bytes": 2076
+    },
+    {
+      "path": "host-full/soak.json",
+      "bytes": 648
+    },
+    {
+      "path": "host-full/split.log",
+      "bytes": 817917
+    },
+    {
+      "path": "host-full/summary.md",
+      "bytes": 565
+    },
+    {
+      "path": "lifecycle-final/lifecycle.log",
+      "bytes": 1854
+    },
+    {
+      "path": "lifecycle-final/residual-calibration.json",
+      "bytes": 5447
+    },
+    {
+      "path": "lifecycle-final/result.json",
+      "bytes": 2243
+    },
+    {
+      "path": "linux-final/command-0.json",
+      "bytes": 633
+    },
+    {
+      "path": "linux-final/command-1.json",
+      "bytes": 200
+    },
+    {
+      "path": "linux-final/reports/calibration-green-test_contracts.log",
+      "bytes": 976
+    },
+    {
+      "path": "linux-final/reports/calibration-green-test_infrastructure.log",
+      "bytes": 823
+    },
+    {
+      "path": "linux-final/reports/calibration-red-FM01.log",
+      "bytes": 729
+    },
+    {
+      "path": "linux-final/reports/calibration-red-FM02.log",
+      "bytes": 3969
+    },
+    {
+      "path": "linux-final/reports/calibration-red-FM03.log",
+      "bytes": 795
+    },
+    {
+      "path": "linux-final/reports/calibration-red-FM04.log",
+      "bytes": 4169
+    },
+    {
+      "path": "linux-final/reports/calibration-red-FM05.log",
+      "bytes": 956
+    },
+    {
+      "path": "linux-final/reports/calibration-red-FM06.log",
+      "bytes": 1032
+    },
+    {
+      "path": "linux-final/reports/calibration-red-FM07.log",
+      "bytes": 1361
+    },
+    {
+      "path": "linux-final/reports/calibration-red-FM08.log",
+      "bytes": 741
+    },
+    {
+      "path": "linux-final/reports/calibration.json",
+      "bytes": 2015
+    },
+    {
+      "path": "linux-final/reports/calibration.log",
+      "bytes": 200
+    },
+    {
+      "path": "linux-final/reports/contracts.log",
+      "bytes": 976
+    },
+    {
+      "path": "linux-final/reports/fsm.log",
+      "bytes": 724
+    },
+    {
+      "path": "linux-final/reports/host-soak.log",
+      "bytes": 49
+    },
+    {
+      "path": "linux-final/reports/infrastructure.log",
+      "bytes": 823
+    },
+    {
+      "path": "linux-final/reports/junit.xml",
+      "bytes": 1237
+    },
+    {
+      "path": "linux-final/reports/npu-adapter.log",
+      "bytes": 794
+    },
+    {
+      "path": "linux-final/reports/npu-lifecycle.log",
+      "bytes": 1794
+    },
+    {
+      "path": "linux-final/reports/npu-q3-adapter.log",
+      "bytes": 1407
+    },
+    {
+      "path": "linux-final/reports/results.json",
+      "bytes": 2328
+    },
+    {
+      "path": "linux-final/reports/soak.json",
+      "bytes": 644
+    },
+    {
+      "path": "linux-final/reports/split.log",
+      "bytes": 804007
+    },
+    {
+      "path": "linux-final/reports/summary.md",
+      "bytes": 549
+    },
+    {
+      "path": "linux-full/command-0.json",
+      "bytes": 1395
+    },
+    {
+      "path": "linux-full/command-1.json",
+      "bytes": 199
+    },
+    {
+      "path": "linux-full/reports/calibration-green-test_contracts.log",
+      "bytes": 976
+    },
+    {
+      "path": "linux-full/reports/calibration-green-test_infrastructure.log",
+      "bytes": 652
+    },
+    {
+      "path": "linux-full/reports/calibration-red-FM01.log",
+      "bytes": 729
+    },
+    {
+      "path": "linux-full/reports/calibration-red-FM02.log",
+      "bytes": 3969
+    },
+    {
+      "path": "linux-full/reports/calibration-red-FM03.log",
+      "bytes": 795
+    },
+    {
+      "path": "linux-full/reports/calibration-red-FM04.log",
+      "bytes": 4169
+    },
+    {
+      "path": "linux-full/reports/calibration-red-FM05.log",
+      "bytes": 956
+    },
+    {
+      "path": "linux-full/reports/calibration-red-FM06.log",
+      "bytes": 1032
+    },
+    {
+      "path": "linux-full/reports/calibration-red-FM07.log",
+      "bytes": 1361
+    },
+    {
+      "path": "linux-full/reports/calibration-red-FM08.log",
+      "bytes": 741
+    },
+    {
+      "path": "linux-full/reports/calibration.json",
+      "bytes": 2015
+    },
+    {
+      "path": "linux-full/reports/calibration.log",
+      "bytes": 200
+    },
+    {
+      "path": "linux-full/reports/contracts.log",
+      "bytes": 976
+    },
+    {
+      "path": "linux-full/reports/fsm.log",
+      "bytes": 724
+    },
+    {
+      "path": "linux-full/reports/host-soak.log",
+      "bytes": 49
+    },
+    {
+      "path": "linux-full/reports/infrastructure.log",
+      "bytes": 652
+    },
+    {
+      "path": "linux-full/reports/junit.xml",
+      "bytes": 1322
+    },
+    {
+      "path": "linux-full/reports/npu-adapter.log",
+      "bytes": 293
+    },
+    {
+      "path": "linux-full/reports/npu-lifecycle.log",
+      "bytes": 1794
+    },
+    {
+      "path": "linux-full/reports/npu-q3-adapter.log",
+      "bytes": 447
+    },
+    {
+      "path": "linux-full/reports/results.json",
+      "bytes": 2331
+    },
+    {
+      "path": "linux-full/reports/soak.json",
+      "bytes": 644
+    },
+    {
+      "path": "linux-full/reports/split.log",
+      "bytes": 804007
+    },
+    {
+      "path": "linux-full/reports/summary.md",
+      "bytes": 549
+    },
+    {
+      "path": "linux-full-corrected/command-0.json",
+      "bytes": 633
+    },
+    {
+      "path": "linux-full-corrected/command-1.json",
+      "bytes": 209
+    },
+    {
+      "path": "linux-full-corrected/reports/calibration-green-test_contracts.log",
+      "bytes": 976
+    },
+    {
+      "path": "linux-full-corrected/reports/calibration-green-test_infrastructure.log",
+      "bytes": 652
+    },
+    {
+      "path": "linux-full-corrected/reports/calibration-red-FM01.log",
+      "bytes": 729
+    },
+    {
+      "path": "linux-full-corrected/reports/calibration-red-FM02.log",
+      "bytes": 3969
+    },
+    {
+      "path": "linux-full-corrected/reports/calibration-red-FM03.log",
+      "bytes": 795
+    },
+    {
+      "path": "linux-full-corrected/reports/calibration-red-FM04.log",
+      "bytes": 4169
+    },
+    {
+      "path": "linux-full-corrected/reports/calibration-red-FM05.log",
+      "bytes": 956
+    },
+    {
+      "path": "linux-full-corrected/reports/calibration-red-FM06.log",
+      "bytes": 1032
+    },
+    {
+      "path": "linux-full-corrected/reports/calibration-red-FM07.log",
+      "bytes": 1361
+    },
+    {
+      "path": "linux-full-corrected/reports/calibration-red-FM08.log",
+      "bytes": 741
+    },
+    {
+      "path": "linux-full-corrected/reports/calibration.json",
+      "bytes": 2015
+    },
+    {
+      "path": "linux-full-corrected/reports/calibration.log",
+      "bytes": 200
+    },
+    {
+      "path": "linux-full-corrected/reports/contracts.log",
+      "bytes": 976
+    },
+    {
+      "path": "linux-full-corrected/reports/fsm.log",
+      "bytes": 724
+    },
+    {
+      "path": "linux-full-corrected/reports/host-soak.log",
+      "bytes": 49
+    },
+    {
+      "path": "linux-full-corrected/reports/infrastructure.log",
+      "bytes": 652
+    },
+    {
+      "path": "linux-full-corrected/reports/junit.xml",
+      "bytes": 1237
+    },
+    {
+      "path": "linux-full-corrected/reports/npu-adapter.log",
+      "bytes": 794
+    },
+    {
+      "path": "linux-full-corrected/reports/npu-lifecycle.log",
+      "bytes": 1794
+    },
+    {
+      "path": "linux-full-corrected/reports/npu-q3-adapter.log",
+      "bytes": 1407
+    },
+    {
+      "path": "linux-full-corrected/reports/results.json",
+      "bytes": 2326
+    },
+    {
+      "path": "linux-full-corrected/reports/soak.json",
+      "bytes": 644
+    },
+    {
+      "path": "linux-full-corrected/reports/split.log",
+      "bytes": 804007
+    },
+    {
+      "path": "linux-full-corrected/reports/summary.md",
+      "bytes": 549
+    },
+    {
+      "path": "manual-publish/inspection.json",
+      "bytes": 10616
+    },
+    {
+      "path": "manual-publish/publication.json",
+      "bytes": 26996
+    },
+    {
+      "path": "manual-publish/push-result.json",
+      "bytes": 1293
+    },
+    {
+      "path": "manual-publish/checks/actionlint-command.json",
+      "bytes": 1351
+    },
+    {
+      "path": "manual-publish/checks/core-command.json",
+      "bytes": 391
+    },
+    {
+      "path": "manual-publish/checks/manual-events.json",
+      "bytes": 345
+    },
+    {
+      "path": "manual-publish/checks/summary.json",
+      "bytes": 2157
+    },
+    {
+      "path": "manual-publish/checks/actionlint/actionlint.json",
+      "bytes": 908
+    },
+    {
+      "path": "manual-publish/checks/core/calibration-green-test_contracts.log",
+      "bytes": 976
+    },
+    {
+      "path": "manual-publish/checks/core/calibration-green-test_infrastructure.log",
+      "bytes": 976
+    },
+    {
+      "path": "manual-publish/checks/core/calibration-red-FM01.log",
+      "bytes": 767
+    },
+    {
+      "path": "manual-publish/checks/core/calibration-red-FM02.log",
+      "bytes": 4159
+    },
+    {
+      "path": "manual-publish/checks/core/calibration-red-FM03.log",
+      "bytes": 833
+    },
+    {
+      "path": "manual-publish/checks/core/calibration-red-FM04.log",
+      "bytes": 4435
+    },
+    {
+      "path": "manual-publish/checks/core/calibration-red-FM05.log",
+      "bytes": 1032
+    },
+    {
+      "path": "manual-publish/checks/core/calibration-red-FM06.log",
+      "bytes": 1070
+    },
+    {
+      "path": "manual-publish/checks/core/calibration-red-FM07.log",
+      "bytes": 1475
+    },
+    {
+      "path": "manual-publish/checks/core/calibration-red-FM08.log",
+      "bytes": 779
+    },
+    {
+      "path": "manual-publish/checks/core/calibration.json",
+      "bytes": 2054
+    },
+    {
+      "path": "manual-publish/checks/core/calibration.log",
+      "bytes": 200
+    },
+    {
+      "path": "manual-publish/checks/core/contracts.log",
+      "bytes": 976
+    },
+    {
+      "path": "manual-publish/checks/core/fsm.log",
+      "bytes": 724
+    },
+    {
+      "path": "manual-publish/checks/core/host-soak.log",
+      "bytes": 87
+    },
+    {
+      "path": "manual-publish/checks/core/infrastructure.log",
+      "bytes": 977
+    },
+    {
+      "path": "manual-publish/checks/core/junit.xml",
+      "bytes": 1003
+    },
+    {
+      "path": "manual-publish/checks/core/npu-lifecycle.log",
+      "bytes": 1854
+    },
+    {
+      "path": "manual-publish/checks/core/results.json",
+      "bytes": 1938
+    },
+    {
+      "path": "manual-publish/checks/core/soak.json",
+      "bytes": 644
+    },
+    {
+      "path": "manual-publish/checks/core/split.log",
+      "bytes": 804007
+    },
+    {
+      "path": "manual-publish/checks/core/summary.md",
+      "bytes": 446
+    },
+    {
+      "path": "package-acceptance/command-01.json",
+      "bytes": 1074
+    },
+    {
+      "path": "package-acceptance/command-02.json",
+      "bytes": 565
+    },
+    {
+      "path": "package-acceptance/command-03.json",
+      "bytes": 1074
+    },
+    {
+      "path": "package-acceptance/command-04.json",
+      "bytes": 565
+    },
+    {
+      "path": "package-acceptance/command-05.json",
+      "bytes": 243
+    },
+    {
+      "path": "package-acceptance/command-06.json",
+      "bytes": 180
+    },
+    {
+      "path": "package-acceptance/command-07.json",
+      "bytes": 226
+    },
+    {
+      "path": "package-acceptance/command-08.json",
+      "bytes": 322
+    },
+    {
+      "path": "package-acceptance/command-09.json",
+      "bytes": 279
+    },
+    {
+      "path": "package-acceptance/command-10.json",
+      "bytes": 288
+    },
+    {
+      "path": "package-acceptance/command-11.json",
+      "bytes": 203
+    },
+    {
+      "path": "package-acceptance/lifecycle-command.json",
+      "bytes": 158
+    },
+    {
+      "path": "package-acceptance/lifecycle.json",
+      "bytes": 23096
+    },
+    {
+      "path": "package-acceptance/static-amd64.json",
+      "bytes": 488
+    },
+    {
+      "path": "package-acceptance/static-arm64.json",
+      "bytes": 488
+    },
+    {
+      "path": "performance-acceptance/baseline.json",
+      "bytes": 6300
+    },
+    {
+      "path": "performance-acceptance/candidate.json",
+      "bytes": 6259
+    },
+    {
+      "path": "performance-acceptance/command-01.json",
+      "bytes": 456
+    },
+    {
+      "path": "performance-acceptance/command-02.json",
+      "bytes": 458
+    },
+    {
+      "path": "performance-acceptance/command-03.json",
+      "bytes": 1730
+    },
+    {
+      "path": "performance-acceptance/comparison.html",
+      "bytes": 3765
+    },
+    {
+      "path": "performance-acceptance/comparison.json",
+      "bytes": 2356
+    },
+    {
+      "path": "performance-acceptance/comparison.md",
+      "bytes": 1153
+    },
+    {
+      "path": "performance-final/baseline.json",
+      "bytes": 11954
+    },
+    {
+      "path": "performance-final/candidate.json",
+      "bytes": 11986
+    },
+    {
+      "path": "performance-final/command-01.json",
+      "bytes": 446
+    },
+    {
+      "path": "performance-final/command-02.json",
+      "bytes": 448
+    },
+    {
+      "path": "performance-final/command-03.json",
+      "bytes": 2079
+    },
+    {
+      "path": "performance-final/command-04.json",
+      "bytes": 2143
+    },
+    {
+      "path": "performance-final/command-05.json",
+      "bytes": 2199
+    },
+    {
+      "path": "performance-final/command-06.json",
+      "bytes": 2059
+    },
+    {
+      "path": "performance-final/command-07.json",
+      "bytes": 1900
+    },
+    {
+      "path": "performance-final/comparison.html",
+      "bytes": 5148
+    },
+    {
+      "path": "performance-final/comparison.json",
+      "bytes": 3631
+    },
+    {
+      "path": "performance-final/comparison.md",
+      "bytes": 1495
+    },
+    {
+      "path": "performance-final/no-baseline.html",
+      "bytes": 2097
+    },
+    {
+      "path": "performance-final/no-baseline.json",
+      "bytes": 115
+    },
+    {
+      "path": "performance-final/no-baseline.md",
+      "bytes": 1496
+    },
+    {
+      "path": "performance-final/parameters.html",
+      "bytes": 3075
+    },
+    {
+      "path": "performance-final/parameters.json",
+      "bytes": 2227
+    },
+    {
+      "path": "performance-final/parameters.md",
+      "bytes": 1315
+    },
+    {
+      "path": "performance-final/synthetic-incomparable.html",
+      "bytes": 2094
+    },
+    {
+      "path": "performance-final/synthetic-incomparable.json",
+      "bytes": 91
+    },
+    {
+      "path": "performance-final/synthetic-incomparable.md",
+      "bytes": 1517
+    },
+    {
+      "path": "performance-final/synthetic-regression.html",
+      "bytes": 5204
+    },
+    {
+      "path": "performance-final/synthetic-regression.json",
+      "bytes": 3457
+    },
+    {
+      "path": "performance-final/synthetic-regression.md",
+      "bytes": 1555
+    },
+    {
+      "path": "performance-linux-release/baseline.json",
+      "bytes": 13395
+    },
+    {
+      "path": "performance-linux-release/candidate.json",
+      "bytes": 13389
+    },
+    {
+      "path": "performance-linux-release/command-01.json",
+      "bytes": 431
+    },
+    {
+      "path": "performance-linux-release/command-02.json",
+      "bytes": 433
+    },
+    {
+      "path": "performance-linux-release/command-03.json",
+      "bytes": 2141
+    },
+    {
+      "path": "performance-linux-release/command-04.json",
+      "bytes": 2305
+    },
+    {
+      "path": "performance-linux-release/command-05.json",
+      "bytes": 2269
+    },
+    {
+      "path": "performance-linux-release/command-06.json",
+      "bytes": 2118
+    },
+    {
+      "path": "performance-linux-release/command-07.json",
+      "bytes": 1878
+    },
+    {
+      "path": "performance-linux-release/comparison.html",
+      "bytes": 5399
+    },
+    {
+      "path": "performance-linux-release/comparison.json",
+      "bytes": 4709
+    },
+    {
+      "path": "performance-linux-release/comparison.md",
+      "bytes": 1532
+    },
+    {
+      "path": "performance-linux-release/no-baseline.html",
+      "bytes": 2133
+    },
+    {
+      "path": "performance-linux-release/no-baseline.json",
+      "bytes": 919
+    },
+    {
+      "path": "performance-linux-release/no-baseline.md",
+      "bytes": 1532
+    },
+    {
+      "path": "performance-linux-release/parameters.html",
+      "bytes": 3037
+    },
+    {
+      "path": "performance-linux-release/parameters.json",
+      "bytes": 2478
+    },
+    {
+      "path": "performance-linux-release/parameters.md",
+      "bytes": 1277
+    },
+    {
+      "path": "performance-linux-release/synthetic-incomparable.html",
+      "bytes": 2133
+    },
+    {
+      "path": "performance-linux-release/synthetic-incomparable.json",
+      "bytes": 905
+    },
+    {
+      "path": "performance-linux-release/synthetic-incomparable.md",
+      "bytes": 1556
+    },
+    {
+      "path": "performance-linux-release/synthetic-regression.html",
+      "bytes": 5653
+    },
+    {
+      "path": "performance-linux-release/synthetic-regression.json",
+      "bytes": 4685
+    },
+    {
+      "path": "performance-linux-release/synthetic-regression.md",
+      "bytes": 1692
+    },
+    {
+      "path": "py38-environment/command-0.json",
+      "bytes": 164
+    },
+    {
+      "path": "py38-environment/command-1.json",
+      "bytes": 212
+    },
+    {
+      "path": "py38-environment/command-2.json",
+      "bytes": 629
+    },
+    {
+      "path": "report-safety/checks.json",
+      "bytes": 8991
+    },
+    {
+      "path": "report-safety/collision-input.json",
+      "bytes": 13389
+    },
+    {
+      "path": "report-safety/comparison.html",
+      "bytes": 5399
+    },
+    {
+      "path": "report-safety/comparison.json",
+      "bytes": 4709
+    },
+    {
+      "path": "report-safety/comparison.md",
+      "bytes": 1532
+    },
+    {
+      "path": "report-safety/different-input.json",
+      "bytes": 13399
+    },
+    {
+      "path": "report-safety/different-report.html",
+      "bytes": 2133
+    },
+    {
+      "path": "report-safety/different-report.json",
+      "bytes": 905
+    },
+    {
+      "path": "report-safety/different-report.md",
+      "bytes": 1556
+    },
+    {
+      "path": "report-safety/no-baseline.html",
+      "bytes": 2133
+    },
+    {
+      "path": "report-safety/no-baseline.json",
+      "bytes": 919
+    },
+    {
+      "path": "report-safety/no-baseline.md",
+      "bytes": 1532
+    },
+    {
+      "path": "report-safety/parameters.html",
+      "bytes": 3037
+    },
+    {
+      "path": "report-safety/parameters.json",
+      "bytes": 2478
+    },
+    {
+      "path": "report-safety/parameters.md",
+      "bytes": 1277
+    },
+    {
+      "path": "report-safety/slower-input.json",
+      "bytes": 14099
+    },
+    {
+      "path": "report-safety/slower-report.html",
+      "bytes": 5653
+    },
+    {
+      "path": "report-safety/slower-report.json",
+      "bytes": 4685
+    },
+    {
+      "path": "report-safety/slower-report.md",
+      "bytes": 1692
+    },
+    {
+      "path": "speech-corpus/tts-response-8a9038db6b75/response.json",
+      "bytes": 316671
+    },
+    {
+      "path": "upstreams-fcd18c6d5095/inventory.json",
+      "bytes": 1436
+    },
+    {
+      "path": "windows-full-final/calibration-green-test_contracts.log",
+      "bytes": 1297
+    },
+    {
+      "path": "windows-full-final/calibration-green-test_infrastructure.log",
+      "bytes": 975
+    },
+    {
+      "path": "windows-full-final/calibration-red-FM01.log",
+      "bytes": 904
+    },
+    {
+      "path": "windows-full-final/calibration-red-FM02.log",
+      "bytes": 5115
+    },
+    {
+      "path": "windows-full-final/calibration-red-FM03.log",
+      "bytes": 966
+    },
+    {
+      "path": "windows-full-final/calibration-red-FM04.log",
+      "bytes": 6530
+    },
+    {
+      "path": "windows-full-final/calibration-red-FM05.log",
+      "bytes": 1235
+    },
+    {
+      "path": "windows-full-final/calibration-red-FM06.log",
+      "bytes": 1197
+    },
+    {
+      "path": "windows-full-final/calibration-red-FM07.log",
+      "bytes": 1918
+    },
+    {
+      "path": "windows-full-final/calibration-red-FM08.log",
+      "bytes": 938
+    },
+    {
+      "path": "windows-full-final/calibration.json",
+      "bytes": 2047
+    },
+    {
+      "path": "windows-full-final/calibration.log",
+      "bytes": 208
+    },
+    {
+      "path": "windows-full-final/contracts.log",
+      "bytes": 1317
+    },
+    {
+      "path": "windows-full-final/fsm.log",
+      "bytes": 746
+    },
+    {
+      "path": "windows-full-final/host-soak.log",
+      "bytes": 76
+    },
+    {
+      "path": "windows-full-final/infrastructure.log",
+      "bytes": 987
+    },
+    {
+      "path": "windows-full-final/junit.xml",
+      "bytes": 1338
+    },
+    {
+      "path": "windows-full-final/results.json",
+      "bytes": 2075
+    },
+    {
+      "path": "windows-full-final/soak.json",
+      "bytes": 648
+    },
+    {
+      "path": "windows-full-final/split.log",
+      "bytes": 817917
+    },
+    {
+      "path": "windows-full-final/summary.md",
+      "bytes": 565
+    },
+    {
+      "path": "windows-quick-delivery/contracts.log",
+      "bytes": 1317
+    },
+    {
+      "path": "windows-quick-delivery/fsm.log",
+      "bytes": 746
+    },
+    {
+      "path": "windows-quick-delivery/infrastructure.log",
+      "bytes": 1506
+    },
+    {
+      "path": "windows-quick-delivery/junit.xml",
+      "bytes": 655
+    },
+    {
+      "path": "windows-quick-delivery/results.json",
+      "bytes": 1370
+    },
+    {
+      "path": "windows-quick-delivery/split.log",
+      "bytes": 817917
+    },
+    {
+      "path": "windows-quick-delivery/summary.md",
+      "bytes": 294
+    },
+    {
+      "path": "windows-quick-final/contracts.log",
+      "bytes": 1317
+    },
+    {
+      "path": "windows-quick-final/fsm.log",
+      "bytes": 746
+    },
+    {
+      "path": "windows-quick-final/infrastructure.log",
+      "bytes": 1265
+    },
+    {
+      "path": "windows-quick-final/junit.xml",
+      "bytes": 655
+    },
+    {
+      "path": "windows-quick-final/results.json",
+      "bytes": 1343
+    },
+    {
+      "path": "windows-quick-final/split.log",
+      "bytes": 817917
+    },
+    {
+      "path": "windows-quick-final/summary.md",
+      "bytes": 294
+    },
+    {
+      "path": "windows-quick-release/contracts.log",
+      "bytes": 1317
+    },
+    {
+      "path": "windows-quick-release/fsm.log",
+      "bytes": 746
+    },
+    {
+      "path": "windows-quick-release/infrastructure.log",
+      "bytes": 1378
+    },
+    {
+      "path": "windows-quick-release/junit.xml",
+      "bytes": 655
+    },
+    {
+      "path": "windows-quick-release/results.json",
+      "bytes": 1367
+    },
+    {
+      "path": "windows-quick-release/split.log",
+      "bytes": 817917
+    },
+    {
+      "path": "windows-quick-release/summary.md",
+      "bytes": 294
+    },
+    {
+      "path": "zgbuild-environment/command-0.json",
+      "bytes": 162
+    },
+    {
+      "path": "zgbuild-environment/command-1.json",
+      "bytes": 210
+    },
+    {
+      "path": "zgbuild-environment/command-2.json",
+      "bytes": 638
+    }
+  ],
+  "skipped_directories": [
+    "adapters-release/reports/calibration-source-43fa058876cf/",
+    "adapters-release/reports/tmp/",
+    "calibration-fixed/calibration-source-e495c4dc5e3c/",
+    "core-full-delivery/reports/calibration-source-3962d9a9c0b0/",
+    "core-full-delivery/reports/calibration-source-3cb98fbf7bc1/",
+    "core-full-delivery/reports/tmp/",
+    "core-full-release/reports/calibration-source-3962d9a9c0b0/",
+    "core-full-release/reports/tmp/",
+    "host-full/calibration-source-5e932f38bc6b/",
+    "host-full/tmp/",
+    "linux-final/reports/calibration-source-92bd340c2829/",
+    "linux-final/reports/calibration-source-b5959074e07d/",
+    "linux-final/reports/calibration-source-d5f31680ea9b/",
+    "linux-final/reports/tmp/",
+    "linux-full/reports/calibration-source-b5959074e07d/",
+    "linux-full/reports/tmp/",
+    "linux-full-corrected/reports/calibration-source-92bd340c2829/",
+    "linux-full-corrected/reports/calibration-source-b5959074e07d/",
+    "linux-full-corrected/reports/tmp/",
+    "manual-publish/checkout-20261104T215939/",
+    "manual-publish/checks/core/calibration-source-8f1412eb617a/",
+    "manual-publish/checks/core/tmp/",
+    "package-acceptance/stage-amd64-20261104T185518432213/",
+    "package-acceptance/stage-arm64-20261104T185459779353/",
+    "windows-full-final/calibration-source-262c37590e70/",
+    "windows-full-final/tmp/",
+    "windows-quick-delivery/tmp/",
+    "windows-quick-final/tmp/",
+    "windows-quick-release/tmp/"
+  ],
+  "buckets": {
+    "actionlint-corrected": {
+      "files": 1,
+      "bytes": 785
+    },
+    "actionlint-delivery": {
+      "files": 1,
+      "bytes": 908
+    },
+    "actionlint-final": {
+      "files": 1,
+      "bytes": 1342
+    },
+    "actionlint-publish": {
+      "files": 1,
+      "bytes": 908
+    },
+    "actionlint-release": {
+      "files": 1,
+      "bytes": 171
+    },
+    "adapters-release": {
+      "files": 26,
+      "bytes": 834552
+    },
+    "calibration-fixed": {
+      "files": 11,
+      "bytes": 23099
+    },
+    "core-full-delivery": {
+      "files": 24,
+      "bytes": 831308
+    },
+    "core-full-release": {
+      "files": 24,
+      "bytes": 831084
+    },
+    "device-delivery": {
+      "files": 9,
+      "bytes": 23186
+    },
+    "device-release": {
+      "files": 9,
+      "bytes": 23194
+    },
+    "existing-container-inventory": {
+      "files": 1,
+      "bytes": 540
+    },
+    "existing-container-inventory-final": {
+      "files": 1,
+      "bytes": 763
+    },
+    "existing-linux-inventory": {
+      "files": 2,
+      "bytes": 1078
+    },
+    "host-full": {
+      "files": 12,
+      "bytes": 826541
+    },
+    "lifecycle-final": {
+      "files": 3,
+      "bytes": 9544
+    },
+    "linux-final": {
+      "files": 26,
+      "bytes": 833931
+    },
+    "linux-full": {
+      "files": 26,
+      "bytes": 832977
+    },
+    "linux-full-corrected": {
+      "files": 26,
+      "bytes": 833596
+    },
+    "manual-publish": {
+      "files": 30,
+      "bytes": 875469
+    },
+    "package-acceptance": {
+      "files": 15,
+      "bytes": 29249
+    },
+    "performance-acceptance": {
+      "files": 8,
+      "bytes": 22477
+    },
+    "performance-final": {
+      "files": 24,
+      "bytes": 69731
+    },
+    "performance-linux-release": {
+      "files": 24,
+      "bytes": 77999
+    },
+    "py38-environment": {
+      "files": 3,
+      "bytes": 1005
+    },
+    "report-safety": {
+      "files": 19,
+      "bytes": 89518
+    },
+    "scripts-and-summary": {
+      "files": 36,
+      "bytes": 122236
+    },
+    "speech-corpus": {
+      "files": 1,
+      "bytes": 316671
+    },
+    "upstreams-fcd18c6d5095": {
+      "files": 1,
+      "bytes": 1436
+    },
+    "windows-full-final": {
+      "files": 21,
+      "bytes": 848999
+    },
+    "windows-quick-delivery": {
+      "files": 7,
+      "bytes": 823805
+    },
+    "windows-quick-final": {
+      "files": 7,
+      "bytes": 823537
+    },
+    "windows-quick-release": {
+      "files": 7,
+      "bytes": 823674
+    },
+    "zgbuild-environment": {
+      "files": 3,
+      "bytes": 1010
+    }
+  },
+  "total_files": 411,
+  "total_bytes": 10836323
+}

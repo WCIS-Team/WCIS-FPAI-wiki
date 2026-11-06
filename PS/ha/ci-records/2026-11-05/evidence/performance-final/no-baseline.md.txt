@@ -1,0 +1,29 @@
+# HA4FPAI performance
+
+Result: **no-baseline**
+
+Measured candidate; no speedup claim without a baseline
+
+Source: `27b8a1f76cd576d24db478fc9bcab196f9d25caf`; dirty: `True`
+
+| Metric | Baseline | Candidate | Change | Gate |
+|---|---:|---:|---:|---|
+| split-12.chain_ms.p50 | — | 27.6981 | — | no baseline |
+| split-12.chain_ms.p95 | — | 38.8719 | — | no baseline |
+| split-12.first_request_ms.value | — | 24.5473 | — | no baseline |
+| split-12.split_ms.p50 | — | 0.0391 | — | no baseline |
+| split-12.split_ms.p95 | — | 0.0546 | — | no baseline |
+| split-20-16k.chain_ms.p50 | — | 24.9215 | — | no baseline |
+| split-20-16k.chain_ms.p95 | — | 28.2833 | — | no baseline |
+| split-20-16k.first_request_ms.value | — | 25.7250 | — | no baseline |
+| split-20-16k.split_ms.p50 | — | 0.0333 | — | no baseline |
+| split-20-16k.split_ms.p95 | — | 0.0512 | — | no baseline |
+| split-20.chain_ms.p50 | — | 62.0992 | — | no baseline |
+| split-20.chain_ms.p95 | — | 69.1758 | — | no baseline |
+| split-20.first_request_ms.value | — | 164.0128 | — | no baseline |
+| split-20.split_ms.p50 | — | 0.0353 | — | no baseline |
+| split-20.split_ms.p95 | — | 0.0477 | — | no baseline |
+
+Negative change means faster for latency; verify the metric's direction for other units.
+A gate fails only when the regression exceeds both its relative and absolute tolerances.
+All raw samples, conditions, source hashes and correctness checks remain in the JSON artifact.

@@ -1,0 +1,22 @@
+### fpga_bitstream
+cmd: ls -l /sys/class/fpga_manager/fpga0/ 2>/dev/null; echo '---firmware symlink:'; ls -l /sys/firmware/ 2>/dev/null; echo '---dmesg fpga:'; dmesg 2>/dev/null | grep -iE 'fpga|bitstream' | head -20
+---
+total 0
+lrwxrwxrwx 1 root root    0 Oct 20 07:49 device -> ../../../e0040000.devcfg
+--w------- 1 root root 4096 Oct 20 07:45 firmware
+-rw-r--r-- 1 root root 4096 Oct 20 07:49 flags
+-rw-r--r-- 1 root root 4096 Oct 20 07:49 key
+-r--r--r-- 1 root root 4096 Oct 20 07:45 name
+lrwxrwxrwx 1 root root    0 Oct 20 07:49 of_node -> ../../../../../../firmware/devicetree/base/amba-apu@0/devcfg@e0040000
+drwxr-xr-x 2 root root    0 Oct 20 07:49 power
+-r--r--r-- 1 root root 4096 Oct 20 07:45 state
+-r--r--r-- 1 root root 4096 Oct 20 07:45 status
+lrwxrwxrwx 1 root root    0 Mar  2  2023 subsystem -> ../../../../../../class/fpga_manager
+-rw-r--r-- 1 root root 4096 Mar  2  2023 uevent
+---firmware symlink:
+total 0
+drwxr-xr-x 3 root root     0 Mar  2  2023 devicetree
+-r-------- 1 root root 16384 Oct 20 07:49 fdt
+---dmesg fpga:
+[    1.589258] FPGA manager framework
+[    2.641883] fpga_manager fpga0: FMSH FMQL FPGA Manager registered

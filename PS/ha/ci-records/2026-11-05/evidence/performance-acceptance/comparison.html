@@ -1,0 +1,25 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>HA4FPAI performance</title><style>body{font:16px system-ui;max-width:1080px;margin:40px auto;padding:0 24px;color:#172033}pre{white-space:pre-wrap;background:#f1f5f9;padding:20px;border-radius:8px}.metric{margin:24px 0}.metric div{display:flex;align-items:center;gap:12px;margin:6px 0}i{display:inline-block;height:18px;border-radius:3px}h1{font-size:28px}</style><h1>HA4FPAI performance: regression</h1><p>Comparable measurements</p><div class="metric"><b>split-12.chain_ms.p50</b><div>baseline <i style="width:58.9%;background:#94a3b8"></i> 25.8658</div><div>candidate <i style="width:60.0%;background:#0f766e"></i> 26.3305</div></div><div class="metric"><b>split-12.chain_ms.p95</b><div>baseline <i style="width:50.2%;background:#94a3b8"></i> 33.1872</div><div>candidate <i style="width:60.0%;background:#b91c1c"></i> 39.6727</div></div><div class="metric"><b>split-12.first_request_ms.value</b><div>baseline <i style="width:54.4%;background:#94a3b8"></i> 28.3980</div><div>candidate <i style="width:60.0%;background:#0f766e"></i> 31.3111</div></div><div class="metric"><b>split-12.split_ms.p50</b><div>baseline <i style="width:42.3%;background:#94a3b8"></i> 0.0281</div><div>candidate <i style="width:60.0%;background:#0f766e"></i> 0.0399</div></div><div class="metric"><b>split-12.split_ms.p95</b><div>baseline <i style="width:60.0%;background:#94a3b8"></i> 0.1165</div><div>candidate <i style="width:24.8%;background:#0f766e"></i> 0.0481</div></div><div class="metric"><b>split-20.chain_ms.p50</b><div>baseline <i style="width:60.0%;background:#94a3b8"></i> 66.0334</div><div>candidate <i style="width:55.3%;background:#0f766e"></i> 60.9102</div></div><div class="metric"><b>split-20.chain_ms.p95</b><div>baseline <i style="width:60.0%;background:#94a3b8"></i> 71.4125</div><div>candidate <i style="width:59.4%;background:#0f766e"></i> 70.6865</div></div><div class="metric"><b>split-20.first_request_ms.value</b><div>baseline <i style="width:60.0%;background:#94a3b8"></i> 241.6471</div><div>candidate <i style="width:35.6%;background:#0f766e"></i> 143.4161</div></div><div class="metric"><b>split-20.split_ms.p50</b><div>baseline <i style="width:60.0%;background:#94a3b8"></i> 0.0356</div><div>candidate <i style="width:47.5%;background:#0f766e"></i> 0.0282</div></div><div class="metric"><b>split-20.split_ms.p95</b><div>baseline <i style="width:60.0%;background:#94a3b8"></i> 0.0843</div><div>candidate <i style="width:44.9%;background:#0f766e"></i> 0.0631</div></div><pre># HA4FPAI performance
+
+Result: **regression**
+
+Comparable measurements
+
+Source: `27b8a1f76cd576d24db478fc9bcab196f9d25caf`; dirty: `True`
+
+| Metric | Baseline | Candidate | Change | Gate |
+|---|---:|---:|---:|---|
+| split-12.chain_ms.p50 | 25.8658 | 26.3305 | +1.80% | observe |
+| split-12.chain_ms.p95 | 33.1872 | 39.6727 | +19.54% | REGRESSION |
+| split-12.first_request_ms.value | 28.3980 | 31.3111 | +10.26% | observe |
+| split-12.split_ms.p50 | 0.0281 | 0.0399 | +41.99% | observe |
+| split-12.split_ms.p95 | 0.1165 | 0.0481 | -58.71% | pass |
+| split-20.chain_ms.p50 | 66.0334 | 60.9102 | -7.76% | observe |
+| split-20.chain_ms.p95 | 71.4125 | 70.6865 | -1.02% | pass |
+| split-20.first_request_ms.value | 241.6471 | 143.4161 | -40.65% | observe |
+| split-20.split_ms.p50 | 0.0356 | 0.0282 | -20.79% | observe |
+| split-20.split_ms.p95 | 0.0843 | 0.0631 | -25.15% | pass |
+
+Negative change means faster for latency; verify the metric&#x27;s direction for other units.
+A gate fails only when the regression exceeds both its relative and absolute tolerances.
+All raw samples, conditions, source hashes and correctness checks remain in the JSON artifact.
+</pre></html>

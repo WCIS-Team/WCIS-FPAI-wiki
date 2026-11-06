@@ -1,0 +1,11 @@
+{
+  "command": [
+    "podman",
+    "cp",
+    "S:/work/WCIS/workenv/ha4fpai-ci/validation-environment.py",
+    "wcis-py38:/workenv/ha4fpai-ci/environment.py"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

@@ -1,0 +1,35 @@
+### net_sysfs
+cmd: for n in /sys/class/net/*; do echo "== $n"; for a in address speed duplex mtu operstate carrier type; do echo -n "  $a: "; cat $n/$a 2>/dev/null || echo na; done; done
+---
+== /sys/class/net/can0
+  address: 
+  speed: na
+  duplex: na
+  mtu: 16
+  operstate: down
+  carrier: na
+  type: 280
+== /sys/class/net/eth0
+  address: ae:59:f4:2d:3a:99
+  speed: 100
+  duplex: full
+  mtu: 1500
+  operstate: up
+  carrier: 1
+  type: 1
+== /sys/class/net/lo
+  address: 00:00:00:00:00:00
+  speed: na
+  duplex: na
+  mtu: 65536
+  operstate: unknown
+  carrier: 1
+  type: 772
+== /sys/class/net/sit0
+  address: 00:00:00:00
+  speed: na
+  duplex: na
+  mtu: 1480
+  operstate: down
+  carrier: na
+  type: 776

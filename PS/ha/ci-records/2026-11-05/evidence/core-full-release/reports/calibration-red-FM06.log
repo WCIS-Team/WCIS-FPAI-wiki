@@ -1,0 +1,22 @@
+test_FM06_http_content_and_compatibility (__main__.Contracts) ... [19:45:27] "GET /health HTTP/1.1" 200 -
+[19:45:27] "GET /components HTTP/1.1" 200 -
+[19:45:27] "GET /stats HTTP/1.1" 200 -
+[19:45:27] "POST /api/v1/chain HTTP/1.1" 200 -
+[19:45:27] "POST /api/v1/asr HTTP/1.1" 200 -
+[19:45:28] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+[19:45:28] "POST /tts HTTP/1.1" 400 -
+[19:45:28] "GET /unknown-ci-route HTTP/1.1" 200 -
+FAIL
+
+======================================================================
+FAIL: test_FM06_http_content_and_compatibility (__main__.Contracts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workenv/ha4fpai-ci/full/calibration-source-3962d9a9c0b0/ci/tests/test_contracts.py", line 183, in test_FM06_http_content_and_compatibility
+    opener.open(base + "/unknown-ci-route", timeout=5)
+AssertionError: HTTPError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.739s
+
+FAILED (failures=1)

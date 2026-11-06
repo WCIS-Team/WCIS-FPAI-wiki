@@ -1,0 +1,2954 @@
+{
+  "schema_version": 1,
+  "archived_at_utc": "2026-11-05T02:14:39.322192+00:00",
+  "source_root": "S:\\work\\WCIS\\workenv\\ha4fpai-ci",
+  "archive_root": "S:\\work\\WCIS\\wiki\\PS\\ha\\ci-records\\2026-11-05",
+  "code_publication": {
+    "repository": "takomitkm/HA4FPAI",
+    "commit": "c6702855eb229a6e5543db4812887c8628ccb739"
+  },
+  "workflow_run": "dwfrun-4010afc1-1814-4c3b-8884-f0bc75943e44",
+  "files": [
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\adapter-pin.json",
+      "archive": "evidence/adapter-pin.json",
+      "bytes": 375,
+      "sha256": "139b311a224ab67101209dcb196f983b696a2cde9e385d4ed3f15f77cc9867d4",
+      "source_mtime_utc": "2026-11-04T19:23:06.651720+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\delivery-audit.json",
+      "archive": "evidence/delivery-audit.json",
+      "bytes": 11059,
+      "sha256": "009a522d36ddc867962a38bfe6abf6a1a1421dbf253b3c15fe5197f82cde132a",
+      "source_mtime_utc": "2026-11-04T21:42:36.731007+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\delivery-facts-final.json",
+      "archive": "evidence/delivery-facts-final.json",
+      "bytes": 9242,
+      "sha256": "9d5177e32e6a26577ee70fcbb481304787e378ed4a06940f8e8f18b177b15b8d",
+      "source_mtime_utc": "2026-11-04T21:26:51.261451+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\delivery-facts.json",
+      "archive": "evidence/delivery-facts.json",
+      "bytes": 9245,
+      "sha256": "90311af0796c6373076387ab2f99ec3346a767f520ae965afa04d8dd1d1af4de",
+      "source_mtime_utc": "2026-11-04T19:56:48.335198+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\device-benchmark-final.json",
+      "archive": "evidence/device-benchmark-final.json",
+      "bytes": 5591,
+      "sha256": "55218959750a46dfac494c5f50567b3a9d2b80c795158bbd07a6379a8b00ee0b",
+      "source_mtime_utc": "2026-11-04T19:12:46.482458+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\device-health-final.json",
+      "archive": "evidence/device-health-final.json",
+      "bytes": 3302,
+      "sha256": "3cbd539c1e32ac1367adcc4c90e9df7d31aba772c7ca85da6bfc478d9f2b535d",
+      "source_mtime_utc": "2026-11-04T18:21:29.761383+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\device-health-initial.json",
+      "archive": "evidence/device-health-initial.json",
+      "bytes": 142,
+      "sha256": "1ebb0b8cc09691481825c52385d8ee68f310b06a24b664b96ce7a1cde6a99881",
+      "source_mtime_utc": "2026-11-04T17:27:56.262746+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\device-package-benchmark.json",
+      "archive": "evidence/device-package-benchmark.json",
+      "bytes": 5220,
+      "sha256": "c8da172feca2fb24e0f43cb245f80c0406add7e9adf28c5c018dd81e7be15d15",
+      "source_mtime_utc": "2026-11-04T18:58:24.608716+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\device-package-health.json",
+      "archive": "evidence/device-package-health.json",
+      "bytes": 3902,
+      "sha256": "9d4a673ec95775b783782b11fde3e21921570ad726c5595563f8bef0f6bdc0b2",
+      "source_mtime_utc": "2026-11-04T18:51:49.726394+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\evidence-facts.json",
+      "archive": "evidence/evidence-facts.json",
+      "bytes": 241,
+      "sha256": "d5087d9cf82e374de7b22164e982dfcdad9d7ee9bbacd0414f1368616074d4c6",
+      "source_mtime_utc": "2026-11-04T19:02:53.962545+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\host-benchmark.json",
+      "archive": "evidence/host-benchmark.json",
+      "bytes": 5305,
+      "sha256": "b11045dd17670a474d687cdefd0271eb3c1fbb76f86279f97a32450e1102bd0e",
+      "source_mtime_utc": "2026-11-04T18:05:24.138910+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\actionlint-corrected\\actionlint.json",
+      "archive": "evidence/actionlint-corrected/actionlint.json",
+      "bytes": 785,
+      "sha256": "9eaf330291b96251e36ebc12e55301bdf55d5ca28b20a452eff8189766e6a12b",
+      "source_mtime_utc": "2026-11-04T19:19:25.594638+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\actionlint-delivery\\actionlint.json",
+      "archive": "evidence/actionlint-delivery/actionlint.json",
+      "bytes": 908,
+      "sha256": "aadb3688e26cad233fb8f252aee5bf5d023a3b69e22082302ef1e33c85835fee",
+      "source_mtime_utc": "2026-11-04T19:51:06.037523+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\actionlint-final\\actionlint.json",
+      "archive": "evidence/actionlint-final/actionlint.json",
+      "bytes": 1342,
+      "sha256": "8c088fbc93ba5c09bf8622255df7aa86bf40bfcd1e7d5baffd099a4e57d716ac",
+      "source_mtime_utc": "2026-11-04T19:09:50.598540+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\actionlint-publish\\actionlint.json",
+      "archive": "evidence/actionlint-publish/actionlint.json",
+      "bytes": 908,
+      "sha256": "caaa178d215e6af8ba92e448e84353eeeec7071b735c69ae64fcda130d2fa611",
+      "source_mtime_utc": "2026-11-04T21:21:24.454448+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\actionlint-release\\actionlint.json",
+      "archive": "evidence/actionlint-release/actionlint.json",
+      "bytes": 171,
+      "sha256": "3e51f109e4e0b3bbb8fb0781123202305a3f20cfa9aa40a223c764f8a07e0921",
+      "source_mtime_utc": "2026-11-04T19:44:54.969816+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\adapters-release\\command-0.json",
+      "archive": "evidence/adapters-release/command-0.json",
+      "bytes": 649,
+      "sha256": "0b1933ad1cca8b4e8efb3a12bed6b05d1db904d177e1d389918f6e1df499ce5b",
+      "source_mtime_utc": "2026-11-04T19:46:06.587584+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\adapters-release\\command-1.json",
+      "archive": "evidence/adapters-release/command-1.json",
+      "bytes": 209,
+      "sha256": "0e3d2287db13a8fc6338dfbbe022d234049c0193f5acf5e6defd231f09116a24",
+      "source_mtime_utc": "2026-11-04T19:46:13.121452+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\adapters-release\\reports\\calibration-green-test_contracts.log",
+      "archive": "evidence/adapters-release/reports/calibration-green-test_contracts.log",
+      "bytes": 976,
+      "sha256": "eb9058caca42630a57474b4322fb290970e50c301135a87044fd324d14dc42d0",
+      "source_mtime_utc": "2026-11-04T19:46:02+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\adapters-release\\reports\\calibration-green-test_infrastructure.log",
+      "archive": "evidence/adapters-release/reports/calibration-green-test_infrastructure.log",
+      "bytes": 896,
+      "sha256": "7ee70a4598c06565bd561de0a11d43d87b444137ec67908c0930106b1aa3e028",
+      "source_mtime_utc": "2026-11-04T19:46:03+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\adapters-release\\reports\\calibration-red-FM01.log",
+      "archive": "evidence/adapters-release/reports/calibration-red-FM01.log",
+      "bytes": 733,
+      "sha256": "61b9513889f883639aaa9acd2b0f0f5d00f63f964947b1c5bd7642f2b937e5a0",
+      "source_mtime_utc": "2026-11-04T19:46:03+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\adapters-release\\reports\\calibration-red-FM02.log",
+      "archive": "evidence/adapters-release/reports/calibration-red-FM02.log",
+      "bytes": 3989,
+      "sha256": "46f76424bbe05b0146aa7c8bfe4d67c66294fb863f5fb76f4792a699a69c5ada",
+      "source_mtime_utc": "2026-11-04T19:46:03+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\adapters-release\\reports\\calibration-red-FM03.log",
+      "archive": "evidence/adapters-release/reports/calibration-red-FM03.log",
+      "bytes": 799,
+      "sha256": "860fae5e5735521ae8b29f568dc808576f6293db42848be6dfc3e4191fae9227",
+      "source_mtime_utc": "2026-11-04T19:46:03+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\adapters-release\\reports\\calibration-red-FM04.log",
+      "archive": "evidence/adapters-release/reports/calibration-red-FM04.log",
+      "bytes": 4197,
+      "sha256": "592b233714d315a4a766935c0d65653a58c6029648bed9b06b7a28ca0f396d8c",
+      "source_mtime_utc": "2026-11-04T19:46:05+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\adapters-release\\reports\\calibration-red-FM05.log",
+      "archive": "evidence/adapters-release/reports/calibration-red-FM05.log",
+      "bytes": 964,
+      "sha256": "f1f721d414aac8ec619c278c25499408dae1d747e85e62ac8c7c62b7acc23d94",
+      "source_mtime_utc": "2026-11-04T19:46:05+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\adapters-release\\reports\\calibration-red-FM06.log",
+      "archive": "evidence/adapters-release/reports/calibration-red-FM06.log",
+      "bytes": 1036,
+      "sha256": "b564133deefd5bcc60b5005d3451795e50cb43f5d3e0f515ef4d820461bc121a",
+      "source_mtime_utc": "2026-11-04T19:46:06+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\adapters-release\\reports\\calibration-red-FM07.log",
+      "archive": "evidence/adapters-release/reports/calibration-red-FM07.log",
+      "bytes": 1373,
+      "sha256": "0e899b46be4cfb4fd81ddc56f537235ad3e69ff0328a10b650d278867b4b17d1",
+      "source_mtime_utc": "2026-11-04T19:46:06+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\adapters-release\\reports\\calibration-red-FM08.log",
+      "archive": "evidence/adapters-release/reports/calibration-red-FM08.log",
+      "bytes": 745,
+      "sha256": "5a4f626b12d0f09c17c20b68842e8ec26ed65a158d869528cbad5712b92dd018",
+      "source_mtime_utc": "2026-11-04T19:46:06+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\adapters-release\\reports\\calibration.json",
+      "archive": "evidence/adapters-release/reports/calibration.json",
+      "bytes": 2020,
+      "sha256": "37da4a6ccfddf6b89dbf39dc2dd60ecfd2eaaeb5548c9e936875121e8c309f2a",
+      "source_mtime_utc": "2026-11-04T19:46:06+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\adapters-release\\reports\\calibration.log",
+      "archive": "evidence/adapters-release/reports/calibration.log",
+      "bytes": 200,
+      "sha256": "71bf42f2cf575c7b15bf37d224629920b2b8418385b5c2f68bdc98b3c1047e69",
+      "source_mtime_utc": "2026-11-04T19:46:06+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\adapters-release\\reports\\contracts.log",
+      "archive": "evidence/adapters-release/reports/contracts.log",
+      "bytes": 976,
+      "sha256": "92585215d26413940b72b9f49aa6e5a27bf0a0d2eb994526e755fd09434cfa1a",
+      "source_mtime_utc": "2026-11-04T19:45:40+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\adapters-release\\reports\\fsm.log",
+      "archive": "evidence/adapters-release/reports/fsm.log",
+      "bytes": 724,
+      "sha256": "95f4a7f0e5e5ada5f041308d0185ce5cbe0b136132a1c1a9a9af88f99088129c",
+      "source_mtime_utc": "2026-11-04T19:45:42+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\adapters-release\\reports\\host-soak.log",
+      "archive": "evidence/adapters-release/reports/host-soak.log",
+      "bytes": 53,
+      "sha256": "188289fe194ce53fc167bd0a9117b6a830d0f8230559ede4316aff4101bd70b4",
+      "source_mtime_utc": "2026-11-04T19:45:58+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\adapters-release\\reports\\infrastructure.log",
+      "archive": "evidence/adapters-release/reports/infrastructure.log",
+      "bytes": 896,
+      "sha256": "d22ae45947545618ea0424c397587e7ad5455ded03a9c59155574033e006cabb",
+      "source_mtime_utc": "2026-11-04T19:45:41+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\adapters-release\\reports\\junit.xml",
+      "archive": "evidence/adapters-release/reports/junit.xml",
+      "bytes": 1237,
+      "sha256": "96d765fc3f6f9b6680eb3a059276d96104791f8c28fbd64fa80939499123ea9e",
+      "source_mtime_utc": "2026-11-04T19:46:06+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\adapters-release\\reports\\npu-adapter.log",
+      "archive": "evidence/adapters-release/reports/npu-adapter.log",
+      "bytes": 794,
+      "sha256": "d9e5be9594854cfa4659a095aa372bdc48d7c3f283a4e7af5c9012230a2a9399",
+      "source_mtime_utc": "2026-11-04T19:45:52+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\adapters-release\\reports\\npu-lifecycle.log",
+      "archive": "evidence/adapters-release/reports/npu-lifecycle.log",
+      "bytes": 1794,
+      "sha256": "1ad992045b3e5160761acc76b84b3b934e4a1077559f1ee8d375d7a0c08c59c1",
+      "source_mtime_utc": "2026-11-04T19:45:50+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\adapters-release\\reports\\npu-q3-adapter.log",
+      "archive": "evidence/adapters-release/reports/npu-q3-adapter.log",
+      "bytes": 1407,
+      "sha256": "ec38fcae466238c743b2fbbbcda191013086f4369afe4f2502635a918a16f5c8",
+      "source_mtime_utc": "2026-11-04T19:45:57+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\adapters-release\\reports\\results.json",
+      "archive": "evidence/adapters-release/reports/results.json",
+      "bytes": 2681,
+      "sha256": "8a13a944d27837c1b4eb332ef24dd609b35ef10dd1a2a06e556db77093fe9f37",
+      "source_mtime_utc": "2026-11-04T19:46:06+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\adapters-release\\reports\\soak.json",
+      "archive": "evidence/adapters-release/reports/soak.json",
+      "bytes": 644,
+      "sha256": "5b2c8899af36749826957339d543dceedb24f3f75dda3b29e1f3a1efb9c0426a",
+      "source_mtime_utc": "2026-11-04T19:45:58+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\adapters-release\\reports\\split.log",
+      "archive": "evidence/adapters-release/reports/split.log",
+      "bytes": 804007,
+      "sha256": "ab28ff735178848b95204de10b7e2b577cbc6a761c35723d05a042d50e79aa3c",
+      "source_mtime_utc": "2026-11-04T19:45:41+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\adapters-release\\reports\\summary.md",
+      "archive": "evidence/adapters-release/reports/summary.md.txt",
+      "bytes": 553,
+      "sha256": "03293dbe66c78739a740899cbfb1808664caab65b23854f6b2d95620171cf916",
+      "source_mtime_utc": "2026-11-04T19:46:06+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\calibration-fixed\\calibration-green-test_contracts.log",
+      "archive": "evidence/calibration-fixed/calibration-green-test_contracts.log",
+      "bytes": 1297,
+      "sha256": "3d1bfa860e6041c75f03e842a0a5ecd938211b791d7c4ce9a1d06b44b5b8245d",
+      "source_mtime_utc": "2026-11-04T18:06:12.480114+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\calibration-fixed\\calibration-green-test_infrastructure.log",
+      "archive": "evidence/calibration-fixed/calibration-green-test_infrastructure.log",
+      "bytes": 975,
+      "sha256": "4917e3ba1694b1884fc9e40d00c029c9656f5c17a9a842a91935558dc976f396",
+      "source_mtime_utc": "2026-11-04T18:06:13.471607+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\calibration-fixed\\calibration-red-FM01.log",
+      "archive": "evidence/calibration-fixed/calibration-red-FM01.log",
+      "bytes": 903,
+      "sha256": "f6e6792c2c9b863c5ec1ce1247e7c244dd919c1bfc71255302366478b7f4d508",
+      "source_mtime_utc": "2026-11-04T18:06:13.730085+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\calibration-fixed\\calibration-red-FM02.log",
+      "archive": "evidence/calibration-fixed/calibration-red-FM02.log",
+      "bytes": 5110,
+      "sha256": "52f263dcde2d5c253f2ddaca099357a40b6387f7c91273eb19e71a784bedf68e",
+      "source_mtime_utc": "2026-11-04T18:06:14.054308+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\calibration-fixed\\calibration-red-FM03.log",
+      "archive": "evidence/calibration-fixed/calibration-red-FM03.log",
+      "bytes": 964,
+      "sha256": "844ebd8d48959136afb09db3585346db7cf00a043736d97a96122e8028f1f379",
+      "source_mtime_utc": "2026-11-04T18:06:14.435542+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\calibration-fixed\\calibration-red-FM04.log",
+      "archive": "evidence/calibration-fixed/calibration-red-FM04.log",
+      "bytes": 6523,
+      "sha256": "3a8010d94e3a459024d24ddbbb2476856d4be0a88046d573b13a75a46e496ce6",
+      "source_mtime_utc": "2026-11-04T18:06:15.588358+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\calibration-fixed\\calibration-red-FM05.log",
+      "archive": "evidence/calibration-fixed/calibration-red-FM05.log",
+      "bytes": 1233,
+      "sha256": "5b31d378f7cc7ed07f6f1a5541217293ec50e517e699094b06dbcf8d150acc38",
+      "source_mtime_utc": "2026-11-04T18:06:15.990455+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\calibration-fixed\\calibration-red-FM06.log",
+      "archive": "evidence/calibration-fixed/calibration-red-FM06.log",
+      "bytes": 1196,
+      "sha256": "ba17c89284fb7672e32a0cbe6460666b823099c6b5cf6c73d5373b4e4b85339d",
+      "source_mtime_utc": "2026-11-04T18:06:17.024024+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\calibration-fixed\\calibration-red-FM07.log",
+      "archive": "evidence/calibration-fixed/calibration-red-FM07.log",
+      "bytes": 1915,
+      "sha256": "af0754cd0b6d7ce436955eeaa945916df0fd1b4a6816976ae861a388a3f47040",
+      "source_mtime_utc": "2026-11-04T18:06:17.338018+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\calibration-fixed\\calibration-red-FM08.log",
+      "archive": "evidence/calibration-fixed/calibration-red-FM08.log",
+      "bytes": 937,
+      "sha256": "38bdbd86792415137fc6139555266538d941d9ef2c994cb22c61fa3ab7693ff8",
+      "source_mtime_utc": "2026-11-04T18:06:17.614423+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\calibration-fixed\\calibration.json",
+      "archive": "evidence/calibration-fixed/calibration.json",
+      "bytes": 2046,
+      "sha256": "ee2c5e5c68e369376c469a45afe1ec01cb2989326321d74d9ccdc043fc0ff071",
+      "source_mtime_utc": "2026-11-04T18:06:17.618503+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-delivery\\command-0.json",
+      "archive": "evidence/core-full-delivery/command-0.json",
+      "bytes": 566,
+      "sha256": "56acf0ad8ab6f99d8106036d96714aadbc430f8a7715fe2d0d3f179f8ca96594",
+      "source_mtime_utc": "2026-11-04T21:22:02.006660+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-delivery\\command-1.json",
+      "archive": "evidence/core-full-delivery/command-1.json",
+      "bytes": 209,
+      "sha256": "2c7e2673f5bd569265de1a4b585b562d09ecd4a2330ed839921f3b42d9de21a1",
+      "source_mtime_utc": "2026-11-04T21:22:10.419013+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-delivery\\reports\\calibration-green-test_contracts.log",
+      "archive": "evidence/core-full-delivery/reports/calibration-green-test_contracts.log",
+      "bytes": 976,
+      "sha256": "ba0887419716980b9d43a43768b900897b891217b53b1cbea1d19aee1038af7c",
+      "source_mtime_utc": "2026-11-04T21:21:56+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-delivery\\reports\\calibration-green-test_infrastructure.log",
+      "archive": "evidence/core-full-delivery/reports/calibration-green-test_infrastructure.log",
+      "bytes": 976,
+      "sha256": "a36b24f6f0a21b79e32bd812bc205b2ee24057b5191b27be20b7751b929b9798",
+      "source_mtime_utc": "2026-11-04T21:21:57+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-delivery\\reports\\calibration-red-FM01.log",
+      "archive": "evidence/core-full-delivery/reports/calibration-red-FM01.log",
+      "bytes": 729,
+      "sha256": "f235261a9dc56717c6619e3bab0051f97d8e8d77d9a51ef5527b8c617a98961f",
+      "source_mtime_utc": "2026-11-04T21:21:57+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-delivery\\reports\\calibration-red-FM02.log",
+      "archive": "evidence/core-full-delivery/reports/calibration-red-FM02.log",
+      "bytes": 3969,
+      "sha256": "76e64e307a848e042f3cc6dfd7e34525a6c60e729b8571f3fdfb4a0f305657f8",
+      "source_mtime_utc": "2026-11-04T21:21:57+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-delivery\\reports\\calibration-red-FM03.log",
+      "archive": "evidence/core-full-delivery/reports/calibration-red-FM03.log",
+      "bytes": 795,
+      "sha256": "59658a13375f07a470e19f81a8084d392953c91bb4801f5c2b3a89ff6ad355f2",
+      "source_mtime_utc": "2026-11-04T21:21:57+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-delivery\\reports\\calibration-red-FM04.log",
+      "archive": "evidence/core-full-delivery/reports/calibration-red-FM04.log",
+      "bytes": 4169,
+      "sha256": "86e2260adddc7c4ed414ab75c382a9f3ac2ac7476f3d44aed63ba21bd6a974fc",
+      "source_mtime_utc": "2026-11-04T21:22:00+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-delivery\\reports\\calibration-red-FM05.log",
+      "archive": "evidence/core-full-delivery/reports/calibration-red-FM05.log",
+      "bytes": 956,
+      "sha256": "620122a8f3e8406f3c31821fabcfbb59ecfd553f024da732604de8a96aa0aada",
+      "source_mtime_utc": "2026-11-04T21:22:00+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-delivery\\reports\\calibration-red-FM06.log",
+      "archive": "evidence/core-full-delivery/reports/calibration-red-FM06.log",
+      "bytes": 1032,
+      "sha256": "79f2c46eb042d7f07af47642503f60f70d15ac93b90920f22af41e4884a47933",
+      "source_mtime_utc": "2026-11-04T21:22:01+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-delivery\\reports\\calibration-red-FM07.log",
+      "archive": "evidence/core-full-delivery/reports/calibration-red-FM07.log",
+      "bytes": 1361,
+      "sha256": "bf8acd9ce9d2b22c596cf03d29e0672e63dec856f0420dc16b57ce790e81c15d",
+      "source_mtime_utc": "2026-11-04T21:22:02+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-delivery\\reports\\calibration-red-FM08.log",
+      "archive": "evidence/core-full-delivery/reports/calibration-red-FM08.log",
+      "bytes": 741,
+      "sha256": "40c066d07ce82c8e1b6835ef0ead7eaaa7edaed0d16ff78cebdea0cdb34c2c7b",
+      "source_mtime_utc": "2026-11-04T21:22:02+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-delivery\\reports\\calibration.json",
+      "archive": "evidence/core-full-delivery/reports/calibration.json",
+      "bytes": 2016,
+      "sha256": "0716e7451da9cf7beafcac0db241a3af659130e3dac7f574f1b4c6cc14e10fba",
+      "source_mtime_utc": "2026-11-04T21:22:02+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-delivery\\reports\\calibration.log",
+      "archive": "evidence/core-full-delivery/reports/calibration.log",
+      "bytes": 200,
+      "sha256": "71bf42f2cf575c7b15bf37d224629920b2b8418385b5c2f68bdc98b3c1047e69",
+      "source_mtime_utc": "2026-11-04T21:22:02+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-delivery\\reports\\contracts.log",
+      "archive": "evidence/core-full-delivery/reports/contracts.log",
+      "bytes": 976,
+      "sha256": "a68a650c93ed982287610b47e2a953e7e002c67f34ac1963fa0ef7db60689c5f",
+      "source_mtime_utc": "2026-11-04T21:21:39+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-delivery\\reports\\fsm.log",
+      "archive": "evidence/core-full-delivery/reports/fsm.log",
+      "bytes": 724,
+      "sha256": "95f4a7f0e5e5ada5f041308d0185ce5cbe0b136132a1c1a9a9af88f99088129c",
+      "source_mtime_utc": "2026-11-04T21:21:41+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-delivery\\reports\\host-soak.log",
+      "archive": "evidence/core-full-delivery/reports/host-soak.log",
+      "bytes": 49,
+      "sha256": "5ea16f4da8c6fda6153aa3a2becbb38ac5c393da95542a7f2a7fa1d36f86d411",
+      "source_mtime_utc": "2026-11-04T21:21:50+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-delivery\\reports\\infrastructure.log",
+      "archive": "evidence/core-full-delivery/reports/infrastructure.log",
+      "bytes": 976,
+      "sha256": "e1500d3d6f61b38a43059bbb49b59410a4336bef04f9937d11d9de61537f71cc",
+      "source_mtime_utc": "2026-11-04T21:21:40+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-delivery\\reports\\junit.xml",
+      "archive": "evidence/core-full-delivery/reports/junit.xml",
+      "bytes": 1001,
+      "sha256": "f7c7cfdc9fc49ca138f5bdb8886043ee4da90697abe31264ead76ea1f2c28cf4",
+      "source_mtime_utc": "2026-11-04T21:22:02+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-delivery\\reports\\npu-lifecycle.log",
+      "archive": "evidence/core-full-delivery/reports/npu-lifecycle.log",
+      "bytes": 1854,
+      "sha256": "c3e70488e19dc2ce3109d815b58ea899020728f9410e1960059dc68f1e44db75",
+      "source_mtime_utc": "2026-11-04T21:21:49+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-delivery\\reports\\results.json",
+      "archive": "evidence/core-full-delivery/reports/results.json",
+      "bytes": 1938,
+      "sha256": "5f6207dc8cc78eb4582f91d237af2af6e7d7a9299fca5e7602d5214434258d61",
+      "source_mtime_utc": "2026-11-04T21:22:02+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-delivery\\reports\\soak.json",
+      "archive": "evidence/core-full-delivery/reports/soak.json",
+      "bytes": 644,
+      "sha256": "2bdfeb34e5687256243eb696600a2d34df5df0a122028aeb4d18e328167dc2d0",
+      "source_mtime_utc": "2026-11-04T21:21:50+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-delivery\\reports\\split.log",
+      "archive": "evidence/core-full-delivery/reports/split.log",
+      "bytes": 804007,
+      "sha256": "ab28ff735178848b95204de10b7e2b577cbc6a761c35723d05a042d50e79aa3c",
+      "source_mtime_utc": "2026-11-04T21:21:41+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-delivery\\reports\\summary.md",
+      "archive": "evidence/core-full-delivery/reports/summary.md.txt",
+      "bytes": 444,
+      "sha256": "b90786497d189b07459e5e76fad6fc0c4263d7659dfdeddfb47a025020dbace2",
+      "source_mtime_utc": "2026-11-04T21:22:02+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-release\\command-0.json",
+      "archive": "evidence/core-full-release/command-0.json",
+      "bytes": 566,
+      "sha256": "778e47df07c5d38761ee6b9b671704965690ec160f6cce2af02e23efba8655cb",
+      "source_mtime_utc": "2026-11-04T19:45:29.338239+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-release\\command-1.json",
+      "archive": "evidence/core-full-release/command-1.json",
+      "bytes": 208,
+      "sha256": "966574d935babed20a549ef4a3d688e60e9e2347ea3fcbe2f7dcf44e2aca44c2",
+      "source_mtime_utc": "2026-11-04T19:45:34.662300+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-release\\reports\\calibration-green-test_contracts.log",
+      "archive": "evidence/core-full-release/reports/calibration-green-test_contracts.log",
+      "bytes": 976,
+      "sha256": "3a0cb896df2c4da361fc3e53c05bb106ff8f91026ae57bee6ba5f869aad75015",
+      "source_mtime_utc": "2026-11-04T19:45:23+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-release\\reports\\calibration-green-test_infrastructure.log",
+      "archive": "evidence/core-full-release/reports/calibration-green-test_infrastructure.log",
+      "bytes": 896,
+      "sha256": "90309cb75c81452ac545eb733d0ec98455b5ab16efc8e812c01a0c2382210cb6",
+      "source_mtime_utc": "2026-11-04T19:45:24+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-release\\reports\\calibration-red-FM01.log",
+      "archive": "evidence/core-full-release/reports/calibration-red-FM01.log",
+      "bytes": 729,
+      "sha256": "b32c37818b088fb59d11c509de2a87c48effbae71048a5671f8449eeb57d5c86",
+      "source_mtime_utc": "2026-11-04T19:45:24+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-release\\reports\\calibration-red-FM02.log",
+      "archive": "evidence/core-full-release/reports/calibration-red-FM02.log",
+      "bytes": 3969,
+      "sha256": "f917ace5f15a8867406a0ce51b8c645b789ad1c276a4a22f7331fd15388ab515",
+      "source_mtime_utc": "2026-11-04T19:45:24+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-release\\reports\\calibration-red-FM03.log",
+      "archive": "evidence/core-full-release/reports/calibration-red-FM03.log",
+      "bytes": 794,
+      "sha256": "b936104381b88e95f1c8479cebfab1559f32d409e8a67a45b92510a3aee43edb",
+      "source_mtime_utc": "2026-11-04T19:45:25+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-release\\reports\\calibration-red-FM04.log",
+      "archive": "evidence/core-full-release/reports/calibration-red-FM04.log",
+      "bytes": 4169,
+      "sha256": "82e5498626ed4ad56a2c273a2c2ccb09c16bba5bd8df559bac5959e8d3384ff7",
+      "source_mtime_utc": "2026-11-04T19:45:27+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-release\\reports\\calibration-red-FM05.log",
+      "archive": "evidence/core-full-release/reports/calibration-red-FM05.log",
+      "bytes": 956,
+      "sha256": "4a5c9d24ef6b8377159e9bb1987b449bcf5df4b243ce7410b82935f6d60955c3",
+      "source_mtime_utc": "2026-11-04T19:45:28+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-release\\reports\\calibration-red-FM06.log",
+      "archive": "evidence/core-full-release/reports/calibration-red-FM06.log",
+      "bytes": 1032,
+      "sha256": "a0b0d7fbdee36efaa10d33f355fdd91083bffea5588c1bcaa4705c96452443e9",
+      "source_mtime_utc": "2026-11-04T19:45:29+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-release\\reports\\calibration-red-FM07.log",
+      "archive": "evidence/core-full-release/reports/calibration-red-FM07.log",
+      "bytes": 1361,
+      "sha256": "0e142e42895cb84cefc65eb279f190109f00af58208cd301bfc5620c83bafa24",
+      "source_mtime_utc": "2026-11-04T19:45:29+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-release\\reports\\calibration-red-FM08.log",
+      "archive": "evidence/core-full-release/reports/calibration-red-FM08.log",
+      "bytes": 741,
+      "sha256": "4466737a8ac1c38b5aff6be0a976c2b4f2a123f66edacd51d9d0640e7b64af6e",
+      "source_mtime_utc": "2026-11-04T19:45:29+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-release\\reports\\calibration.json",
+      "archive": "evidence/core-full-release/reports/calibration.json",
+      "bytes": 2016,
+      "sha256": "e994b724d23b657a6cd5e7075643db5594cb3a1f1f01c84074c28c9a53848f66",
+      "source_mtime_utc": "2026-11-04T19:45:29+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-release\\reports\\calibration.log",
+      "archive": "evidence/core-full-release/reports/calibration.log",
+      "bytes": 200,
+      "sha256": "71bf42f2cf575c7b15bf37d224629920b2b8418385b5c2f68bdc98b3c1047e69",
+      "source_mtime_utc": "2026-11-04T19:45:29+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-release\\reports\\contracts.log",
+      "archive": "evidence/core-full-release/reports/contracts.log",
+      "bytes": 976,
+      "sha256": "a9db0c89288ccb252405a9bfbd9dcace85a3619e1164b7c5f6e02c99f478617f",
+      "source_mtime_utc": "2026-11-04T19:45:06+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-release\\reports\\fsm.log",
+      "archive": "evidence/core-full-release/reports/fsm.log",
+      "bytes": 724,
+      "sha256": "95f4a7f0e5e5ada5f041308d0185ce5cbe0b136132a1c1a9a9af88f99088129c",
+      "source_mtime_utc": "2026-11-04T19:45:09+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-release\\reports\\host-soak.log",
+      "archive": "evidence/core-full-release/reports/host-soak.log",
+      "bytes": 49,
+      "sha256": "5ea16f4da8c6fda6153aa3a2becbb38ac5c393da95542a7f2a7fa1d36f86d411",
+      "source_mtime_utc": "2026-11-04T19:45:17+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-release\\reports\\infrastructure.log",
+      "archive": "evidence/core-full-release/reports/infrastructure.log",
+      "bytes": 896,
+      "sha256": "1e40a194e00d11505884907de651eeb30e6b160522bdb4c097085b44752f1364",
+      "source_mtime_utc": "2026-11-04T19:45:08+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-release\\reports\\junit.xml",
+      "archive": "evidence/core-full-release/reports/junit.xml",
+      "bytes": 1001,
+      "sha256": "cabe9d46a6370fc3fe5f6e3af47954a5ea9100effd6b32ac4b0c3cfc14534de2",
+      "source_mtime_utc": "2026-11-04T19:45:29+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-release\\reports\\npu-lifecycle.log",
+      "archive": "evidence/core-full-release/reports/npu-lifecycle.log",
+      "bytes": 1794,
+      "sha256": "1ad992045b3e5160761acc76b84b3b934e4a1077559f1ee8d375d7a0c08c59c1",
+      "source_mtime_utc": "2026-11-04T19:45:17+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-release\\reports\\results.json",
+      "archive": "evidence/core-full-release/reports/results.json",
+      "bytes": 1936,
+      "sha256": "25f973bcbe1c9a75a68ac3b9a216ff1361eb1651e84914fa5f5cc87ac7fb228a",
+      "source_mtime_utc": "2026-11-04T19:45:29+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-release\\reports\\soak.json",
+      "archive": "evidence/core-full-release/reports/soak.json",
+      "bytes": 644,
+      "sha256": "c11ac5c7fc6c9bb8c49d5c7b5a64a6f1826659142c1a8478c3e181cb93603fd9",
+      "source_mtime_utc": "2026-11-04T19:45:17+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-release\\reports\\split.log",
+      "archive": "evidence/core-full-release/reports/split.log",
+      "bytes": 804007,
+      "sha256": "ab28ff735178848b95204de10b7e2b577cbc6a761c35723d05a042d50e79aa3c",
+      "source_mtime_utc": "2026-11-04T19:45:08+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\core-full-release\\reports\\summary.md",
+      "archive": "evidence/core-full-release/reports/summary.md.txt",
+      "bytes": 444,
+      "sha256": "627645658a58c6288e73467c0eb7b1c14ca35e9e82e3b45efc5e868ad94378a6",
+      "source_mtime_utc": "2026-11-04T19:45:29+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\device-delivery\\benchmark-report.html",
+      "archive": "evidence/device-delivery/benchmark-report.html",
+      "bytes": 1965,
+      "sha256": "c14473ff0c6c265f654ee563fb735e7f21e8033b66beb3428ff62d06e2154752",
+      "source_mtime_utc": "2026-11-04T21:22:47.724148+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\device-delivery\\benchmark-report.json",
+      "archive": "evidence/device-delivery/benchmark-report.json",
+      "bytes": 921,
+      "sha256": "862183c829c624e2639227378158ffdcd151d164b8234f3a20684be88d37aa0f",
+      "source_mtime_utc": "2026-11-04T21:22:47.718037+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\device-delivery\\benchmark-report.md",
+      "archive": "evidence/device-delivery/benchmark-report.md.txt",
+      "bytes": 1364,
+      "sha256": "c509e4b0f3f08b569bb9ad05148fe46a045c3ca35d8e1f97987c9ed93d5be4db",
+      "source_mtime_utc": "2026-11-04T21:22:47.724148+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\device-delivery\\benchmark.json",
+      "archive": "evidence/device-delivery/benchmark.json",
+      "bytes": 6397,
+      "sha256": "4e57859d3f2a38f467c41240b34a3a31d686ad6e8e7d18b8cf32940421a9f013",
+      "source_mtime_utc": "2026-11-04T21:22:47.496809+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\device-delivery\\short-soak-manifest.json",
+      "archive": "evidence/device-delivery/short-soak-manifest.json",
+      "bytes": 2102,
+      "sha256": "7231cbae5137e85340c40fa8cd5125368d127286cf5579b636d8b6804ca5feaa",
+      "source_mtime_utc": "2026-11-04T21:22:24.203728+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\device-delivery\\short-soak.json",
+      "archive": "evidence/device-delivery/short-soak.json",
+      "bytes": 6192,
+      "sha256": "762c43ec7a63d7d66e1c6c829dedcd74902bb2933dc4ca20f98400dcc335c80c",
+      "source_mtime_utc": "2026-11-04T21:23:02.845940+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\device-delivery\\soak-report.html",
+      "archive": "evidence/device-delivery/soak-report.html",
+      "bytes": 1965,
+      "sha256": "8b8f04c6db26a9d75e25a7cd9b19a704daa8b69ece630afa8899bc64f82ab165",
+      "source_mtime_utc": "2026-11-04T21:23:03.024192+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\device-delivery\\soak-report.json",
+      "archive": "evidence/device-delivery/soak-report.json",
+      "bytes": 916,
+      "sha256": "e44be111818f4c6eae8246d4d3b9b309dacd0751dd19a7408b909804662c7336",
+      "source_mtime_utc": "2026-11-04T21:23:02.998262+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\device-delivery\\soak-report.md",
+      "archive": "evidence/device-delivery/soak-report.md.txt",
+      "bytes": 1364,
+      "sha256": "c6ded29ea218ba4d0097a1036e5fafc80986c8483f5fce5acabe08e4eddcba24",
+      "source_mtime_utc": "2026-11-04T21:23:03.024192+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\device-release\\benchmark-report.html",
+      "archive": "evidence/device-release/benchmark-report.html",
+      "bytes": 1965,
+      "sha256": "41d1a7e78f49acd7dd183e95d5c875595923e02967763ece08571957102cd140",
+      "source_mtime_utc": "2026-11-04T19:47:30.835577+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\device-release\\benchmark-report.json",
+      "archive": "evidence/device-release/benchmark-report.json",
+      "bytes": 921,
+      "sha256": "fb20f78289d8ef943496536a2e8a960f3765abb7d1840b55ed8dcfcb7b4ba659",
+      "source_mtime_utc": "2026-11-04T19:47:30.829068+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\device-release\\benchmark-report.md",
+      "archive": "evidence/device-release/benchmark-report.md.txt",
+      "bytes": 1364,
+      "sha256": "703127a86db17889b208f65e365911ffef9083d68c17a8f55428f8fa26a8e212",
+      "source_mtime_utc": "2026-11-04T19:47:30.833577+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\device-release\\benchmark.json",
+      "archive": "evidence/device-release/benchmark.json",
+      "bytes": 6402,
+      "sha256": "4add5637cf8691e4c3acb45670b3bb57f75f0c744f4b6b364865d67d0ff4d893",
+      "source_mtime_utc": "2026-11-04T19:47:30.688677+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\device-release\\short-soak-manifest.json",
+      "archive": "evidence/device-release/short-soak-manifest.json",
+      "bytes": 2102,
+      "sha256": "7231cbae5137e85340c40fa8cd5125368d127286cf5579b636d8b6804ca5feaa",
+      "source_mtime_utc": "2026-11-04T19:47:02.711535+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\device-release\\short-soak.json",
+      "archive": "evidence/device-release/short-soak.json",
+      "bytes": 6195,
+      "sha256": "e14d948aee792f5cc4cdaf1a3724dfbc4b28960b1b0d9430a1aa4810878e4fc9",
+      "source_mtime_utc": "2026-11-04T19:47:49.184630+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\device-release\\soak-report.html",
+      "archive": "evidence/device-release/soak-report.html",
+      "bytes": 1965,
+      "sha256": "d0d22ef7a0ffa266ccc7948f15f088bbff886a7cd94d5810c2d04e9cbbcb25ad",
+      "source_mtime_utc": "2026-11-04T19:47:49.313159+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\device-release\\soak-report.json",
+      "archive": "evidence/device-release/soak-report.json",
+      "bytes": 916,
+      "sha256": "969ff702de7a44ee5a01972f1e640713065d2959c449dfe8cce29265e92bcbc1",
+      "source_mtime_utc": "2026-11-04T19:47:49.307678+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\device-release\\soak-report.md",
+      "archive": "evidence/device-release/soak-report.md.txt",
+      "bytes": 1364,
+      "sha256": "196a8c59f5eae1778800ed3cba12923516f94342b73e2aab324a8c437a10e65b",
+      "source_mtime_utc": "2026-11-04T19:47:49.310991+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\existing-container-inventory\\command-0.json",
+      "archive": "evidence/existing-container-inventory/command-0.json",
+      "bytes": 540,
+      "sha256": "d9d20ee8d5d517fcb4a197eb0acabe8d0a5b92abe46b9257fd58aa077b77a263",
+      "source_mtime_utc": "2026-11-04T18:15:45.050991+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\existing-container-inventory-final\\command-0.json",
+      "archive": "evidence/existing-container-inventory-final/command-0.json",
+      "bytes": 763,
+      "sha256": "de0caef40dc1d6967c40d8fc129795dde400dd49100f48f810c52627a691c250",
+      "source_mtime_utc": "2026-11-04T18:19:20.195093+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\existing-linux-inventory\\command-0.json",
+      "archive": "evidence/existing-linux-inventory/command-0.json",
+      "bytes": 714,
+      "sha256": "24dc9ed70128b585d8e5e2dac7f37ff15d24f4589dc652a13cf8c3c275a4fe2c",
+      "source_mtime_utc": "2026-11-04T18:15:24.268167+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\existing-linux-inventory\\command-1.json",
+      "archive": "evidence/existing-linux-inventory/command-1.json",
+      "bytes": 364,
+      "sha256": "77996b479555600b1d6f8c5286d2efb36a15268b87cd9278d002146aa26e5d91",
+      "source_mtime_utc": "2026-11-04T18:15:26.013004+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\host-full\\calibration-green-test_contracts.log",
+      "archive": "evidence/host-full/calibration-green-test_contracts.log",
+      "bytes": 703,
+      "sha256": "da6ed8496bd207d86ba1fb7ef53719274b41f3d8b8daeacd8ff96168d48d741f",
+      "source_mtime_utc": "2026-11-04T18:05:20.228041+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\host-full\\calibration.json",
+      "archive": "evidence/host-full/calibration.json",
+      "bytes": 137,
+      "sha256": "3337de858ea02b22c6a37d8671094dc69be97a1d2fe9471fa909fc7b5ba365b2",
+      "source_mtime_utc": "2026-11-04T18:05:20.229614+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\host-full\\calibration.log",
+      "archive": "evidence/host-full/calibration.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_mtime_utc": "2026-11-04T18:05:19.336672+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\host-full\\contracts.log",
+      "archive": "evidence/host-full/contracts.log",
+      "bytes": 1317,
+      "sha256": "d6e333ed84650d6a02a594eb00eafa1e348b81659906ab31aca2d63f56d884ff",
+      "source_mtime_utc": "2026-11-04T18:05:17.218243+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\host-full\\fsm.log",
+      "archive": "evidence/host-full/fsm.log",
+      "bytes": 746,
+      "sha256": "c0418dbb3a9410b5662afd917ec5c236365a94b602d226c8782e453624054b04",
+      "source_mtime_utc": "2026-11-04T18:05:18.926664+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\host-full\\host-soak.log",
+      "archive": "evidence/host-full/host-soak.log",
+      "bytes": 67,
+      "sha256": "50de00acc240142ca1499d998539307395f4881185ce5183eec7ee73f81e59eb",
+      "source_mtime_utc": "2026-11-04T18:05:19.257442+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\host-full\\infrastructure.log",
+      "archive": "evidence/host-full/infrastructure.log",
+      "bytes": 987,
+      "sha256": "7ab27abdda21fd3101dfe1415ea0af0bc5182377feffbe6c25e3ce59ee5882e8",
+      "source_mtime_utc": "2026-11-04T18:05:18.443287+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\host-full\\junit.xml",
+      "archive": "evidence/host-full/junit.xml",
+      "bytes": 1378,
+      "sha256": "a6b8bc6d98e718c0b6407df6b43b4de315d25b8e3f9ae2249c3f482d72e55bf6",
+      "source_mtime_utc": "2026-11-04T18:05:21.223734+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\host-full\\results.json",
+      "archive": "evidence/host-full/results.json",
+      "bytes": 2076,
+      "sha256": "e4cb255b220074901bf3641b3dcfb830f57f5702167622879eec4cf6534f4ce7",
+      "source_mtime_utc": "2026-11-04T18:05:21.221158+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\host-full\\soak.json",
+      "archive": "evidence/host-full/soak.json",
+      "bytes": 648,
+      "sha256": "bec17f1a4ccbd66613d109f585fdb96e4fb3a5e2cfb92ecc202be7c47eff15c0",
+      "source_mtime_utc": "2026-11-04T18:05:19.196959+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\host-full\\split.log",
+      "archive": "evidence/host-full/split.log",
+      "bytes": 817917,
+      "sha256": "99834004c531fefa8cfaa85b037683ce1cc7c152a09eebc901ec26f853ca7639",
+      "source_mtime_utc": "2026-11-04T18:05:18.826967+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\host-full\\summary.md",
+      "archive": "evidence/host-full/summary.md.txt",
+      "bytes": 565,
+      "sha256": "947c85111fc65891a9356e648a56099c436756dab91d53cd15d5f3915e3b4c05",
+      "source_mtime_utc": "2026-11-04T18:05:21.226644+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\lifecycle-final\\lifecycle.log",
+      "archive": "evidence/lifecycle-final/lifecycle.log",
+      "bytes": 1854,
+      "sha256": "c3e70488e19dc2ce3109d815b58ea899020728f9410e1960059dc68f1e44db75",
+      "source_mtime_utc": "2026-11-04T20:08:55.652618+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\lifecycle-final\\residual-calibration.json",
+      "archive": "evidence/lifecycle-final/residual-calibration.json",
+      "bytes": 5447,
+      "sha256": "30db17390e89387777a3b040b9283e9f54ec665c319dbb8872efbd24727833bb",
+      "source_mtime_utc": "2026-11-04T20:10:54.231222+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\lifecycle-final\\result.json",
+      "archive": "evidence/lifecycle-final/result.json",
+      "bytes": 2243,
+      "sha256": "d1e4767f800af0d90e8fded78381dc16d6436859fdfa91d6a7c85794ba2ef012",
+      "source_mtime_utc": "2026-11-04T20:08:55.649496+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-final\\command-0.json",
+      "archive": "evidence/linux-final/command-0.json",
+      "bytes": 633,
+      "sha256": "b3455e75e6bd3219baf6c4bf5628b4dd8cea416c83409edfc6feb7a29711f874",
+      "source_mtime_utc": "2026-11-04T19:10:20.515179+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-final\\command-1.json",
+      "archive": "evidence/linux-final/command-1.json",
+      "bytes": 200,
+      "sha256": "de19e96bce24a735d65ba183df3834210176afcc41886d987758abdc11e0263a",
+      "source_mtime_utc": "2026-11-04T19:10:36.680868+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-final\\reports\\calibration-green-test_contracts.log",
+      "archive": "evidence/linux-final/reports/calibration-green-test_contracts.log",
+      "bytes": 976,
+      "sha256": "696e67a440987d74de24c5dcbfe03de76e3ef088246cad990346dbd3faba3e00",
+      "source_mtime_utc": "2026-11-04T19:10:16+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-final\\reports\\calibration-green-test_infrastructure.log",
+      "archive": "evidence/linux-final/reports/calibration-green-test_infrastructure.log",
+      "bytes": 823,
+      "sha256": "a5d985c54fff738ce327fe234315c86080d4a5741680f1f3d3b2169c3b106684",
+      "source_mtime_utc": "2026-11-04T19:10:17+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-final\\reports\\calibration-red-FM01.log",
+      "archive": "evidence/linux-final/reports/calibration-red-FM01.log",
+      "bytes": 729,
+      "sha256": "3ffb1ba8731fc194f928aaca52f33966c0029222a8695425c2ce036f8d25dbe3",
+      "source_mtime_utc": "2026-11-04T19:10:17+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-final\\reports\\calibration-red-FM02.log",
+      "archive": "evidence/linux-final/reports/calibration-red-FM02.log",
+      "bytes": 3969,
+      "sha256": "3cf4b53a5448790cf7929304f8cdd30d4a3076fba3715940895bbe6a434b429a",
+      "source_mtime_utc": "2026-11-04T19:10:17+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-final\\reports\\calibration-red-FM03.log",
+      "archive": "evidence/linux-final/reports/calibration-red-FM03.log",
+      "bytes": 795,
+      "sha256": "d2ef4fb7ee3a9611bafb01cadef703661eee6b5293a5a2c810f8fb8b4acfd665",
+      "source_mtime_utc": "2026-11-04T19:10:18+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-final\\reports\\calibration-red-FM04.log",
+      "archive": "evidence/linux-final/reports/calibration-red-FM04.log",
+      "bytes": 4169,
+      "sha256": "e074c5b57c3e1cb89da6fa7561f75f1ed3f891ce42eb418ee639b559a85e2d83",
+      "source_mtime_utc": "2026-11-04T19:10:19+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-final\\reports\\calibration-red-FM05.log",
+      "archive": "evidence/linux-final/reports/calibration-red-FM05.log",
+      "bytes": 956,
+      "sha256": "3c4960c92fd4016e488a5700b8a7ac1a0ebeaf6364cd77c49b14bba723dd809d",
+      "source_mtime_utc": "2026-11-04T19:10:19+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-final\\reports\\calibration-red-FM06.log",
+      "archive": "evidence/linux-final/reports/calibration-red-FM06.log",
+      "bytes": 1032,
+      "sha256": "3a7ff21a2172ef37b10ab357f683a4d7325b0ebe07d2af5cd15347deb455a4bb",
+      "source_mtime_utc": "2026-11-04T19:10:20+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-final\\reports\\calibration-red-FM07.log",
+      "archive": "evidence/linux-final/reports/calibration-red-FM07.log",
+      "bytes": 1361,
+      "sha256": "499c405945df692b944686969d6828d566a236d7f28ab3ab520beb84d2c13c10",
+      "source_mtime_utc": "2026-11-04T19:10:20+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-final\\reports\\calibration-red-FM08.log",
+      "archive": "evidence/linux-final/reports/calibration-red-FM08.log",
+      "bytes": 741,
+      "sha256": "813e9a5137e5c80aa4c02974cb7f5453aa8872dec9d726ed2e8fb7b6c8434d1a",
+      "source_mtime_utc": "2026-11-04T19:10:20+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-final\\reports\\calibration.json",
+      "archive": "evidence/linux-final/reports/calibration.json",
+      "bytes": 2015,
+      "sha256": "f5b677190cf940b1163478b4327020b96da018fb0d2f844aeffd045fab738b54",
+      "source_mtime_utc": "2026-11-04T19:10:20+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-final\\reports\\calibration.log",
+      "archive": "evidence/linux-final/reports/calibration.log",
+      "bytes": 200,
+      "sha256": "71bf42f2cf575c7b15bf37d224629920b2b8418385b5c2f68bdc98b3c1047e69",
+      "source_mtime_utc": "2026-11-04T19:10:20+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-final\\reports\\contracts.log",
+      "archive": "evidence/linux-final/reports/contracts.log",
+      "bytes": 976,
+      "sha256": "ce130845dd0c2d52272f8ac0b9a5f21e0ffdd64dfb86aa47be3d6f5f4920bbb2",
+      "source_mtime_utc": "2026-11-04T19:09:57+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-final\\reports\\fsm.log",
+      "archive": "evidence/linux-final/reports/fsm.log",
+      "bytes": 724,
+      "sha256": "95f4a7f0e5e5ada5f041308d0185ce5cbe0b136132a1c1a9a9af88f99088129c",
+      "source_mtime_utc": "2026-11-04T19:09:58+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-final\\reports\\host-soak.log",
+      "archive": "evidence/linux-final/reports/host-soak.log",
+      "bytes": 49,
+      "sha256": "5ea16f4da8c6fda6153aa3a2becbb38ac5c393da95542a7f2a7fa1d36f86d411",
+      "source_mtime_utc": "2026-11-04T19:10:14+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-final\\reports\\infrastructure.log",
+      "archive": "evidence/linux-final/reports/infrastructure.log",
+      "bytes": 823,
+      "sha256": "655bda52b0b94e10a2c51a7da5098643adf09db5ee6d2a11d6743e1064e5fdfa",
+      "source_mtime_utc": "2026-11-04T19:09:57+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-final\\reports\\junit.xml",
+      "archive": "evidence/linux-final/reports/junit.xml",
+      "bytes": 1237,
+      "sha256": "9354b6baed55ead84d15d13fba6d45d71a589db924fe28f73927dafeeee46dab",
+      "source_mtime_utc": "2026-11-04T19:10:20+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-final\\reports\\npu-adapter.log",
+      "archive": "evidence/linux-final/reports/npu-adapter.log",
+      "bytes": 794,
+      "sha256": "d9e5be9594854cfa4659a095aa372bdc48d7c3f283a4e7af5c9012230a2a9399",
+      "source_mtime_utc": "2026-11-04T19:10:08+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-final\\reports\\npu-lifecycle.log",
+      "archive": "evidence/linux-final/reports/npu-lifecycle.log",
+      "bytes": 1794,
+      "sha256": "1ad992045b3e5160761acc76b84b3b934e4a1077559f1ee8d375d7a0c08c59c1",
+      "source_mtime_utc": "2026-11-04T19:10:06+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-final\\reports\\npu-q3-adapter.log",
+      "archive": "evidence/linux-final/reports/npu-q3-adapter.log",
+      "bytes": 1407,
+      "sha256": "ec38fcae466238c743b2fbbbcda191013086f4369afe4f2502635a918a16f5c8",
+      "source_mtime_utc": "2026-11-04T19:10:13+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-final\\reports\\results.json",
+      "archive": "evidence/linux-final/reports/results.json",
+      "bytes": 2328,
+      "sha256": "1fa39467f900b70b71e4d82fb637ddda4086ec03deb71bc7f539725cbf5cfb62",
+      "source_mtime_utc": "2026-11-04T19:10:20+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-final\\reports\\soak.json",
+      "archive": "evidence/linux-final/reports/soak.json",
+      "bytes": 644,
+      "sha256": "0e210ab37ce1e2f1aa6cccd307fea1a39286a6f0706b72cbda8ce457b0caab1a",
+      "source_mtime_utc": "2026-11-04T19:10:14+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-final\\reports\\split.log",
+      "archive": "evidence/linux-final/reports/split.log",
+      "bytes": 804007,
+      "sha256": "ab28ff735178848b95204de10b7e2b577cbc6a761c35723d05a042d50e79aa3c",
+      "source_mtime_utc": "2026-11-04T19:09:58+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-final\\reports\\summary.md",
+      "archive": "evidence/linux-final/reports/summary.md.txt",
+      "bytes": 549,
+      "sha256": "792d38b058d275d1b4f6dd6091463c4d177e9ad690f05a0712248ab44c58b385",
+      "source_mtime_utc": "2026-11-04T19:10:20+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full\\command-0.json",
+      "archive": "evidence/linux-full/command-0.json",
+      "bytes": 1395,
+      "sha256": "c24791012b40c3cd7e91d7d4ba1dfc6e7d776217d14a4b17271eaed4ea8fa25a",
+      "source_mtime_utc": "2026-11-04T18:21:07.426513+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full\\command-1.json",
+      "archive": "evidence/linux-full/command-1.json",
+      "bytes": 199,
+      "sha256": "01e2e9c0b126b79358f2628065ec54b28f68860aa3082204ab66396c14e440e5",
+      "source_mtime_utc": "2026-11-04T18:21:11.875988+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full\\reports\\calibration-green-test_contracts.log",
+      "archive": "evidence/linux-full/reports/calibration-green-test_contracts.log",
+      "bytes": 976,
+      "sha256": "a9c359252685a9ef78f272bcca1becfe488717d2bb506bd9cef3280ab3436fed",
+      "source_mtime_utc": "2026-11-04T18:21:03+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full\\reports\\calibration-green-test_infrastructure.log",
+      "archive": "evidence/linux-full/reports/calibration-green-test_infrastructure.log",
+      "bytes": 652,
+      "sha256": "d6850145f03868dff64887991b1955134f3c7f3afdb15772953e452dcc0904aa",
+      "source_mtime_utc": "2026-11-04T18:21:04+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full\\reports\\calibration-red-FM01.log",
+      "archive": "evidence/linux-full/reports/calibration-red-FM01.log",
+      "bytes": 729,
+      "sha256": "aee5fa2adfc7534df2038a9885116488f64291d423bce168d3bd1d084b7090cc",
+      "source_mtime_utc": "2026-11-04T18:21:04+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full\\reports\\calibration-red-FM02.log",
+      "archive": "evidence/linux-full/reports/calibration-red-FM02.log",
+      "bytes": 3969,
+      "sha256": "b4d63a790a7782555a58d742595889f94315ea48b610358aeb3ec89ca86b7cb0",
+      "source_mtime_utc": "2026-11-04T18:21:04+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full\\reports\\calibration-red-FM03.log",
+      "archive": "evidence/linux-full/reports/calibration-red-FM03.log",
+      "bytes": 795,
+      "sha256": "82a857a8bbdb20edbc5f1e757b7ba3c4ee7e81179c824af71633a27cb465799d",
+      "source_mtime_utc": "2026-11-04T18:21:05+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full\\reports\\calibration-red-FM04.log",
+      "archive": "evidence/linux-full/reports/calibration-red-FM04.log",
+      "bytes": 4169,
+      "sha256": "b1c6ec35ef27520945dfb391204301f6f0af04240c6d56881d58444a5f58e1aa",
+      "source_mtime_utc": "2026-11-04T18:21:06+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full\\reports\\calibration-red-FM05.log",
+      "archive": "evidence/linux-full/reports/calibration-red-FM05.log",
+      "bytes": 956,
+      "sha256": "eaeb3c8bca4e7552df948e99911596ac123dfc18fa4b912cf7419654364825d0",
+      "source_mtime_utc": "2026-11-04T18:21:06+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full\\reports\\calibration-red-FM06.log",
+      "archive": "evidence/linux-full/reports/calibration-red-FM06.log",
+      "bytes": 1032,
+      "sha256": "589e467a81534fa59af682befcbc2e86e5a07f4d822c7477d69e72cdc9c319d4",
+      "source_mtime_utc": "2026-11-04T18:21:07+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full\\reports\\calibration-red-FM07.log",
+      "archive": "evidence/linux-full/reports/calibration-red-FM07.log",
+      "bytes": 1361,
+      "sha256": "2668ad927693a84d03eb3dab4156fc58c73ebdc205e2bde403cbbb8e81784e8f",
+      "source_mtime_utc": "2026-11-04T18:21:07+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full\\reports\\calibration-red-FM08.log",
+      "archive": "evidence/linux-full/reports/calibration-red-FM08.log",
+      "bytes": 741,
+      "sha256": "c65a3faa7af34aa916f7dbfdb066f7f9a1465c1bd84dcad18d4334f70cf69f58",
+      "source_mtime_utc": "2026-11-04T18:21:07+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full\\reports\\calibration.json",
+      "archive": "evidence/linux-full/reports/calibration.json",
+      "bytes": 2015,
+      "sha256": "f36b5d3d0e9203a173ce95d801f83da9b819e0e0c6cf96b6ebaa4da11aab8b42",
+      "source_mtime_utc": "2026-11-04T18:21:07+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full\\reports\\calibration.log",
+      "archive": "evidence/linux-full/reports/calibration.log",
+      "bytes": 200,
+      "sha256": "71bf42f2cf575c7b15bf37d224629920b2b8418385b5c2f68bdc98b3c1047e69",
+      "source_mtime_utc": "2026-11-04T18:21:07+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full\\reports\\contracts.log",
+      "archive": "evidence/linux-full/reports/contracts.log",
+      "bytes": 976,
+      "sha256": "2b1edba2424659bdcb1a8192fbbe374a6c6964dbfecb32fcec88cbfe41d07fc1",
+      "source_mtime_utc": "2026-11-04T18:20:50+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full\\reports\\fsm.log",
+      "archive": "evidence/linux-full/reports/fsm.log",
+      "bytes": 724,
+      "sha256": "95f4a7f0e5e5ada5f041308d0185ce5cbe0b136132a1c1a9a9af88f99088129c",
+      "source_mtime_utc": "2026-11-04T18:20:51+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full\\reports\\host-soak.log",
+      "archive": "evidence/linux-full/reports/host-soak.log",
+      "bytes": 49,
+      "sha256": "5ea16f4da8c6fda6153aa3a2becbb38ac5c393da95542a7f2a7fa1d36f86d411",
+      "source_mtime_utc": "2026-11-04T18:21:00+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full\\reports\\infrastructure.log",
+      "archive": "evidence/linux-full/reports/infrastructure.log",
+      "bytes": 652,
+      "sha256": "194082ba8fe9b0656fdbc950e3bb7472f03feedbaf3c84b6c6f1c58eb335148b",
+      "source_mtime_utc": "2026-11-04T18:20:51+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full\\reports\\junit.xml",
+      "archive": "evidence/linux-full/reports/junit.xml",
+      "bytes": 1322,
+      "sha256": "02a7f40a4521a0a2cede5f20b7718f41975a3e6263cdaf3b0e488c5f2f2fd60a",
+      "source_mtime_utc": "2026-11-04T18:21:07+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full\\reports\\npu-adapter.log",
+      "archive": "evidence/linux-full/reports/npu-adapter.log",
+      "bytes": 293,
+      "sha256": "5c0b50413ec79624b50bbed24ae14579f313fb7f40991b73bac4d38aacb99665",
+      "source_mtime_utc": "2026-11-04T18:20:59+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full\\reports\\npu-lifecycle.log",
+      "archive": "evidence/linux-full/reports/npu-lifecycle.log",
+      "bytes": 1794,
+      "sha256": "1ad992045b3e5160761acc76b84b3b934e4a1077559f1ee8d375d7a0c08c59c1",
+      "source_mtime_utc": "2026-11-04T18:20:59+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full\\reports\\npu-q3-adapter.log",
+      "archive": "evidence/linux-full/reports/npu-q3-adapter.log",
+      "bytes": 447,
+      "sha256": "18f71d1947288f2d978a63134222591787688074151f96f2bdb173563f3f491c",
+      "source_mtime_utc": "2026-11-04T18:21:00+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full\\reports\\results.json",
+      "archive": "evidence/linux-full/reports/results.json",
+      "bytes": 2331,
+      "sha256": "5ce1418d72bd842b4ee780a15fd50b0edb6905a32c7f747ff988ab0c72b27cf2",
+      "source_mtime_utc": "2026-11-04T18:21:07+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full\\reports\\soak.json",
+      "archive": "evidence/linux-full/reports/soak.json",
+      "bytes": 644,
+      "sha256": "b38206172f2b8ddfa36ee345b1b2624c2e190d92ab075b9433561d6d711c0bcb",
+      "source_mtime_utc": "2026-11-04T18:21:00+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full\\reports\\split.log",
+      "archive": "evidence/linux-full/reports/split.log",
+      "bytes": 804007,
+      "sha256": "ab28ff735178848b95204de10b7e2b577cbc6a761c35723d05a042d50e79aa3c",
+      "source_mtime_utc": "2026-11-04T18:20:51+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full\\reports\\summary.md",
+      "archive": "evidence/linux-full/reports/summary.md.txt",
+      "bytes": 549,
+      "sha256": "a2c415d71f9b74cf4f9fdbc469d0d96c2c2ccb79428b5ad0b0faa762e1d228e2",
+      "source_mtime_utc": "2026-11-04T18:21:07+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full-corrected\\command-0.json",
+      "archive": "evidence/linux-full-corrected/command-0.json",
+      "bytes": 633,
+      "sha256": "1576351df0ed76a7294ad452c97ddb14111d84acd9b4d1ed1824aee95dc06f44",
+      "source_mtime_utc": "2026-11-04T18:50:07.687792+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full-corrected\\command-1.json",
+      "archive": "evidence/linux-full-corrected/command-1.json",
+      "bytes": 209,
+      "sha256": "dc1d30198534aeaf46404f5e7fefa1588da965bf695955e2f5baa438c21b08bb",
+      "source_mtime_utc": "2026-11-04T18:50:17.119295+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full-corrected\\reports\\calibration-green-test_contracts.log",
+      "archive": "evidence/linux-full-corrected/reports/calibration-green-test_contracts.log",
+      "bytes": 976,
+      "sha256": "89e77e48b16ba117d35cae65f58038010cbdf0afd12af7b65e34aa6a2e404c7f",
+      "source_mtime_utc": "2026-11-04T18:50:04+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full-corrected\\reports\\calibration-green-test_infrastructure.log",
+      "archive": "evidence/linux-full-corrected/reports/calibration-green-test_infrastructure.log",
+      "bytes": 652,
+      "sha256": "a4e7c4d85f3fb49f4696dc0d83f39c97da2891105218a0b30902bafc2dc139b7",
+      "source_mtime_utc": "2026-11-04T18:50:04+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full-corrected\\reports\\calibration-red-FM01.log",
+      "archive": "evidence/linux-full-corrected/reports/calibration-red-FM01.log",
+      "bytes": 729,
+      "sha256": "4fa605d4575e9f9d933fe280cf3f539216437376d6854055cb6918de57a8fcfb",
+      "source_mtime_utc": "2026-11-04T18:50:04+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full-corrected\\reports\\calibration-red-FM02.log",
+      "archive": "evidence/linux-full-corrected/reports/calibration-red-FM02.log",
+      "bytes": 3969,
+      "sha256": "59dde53d29eef774c9a7568603611a1d2ad23c475fb6e35b794277bc853ce288",
+      "source_mtime_utc": "2026-11-04T18:50:05+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full-corrected\\reports\\calibration-red-FM03.log",
+      "archive": "evidence/linux-full-corrected/reports/calibration-red-FM03.log",
+      "bytes": 795,
+      "sha256": "edda95b0c8662f0f0778aafc4463d76631524b927bf3203afd9d886c74053821",
+      "source_mtime_utc": "2026-11-04T18:50:05+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full-corrected\\reports\\calibration-red-FM04.log",
+      "archive": "evidence/linux-full-corrected/reports/calibration-red-FM04.log",
+      "bytes": 4169,
+      "sha256": "54902bc296ed5b025c903052e5ae0c4e8f9cc47857b494687c151f5c483d2236",
+      "source_mtime_utc": "2026-11-04T18:50:06+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full-corrected\\reports\\calibration-red-FM05.log",
+      "archive": "evidence/linux-full-corrected/reports/calibration-red-FM05.log",
+      "bytes": 956,
+      "sha256": "936fde065abb4f778356ddc1011d3232e50bb744698693a7c466b8dc52602da5",
+      "source_mtime_utc": "2026-11-04T18:50:06+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full-corrected\\reports\\calibration-red-FM06.log",
+      "archive": "evidence/linux-full-corrected/reports/calibration-red-FM06.log",
+      "bytes": 1032,
+      "sha256": "6c183c8559c9c1d0e1ad8e6132afd09e346c2d8aac7eaa0c5fcd71b5826bbae3",
+      "source_mtime_utc": "2026-11-04T18:50:07+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full-corrected\\reports\\calibration-red-FM07.log",
+      "archive": "evidence/linux-full-corrected/reports/calibration-red-FM07.log",
+      "bytes": 1361,
+      "sha256": "7ac7c4a8548fbd86e3ec647711b580cfe253c157995aec1383e51d4abd2f1a9b",
+      "source_mtime_utc": "2026-11-04T18:50:07+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full-corrected\\reports\\calibration-red-FM08.log",
+      "archive": "evidence/linux-full-corrected/reports/calibration-red-FM08.log",
+      "bytes": 741,
+      "sha256": "0838ab31dd7a33c23658fa2fed42af034bcaff88220d42f94c42d8f71fd87ba1",
+      "source_mtime_utc": "2026-11-04T18:50:07+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full-corrected\\reports\\calibration.json",
+      "archive": "evidence/linux-full-corrected/reports/calibration.json",
+      "bytes": 2015,
+      "sha256": "92849eaa3745aff923922a35e6b70067850f5f835396e98dbacd38d240eb97d6",
+      "source_mtime_utc": "2026-11-04T18:50:07+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full-corrected\\reports\\calibration.log",
+      "archive": "evidence/linux-full-corrected/reports/calibration.log",
+      "bytes": 200,
+      "sha256": "71bf42f2cf575c7b15bf37d224629920b2b8418385b5c2f68bdc98b3c1047e69",
+      "source_mtime_utc": "2026-11-04T18:50:07+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full-corrected\\reports\\contracts.log",
+      "archive": "evidence/linux-full-corrected/reports/contracts.log",
+      "bytes": 976,
+      "sha256": "e605691f1e0a73ad19e0d5338037add832f37d2490a2a755a1acb5b5302fdd41",
+      "source_mtime_utc": "2026-11-04T18:49:44+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full-corrected\\reports\\fsm.log",
+      "archive": "evidence/linux-full-corrected/reports/fsm.log",
+      "bytes": 724,
+      "sha256": "95f4a7f0e5e5ada5f041308d0185ce5cbe0b136132a1c1a9a9af88f99088129c",
+      "source_mtime_utc": "2026-11-04T18:49:45+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full-corrected\\reports\\host-soak.log",
+      "archive": "evidence/linux-full-corrected/reports/host-soak.log",
+      "bytes": 49,
+      "sha256": "5ea16f4da8c6fda6153aa3a2becbb38ac5c393da95542a7f2a7fa1d36f86d411",
+      "source_mtime_utc": "2026-11-04T18:50:01+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full-corrected\\reports\\infrastructure.log",
+      "archive": "evidence/linux-full-corrected/reports/infrastructure.log",
+      "bytes": 652,
+      "sha256": "5b77ee9cfabb5c32d53bb9eefb03453f2a5eb5c327f5b930cf5d9c8d616bd584",
+      "source_mtime_utc": "2026-11-04T18:49:45+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full-corrected\\reports\\junit.xml",
+      "archive": "evidence/linux-full-corrected/reports/junit.xml",
+      "bytes": 1237,
+      "sha256": "55c63de89322940f2b8d03bd952432bbafa3338ab001f7ec7115695ffb135137",
+      "source_mtime_utc": "2026-11-04T18:50:08+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full-corrected\\reports\\npu-adapter.log",
+      "archive": "evidence/linux-full-corrected/reports/npu-adapter.log",
+      "bytes": 794,
+      "sha256": "d9e5be9594854cfa4659a095aa372bdc48d7c3f283a4e7af5c9012230a2a9399",
+      "source_mtime_utc": "2026-11-04T18:49:55+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full-corrected\\reports\\npu-lifecycle.log",
+      "archive": "evidence/linux-full-corrected/reports/npu-lifecycle.log",
+      "bytes": 1794,
+      "sha256": "1ad992045b3e5160761acc76b84b3b934e4a1077559f1ee8d375d7a0c08c59c1",
+      "source_mtime_utc": "2026-11-04T18:49:53+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full-corrected\\reports\\npu-q3-adapter.log",
+      "archive": "evidence/linux-full-corrected/reports/npu-q3-adapter.log",
+      "bytes": 1407,
+      "sha256": "ec38fcae466238c743b2fbbbcda191013086f4369afe4f2502635a918a16f5c8",
+      "source_mtime_utc": "2026-11-04T18:50:00+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full-corrected\\reports\\results.json",
+      "archive": "evidence/linux-full-corrected/reports/results.json",
+      "bytes": 2326,
+      "sha256": "743764d11eb4254588abe4b166884e533f09120548786a1a6cfd6e8ad24d9c5d",
+      "source_mtime_utc": "2026-11-04T18:50:08+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full-corrected\\reports\\soak.json",
+      "archive": "evidence/linux-full-corrected/reports/soak.json",
+      "bytes": 644,
+      "sha256": "9d9cdcddc2b8cd3558123c37b837cd07e0c8cf9e2d18575e44174c44c52d3d29",
+      "source_mtime_utc": "2026-11-04T18:50:01+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full-corrected\\reports\\split.log",
+      "archive": "evidence/linux-full-corrected/reports/split.log",
+      "bytes": 804007,
+      "sha256": "ab28ff735178848b95204de10b7e2b577cbc6a761c35723d05a042d50e79aa3c",
+      "source_mtime_utc": "2026-11-04T18:49:45+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\linux-full-corrected\\reports\\summary.md",
+      "archive": "evidence/linux-full-corrected/reports/summary.md.txt",
+      "bytes": 549,
+      "sha256": "b99d1fa9e7f177836955757d25be80e829002ea8155d9a2c4b9cb45fb0546f2c",
+      "source_mtime_utc": "2026-11-04T18:50:08+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\inspection.json",
+      "archive": "evidence/manual-publish/inspection.json",
+      "bytes": 10616,
+      "sha256": "512a08d51c73c7ce43237bdf0bf458364d901db6449f2587eecfb02b1b1a0a12",
+      "source_mtime_utc": "2026-11-04T21:58:28.357640+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\publication.json",
+      "archive": "evidence/manual-publish/publication.json",
+      "bytes": 26996,
+      "sha256": "b2d8424275ba1d65e61f923e99b63c4bc86b24bae6fe72f6b6defce62f0f1f5a",
+      "source_mtime_utc": "2026-11-04T22:23:43.011067+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\push-result.json",
+      "archive": "evidence/manual-publish/push-result.json",
+      "bytes": 1293,
+      "sha256": "f1ec35e483ee7f8df753ea9eedec86f9dde61b9a7c9b95c80d553dc5a0cd2168",
+      "source_mtime_utc": "2026-11-04T22:26:21.540773+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\actionlint-command.json",
+      "archive": "evidence/manual-publish/checks/actionlint-command.json",
+      "bytes": 1351,
+      "sha256": "4015b2d9e25e55274671790125fcfee7b5c993b6bb24f2ed75981a92fb4f8b2e",
+      "source_mtime_utc": "2026-11-04T22:15:51.638875+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\core-command.json",
+      "archive": "evidence/manual-publish/checks/core-command.json",
+      "bytes": 391,
+      "sha256": "5fccf3e1394c1748ea8cf12c2ceb3e7d3d0a4c0b1e2f8c56781e2582cb4c61dd",
+      "source_mtime_utc": "2026-11-04T22:16:44.755543+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\manual-events.json",
+      "archive": "evidence/manual-publish/checks/manual-events.json",
+      "bytes": 345,
+      "sha256": "289e8bdd59634bc4d8b528dbd650d8300833fa70cce6ad385e6b0046582d7c6c",
+      "source_mtime_utc": "2026-11-04T22:15:42.930821+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\summary.json",
+      "archive": "evidence/manual-publish/checks/summary.json",
+      "bytes": 2157,
+      "sha256": "0d9ee56793a3f33c5c9419e9c48b7fb20cc082c9f7fb7d0bf2b97498f475e08b",
+      "source_mtime_utc": "2026-11-04T22:16:44.783742+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\actionlint\\actionlint.json",
+      "archive": "evidence/manual-publish/checks/actionlint/actionlint.json",
+      "bytes": 908,
+      "sha256": "af3bdad173b8e41622f29b3e071efa569c8ebb4a354346b96e3b768b0346f355",
+      "source_mtime_utc": "2026-11-04T22:15:51.474376+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\core\\calibration-green-test_contracts.log",
+      "archive": "evidence/manual-publish/checks/core/calibration-green-test_contracts.log",
+      "bytes": 976,
+      "sha256": "3daf962accb3ba95ab3266296e748bdc9b6f23b1d90e2535c27720a039192e5f",
+      "source_mtime_utc": "2026-11-04T22:16:31.881974+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\core\\calibration-green-test_infrastructure.log",
+      "archive": "evidence/manual-publish/checks/core/calibration-green-test_infrastructure.log",
+      "bytes": 976,
+      "sha256": "0e70431221f9a04c644e6c09efbc71ab75713420bd2e17486ad766d4dc6aa38d",
+      "source_mtime_utc": "2026-11-04T22:16:34.221760+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\core\\calibration-red-FM01.log",
+      "archive": "evidence/manual-publish/checks/core/calibration-red-FM01.log",
+      "bytes": 767,
+      "sha256": "d6420414bddc54c84a378f4d863d4cca3fe3ecbc43d17b9374da681c72cbc964",
+      "source_mtime_utc": "2026-11-04T22:16:35.011804+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\core\\calibration-red-FM02.log",
+      "archive": "evidence/manual-publish/checks/core/calibration-red-FM02.log",
+      "bytes": 4159,
+      "sha256": "643187aad7753bc233fb14fac80576180532b79fe839161220ff5e53572e6281",
+      "source_mtime_utc": "2026-11-04T22:16:35.783199+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\core\\calibration-red-FM03.log",
+      "archive": "evidence/manual-publish/checks/core/calibration-red-FM03.log",
+      "bytes": 833,
+      "sha256": "9514a72f5e66d482d9d9d839abb9d412c774960883185b4ae900dbbd5ffcdeb5",
+      "source_mtime_utc": "2026-11-04T22:16:37.425451+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\core\\calibration-red-FM04.log",
+      "archive": "evidence/manual-publish/checks/core/calibration-red-FM04.log",
+      "bytes": 4435,
+      "sha256": "22fa29b4b6f9375f52e32fa46d58a56763658d9653c85cb0d829881439752365",
+      "source_mtime_utc": "2026-11-04T22:16:40.123816+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\core\\calibration-red-FM05.log",
+      "archive": "evidence/manual-publish/checks/core/calibration-red-FM05.log",
+      "bytes": 1032,
+      "sha256": "beb6e4b71d0f7c1f1474fae4e03dd5c694ab6f5b9ab9946fb4113bcf3346b7da",
+      "source_mtime_utc": "2026-11-04T22:16:41.087708+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\core\\calibration-red-FM06.log",
+      "archive": "evidence/manual-publish/checks/core/calibration-red-FM06.log",
+      "bytes": 1070,
+      "sha256": "a439222f40fc79eb1e5370069c5292d15628b6757d9800ef29614a0917c2967a",
+      "source_mtime_utc": "2026-11-04T22:16:43.041322+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\core\\calibration-red-FM07.log",
+      "archive": "evidence/manual-publish/checks/core/calibration-red-FM07.log",
+      "bytes": 1475,
+      "sha256": "8743aa384184bbd0d2fbda6d1986a39206d1fdb73d3bf01da8525672169a40d6",
+      "source_mtime_utc": "2026-11-04T22:16:43.928659+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\core\\calibration-red-FM08.log",
+      "archive": "evidence/manual-publish/checks/core/calibration-red-FM08.log",
+      "bytes": 779,
+      "sha256": "a13052821e87b365bad1266e49da4f0495777d0fc91d062169f146935e0111d8",
+      "source_mtime_utc": "2026-11-04T22:16:44.388532+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\core\\calibration.json",
+      "archive": "evidence/manual-publish/checks/core/calibration.json",
+      "bytes": 2054,
+      "sha256": "93875a9cd324680bc9c75a2d7617ccecefd7c16d92348deb9e9d5ac7ccdb1998",
+      "source_mtime_utc": "2026-11-04T22:16:44.403219+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\core\\calibration.log",
+      "archive": "evidence/manual-publish/checks/core/calibration.log",
+      "bytes": 200,
+      "sha256": "71bf42f2cf575c7b15bf37d224629920b2b8418385b5c2f68bdc98b3c1047e69",
+      "source_mtime_utc": "2026-11-04T22:16:44.392152+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\core\\contracts.log",
+      "archive": "evidence/manual-publish/checks/core/contracts.log",
+      "bytes": 976,
+      "sha256": "54af733becdce9570f07e62d447ece2c16b60fc999a3009f073430cd41496465",
+      "source_mtime_utc": "2026-11-04T22:16:00.067744+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\core\\fsm.log",
+      "archive": "evidence/manual-publish/checks/core/fsm.log",
+      "bytes": 724,
+      "sha256": "95f4a7f0e5e5ada5f041308d0185ce5cbe0b136132a1c1a9a9af88f99088129c",
+      "source_mtime_utc": "2026-11-04T22:16:14.086340+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\core\\host-soak.log",
+      "archive": "evidence/manual-publish/checks/core/host-soak.log",
+      "bytes": 87,
+      "sha256": "2d50267577611a2baa911ebcc5f76774054df45b2024d431323334b152d5ae69",
+      "source_mtime_utc": "2026-11-04T22:16:25.643959+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\core\\infrastructure.log",
+      "archive": "evidence/manual-publish/checks/core/infrastructure.log",
+      "bytes": 977,
+      "sha256": "7dc95b656cbd703e1575988ed7ca270413d66f2e8808332ed39591467e043789",
+      "source_mtime_utc": "2026-11-04T22:16:10.760785+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\core\\junit.xml",
+      "archive": "evidence/manual-publish/checks/core/junit.xml",
+      "bytes": 1003,
+      "sha256": "85d6cf437fae28eb0149d0fc3c134b74d929b6b1b1f37c5085eeb0f7adb13c6b",
+      "source_mtime_utc": "2026-11-04T22:16:44.530688+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\core\\npu-lifecycle.log",
+      "archive": "evidence/manual-publish/checks/core/npu-lifecycle.log",
+      "bytes": 1854,
+      "sha256": "c3e70488e19dc2ce3109d815b58ea899020728f9410e1960059dc68f1e44db75",
+      "source_mtime_utc": "2026-11-04T22:16:24.874518+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\core\\results.json",
+      "archive": "evidence/manual-publish/checks/core/results.json",
+      "bytes": 1938,
+      "sha256": "9ebaf36d1bebdb98406351113522c010e5b5ff60409bf57fb0bfea586acfb728",
+      "source_mtime_utc": "2026-11-04T22:16:44.512043+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\core\\soak.json",
+      "archive": "evidence/manual-publish/checks/core/soak.json",
+      "bytes": 644,
+      "sha256": "60429648e4ac1f7622330455d9e87820e7efeb00b72dd9cd63f66c4ca530c66f",
+      "source_mtime_utc": "2026-11-04T22:16:25.551687+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\core\\split.log",
+      "archive": "evidence/manual-publish/checks/core/split.log",
+      "bytes": 804007,
+      "sha256": "ab28ff735178848b95204de10b7e2b577cbc6a761c35723d05a042d50e79aa3c",
+      "source_mtime_utc": "2026-11-04T22:16:13.831196+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\manual-publish\\checks\\core\\summary.md",
+      "archive": "evidence/manual-publish/checks/core/summary.md.txt",
+      "bytes": 446,
+      "sha256": "0904c289d6c2cab232da076e9a89e74c3822fecbe119a0356eb449431c42d7d8",
+      "source_mtime_utc": "2026-11-04T22:16:44.539191+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\package-acceptance\\command-01.json",
+      "archive": "evidence/package-acceptance/command-01.json",
+      "bytes": 1074,
+      "sha256": "391ea37a2ed71f792de0c287566a417e544621a4da21d53ae6a1e063a7529538",
+      "source_mtime_utc": "2026-11-04T18:55:15.973788+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\package-acceptance\\command-02.json",
+      "archive": "evidence/package-acceptance/command-02.json",
+      "bytes": 565,
+      "sha256": "a000a1c90f4d55ce5aca49d5ef2acc1afd1df2bb7e064dcc61526d85756c44eb",
+      "source_mtime_utc": "2026-11-04T18:55:17.925956+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\package-acceptance\\command-03.json",
+      "archive": "evidence/package-acceptance/command-03.json",
+      "bytes": 1074,
+      "sha256": "bf638a8d35a3df87194b4c58fe963055f72bff264087eeaf793d2cbab87a862a",
+      "source_mtime_utc": "2026-11-04T18:55:34.192231+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\package-acceptance\\command-04.json",
+      "archive": "evidence/package-acceptance/command-04.json",
+      "bytes": 565,
+      "sha256": "9b89549e4a05bb8362784a85525d258c6e26ffa552edc47b0b9f0aa4fc190313",
+      "source_mtime_utc": "2026-11-04T18:55:36.131952+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\package-acceptance\\command-05.json",
+      "archive": "evidence/package-acceptance/command-05.json",
+      "bytes": 243,
+      "sha256": "33ed19a88be740f4842a5aa4ac5c01d6f8170ef8a116ee0d65ec582c9f0ae733",
+      "source_mtime_utc": "2026-11-04T18:55:36.451854+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\package-acceptance\\command-06.json",
+      "archive": "evidence/package-acceptance/command-06.json",
+      "bytes": 180,
+      "sha256": "3d7a47d8bce65f0f856b67ae3ec5af5701b9c855bd1863c3dab38eedaddd6f20",
+      "source_mtime_utc": "2026-11-04T18:55:36.966536+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\package-acceptance\\command-07.json",
+      "archive": "evidence/package-acceptance/command-07.json",
+      "bytes": 226,
+      "sha256": "6198bd3290149bbdeca27a01c15ca7f7f5e15e79e41794ac50ca4288db90e368",
+      "source_mtime_utc": "2026-11-04T18:55:37.415660+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\package-acceptance\\command-08.json",
+      "archive": "evidence/package-acceptance/command-08.json",
+      "bytes": 322,
+      "sha256": "a0f534b02057832129c9b324185e3e5c675bf588803119bd9b417e46ed4b39ed",
+      "source_mtime_utc": "2026-11-04T18:55:38.537352+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\package-acceptance\\command-09.json",
+      "archive": "evidence/package-acceptance/command-09.json",
+      "bytes": 279,
+      "sha256": "d9126245de0375a6d9bd23245757254b7a9bfa662e23bea1bd7f3f22c49caeb7",
+      "source_mtime_utc": "2026-11-04T18:55:38.929903+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\package-acceptance\\command-10.json",
+      "archive": "evidence/package-acceptance/command-10.json",
+      "bytes": 288,
+      "sha256": "028d4de9e08af841834b2db2d9aa9fadab8535889c9563b6c5cd2a61ddb14354",
+      "source_mtime_utc": "2026-11-04T18:56:24.223607+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\package-acceptance\\command-11.json",
+      "archive": "evidence/package-acceptance/command-11.json",
+      "bytes": 203,
+      "sha256": "116d6a1f8befb35b379e75bfff66bd818791e907745e888452d23824e4a4b3f5",
+      "source_mtime_utc": "2026-11-04T18:56:34.707361+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\package-acceptance\\lifecycle-command.json",
+      "archive": "evidence/package-acceptance/lifecycle-command.json",
+      "bytes": 158,
+      "sha256": "61f064e51a68fe0c0af913f9be5ad9814a7800c1889db3b7f5fa01dc35fcfafe",
+      "source_mtime_utc": "2026-11-04T18:56:23.738385+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\package-acceptance\\lifecycle.json",
+      "archive": "evidence/package-acceptance/lifecycle.json",
+      "bytes": 23096,
+      "sha256": "4e8660c07da97317bdbb58a3e46ea6e5653f711d575f39b110a6b2460d99721d",
+      "source_mtime_utc": "2026-11-04T18:56:24+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\package-acceptance\\static-amd64.json",
+      "archive": "evidence/package-acceptance/static-amd64.json",
+      "bytes": 488,
+      "sha256": "734bd5b9e3527223fcb1495b781d1f66eb2cddc5cef4adc6b3c3b4aa1c8e211e",
+      "source_mtime_utc": "2026-11-04T18:55:36.004744+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\package-acceptance\\static-arm64.json",
+      "archive": "evidence/package-acceptance/static-arm64.json",
+      "bytes": 488,
+      "sha256": "ebfbf3640d3642b930c500b16a98f50dd930efb485ff82408d15fe274d03d930",
+      "source_mtime_utc": "2026-11-04T18:55:17.813680+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-acceptance\\baseline.json",
+      "archive": "evidence/performance-acceptance/baseline.json",
+      "bytes": 6300,
+      "sha256": "c408aa0551c481ed5d6de14b1643bdae49e5cc7227588225e86e3b9c04b23e0c",
+      "source_mtime_utc": "2026-11-04T18:56:38.507018+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-acceptance\\candidate.json",
+      "archive": "evidence/performance-acceptance/candidate.json",
+      "bytes": 6259,
+      "sha256": "ad87b80c5377defd1e6b809d0d9ae294026793406a5cc59d64c635e12d7208d2",
+      "source_mtime_utc": "2026-11-04T18:56:40.976977+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-acceptance\\command-01.json",
+      "archive": "evidence/performance-acceptance/command-01.json",
+      "bytes": 456,
+      "sha256": "226d529c3af0f923af5e028ef1500e5b79f304c36ddc2640664759b8a0c7f780",
+      "source_mtime_utc": "2026-11-04T18:56:38.552568+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-acceptance\\command-02.json",
+      "archive": "evidence/performance-acceptance/command-02.json",
+      "bytes": 458,
+      "sha256": "5ee8c0df103e01c287af492ad818bb9462cc9df156959b79002c3ce329bb380a",
+      "source_mtime_utc": "2026-11-04T18:56:41.016899+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-acceptance\\command-03.json",
+      "archive": "evidence/performance-acceptance/command-03.json",
+      "bytes": 1730,
+      "sha256": "49bc354adf8e316d7e0fabcbc94f11e85897365945d5bf5a9edfecb4e6d0c738",
+      "source_mtime_utc": "2026-11-04T18:56:41.206823+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-acceptance\\comparison.html",
+      "archive": "evidence/performance-acceptance/comparison.html",
+      "bytes": 3765,
+      "sha256": "2253e3d9bdffbcf30d545a61a7ff131820c6ee48dcc15008facebdcd934f2269",
+      "source_mtime_utc": "2026-11-04T18:56:41.186634+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-acceptance\\comparison.json",
+      "archive": "evidence/performance-acceptance/comparison.json",
+      "bytes": 2356,
+      "sha256": "eda4d022c07c614a2ca3ee9ef9cfc0f7797c885c79fe3f5e5fbb3f2870b05520",
+      "source_mtime_utc": "2026-11-04T18:56:41.146751+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-acceptance\\comparison.md",
+      "archive": "evidence/performance-acceptance/comparison.md.txt",
+      "bytes": 1153,
+      "sha256": "565ad640ce7f64cf2a73725659f922a34e8061822460261898afe8de6e715e0c",
+      "source_mtime_utc": "2026-11-04T18:56:41.186634+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\baseline.json",
+      "archive": "evidence/performance-final/baseline.json",
+      "bytes": 11954,
+      "sha256": "dfba253ad5c32abf8351aedaf5ce45595bf84d0f185e6cfc5107852804cdb95d",
+      "source_mtime_utc": "2026-11-04T19:10:52.124479+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\candidate.json",
+      "archive": "evidence/performance-final/candidate.json",
+      "bytes": 11986,
+      "sha256": "74c143a708fd0599b85341d8449b5c90e5606cafde6b65b67d83e7da9ebb4501",
+      "source_mtime_utc": "2026-11-04T19:11:00.820287+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\command-01.json",
+      "archive": "evidence/performance-final/command-01.json",
+      "bytes": 446,
+      "sha256": "1e4893406eac6bd559b8d2b037e97bcd1f964a6359fb6f54f6fc6420bc31a1c9",
+      "source_mtime_utc": "2026-11-04T19:10:52.171643+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\command-02.json",
+      "archive": "evidence/performance-final/command-02.json",
+      "bytes": 448,
+      "sha256": "d3b3ec3025d9fb5eb883b50405cfa55fab0acacc0d5f7f63713518bfb65274e1",
+      "source_mtime_utc": "2026-11-04T19:11:00.873150+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\command-03.json",
+      "archive": "evidence/performance-final/command-03.json",
+      "bytes": 2079,
+      "sha256": "1e5154f1a34ea98a3aa66b74f3f6883148c4d54794bcab577cc8d4ea21aa9de3",
+      "source_mtime_utc": "2026-11-04T19:11:01.107867+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\command-04.json",
+      "archive": "evidence/performance-final/command-04.json",
+      "bytes": 2143,
+      "sha256": "e608ebfd6ade1c22071ce3756d9f60f6add57b6166547cd2bfd7809ed7c7cb70",
+      "source_mtime_utc": "2026-11-04T19:11:01.239080+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\command-05.json",
+      "archive": "evidence/performance-final/command-05.json",
+      "bytes": 2199,
+      "sha256": "dcfb4358f39f015e8d481ff5617be5d3279fa12c79bbe3156c3069bfe4e87ff6",
+      "source_mtime_utc": "2026-11-04T19:11:01.429713+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\command-06.json",
+      "archive": "evidence/performance-final/command-06.json",
+      "bytes": 2059,
+      "sha256": "82b41f32e38ec2e979ccb3e65af4c5f624e742446fb599c65042fc550872f817",
+      "source_mtime_utc": "2026-11-04T19:11:01.625842+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\command-07.json",
+      "archive": "evidence/performance-final/command-07.json",
+      "bytes": 1900,
+      "sha256": "b0bfb642db231cb3a5c2c5eebb92dc7f9f4156783d4e20c021d552a9862758ee",
+      "source_mtime_utc": "2026-11-04T19:11:01.797749+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\comparison.html",
+      "archive": "evidence/performance-final/comparison.html",
+      "bytes": 5148,
+      "sha256": "7843a94ae74783862fc55c5c25fdef4c5dad4ee6bea3316c88224f97a35a2800",
+      "source_mtime_utc": "2026-11-04T19:11:01.090693+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\comparison.json",
+      "archive": "evidence/performance-final/comparison.json",
+      "bytes": 3631,
+      "sha256": "08b475c5ca303ed4702f47a29ab7bcb7ba4f9e5036966b72ba023e76b6d08486",
+      "source_mtime_utc": "2026-11-04T19:11:01.085059+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\comparison.md",
+      "archive": "evidence/performance-final/comparison.md.txt",
+      "bytes": 1495,
+      "sha256": "8add4df5483212ee91cc295840eaf68319eac2c35d08bde3d217ee4403ed2247",
+      "source_mtime_utc": "2026-11-04T19:11:01.088688+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\no-baseline.html",
+      "archive": "evidence/performance-final/no-baseline.html",
+      "bytes": 2097,
+      "sha256": "df968b7b1e82323149966b1b7275f4a009ca2ee90f0cbce174f05fb7e4940fdb",
+      "source_mtime_utc": "2026-11-04T19:11:01.584598+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\no-baseline.json",
+      "archive": "evidence/performance-final/no-baseline.json",
+      "bytes": 115,
+      "sha256": "d4d135463c2e2dd52a1bab1b7a5ba2d6ca880dadc6984c1a6c75b50cd3b74341",
+      "source_mtime_utc": "2026-11-04T19:11:01.528939+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\no-baseline.md",
+      "archive": "evidence/performance-final/no-baseline.md.txt",
+      "bytes": 1496,
+      "sha256": "133d5e6064924f2fb6c7383e9220946bb2b62e6cb1c16c6382771c4f6bc7504e",
+      "source_mtime_utc": "2026-11-04T19:11:01.582311+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\parameters.html",
+      "archive": "evidence/performance-final/parameters.html",
+      "bytes": 3075,
+      "sha256": "f6ce574227fae22d8be9529b96cbd7f1f4cc4db5fd639ee4c944ea30208d55aa",
+      "source_mtime_utc": "2026-11-04T19:11:01.734093+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\parameters.json",
+      "archive": "evidence/performance-final/parameters.json",
+      "bytes": 2227,
+      "sha256": "69ebd8d300e261fb80d81803286ca180f3756c840030c3658b54d7faf951eb65",
+      "source_mtime_utc": "2026-11-04T19:11:01.728712+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\parameters.md",
+      "archive": "evidence/performance-final/parameters.md.txt",
+      "bytes": 1315,
+      "sha256": "fc94722927b89dcc3b59971a1b7d6689002bf79a0f75d023d5d8a5b414b865a4",
+      "source_mtime_utc": "2026-11-04T19:11:01.732090+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\synthetic-incomparable.html",
+      "archive": "evidence/performance-final/synthetic-incomparable.html",
+      "bytes": 2094,
+      "sha256": "93328c82ccdee248b74c0612cb8fae487d893d039665477ace0d8aa0f0ab2fd9",
+      "source_mtime_utc": "2026-11-04T19:11:01.412153+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\synthetic-incomparable.json",
+      "archive": "evidence/performance-final/synthetic-incomparable.json",
+      "bytes": 91,
+      "sha256": "e2229823d2f8f9a3e9201980f51f031967fcf010b577a815d2a0a41d16dab7a0",
+      "source_mtime_utc": "2026-11-04T19:11:01.370482+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\synthetic-incomparable.md",
+      "archive": "evidence/performance-final/synthetic-incomparable.md.txt",
+      "bytes": 1517,
+      "sha256": "948301e2e50bac45f845ad033c52a720371502054920ee6aeb1845e4f870c463",
+      "source_mtime_utc": "2026-11-04T19:11:01.411155+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\synthetic-regression.html",
+      "archive": "evidence/performance-final/synthetic-regression.html",
+      "bytes": 5204,
+      "sha256": "fda562b3d64641d5ae1b57271cda727802c331a88cd1000aae0f43a54c2cfe0f",
+      "source_mtime_utc": "2026-11-04T19:11:01.216473+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\synthetic-regression.json",
+      "archive": "evidence/performance-final/synthetic-regression.json",
+      "bytes": 3457,
+      "sha256": "6d22212ada12a428353c64bbc74dc87f265fc17f441bf604616e5b165347bc7e",
+      "source_mtime_utc": "2026-11-04T19:11:01.211376+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\synthetic-regression.md",
+      "archive": "evidence/performance-final/synthetic-regression.md.txt",
+      "bytes": 1555,
+      "sha256": "79fb88d13b4f1ceaf626a2c61515a1bf49a764e25366d12eb3178bc0b3d1baf1",
+      "source_mtime_utc": "2026-11-04T19:11:01.215471+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\baseline.json",
+      "archive": "evidence/performance-linux-release/baseline.json",
+      "bytes": 13395,
+      "sha256": "ebbdd556a93fb5eaf96c26a67fc79bacf980e893a4d36a66bc722af4624088dd",
+      "source_mtime_utc": "2026-11-04T19:46:43.113335+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\candidate.json",
+      "archive": "evidence/performance-linux-release/candidate.json",
+      "bytes": 13389,
+      "sha256": "c1c573b96a515ecf89f3a86cf16dabb961dacc0de07e72626d7b58edc259b4af",
+      "source_mtime_utc": "2026-11-04T19:47:01.321414+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\command-01.json",
+      "archive": "evidence/performance-linux-release/command-01.json",
+      "bytes": 431,
+      "sha256": "bd100254dd972b6c5bb19fca6ee40aa9788d661788ec3b07abe6c08106b10ac4",
+      "source_mtime_utc": "2026-11-04T19:46:43.276514+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\command-02.json",
+      "archive": "evidence/performance-linux-release/command-02.json",
+      "bytes": 433,
+      "sha256": "c8eb6b67e7b3451d63d593bc74647e84b33ddb1006fe9ce4614d8e89f3b29462",
+      "source_mtime_utc": "2026-11-04T19:47:01.510189+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\command-03.json",
+      "archive": "evidence/performance-linux-release/command-03.json",
+      "bytes": 2141,
+      "sha256": "9c311ff31ac06e2845e68f2fb1f9af95cc1dedcf63376b5fc2211a7d69cc5d3d",
+      "source_mtime_utc": "2026-11-04T19:47:01.691178+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\command-04.json",
+      "archive": "evidence/performance-linux-release/command-04.json",
+      "bytes": 2305,
+      "sha256": "44ecbd184e2c287936325e747696e372a3a7ffc64b6f3ebcf7b95c60caa75bab",
+      "source_mtime_utc": "2026-11-04T19:47:01.855332+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\command-05.json",
+      "archive": "evidence/performance-linux-release/command-05.json",
+      "bytes": 2269,
+      "sha256": "40704862ac5aca6cc1516199a9f814b678b0267ad8c2d9b78df8af9f2f7b8753",
+      "source_mtime_utc": "2026-11-04T19:47:02.031364+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\command-06.json",
+      "archive": "evidence/performance-linux-release/command-06.json",
+      "bytes": 2118,
+      "sha256": "5debc9b707af8ed35bf0cfc955085659ef65a8ecdae48ba058e3664c698023fa",
+      "source_mtime_utc": "2026-11-04T19:47:02.211300+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\command-07.json",
+      "archive": "evidence/performance-linux-release/command-07.json",
+      "bytes": 1878,
+      "sha256": "ff7d68afc57653d0aa2c51723a53a98f5852b0d837fc2722477f46a1f22ad8ad",
+      "source_mtime_utc": "2026-11-04T19:47:02.367144+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\comparison.html",
+      "archive": "evidence/performance-linux-release/comparison.html",
+      "bytes": 5399,
+      "sha256": "39a793cf32ee4c74f334e4714324b93d0733019c2be38349e71fb2c0d8950f6b",
+      "source_mtime_utc": "2026-11-04T19:47:01.671623+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\comparison.json",
+      "archive": "evidence/performance-linux-release/comparison.json",
+      "bytes": 4709,
+      "sha256": "9a4adc5d2a52ece3c9f17d6fd3c168d13fe032f252a3cbc3195cf9ca9998b336",
+      "source_mtime_utc": "2026-11-04T19:47:01.661525+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\comparison.md",
+      "archive": "evidence/performance-linux-release/comparison.md.txt",
+      "bytes": 1532,
+      "sha256": "1a3a270cd3ecd47b719161153b792bd35d7208eab2cdc0db28095d5b1da1ba7b",
+      "source_mtime_utc": "2026-11-04T19:47:01.669480+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\no-baseline.html",
+      "archive": "evidence/performance-linux-release/no-baseline.html",
+      "bytes": 2133,
+      "sha256": "639422b42c5e56450a64755575b52bd3fc632347e1032653ef8982a4a9f84fe7",
+      "source_mtime_utc": "2026-11-04T19:47:02.192389+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\no-baseline.json",
+      "archive": "evidence/performance-linux-release/no-baseline.json",
+      "bytes": 919,
+      "sha256": "b74938ac15d3d6810e51201ab9ce44d5172443ae81ac6b657fd9eaa489fa3395",
+      "source_mtime_utc": "2026-11-04T19:47:02.161288+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\no-baseline.md",
+      "archive": "evidence/performance-linux-release/no-baseline.md.txt",
+      "bytes": 1532,
+      "sha256": "baa8739c4d616a6cd69d726370e02fa95e35cf62dca5202436f4a943367c871c",
+      "source_mtime_utc": "2026-11-04T19:47:02.161288+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\parameters.html",
+      "archive": "evidence/performance-linux-release/parameters.html",
+      "bytes": 3037,
+      "sha256": "f106f4e427363e2477e2b4e2ea213b58ae0a3877c76b5f5ec93e7d856d471427",
+      "source_mtime_utc": "2026-11-04T19:47:02.351308+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\parameters.json",
+      "archive": "evidence/performance-linux-release/parameters.json",
+      "bytes": 2478,
+      "sha256": "560d7cd7f048830bae9c069254ff862c5ef1f53950ae5935ee36bb25b1653fb4",
+      "source_mtime_utc": "2026-11-04T19:47:02.345422+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\parameters.md",
+      "archive": "evidence/performance-linux-release/parameters.md.txt",
+      "bytes": 1277,
+      "sha256": "48291d8ab0dc56d4c1cf7b4a50045d8ad029fa6c3dccc4b29c9219de1b18b0f6",
+      "source_mtime_utc": "2026-11-04T19:47:02.345422+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\synthetic-incomparable.html",
+      "archive": "evidence/performance-linux-release/synthetic-incomparable.html",
+      "bytes": 2133,
+      "sha256": "cf80de970c51931b5de8939e06393c05b80c543ccfbcc26abf9b6a8d6e2a3613",
+      "source_mtime_utc": "2026-11-04T19:47:02.012752+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\synthetic-incomparable.json",
+      "archive": "evidence/performance-linux-release/synthetic-incomparable.json",
+      "bytes": 905,
+      "sha256": "47b6216f28c727509cd3a99d3fa99bf9bd6de3ddc48516aeb749c5ac7336a0da",
+      "source_mtime_utc": "2026-11-04T19:47:02.006184+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\synthetic-incomparable.md",
+      "archive": "evidence/performance-linux-release/synthetic-incomparable.md.txt",
+      "bytes": 1556,
+      "sha256": "b754a2d8f7f3c60e82e14db25b8a061775afe59b064571b9aefd9c9dd9727930",
+      "source_mtime_utc": "2026-11-04T19:47:02.011224+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\synthetic-regression.html",
+      "archive": "evidence/performance-linux-release/synthetic-regression.html",
+      "bytes": 5653,
+      "sha256": "86d9b49859ab72e5b31d4b5e7aae2fc9214311c946bba73e1c817890eb5c20fc",
+      "source_mtime_utc": "2026-11-04T19:47:01.836142+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\synthetic-regression.json",
+      "archive": "evidence/performance-linux-release/synthetic-regression.json",
+      "bytes": 4685,
+      "sha256": "d443d6355bd6d3b8cbf1e502458b8558616825c4c2ec3831fa4c2b4de0844ead",
+      "source_mtime_utc": "2026-11-04T19:47:01.831467+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\synthetic-regression.md",
+      "archive": "evidence/performance-linux-release/synthetic-regression.md.txt",
+      "bytes": 1692,
+      "sha256": "62b01190daa49da46ca30d5b08ebfcda2d1af9153a713c84fbb1922b0185ea1b",
+      "source_mtime_utc": "2026-11-04T19:47:01.835131+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\py38-environment\\command-0.json",
+      "archive": "evidence/py38-environment/command-0.json",
+      "bytes": 164,
+      "sha256": "713441f4afd8b42f10c7f1071ceb657519f5c93253b3aa26f236fb0c2f538651",
+      "source_mtime_utc": "2026-11-04T18:16:20.915401+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\py38-environment\\command-1.json",
+      "archive": "evidence/py38-environment/command-1.json",
+      "bytes": 212,
+      "sha256": "f963b9e199058f9fdbf1769a430132a3567b0bda6278f2b9bf9cb7ce4c61b0f2",
+      "source_mtime_utc": "2026-11-04T18:16:21.413217+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\py38-environment\\command-2.json",
+      "archive": "evidence/py38-environment/command-2.json",
+      "bytes": 629,
+      "sha256": "125833487f6488d15dfb30d0490a441d7f929c8907994e2e1aeac5f82a59467d",
+      "source_mtime_utc": "2026-11-04T18:16:22.055536+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\report-safety\\checks.json",
+      "archive": "evidence/report-safety/checks.json",
+      "bytes": 8991,
+      "sha256": "77353c77f60d2bed116ffc167e46083ffdd877da7444beda14f05fa80cc2a03e",
+      "source_mtime_utc": "2026-11-04T21:22:23.702217+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\report-safety\\collision-input.json",
+      "archive": "evidence/report-safety/collision-input.json",
+      "bytes": 13389,
+      "sha256": "c1c573b96a515ecf89f3a86cf16dabb961dacc0de07e72626d7b58edc259b4af",
+      "source_mtime_utc": "2026-11-04T21:22:23.496941+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\report-safety\\comparison.html",
+      "archive": "evidence/report-safety/comparison.html",
+      "bytes": 5399,
+      "sha256": "39a793cf32ee4c74f334e4714324b93d0733019c2be38349e71fb2c0d8950f6b",
+      "source_mtime_utc": "2026-11-04T21:22:22.663831+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\report-safety\\comparison.json",
+      "archive": "evidence/report-safety/comparison.json",
+      "bytes": 4709,
+      "sha256": "c00ba52a57320df1f23e35393b70d988e87419167b70a3c0402bea439c6e6e1e",
+      "source_mtime_utc": "2026-11-04T21:22:22.639574+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\report-safety\\comparison.md",
+      "archive": "evidence/report-safety/comparison.md.txt",
+      "bytes": 1532,
+      "sha256": "1a3a270cd3ecd47b719161153b792bd35d7208eab2cdc0db28095d5b1da1ba7b",
+      "source_mtime_utc": "2026-11-04T21:22:22.645055+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\report-safety\\different-input.json",
+      "archive": "evidence/report-safety/different-input.json",
+      "bytes": 13399,
+      "sha256": "e8d21832ac5e1ccd8b96da13d1b1c2508d89096f3f1f3e51075c7231f0ed74b3",
+      "source_mtime_utc": "2026-11-04T21:22:22.884971+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\report-safety\\different-report.html",
+      "archive": "evidence/report-safety/different-report.html",
+      "bytes": 2133,
+      "sha256": "cf80de970c51931b5de8939e06393c05b80c543ccfbcc26abf9b6a8d6e2a3613",
+      "source_mtime_utc": "2026-11-04T21:22:23.073676+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\report-safety\\different-report.json",
+      "archive": "evidence/report-safety/different-report.json",
+      "bytes": 905,
+      "sha256": "d74ede6994feb0b29b1e465aa961b46d3c0efef96e96a38db72e210fff15f0f9",
+      "source_mtime_utc": "2026-11-04T21:22:23.066472+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\report-safety\\different-report.md",
+      "archive": "evidence/report-safety/different-report.md.txt",
+      "bytes": 1556,
+      "sha256": "b754a2d8f7f3c60e82e14db25b8a061775afe59b064571b9aefd9c9dd9727930",
+      "source_mtime_utc": "2026-11-04T21:22:23.066472+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\report-safety\\no-baseline.html",
+      "archive": "evidence/report-safety/no-baseline.html",
+      "bytes": 2133,
+      "sha256": "639422b42c5e56450a64755575b52bd3fc632347e1032653ef8982a4a9f84fe7",
+      "source_mtime_utc": "2026-11-04T21:22:23.273380+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\report-safety\\no-baseline.json",
+      "archive": "evidence/report-safety/no-baseline.json",
+      "bytes": 919,
+      "sha256": "7f20f352261c0a170703a2f9264edf7a70e2aed295d4fbb94a77a92dd7e86d49",
+      "source_mtime_utc": "2026-11-04T21:22:23.263668+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\report-safety\\no-baseline.md",
+      "archive": "evidence/report-safety/no-baseline.md.txt",
+      "bytes": 1532,
+      "sha256": "baa8739c4d616a6cd69d726370e02fa95e35cf62dca5202436f4a943367c871c",
+      "source_mtime_utc": "2026-11-04T21:22:23.269742+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\report-safety\\parameters.html",
+      "archive": "evidence/report-safety/parameters.html",
+      "bytes": 3037,
+      "sha256": "f106f4e427363e2477e2b4e2ea213b58ae0a3877c76b5f5ec93e7d856d471427",
+      "source_mtime_utc": "2026-11-04T21:22:23.473981+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\report-safety\\parameters.json",
+      "archive": "evidence/report-safety/parameters.json",
+      "bytes": 2478,
+      "sha256": "560d7cd7f048830bae9c069254ff862c5ef1f53950ae5935ee36bb25b1653fb4",
+      "source_mtime_utc": "2026-11-04T21:22:23.467280+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\report-safety\\parameters.md",
+      "archive": "evidence/report-safety/parameters.md.txt",
+      "bytes": 1277,
+      "sha256": "48291d8ab0dc56d4c1cf7b4a50045d8ad029fa6c3dccc4b29c9219de1b18b0f6",
+      "source_mtime_utc": "2026-11-04T21:22:23.467280+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\report-safety\\slower-input.json",
+      "archive": "evidence/report-safety/slower-input.json",
+      "bytes": 14099,
+      "sha256": "a24649535db9ef5e558c7f40cbc42f7c30ab7b812d4ca2cf450b1427ee2e394f",
+      "source_mtime_utc": "2026-11-04T21:22:22.690214+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\report-safety\\slower-report.html",
+      "archive": "evidence/report-safety/slower-report.html",
+      "bytes": 5653,
+      "sha256": "86d9b49859ab72e5b31d4b5e7aae2fc9214311c946bba73e1c817890eb5c20fc",
+      "source_mtime_utc": "2026-11-04T21:22:22.869144+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\report-safety\\slower-report.json",
+      "archive": "evidence/report-safety/slower-report.json",
+      "bytes": 4685,
+      "sha256": "4a5531fa5b322ef34a2a1ac4115ceb54f591bb8dde0694ce79e103475963aada",
+      "source_mtime_utc": "2026-11-04T21:22:22.862239+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\report-safety\\slower-report.md",
+      "archive": "evidence/report-safety/slower-report.md.txt",
+      "bytes": 1692,
+      "sha256": "62b01190daa49da46ca30d5b08ebfcda2d1af9153a713c84fbb1922b0185ea1b",
+      "source_mtime_utc": "2026-11-04T21:22:22.865782+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\speech-corpus\\tts-response-8a9038db6b75\\response.json",
+      "archive": "evidence/speech-corpus/tts-response-8a9038db6b75/response.json",
+      "bytes": 316671,
+      "sha256": "335618130951f4188a2926260e9b7ec1f605a91ee2d87ce52bda1ff1a2b73dda",
+      "source_mtime_utc": "2026-11-04T19:16:15.774030+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\upstreams-fcd18c6d5095\\inventory.json",
+      "archive": "evidence/upstreams-fcd18c6d5095/inventory.json",
+      "bytes": 1436,
+      "sha256": "4177a786f864459538a3a549d6029d11f0440cdda95a91a7bfc25162c88685be",
+      "source_mtime_utc": "2026-11-04T17:28:21.602295+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-full-final\\calibration-green-test_contracts.log",
+      "archive": "evidence/windows-full-final/calibration-green-test_contracts.log",
+      "bytes": 1297,
+      "sha256": "e6cfc9dc00883aaf476b040fefcbdc5d9270b557e35ca25dcefc35e2ce488e22",
+      "source_mtime_utc": "2026-11-04T18:21:20.460011+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-full-final\\calibration-green-test_infrastructure.log",
+      "archive": "evidence/windows-full-final/calibration-green-test_infrastructure.log",
+      "bytes": 975,
+      "sha256": "302b500fae1c9c0c4f06590b98183e9de40f01387fe9efc9438575d02795f779",
+      "source_mtime_utc": "2026-11-04T18:21:21.854596+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-full-final\\calibration-red-FM01.log",
+      "archive": "evidence/windows-full-final/calibration-red-FM01.log",
+      "bytes": 904,
+      "sha256": "bd3cb3e077d7e434a9637e566c936eefdc903fbc3c335c7f740c2d7697ed252a",
+      "source_mtime_utc": "2026-11-04T18:21:22.165408+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-full-final\\calibration-red-FM02.log",
+      "archive": "evidence/windows-full-final/calibration-red-FM02.log",
+      "bytes": 5115,
+      "sha256": "5c5f27042161811cb5f65a07c60c1534c5136852b6b3bba350c18726c6776692",
+      "source_mtime_utc": "2026-11-04T18:21:22.454898+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-full-final\\calibration-red-FM03.log",
+      "archive": "evidence/windows-full-final/calibration-red-FM03.log",
+      "bytes": 966,
+      "sha256": "1f8742ce0725e4234304841e19741dc19cf0d73d9ba5d712e80a782e80d0583d",
+      "source_mtime_utc": "2026-11-04T18:21:22.894977+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-full-final\\calibration-red-FM04.log",
+      "archive": "evidence/windows-full-final/calibration-red-FM04.log",
+      "bytes": 6530,
+      "sha256": "fbfcbd8a020f5b74cf497dcab6123e235bea0d8e2569f19475189825beee63b6",
+      "source_mtime_utc": "2026-11-04T18:21:24.184310+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-full-final\\calibration-red-FM05.log",
+      "archive": "evidence/windows-full-final/calibration-red-FM05.log",
+      "bytes": 1235,
+      "sha256": "976a20eb97dcfe77935425d21f7279a69c661fd4fce8582fec10c5fc1d225c79",
+      "source_mtime_utc": "2026-11-04T18:21:24.554974+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-full-final\\calibration-red-FM06.log",
+      "archive": "evidence/windows-full-final/calibration-red-FM06.log",
+      "bytes": 1197,
+      "sha256": "fb27cd4e01ef44a456416ebe02a7d872ab105fda1723b122aa0ea1186e3cff5f",
+      "source_mtime_utc": "2026-11-04T18:21:25.614897+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-full-final\\calibration-red-FM07.log",
+      "archive": "evidence/windows-full-final/calibration-red-FM07.log",
+      "bytes": 1918,
+      "sha256": "2e0082499d4e23fa07485fbbc462df9dc66ac88ba204dd5bc1444ee03f9f0e99",
+      "source_mtime_utc": "2026-11-04T18:21:25.898212+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-full-final\\calibration-red-FM08.log",
+      "archive": "evidence/windows-full-final/calibration-red-FM08.log",
+      "bytes": 938,
+      "sha256": "b789434a0132e21cc72563ffac5fd4f7d7c6d138ef99a95b4a5811d94137f079",
+      "source_mtime_utc": "2026-11-04T18:21:26.145096+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-full-final\\calibration.json",
+      "archive": "evidence/windows-full-final/calibration.json",
+      "bytes": 2047,
+      "sha256": "5b45b136d9508cd13ae0941289d9a249f4770a907052aab083862f832280b75b",
+      "source_mtime_utc": "2026-11-04T18:21:26.151677+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-full-final\\calibration.log",
+      "archive": "evidence/windows-full-final/calibration.log",
+      "bytes": 208,
+      "sha256": "5c59963622bf9e00882b0878e8962ff22804b99bc0d763a4c8037388e5672f24",
+      "source_mtime_utc": "2026-11-04T18:21:26.150720+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-full-final\\contracts.log",
+      "archive": "evidence/windows-full-final/contracts.log",
+      "bytes": 1317,
+      "sha256": "1e50ad86c161cd2faea7f59d7b06ca27bf3109cd3bfb94875c8e8b58d2ad0085",
+      "source_mtime_utc": "2026-11-04T18:21:15.119412+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-full-final\\fsm.log",
+      "archive": "evidence/windows-full-final/fsm.log",
+      "bytes": 746,
+      "sha256": "c0418dbb3a9410b5662afd917ec5c236365a94b602d226c8782e453624054b04",
+      "source_mtime_utc": "2026-11-04T18:21:17.184696+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-full-final\\host-soak.log",
+      "archive": "evidence/windows-full-final/host-soak.log",
+      "bytes": 76,
+      "sha256": "bd56acabea287ce65dc4d23505c1c5d36dc79bca3b466f508131d7927402e9bb",
+      "source_mtime_utc": "2026-11-04T18:21:17.564477+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-full-final\\infrastructure.log",
+      "archive": "evidence/windows-full-final/infrastructure.log",
+      "bytes": 987,
+      "sha256": "24123aab82e53652a30f5de2820ccc63fa6374c6db79a2e03f9e0c493607acf9",
+      "source_mtime_utc": "2026-11-04T18:21:16.578230+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-full-final\\junit.xml",
+      "archive": "evidence/windows-full-final/junit.xml",
+      "bytes": 1338,
+      "sha256": "5595c82a20bea563edd87eef59f4da0fdeedb3b5b4b5c417f6a32f2288d4194a",
+      "source_mtime_utc": "2026-11-04T18:21:27.104716+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-full-final\\results.json",
+      "archive": "evidence/windows-full-final/results.json",
+      "bytes": 2075,
+      "sha256": "d7327a22219cccd74606541f000a0468f9492d32506a827076add01c0d3caec3",
+      "source_mtime_utc": "2026-11-04T18:21:27.104716+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-full-final\\soak.json",
+      "archive": "evidence/windows-full-final/soak.json",
+      "bytes": 648,
+      "sha256": "49a023effd5416f3e3eebd43ea08ee09903b5bc9b3c104fb028dccd3a639f1de",
+      "source_mtime_utc": "2026-11-04T18:21:17.524549+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-full-final\\split.log",
+      "archive": "evidence/windows-full-final/split.log",
+      "bytes": 817917,
+      "sha256": "99834004c531fefa8cfaa85b037683ce1cc7c152a09eebc901ec26f853ca7639",
+      "source_mtime_utc": "2026-11-04T18:21:17.048308+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-full-final\\summary.md",
+      "archive": "evidence/windows-full-final/summary.md.txt",
+      "bytes": 565,
+      "sha256": "018ef31f4614a93002b4881bdc156503af43f6ba5a7d81d33be1875ea9b5d753",
+      "source_mtime_utc": "2026-11-04T18:21:27.114812+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-quick-delivery\\contracts.log",
+      "archive": "evidence/windows-quick-delivery/contracts.log",
+      "bytes": 1317,
+      "sha256": "cd0f86fae95d38a84eac2b3c0a5917bd89cc84cd62aaba0032cc37da2559e5ae",
+      "source_mtime_utc": "2026-11-04T21:22:15.323800+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-quick-delivery\\fsm.log",
+      "archive": "evidence/windows-quick-delivery/fsm.log",
+      "bytes": 746,
+      "sha256": "c0418dbb3a9410b5662afd917ec5c236365a94b602d226c8782e453624054b04",
+      "source_mtime_utc": "2026-11-04T21:22:18.696819+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-quick-delivery\\infrastructure.log",
+      "archive": "evidence/windows-quick-delivery/infrastructure.log",
+      "bytes": 1506,
+      "sha256": "657a4df4a4f6813262475539589ba521240681c90f74341b2f947e1d3995de67",
+      "source_mtime_utc": "2026-11-04T21:22:17.404509+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-quick-delivery\\junit.xml",
+      "archive": "evidence/windows-quick-delivery/junit.xml",
+      "bytes": 655,
+      "sha256": "044a761cf54862d742ae612cdb6ae8ba5d657a554353fdabbad53fefa4d7f0f0",
+      "source_mtime_utc": "2026-11-04T21:22:21.837350+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-quick-delivery\\results.json",
+      "archive": "evidence/windows-quick-delivery/results.json",
+      "bytes": 1370,
+      "sha256": "8be9918d767680555870164a3d5d5eb623808c42ba2e6a28e859c2d7488049b5",
+      "source_mtime_utc": "2026-11-04T21:22:21.835338+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-quick-delivery\\split.log",
+      "archive": "evidence/windows-quick-delivery/split.log",
+      "bytes": 817917,
+      "sha256": "99834004c531fefa8cfaa85b037683ce1cc7c152a09eebc901ec26f853ca7639",
+      "source_mtime_utc": "2026-11-04T21:22:18.564666+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-quick-delivery\\summary.md",
+      "archive": "evidence/windows-quick-delivery/summary.md.txt",
+      "bytes": 294,
+      "sha256": "7052b8ba3b870e92138b054a85bcfe0bf5518a5a791bab7bf8a70b19e3984ca2",
+      "source_mtime_utc": "2026-11-04T21:22:21.867004+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-quick-final\\contracts.log",
+      "archive": "evidence/windows-quick-final/contracts.log",
+      "bytes": 1317,
+      "sha256": "ba18f0ac70ed88a431dbde01a32dba81f12b1718acba6ec224277a3213940e00",
+      "source_mtime_utc": "2026-11-04T19:10:40.117187+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-quick-final\\fsm.log",
+      "archive": "evidence/windows-quick-final/fsm.log",
+      "bytes": 746,
+      "sha256": "c0418dbb3a9410b5662afd917ec5c236365a94b602d226c8782e453624054b04",
+      "source_mtime_utc": "2026-11-04T19:10:42.291969+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-quick-final\\infrastructure.log",
+      "archive": "evidence/windows-quick-final/infrastructure.log",
+      "bytes": 1265,
+      "sha256": "fa20baa09b1f08e40015c9b1f98b605559920b8fa8d14d6df5d3a9af8d369972",
+      "source_mtime_utc": "2026-11-04T19:10:41.650263+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-quick-final\\junit.xml",
+      "archive": "evidence/windows-quick-final/junit.xml",
+      "bytes": 655,
+      "sha256": "9cc5ddd096121a500b4e6bf09fe359bc9abe73fe58e97fe739ae4e512ea30c53",
+      "source_mtime_utc": "2026-11-04T19:10:43.224323+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-quick-final\\results.json",
+      "archive": "evidence/windows-quick-final/results.json",
+      "bytes": 1343,
+      "sha256": "f97355c755ac4d6aaf468499a4b4f8e1b15ca81170aa8d02b5ac4cef15435159",
+      "source_mtime_utc": "2026-11-04T19:10:43.220234+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-quick-final\\split.log",
+      "archive": "evidence/windows-quick-final/split.log",
+      "bytes": 817917,
+      "sha256": "99834004c531fefa8cfaa85b037683ce1cc7c152a09eebc901ec26f853ca7639",
+      "source_mtime_utc": "2026-11-04T19:10:42.054295+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-quick-final\\summary.md",
+      "archive": "evidence/windows-quick-final/summary.md.txt",
+      "bytes": 294,
+      "sha256": "502c5c09f3d1e6932c341ed5d0899e7bf5e496c757e8fa2f4beff6ce13075bee",
+      "source_mtime_utc": "2026-11-04T19:10:43.302737+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-quick-release\\contracts.log",
+      "archive": "evidence/windows-quick-release/contracts.log",
+      "bytes": 1317,
+      "sha256": "f65fe75184a95163475dbbaf031f319b344500381c0f82b0bda0561e1734c4bb",
+      "source_mtime_utc": "2026-11-04T19:46:17.967233+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-quick-release\\fsm.log",
+      "archive": "evidence/windows-quick-release/fsm.log",
+      "bytes": 746,
+      "sha256": "c0418dbb3a9410b5662afd917ec5c236365a94b602d226c8782e453624054b04",
+      "source_mtime_utc": "2026-11-04T19:46:20.796690+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-quick-release\\infrastructure.log",
+      "archive": "evidence/windows-quick-release/infrastructure.log",
+      "bytes": 1378,
+      "sha256": "20076c0b3d8c71ae05a9071699b0463e8146680389da733b29acd250f9c39784",
+      "source_mtime_utc": "2026-11-04T19:46:19.951766+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-quick-release\\junit.xml",
+      "archive": "evidence/windows-quick-release/junit.xml",
+      "bytes": 655,
+      "sha256": "b65089caa7e59d68258fda81753a6ffb29eda8b96f204fd971b63e96e2527115",
+      "source_mtime_utc": "2026-11-04T19:46:21.769816+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-quick-release\\results.json",
+      "archive": "evidence/windows-quick-release/results.json",
+      "bytes": 1367,
+      "sha256": "5deb517a821e8597c76197239c854f2065e0cd9f310fa68cb2f3e325c435fe71",
+      "source_mtime_utc": "2026-11-04T19:46:21.764424+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-quick-release\\split.log",
+      "archive": "evidence/windows-quick-release/split.log",
+      "bytes": 817917,
+      "sha256": "99834004c531fefa8cfaa85b037683ce1cc7c152a09eebc901ec26f853ca7639",
+      "source_mtime_utc": "2026-11-04T19:46:20.640744+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\windows-quick-release\\summary.md",
+      "archive": "evidence/windows-quick-release/summary.md.txt",
+      "bytes": 294,
+      "sha256": "b839db58122390042ab045461f748d4dddee1d5842d6c8ae32dc847076d3952c",
+      "source_mtime_utc": "2026-11-04T19:46:21.840703+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\zgbuild-environment\\command-0.json",
+      "archive": "evidence/zgbuild-environment/command-0.json",
+      "bytes": 162,
+      "sha256": "a437f47f4d89e433f470c63a77e90bba846ff1168040c009df8b29b0758ce8e9",
+      "source_mtime_utc": "2026-11-04T18:19:03.584304+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\zgbuild-environment\\command-1.json",
+      "archive": "evidence/zgbuild-environment/command-1.json",
+      "bytes": 210,
+      "sha256": "2c2bbb0327e0c751b1a2e828014c494b408cb3d1c3efee16b39fe752675db21b",
+      "source_mtime_utc": "2026-11-04T18:19:04.058672+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\zgbuild-environment\\command-2.json",
+      "archive": "evidence/zgbuild-environment/command-2.json",
+      "bytes": 638,
+      "sha256": "ca59b8e0cf52bd779f4263fdd288031d107d79116bc4c638ce082b468c862e33",
+      "source_mtime_utc": "2026-11-04T18:19:04.670628+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-wiki-archive\\source-snapshot\\CI-VALIDATION.md",
+      "original_location": "S:\\work\\WCIS\\repos\\HA4FPAI\\docs\\CI-VALIDATION.md",
+      "archive": "documents/CI-VALIDATION.md.txt",
+      "bytes": 10804,
+      "sha256": "9098cecb23f89b70c3efc5ef01743a2a890983288d98ad21d63b9a179a57a8a0",
+      "source_mtime_utc": "2026-11-04T22:11:07.661999+00:00"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-wiki-archive\\inventory.json",
+      "archive": "archive-tooling/inventory.json",
+      "bytes": 41482,
+      "sha256": "dea550db46c314b87cc6ed1b866059632880ad50d815026aa5a8d2fbfa344028",
+      "source_mtime_utc": "2026-11-05T01:57:12.030737+00:00",
+      "frozen": true
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-wiki-archive\\copy-result.json",
+      "archive": "archive-tooling/copy-result.json",
+      "bytes": 251,
+      "sha256": "3b525b91a0fb4801a07fe8805ae5cb3eb1fa31e00532db97316e1dee05d5539b",
+      "source_mtime_utc": "2026-11-05T02:14:39.330160+00:00",
+      "frozen": true
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-wiki-archive\\verification.json",
+      "archive": "archive-tooling/verification.json",
+      "bytes": 77,
+      "sha256": "ebbe81611b04d69489d46704b9d9f1a9338306b59a8c2a2803a45b109d7edc7c",
+      "source_mtime_utc": "2026-11-05T20:15:56.718096+00:00",
+      "frozen": true
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-wiki-archive\\links-and-tracking.json",
+      "archive": "archive-tooling/links-and-tracking.json",
+      "bytes": 397,
+      "sha256": "8510b1b1a85ba669637c41ae79476f1b72ff7dc11b2240a578dcbea010a4dd12",
+      "source_mtime_utc": "2026-11-05T02:35:06.479117+00:00",
+      "frozen": true
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-wiki-archive\\wiki-check-full.log",
+      "archive": "archive-tooling/wiki-check-full.log",
+      "bytes": 11055,
+      "sha256": "54cd3d4e6a0e4972e26e0e250e9f25d91ff5fd32e101e0f85e173d609b6c7986",
+      "source_mtime_utc": "2026-11-05T02:35:06.476606+00:00",
+      "frozen": true
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\speech-corpus\\tts-response-8a9038db6b75\\speech.wav",
+      "archive": "corpus/speech.wav",
+      "bytes": 237356,
+      "sha256": "165f8fdbb2eccae5ed342b94d9ac95c4fd14fe84d05899fbd77e3a83a1f1947f",
+      "source_mtime_utc": "2026-11-04T19:16:15.779173+00:00"
+    }
+  ],
+  "scripts_referenced_only": [
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\acceptance-evidence.py",
+      "bytes": 6848,
+      "sha256": "9fbb41a813f76033fecec3d11cb652cf86a4bd16b9bc67c7713f94d07fd933dd"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\audit-delivery.py",
+      "bytes": 8337,
+      "sha256": "518e4ad134ed50c3252ef5bad2852e5a276a69b27caf9e7fcd0550ce478ff015"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\capture-speech-remote.py",
+      "bytes": 1241,
+      "sha256": "f352677dac8af4277a484d4ee748ad725f4e8fa2b6b2762c03c0779a309b5293"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\capture-speech.py",
+      "bytes": 3093,
+      "sha256": "4efe9b7fef32718fbc77ccfb0bb85b65ae68772e4f5edad70605af3856dcb7f3"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\commit-manual-publication.py",
+      "bytes": 2073,
+      "sha256": "c2ae4149b46361705d6c4efe702cfb8f469584b815240c82d0c24de35dafb65c"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\container-check.py",
+      "bytes": 2171,
+      "sha256": "06518448193477e1faa59e1e518ed28b3a2eb1b6b09a586b8f1a6993e5dde4d6"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\delivery-facts.py",
+      "bytes": 3801,
+      "sha256": "d30201b3f87221351da872072e22e4eeebacbd8dc9c1308668c737f3bc521f66"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\device-final-checks.py",
+      "bytes": 1604,
+      "sha256": "72f0de8417393ae55eacd02ce8578d0c96837534dad66f2bda206952970bb456"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\evidence-facts.py",
+      "bytes": 1114,
+      "sha256": "94dd619ba46976a389da2bcb5d753e609d65e1a8a400ce459a42138c76232751"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\existing-linux.py",
+      "bytes": 1693,
+      "sha256": "074bc7e31f5dac2f0d6d7a6996c26c42b8f49d6d2014eb764ff9cd2de47ddb97"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\inspect-manual-publish.py",
+      "bytes": 2585,
+      "sha256": "77e8074787a650cddff7e2699008914f74cd0cda62cc3dbb914d1b1bf819eec8"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\lifecycle-final.py",
+      "bytes": 1273,
+      "sha256": "5ca5d1af62657073c2d586d20f4ad2c3d01083ee0d43d9d3b19cab422b45abe0"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\lifecycle-residual-calibration.py",
+      "bytes": 2437,
+      "sha256": "7f3248d4728bfff1f7e1d2aaaf799bbdc7b7417f5f702cffc4303e70bb45d8c5"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\populate-manual-publication.py",
+      "bytes": 1439,
+      "sha256": "bdec2d4a965cd230032adf4e321e39b9edad26cbe348617054d4f82867b04009"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\prepare-manual-publication.py",
+      "bytes": 2538,
+      "sha256": "5b0847db70b8b4af4db286d3ce88259f64d9466765bbe0c4165272fcae3d5eb8"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\push-manual-publication.py",
+      "bytes": 3580,
+      "sha256": "68ccc569d3902c80643d84aaaf7264dd07ccc17fffa1eca76bae71b357913c30"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\research-upstreams.py",
+      "bytes": 4277,
+      "sha256": "d3a0349428dc2b037d06ab94ee6f30ee34a57db12484cd14cca73818fbbb2671"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\school-actionlint.py",
+      "bytes": 3794,
+      "sha256": "8616b56fc0dae00e3fc295128eebc4d798b90cf621b9303bdce1caa542c9c0a2"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\stage-manual-publication.py",
+      "bytes": 2505,
+      "sha256": "fd40d2900d17857617b41f1fb13180a6cac7c187330dcc3869b30932c17003dd"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\validate-school.py",
+      "bytes": 1668,
+      "sha256": "d66d9451797496172570c07b40061dc43da865cbb893268188fd47c64e5cf0ab"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\validation-environment.py",
+      "bytes": 1203,
+      "sha256": "f6246795c9443d422fc13713763d0091b19e751c4ecaa1da5a31aff47046d635"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\verify-adapter-pin-remote.py",
+      "bytes": 1991,
+      "sha256": "97616ee660b1b8e98554587103e6323b21035bcb0836c67b1092b1132c8f452a"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\verify-adapter-pin.py",
+      "bytes": 1272,
+      "sha256": "e910eff83b0a0b0d8f06ccca1cc0671d20927bf4d8235d37e8032bc200dede6c"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\verify-manual-publication.py",
+      "bytes": 2983,
+      "sha256": "e6493fb2c1418cf4d5f5f19e9fc5dc2915730a6f6f5dd3006000dd745783f04a"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\verify-report-safety.py",
+      "bytes": 3092,
+      "sha256": "f85bb135c9545b3fd7dcfbe46e0f4585474ba2e251fc4e0d4ce8044a8be8f4f1"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-wiki-archive\\inventory.py",
+      "bytes": 3421,
+      "sha256": "9337468dd7908f81f164f35410aa24bc98f1f66851a2bc2ff3e65d34d520799c"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-wiki-archive\\archive.py",
+      "bytes": 8299,
+      "sha256": "a771f8ce4585c39c6d2068c877c8d1ffc637bcf267928450f068a12832ad9845"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-wiki-archive\\prepare-page.py",
+      "bytes": 5252,
+      "sha256": "9b3ebe1230db8282317e4949861ddc712abae1ef91d4f3ac070c5cd85671bd6b"
+    },
+    {
+      "source": "S:\\work\\WCIS\\workenv\\ha4fpai-wiki-archive\\verify-links.py",
+      "bytes": 3560,
+      "sha256": "bfd320698ad13524ed20e16d022649918d47bc5bf8901b81145d61b4c4c36cac"
+    }
+  ],
+  "excluded_directories": [
+    "adapters-release/reports/calibration-source-43fa058876cf/",
+    "adapters-release/reports/tmp/",
+    "calibration-fixed/calibration-source-e495c4dc5e3c/",
+    "core-full-delivery/reports/calibration-source-3962d9a9c0b0/",
+    "core-full-delivery/reports/calibration-source-3cb98fbf7bc1/",
+    "core-full-delivery/reports/tmp/",
+    "core-full-release/reports/calibration-source-3962d9a9c0b0/",
+    "core-full-release/reports/tmp/",
+    "host-full/calibration-source-5e932f38bc6b/",
+    "host-full/tmp/",
+    "linux-final/reports/calibration-source-92bd340c2829/",
+    "linux-final/reports/calibration-source-b5959074e07d/",
+    "linux-final/reports/calibration-source-d5f31680ea9b/",
+    "linux-final/reports/tmp/",
+    "linux-full/reports/calibration-source-b5959074e07d/",
+    "linux-full/reports/tmp/",
+    "linux-full-corrected/reports/calibration-source-92bd340c2829/",
+    "linux-full-corrected/reports/calibration-source-b5959074e07d/",
+    "linux-full-corrected/reports/tmp/",
+    "manual-publish/checkout-20261104T215939/",
+    "manual-publish/checks/core/calibration-source-8f1412eb617a/",
+    "manual-publish/checks/core/tmp/",
+    "package-acceptance/stage-amd64-20261104T185518432213/",
+    "package-acceptance/stage-arm64-20261104T185459779353/",
+    "windows-full-final/calibration-source-262c37590e70/",
+    "windows-full-final/tmp/",
+    "windows-quick-delivery/tmp/",
+    "windows-quick-final/tmp/",
+    "windows-quick-release/tmp/"
+  ],
+  "scope": "Completed reports, logs, measurements and parameter snapshots; no source-tree clones, dependencies or installer binaries",
+  "markdown_attachment_policy": "Original Markdown evidence is stored as .md.txt without modifying its bytes",
+  "originals_preserved": true,
+  "automatic_actions_started": false,
+  "extended_at_utc": "2026-11-05T20:16:02.624944+00:00",
+  "revision": 2
+}

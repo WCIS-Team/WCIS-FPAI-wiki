@@ -1,0 +1,14 @@
+{
+  "command": [
+    "podman",
+    "inspect",
+    "wcis-py38",
+    "wcis-lang-package-test",
+    "zgbuild",
+    "--format",
+    "{{.Name}} {{.Config.Image}} {{json .Mounts}}"
+  ],
+  "exit_code": 0,
+  "stdout": "wcis-py38 docker.io/library/ubuntu20.04_container:latest [{\"Type\":\"bind\",\"Source\":\"/mnt/s/work/WCIS/repos\",\"Destination\":\"/work/repos\",\"Driver\":\"\",\"Mode\":\"\",\"Options\":[\"rbind\"],\"RW\":true,\"Propagation\":\"rprivate\"}]\nwcis-lang-package-test localhost/fpai-ub2004:arm64-icraft3.39.0 []\nzgbuild localhost/fpai-ub2004:tts-saved [{\"Type\":\"bind\",\"Source\":\"/mnt/s\",\"Destination\":\"/mnt/s\",\"Driver\":\"\",\"Mode\":\"\",\"Options\":[\"rbind\"],\"RW\":true,\"Propagation\":\"rprivate\"}]\n",
+  "stderr": ""
+}

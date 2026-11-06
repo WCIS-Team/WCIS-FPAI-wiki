@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/mnt/s/work/WCIS/repos/HA4FPAI/lang/npuserv/tests/q3_adapter_stub_check.py", line 383, in <module>
+    sys.exit(main())
+  File "/mnt/s/work/WCIS/repos/HA4FPAI/lang/npuserv/tests/q3_adapter_stub_check.py", line 260, in main
+    src = open(DRIVER, encoding="utf-8").read()
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/s/work/WCIS/repos/HA4FPAI/lang/llm/Qwen3-0.6B/patch/q3_infer_board.py'

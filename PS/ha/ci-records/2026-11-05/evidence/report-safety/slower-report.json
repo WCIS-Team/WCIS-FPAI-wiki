@@ -1,0 +1,177 @@
+{
+  "status": "regression",
+  "reason": "Source fingerprints are unchanged; assess runtime/load variation before attributing the measured regression to code",
+  "rows": [
+    {
+      "metric": "process.peak_rss_kib.value",
+      "baseline": 52604.0,
+      "candidate": 52500.0,
+      "delta": -104.0,
+      "percent": -0.19770359668466275,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-12.chain_ms.p50",
+      "baseline": 56.290991500000004,
+      "candidate": 169.8729745,
+      "delta": 113.581983,
+      "percent": 201.77648318736755,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-12.chain_ms.p95",
+      "baseline": 69.803811,
+      "candidate": 210.411433,
+      "delta": 140.607622,
+      "percent": 201.43258653886392,
+      "regression": true,
+      "gated": true
+    },
+    {
+      "metric": "split-12.first_request_ms.value",
+      "baseline": 54.089768,
+      "candidate": 70.681793,
+      "delta": 16.592025,
+      "percent": 30.67497904594451,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-12.split_ms.p50",
+      "baseline": 0.0534465,
+      "candidate": 1.1603395,
+      "delta": 1.1068930000000001,
+      "percent": 2071.029908413086,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-12.split_ms.p95",
+      "baseline": 0.092435,
+      "candidate": 1.2773050000000001,
+      "delta": 1.18487,
+      "percent": 1281.8412938821875,
+      "regression": true,
+      "gated": true
+    },
+    {
+      "metric": "split-20-16k.chain_ms.p50",
+      "baseline": 55.531828000000004,
+      "candidate": 167.595484,
+      "delta": 112.063656,
+      "percent": 201.80076910128005,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-20-16k.chain_ms.p95",
+      "baseline": 75.946449,
+      "candidate": 228.839347,
+      "delta": 152.892898,
+      "percent": 201.31671725691876,
+      "regression": true,
+      "gated": true
+    },
+    {
+      "metric": "split-20-16k.first_request_ms.value",
+      "baseline": 56.523025,
+      "candidate": 46.891063,
+      "delta": -9.631961999999994,
+      "percent": -17.040775860810694,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-20-16k.split_ms.p50",
+      "baseline": 0.050335000000000005,
+      "candidate": 1.151005,
+      "delta": 1.10067,
+      "percent": 2186.6891824774016,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-20-16k.split_ms.p95",
+      "baseline": 0.071966,
+      "candidate": 1.215898,
+      "delta": 1.143932,
+      "percent": 1589.5450629463912,
+      "regression": true,
+      "gated": true
+    },
+    {
+      "metric": "split-20.chain_ms.p50",
+      "baseline": 156.23575649999998,
+      "candidate": 469.7072695,
+      "delta": 313.471513,
+      "percent": 200.64005834669481,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-20.chain_ms.p95",
+      "baseline": 241.269075,
+      "candidate": 724.807225,
+      "delta": 483.53815000000003,
+      "percent": 200.41447500057768,
+      "regression": true,
+      "gated": true
+    },
+    {
+      "metric": "split-20.first_request_ms.value",
+      "baseline": 318.071818,
+      "candidate": 346.039219,
+      "delta": 27.967400999999995,
+      "percent": 8.792794399659764,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-20.split_ms.p50",
+      "baseline": 0.0658645,
+      "candidate": 1.1975935,
+      "delta": 1.131729,
+      "percent": 1718.2685665267327,
+      "regression": false,
+      "gated": false
+    },
+    {
+      "metric": "split-20.split_ms.p95",
+      "baseline": 0.150806,
+      "candidate": 1.452418,
+      "delta": 1.301612,
+      "percent": 863.1035900428366,
+      "regression": true,
+      "gated": true
+    }
+  ],
+  "gates": {
+    "chain_ms.p95": {
+      "direction": "lower",
+      "relative": 0.15,
+      "absolute": 5.0
+    },
+    "split_ms.p95": {
+      "direction": "lower",
+      "relative": 0.2,
+      "absolute": 0.05
+    }
+  },
+  "comparison_tool_sha256": "ca06cb59875af556f83549550db717133e6eed0d412525c6fab7719ab9551d1d",
+  "conditions": {
+    "kind": "host-mock",
+    "environment": {
+      "device_id": "549b9500faeb",
+      "system": "Linux",
+      "architecture": "x86_64",
+      "python": "3.8.10",
+      "implementation": "CPython",
+      "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+      "cpus": 16
+    },
+    "workload_sha256": "a957682e9cfa09ace7855e8f1512638a0bcfa484c13204886140385a9811310e",
+    "harness_sha256": "966de4df53320d435e7c010a9ac00232fce6b386cebe19e928fcdb44aa7e3204"
+  }
+}

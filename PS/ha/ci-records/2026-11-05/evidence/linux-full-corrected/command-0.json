@@ -1,0 +1,20 @@
+{
+  "command": [
+    "podman",
+    "exec",
+    "zgbuild",
+    "python3",
+    "-I",
+    "-B",
+    "-X",
+    "utf8",
+    "/mnt/s/work/WCIS/repos/HA4FPAI/ci/run.py",
+    "--profile",
+    "full",
+    "--output",
+    "/workenv/ha4fpai-ci/full"
+  ],
+  "exit_code": 0,
+  "stdout": "Validated 73 Python files against Python 3.8 grammar\nPASSED contracts (2.99s)\nPASSED infrastructure (0.77s)\nPASSED split (0.48s)\nPASSED fsm (0.07s)\nPASSED npu-lifecycle (8.00s)\nPASSED npu-adapter (2.38s)\nPASSED npu-q3-adapter (4.95s)\nPASSED host-soak (0.42s)\nPASSED calibration (6.62s)\nCI full: passed; /workenv/ha4fpai-ci/full\n",
+  "stderr": ""
+}

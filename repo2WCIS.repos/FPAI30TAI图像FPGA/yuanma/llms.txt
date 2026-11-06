@@ -1,0 +1,29 @@
+# yuanma 仓库索引（llms.txt）
+
+仓库根：`S:\work\WCIS\repos\yuanma`
+**本文件与同目录 `yuanma索引.md` 是同一份东西（llms = 索引）**，内容必须一致；
+以后仓库或本目录有更新，索引要一起更新（先改一处再同步另一处）。
+本仓库未自带 llms.txt；自带入口是 `README.md` 与 `submission/README.md`（复现步骤）、`submission/filelist.md`（分类索引）。
+只读指路，不修改仓库。
+
+## 顶层
+- `README.md` — 复现主线四节：BOOT → PS 程序 → 上板运行 → 重新生成。
+- `board-run.tar.gz` — 板端一键运行包（board/ + reference_release/ + filelist.json）。
+- `submission/` — 全部提交内容（4481 文件 / 3.1 GB，2026-11-03 冻结）。
+
+## submission/ 分区
+- `source/fpga_project/` — Vivado 源码工程快照（FPAI30TAI图像FPGA 完整副本）：`case/fpai_demo_vivado.xpr`、`rtl/`、`constraints/`、`npu_photo/`、`ps_app/`、`model_backend/`、`lan_stream/`、`patches/`、`sim/`、`tests/`、`scripts/`、`docs/`。
+- `evidence/` — `stages/`（12 个历史阶段原始日志）、`workspace/`（构建/Procise 打包日志）、`restore-check/`（重开 Vivado 报告：104,649 网全布通）、`reproduction/`（BOOT 重打包逐字节比对）。
+- `implemented_baseline/` — 冻结 10-20 实现：`refclk-final.dcp`、`boot-candidate/BOOT.bin`（`f6da96ab…`）、`timing.rpt`、`build-and-board-manifest.json`。
+- `reference_release/` — 板端运行配套：`boot/`（BOOT/Image/dtb/uEnv）、`app/`（识别程序+网页+三个原生二进制）、`identity/`+`pad/`（模型与 `wcis_face_pad`）、`recorder/`（录像八件）。
+- `board/` — 新板安装器：`render_install.py` + `board.example.json` + iCraft 3.39.0 `.deb`。
+- `restore/` — 重新生成：`rebuild_bit.tcl`（冻结 DCP→bit）、`rebuild_boot.ps1/.tcl`（Procise）、`rebuild_rtl.tcl`、两个只读打开 tcl、`compare_boot.py`。
+- `model_inputs/` — 已改写 ONNX：YuNet / MobileFaceNet / MiniFASNetV2、V1SE（`-conv-slope`）。
+
+## 清单与校验
+- `filelist.json` — 4481 件逐条 path/category/stage/bytes/sha256；`checks` 含 10 项复现核验。
+- `filelist.txt` / `filelist.md` — 纯路径表 / 分类表。
+
+## 复现边界（自查声明）
+- BOOT 重打包逐字节一致；RTL 重综合 7 组仿真过，但未重新布线上板（`rtl_new_route_verified: false`）。
+- 原始时序未完整签核（周期 −0.409 ns 沿用）；板端运行以待验板为准（`board_runtime_verified: false`）。

@@ -1,0 +1,11 @@
+{
+  "command": [
+    "podman",
+    "start",
+    "wcis-lang-package-test"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "stdout": "wcis-lang-package-test\n",
+  "stderr": ""
+}

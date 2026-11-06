@@ -1,0 +1,18 @@
+{
+  "command": [
+    "C:\\Users\\takomi\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-I",
+    "-B",
+    "S:\\work\\WCIS\\repos\\HA4FPAI\\ci\\report.py",
+    "--baseline",
+    "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\baseline.json",
+    "--candidate",
+    "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\synthetic-incomparable.json",
+    "--output",
+    "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-final\\synthetic-incomparable"
+  ],
+  "exit_code": 2,
+  "expected_exit_code": 2,
+  "stdout": "# HA4FPAI performance\n\nResult: **incomparable**\n\nConditions differ: environment\n\nSource: `27b8a1f76cd576d24db478fc9bcab196f9d25caf`; dirty: `True`\n\n| Metric | Baseline | Candidate | Change | Gate |\n|---|---:|---:|---:|---|\n| split-12.chain_ms.p50 | �� | 27.6981 | �� | not comparable |\n| split-12.chain_ms.p95 | �� | 38.8719 | �� | not comparable |\n| split-12.first_request_ms.value | �� | 24.5473 | �� | not comparable |\n| split-12.split_ms.p50 | �� | 0.0391 | �� | not comparable |\n| split-12.split_ms.p95 | �� | 0.0546 | �� | not comparable |\n| split-20-16k.chain_ms.p50 | �� | 24.9215 | �� | not comparable |\n| split-20-16k.chain_ms.p95 | �� | 28.2833 | �� | not comparable |\n| split-20-16k.first_request_ms.value | �� | 25.7250 | �� | not comparable |\n| split-20-16k.split_ms.p50 | �� | 0.0333 | �� | not comparable |\n| split-20-16k.split_ms.p95 | �� | 0.0512 | �� | not comparable |\n| split-20.chain_ms.p50 | �� | 62.0992 | �� | not comparable |\n| split-20.chain_ms.p95 | �� | 69.1758 | �� | not comparable |\n| split-20.first_request_ms.value | �� | 164.0128 | �� | not comparable |\n| split-20.split_ms.p50 | �� | 0.0353 | �� | not comparable |\n| split-20.split_ms.p95 | �� | 0.0477 | �� | not comparable |\n\nNegative change means faster for latency; verify the metric's direction for other units.\nA gate fails only when the regression exceeds both its relative and absolute tolerances.\nAll raw samples, conditions, source hashes and correctness checks remain in the JSON artifact.\n\n",
+  "stderr": ""
+}

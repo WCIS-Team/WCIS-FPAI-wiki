@@ -1,0 +1,6 @@
+### machine_id
+cmd: cat /etc/machine-id 2>/dev/null; echo '---'; cat /var/lib/dbus/machine-id 2>/dev/null
+---
+c18338d14c3049b3ab6cdaed8c0ee749
+---
+c18338d14c3049b3ab6cdaed8c0ee749

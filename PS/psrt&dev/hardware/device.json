@@ -1,0 +1,565 @@
+{
+  "schema": "wcis.sop2.hardware-archive",
+  "archive_version": "1.0",
+  "document": "device.json",
+  "purpose": "SOP 2 - hardware and base runtime environment collection; device identity and hardware specification",
+  "collection": {
+    "collected_at_utc": "2026-10-18T21:08:24Z",
+    "board_timezone_offset": "+0000",
+    "supplementary_batches_utc": [
+      "2026-10-20T07:45:38Z",
+      "2026-10-20T07:49:07Z"
+    ],
+    "collected_at_local_tz_note": "Board clock runs in UTC. 21:08:24Z = 2026-10-19 05:08:24 +0800 Asia/Taipei.",
+    "target_host": "192.168.1.113",
+    "target_user": "root",
+    "transport": "ssh",
+    "method": "read-only shell collection; no config change, no reboot, no service kill, no benchmark, no secret collection",
+    "collection_scripts": [
+      "collect.sh",
+      "collect_followup.sh",
+      "collect_gap3.sh"
+    ]
+  },
+  "tooling": {
+    "transport_client": "PuTTY plink 0.85 (Windows x86_64)",
+    "transfer_client": "PuTTY pscp 0.85",
+    "board_shell": "bash on Ubuntu 20.04.4 userland",
+    "raw_logs_dir": "raw_logs/"
+  },
+  "field_status_legend": {
+    "official_spec": "official vendor specification (vendor manual / board datasheet)",
+    "system_report": "value reported by the running operating system (/proc, /sys, standard tools)",
+    "tool_report": "value reported by a vendor or third-party tool (icraft, lspci, ethtool, ...)",
+    "measured": "value observed on site during this collection (link negotiation, free space, load)",
+    "unverified": "not cross-checked against a second source",
+    "not_supported": "the platform does not expose the field at all",
+    "not_accessible": "the field exists but could not be read with the privileges used"
+  },
+  "identity": {
+    "hostname": {
+      "value": "U.FMSH",
+      "status": "system_report",
+      "evidence": ["raw_logs/hostname.txt", "raw_logs/uname.txt"]
+    },
+    "machine_id": {
+      "value": "c18338d14c3049b3ab6cdaed8c0ee749",
+      "status": "system_report",
+      "note": "matches the /mnt/wcroot image snapshot in ../board_extract/26_system_identity.txt, i.e. this board runs the stock vendor image",
+      "evidence": ["raw_logs/machine_id.txt"]
+    },
+    "device_type": {
+      "value": "development board (physical machine, bare metal)",
+      "status": "measured",
+      "rationale": "no /.dockerenv, no container markers in /proc/1/mountinfo, PID 1 is systemd, cgroup v2 memory.max and cpu.max are absent",
+      "evidence": ["raw_logs/init_container.txt", "raw_logs/cgroup_v2.txt"]
+    },
+    "host_relationship": {
+      "value": "not_applicable",
+      "status": "measured",
+      "note": "not a VM, not a container; there is no host layer to describe",
+      "evidence": ["raw_logs/init_container.txt"]
+    },
+    "vendor": {
+      "value": "FMSH / Fudan Microelectronics (复旦微), FPAI series",
+      "status": "official_spec",
+      "evidence": ["../psdev.md", "../board_extract/41_manual_full_extracted.txt"]
+    },
+    "soc_model_from_device_tree": {
+      "value": "FMQLMP FMQL100TAI",
+      "status": "system_report",
+      "evidence": ["raw_logs/dt_model.txt", "raw_logs/dmesg_full.txt", "raw_logs/dt_serial.txt"],
+      "note": "device tree model string; this is what the running kernel reports as Machine model"
+    },
+    "soc_compatible_string": {
+      "value": "fmsh,fmsh-fmqlmp",
+      "status": "system_report",
+      "evidence": ["raw_logs/dt_model.txt"]
+    },
+    "documented_board_name": {
+      "value": "FMQL30TAI (完整版) / JFMQL30TAI676H (轻量版) - FPAI 悟净开发板",
+      "status": "official_spec",
+      "evidence": ["../psdev.md", "../board_extract/41_manual_full_extracted.txt"]
+    },
+    "model_discrepancy": {
+      "status": "measured",
+      "severity": "needs_vendor_confirmation",
+      "observed": "Device tree reports 'FMQLMP FMQL100TAI'; the vendor manual in this repo documents the 悟净 board as FMQL30TAI / JFMQL30TAI676H. The two names are not reconciled by any document in this repository.",
+      "impact": "The 官方规格 values quoted from the manual (FPGA logic, LUT, BRAM, DSP, TOPS) are attributed to the FMQL30TAI part; whether they apply verbatim to the FMQL100TAI silicon on this board is unconfirmed.",
+      "action": "ask FMSH whether FMQL100TAI is a silicon-step or SKU rename of FMQL30TAI before quoting the manual's resource numbers as this board's specification"
+    },
+    "board_revision": {
+      "value": "unknown",
+      "status": "unverified",
+      "note": "no serial-number or board-name property in the device tree; no revision register was readable",
+      "evidence": ["raw_logs/dt_serial.txt"]
+    },
+    "architecture": {
+      "value": "CPU + NPU + FPGA heterogeneous SoC",
+      "status": "official_spec",
+      "cross_checked_on_site": "NPU (arm china,linlon-v5) and FPGA (fpga_manager fpga0, state=operating) both present; GPU (arm,mali-bifrost) additionally present",
+      "evidence": ["../psdev.md", "raw_logs/npu_platform.txt", "raw_logs/fpga_detail.txt", "raw_logs/mali_gpu.txt"]
+    }
+  },
+  "cpu": {
+    "vendor": {
+      "value": "ARM",
+      "status": "system_report",
+      "evidence": ["raw_logs/lscpu.txt"]
+    },
+    "model": {
+      "value": "Cortex-A53",
+      "status": "system_report",
+      "evidence": ["raw_logs/lscpu.txt"]
+    },
+    "microarchitecture": {
+      "value": "ARMv8-A (ARMv8.0-A), implementer 0x41, part 0xd03, revision 4, stepping r0p4",
+      "status": "system_report",
+      "evidence": ["raw_logs/cpuinfo.txt", "raw_logs/lscpu.txt"]
+    },
+    "isa": {
+      "value": "aarch64 (64-bit), CPU op-mode 32/64-bit, little endian",
+      "status": "system_report",
+      "evidence": ["raw_logs/lscpu.txt"]
+    },
+    "isa_extensions": {
+      "value": "fp asimd evtstrm crc32 cpuid",
+      "status": "system_report",
+      "evidence": ["raw_logs/lscpu.txt", "raw_logs/cpuinfo.txt"]
+    },
+    "physical_cores": {
+      "value": 4,
+      "status": "system_report",
+      "evidence": ["raw_logs/lscpu.txt", "raw_logs/cpuinfo.txt"]
+    },
+    "logical_cpus": {
+      "value": 4,
+      "status": "system_report",
+      "note": "Thread(s) per core = 1, so physical == logical; no SMT",
+      "evidence": ["raw_logs/lscpu.txt"]
+    },
+    "available_cpus": {
+      "value": 4,
+      "status": "system_report",
+      "evidence": ["raw_logs/nproc.txt", "raw_logs/cpu_topology.txt"]
+    },
+    "sockets": {
+      "value": 1,
+      "status": "system_report",
+      "evidence": ["raw_logs/lscpu.txt"]
+    },
+    "max_frequency": {
+      "value": "not_supported",
+      "status": "not_supported",
+      "note": "no cpufreq driver, no cpu_opp_table in the device tree, operating-points-v2 is commented out in the shipped DTB, and cpu@0 has no clock-frequency property. The vendor manual states 最高1GHz (official_spec) but no on-site reading could confirm the running clock.",
+      "official_spec_value": "up to 1 GHz",
+      "official_spec_source": ["../psdev.md", "../board_extract/40_manual_lite_extracted.txt"],
+      "evidence": ["raw_logs/cpu_freq.txt", "raw_logs/cpu_freq_dtb.txt", "raw_logs/cpu_clock.txt"]
+    },
+    "bogomips": {
+      "value": 200.0,
+      "status": "system_report",
+      "note": "reported per core; not a frequency measurement and must not be read as 200 MHz or 100 MHz",
+      "evidence": ["raw_logs/cpuinfo.txt"]
+    },
+    "governor": {
+      "value": "not_supported",
+      "status": "not_supported",
+      "note": "no cpufreq sysfs interface is present",
+      "evidence": ["raw_logs/cpu_freq.txt"]
+    },
+    "idle_governor": {
+      "value": "menu",
+      "status": "system_report",
+      "evidence": ["raw_logs/mtd_flash.txt"]
+    },
+    "temperature": {
+      "value": "not_supported",
+      "status": "not_supported",
+      "note": "the platform exposes no thermal zone; /sys/class/thermal contains no thermal_zone* node",
+      "evidence": ["raw_logs/thermal.txt", "raw_logs/cpu_temp.txt"]
+    },
+    "numa_topology": {
+      "value": "unknown",
+      "status": "unverified",
+      "note": "numactl is not installed; dmesg shows a single node with 262144 total pages, which is consistent with a single NUMA node but was not confirmed with a topology query",
+      "evidence": ["raw_logs/numa.txt", "raw_logs/dmesg_full.txt"]
+    }
+  },
+  "memory": {
+    "ram_total": {
+      "value_bytes": 1067058688,
+      "value_readable": "1017704 kB (MemTotal) = 993 MiB",
+      "status": "system_report",
+      "note": "the kernel was told mem=1024M on the command line, so the usable total is 1 GiB minus kernel reservation",
+      "evidence": ["raw_logs/meminfo.txt", "raw_logs/dmesg_full.txt"]
+    },
+    "ram_type": {
+      "value": "DDR3 (PS side)",
+      "status": "official_spec",
+      "detail": "Fudan Micro 4Gb devices, 16-bit data interface, Fly-By topology, 1600 MHz part speed, theoretical 1600MHz x 32bit = 51.2 Gbps",
+      "evidence": ["../board_extract/40_manual_lite_extracted.txt"]
+    },
+    "ram_channels": {
+      "value": "unknown",
+      "status": "unverified",
+      "note": "the manual describes a Fly-By topology over 16-bit devices but the on-site memory controller configuration was not read out"
+    },
+    "ram_bandwidth": {
+      "value": "not_measured",
+      "status": "unverified",
+      "note": "no bandwidth measurement was performed; SOP 2 forbids performance runs. Theoretical value is 51.2 Gbps (official_spec) but was not measured.",
+      "official_spec_value": "51.2 Gbps (1600 MHz x 32 bit)"
+    },
+    "pl_side_ddr": {
+      "value": "2 GB DDR3",
+      "status": "official_spec",
+      "note": "PL-side memory is not visible in the PS memory tree; not verifiable from the running system",
+      "evidence": ["../board_extract/40_manual_lite_extracted.txt"]
+    },
+    "on_chip_sram": {
+      "value": "256 KB",
+      "status": "official_spec",
+      "note": "not exposed to Linux, so not verifiable on site",
+      "evidence": ["../psdev.md"]
+    },
+    "cache": {
+      "l1_instruction": {
+        "value": "32 KB",
+        "status": "official_spec",
+        "on_site_structure": "cache index1, level 1, type Instruction, shared_cpu_map=1 (private per core)",
+        "on_site_size_readable": false,
+        "note": "sysfs size attribute is absent for every index; the shipped DTB l2-cache node carries only 'compatible' and 'phandle' and no cache-size property, so the kernel cannot publish the capacity",
+        "evidence": ["raw_logs/cache_sizes.txt", "raw_logs/cache_shared.txt", "../board_extract/35_dtb_flattened_shipped.txt"]
+      },
+      "l1_data": {
+        "value": "32 KB",
+        "status": "official_spec",
+        "on_site_structure": "cache index0, level 1, type Data, shared_cpu_map=1 (private per core)",
+        "on_site_size_readable": false,
+        "evidence": ["raw_logs/cache_sizes.txt", "raw_logs/cache_shared.txt"]
+      },
+      "l2": {
+        "value": "1 MB",
+        "status": "official_spec",
+        "on_site_structure": "cache index2, level 2, type Unified, shared_cpu_map=f (shared by all 4 cores); device tree node l2-cache status=okay",
+        "on_site_size_readable": false,
+        "evidence": ["raw_logs/cache_sizes.txt", "raw_logs/cache_shared.txt", "../board_extract/36_dtb_node_status.txt"]
+      }
+    }
+  },
+  "storage": {
+    "root_filesystem": {
+      "device": "/dev/mmcblk0p2",
+      "filesystem": "ext4",
+      "total": "26.1 GiB",
+      "used": "19-20 GiB",
+      "available": "5.1-5.5 GiB",
+      "use_percent": "78-80%",
+      "status": "measured",
+      "note": "used share rose from 19G/78% in batch 1 to 20G/80% in batch 3; the collection itself and the board's own background work account for the difference",
+      "evidence": ["raw_logs/df.txt", "raw_logs/lsblk.txt", "raw_logs/findmnt.txt", "raw_logs/emmc_mount.txt"]
+    },
+    "sd_card": {
+      "device": "mmcblk0",
+      "media": "SD card, high speed SDXC",
+      "capacity": "58.4 GiB",
+      "partitions": "p1 = 1 GiB (FAT boot partition), p2 = 26.1 GiB (rootfs)",
+      "status": "system_report",
+      "note": "the manual specifies a 32 GB TF-CARD; the card actually fitted reports 58.4 GiB. Partition layout matches the 58.42 GiB / 26.08 GiB card recorded in ../psdev.md.",
+      "evidence": ["raw_logs/dmesg_full.txt", "raw_logs/lsblk.txt", "../psdev.md"]
+    },
+    "emmc": {
+      "device": "mmcblk1",
+      "media": "Y2P032 eMMC",
+      "capacity": "29.1 GiB",
+      "partition": "p1 = 29.1 GiB ext4, boot0/boot1 = 4 MiB each",
+      "status": "system_report",
+      "mount_state": {
+        "batch_1": "mounted at /mnt/wcis-emmc, 273M used / 29G available",
+        "batch_3": "not mounted; /mnt/wcis-emmc is empty and df resolves it to the root filesystem",
+        "status": "measured",
+        "note": "the eMMC mount came and went between the two collection batches. Do not assume it is mounted."
+      },
+      "evidence": ["raw_logs/dmesg_full.txt", "raw_logs/findmnt.txt", "raw_logs/df.txt", "raw_logs/emmc_mount.txt"]
+    },
+    "qspi_nor": {
+      "device": "cadence-qspi e0000000.spi",
+      "chip": "n25q256a (32768 Kbytes = 256 Mbit)",
+      "partitions": "mtd0 'bootloader' 4 MiB, mtd1 'kernel' 16 MiB, mtd2 'rootfs' 0 bytes",
+      "status": "system_report",
+      "cross_check": "manual states one 256Mb QSPI FLASH (QSPI0) - matches the official_spec",
+      "evidence": ["raw_logs/mtd_flash.txt", "../board_extract/40_manual_lite_extracted.txt"]
+    },
+    "nor_boot_partition": {
+      "value": "mtdblock0 = 4 MiB, mtdblock1 = 16 MiB",
+      "status": "system_report",
+      "evidence": ["raw_logs/partitions.txt"]
+    }
+  },
+  "accelerators": {
+    "npu": {
+      "vendor": {
+        "value": "FMSH / Arm China - ZG330 iCore (诸葛架构)",
+        "status": "official_spec",
+        "evidence": ["../psdev.md"]
+      },
+      "correction": "2026-10-23 (D-79): the 'device_tree_node', 'driver_probe', 'compute_units' and 'accessible_by_system' entries that previously stood here described the VPU (video codec: mve@F0020000 / Linlon V5276 / amvx). They are now recorded under the 'vpu' key after this block. The ZG330 iCore has no device-tree node, no kernel module and no /dev node. Raw logs were left intact.",
+      "device_tree_node": {
+        "value": "none",
+        "status": "measured",
+        "note": "grepping the flattened device tree for 'npu', 'aiu', 'zhuge' and 'icore' returns 0 hits - the ZG330 iCore lives in the PL and has no device-tree presence. The only 'vpu' node in the tree is the video codec (see the 'vpu' key below).",
+        "evidence": ["../board_extract/35_dtb_flattened_shipped.txt"]
+      },
+      "access_path": {
+        "value": "axi://zg330aiu?npu=0x40000000&dma=0x80000000",
+        "status": "measured",
+        "note": "reached only through two PL AXI slave windows mapped from the PS side; userland talks to it with the icraft / zg330 runtime over /dev/mem"
+      },
+      "ai_throughput": {
+        "value": "8 TOPS @ INT8; 4 TFLOPS @ FP16; 2 TFLOPS @ TF32",
+        "status": "official_spec",
+        "note": "vendor figure; no workload was run to verify it (SOP 2 forbids benchmarks)",
+        "evidence": ["../psdev.md"]
+      },
+      "precision_support": {
+        "value": "INT8 / FP16 / BF16 / TF32",
+        "status": "official_spec",
+        "evidence": ["../psdev.md"]
+      },
+      "device_node": {
+        "value": "not_accessible",
+        "status": "not_accessible",
+        "note": "no /dev node is exported for the NPU and there is no NPU kernel module at all - the amvx module and /dev/udmabuf0 belong to the VPU, not the NPU (corrected 2026-10-23, D-79)",
+        "evidence": ["raw_logs/npu_dev.txt", "raw_logs/dev_list.txt"]
+      },
+      "accessible_by_system": {
+        "value": "no - no driver, no /dev node, no device-tree node",
+        "status": "measured",
+        "note": "the 'driver bound and scheduling threads active' reading that previously stood here describes the VPU driver (mvx_sched threads on f0020000.mve), not the NPU"
+      }
+    },
+    "vpu": {
+      "vendor": {
+        "value": "Arm China - Linlon V5276 video codec (MVX family)",
+        "status": "system_report",
+        "evidence": ["raw_logs/dmesg_accel.txt"]
+      },
+      "device_tree_node": {
+        "value": "vpu: mve@F0020000, compatible = 'arm china,linlon-v5', reg 0xF0020000 size 0x10000, IRQ GIC_SPI 69, clock-names 'clk_vpu'",
+        "status": "system_report",
+        "evidence": ["../board_extract/29_dts_fmqlmp-verify.dts"]
+      },
+      "driver_probe": {
+        "value": "MVX dev: Linlon v5276 identified. cores=2, nlsid=4, id=0. (mvx_dev.c:427)",
+        "status": "system_report",
+        "note": "the video codec driver probes at ~9.5 s after boot and registers platform device f0020000.mve with live kernel threads kworker/u8:{1,2}-mvx_sched and kworker/u8:3-f0020000.mve",
+        "evidence": ["raw_logs/dmesg_accel.txt", "raw_logs/npu_platform.txt", "raw_logs/ps_snapshot.txt"]
+      },
+      "kernel_module": {
+        "value": "amvx",
+        "status": "system_report",
+        "note": "modinfo describes it as 'Tiube VPU Driver'; it is a video codec driver, not an NPU driver",
+        "evidence": ["raw_logs/lsmod.txt", "raw_logs/npu_module.txt"]
+      },
+      "compute_units": {
+        "value": "cores=2, nlsid=4",
+        "status": "system_report",
+        "note": "driver-reported codec core count and NLS id count - unrelated to the ZG330 iCore 官方规格 TOPS figure",
+        "evidence": ["raw_logs/dmesg_accel.txt"]
+      },
+      "device_node": {
+        "value": "/dev/video0 (v4l2 M2M)",
+        "status": "measured",
+        "note": "not from this SOP-2 collection: npu_dev.txt reports 'no dedicated /dev node', which is true for the NPU but wrong for the VPU. This value comes from the 2026-10-05 VPU codec probe.",
+        "evidence": ["../../todo/板卡镜像实测取证.md"]
+      },
+      "firmware": {
+        "value": "/lib/firmware/linlon-v52_v76-80-2/ - 17 codec .fwb blobs",
+        "status": "measured",
+        "note": "mpeg4dec, avs2dec, vp9dec, h264enc, h264enc.prot-ver, jpegdec, avsdec, mpeg2dec, vp8enc, hevcdec, rvdec, h264dec, vp8dec, vc1dec, hevcenc, jpegenc, vp9enc. Every file is a video codec firmware, which settles that this block is a codec and not an AI accelerator.",
+        "evidence": ["../board_extract/58_rootfs_system_config.txt"]
+      },
+      "accessible_by_system": {
+        "value": "yes - driver bound and scheduling threads active",
+        "status": "measured"
+      }
+    },
+    "gpu": {
+      "vendor": {
+        "value": "Arm Mali",
+        "status": "system_report"
+      },
+      "model": {
+        "value": "Mali GPU, DDK r31p0-01eac0, GPU id 0x2, 'arch 7.4.0 r1p0'",
+        "status": "system_report",
+        "note": "the driver does not print a marketing model name. Arch 7.4.0 r1p0 corresponds to Mali-G52 in the Arm GPU architecture mapping, but that name is an interpretation of the arch string, not a directly reported value.",
+        "evidence": ["raw_logs/dmesg_accel.txt"]
+      },
+      "device_tree_node": {
+        "value": "mali_gpu@f0000000, compatible 'arm,mali-bifrost', status okay; companion mali_mgm (arm,physical-memory-group-manager) okay",
+        "status": "system_report",
+        "evidence": ["../board_extract/36_dtb_node_status.txt"]
+      },
+      "device_node": {
+        "value": "/dev/mali0 (char 10:57, misc class)",
+        "status": "system_report",
+        "evidence": ["raw_logs/mali_gpu.txt", "raw_logs/dev_list.txt"]
+      },
+      "coherency": {
+        "value": "coherency mode 31, set from device tree",
+        "status": "system_report",
+        "evidence": ["raw_logs/dmesg_accel.txt"]
+      },
+      "memory": {
+        "value": "unknown",
+        "status": "unverified",
+        "note": "the physical memory group manager probed successfully, but no GPU memory size is published in sysfs and the debugfs gpuinfo path is not populated"
+      },
+      "in_official_spec": {
+        "value": "not listed",
+        "status": "official_spec",
+        "note": "the vendor manual's FMQL30TAI resource table lists CPU, NPU and FPGA only; the Mali GPU is present in the shipped device tree but is not part of the published specification table",
+        "evidence": ["../psdev.md"]
+      }
+    },
+    "fpga": {
+      "vendor": {
+        "value": "FMSH - integrated programmable logic in the FMQL SoC",
+        "status": "official_spec",
+        "evidence": ["../psdev.md"]
+      },
+      "manager": {
+        "value": "fpga_manager fpga0, name 'FMSH FMQL FPGA Manager', device -> e0040000.devcfg, state = operating",
+        "status": "measured",
+        "note": "the bitstream is already loaded at run time; the 'firmware' attribute is write-only and the loaded bitstream identity is not exposed in sysfs",
+        "evidence": ["raw_logs/fpga_detail.txt", "raw_logs/fpga_bitstream.txt"]
+      },
+      "load_path": {
+        "value": "U-Boot loads 'download.bit' from mmc 0:2 into the PL at boot (uEnv.txt loadbit variable), and the Linux fpga_manager reports state=operating",
+        "status": "system_report",
+        "note": "the state was already 'operating' when collection started, so no bitstream was programmed during this collection",
+        "evidence": ["../board_extract/37_boot_uEnv.txt", "raw_logs/fpga_detail.txt"]
+      },
+      "logic_resources": {
+        "logic_elements": {
+          "value": "125K",
+          "status": "official_spec",
+          "evidence": ["../psdev.md", "../board_extract/41_manual_full_extracted.txt"]
+        },
+        "lut_count": {
+          "value": 78600,
+          "status": "official_spec",
+          "evidence": ["../psdev.md"]
+        },
+        "ff_count": {
+          "value": "unknown",
+          "status": "unverified",
+          "note": "not present in the manual's resource table and not readable from the running board"
+        },
+        "bram": {
+          "value": "9.3 Mb",
+          "status": "official_spec",
+          "evidence": ["../psdev.md"]
+        },
+        "uram": {
+          "value": "unknown",
+          "status": "unverified",
+          "note": "not present in the manual's resource table and not readable from the running board"
+        },
+        "dsp_count": {
+          "value": 400,
+          "status": "official_spec",
+          "evidence": ["../psdev.md"]
+        },
+        "clock": {
+          "value": "PS side 50 MHz, PL side 200 MHz",
+          "status": "official_spec",
+          "note": "PL-side clock frequencies actually in use by the loaded bitstream were not measured",
+          "evidence": ["../board_extract/40_manual_lite_extracted.txt"]
+        }
+      },
+      "actual_design_utilisation": {
+        "value": "not_measured",
+        "status": "unverified",
+        "critical_note": "SOP 2 forbids presenting design occupancy as measured resources. No FPGA utilisation report or tool output was produced or collected, so the occupancy of LUT/BRAM/DSP by the running bitstream is unknown. The numbers in logic_resources are device capacities, not usage.",
+        "evidence": ["raw_logs/fpga_detail.txt"]
+      }
+    },
+    "dma_controllers": {
+      "value": "2 controllers, 8 channels each: dw_dmac e004b000.dma and dw_axi_dmac_platform f0010000.dma",
+      "status": "system_report",
+      "cross_check": "the vendor specification lists 8 DMA channels - matches",
+      "evidence": ["raw_logs/dmesg_accel.txt", "../psdev.md"]
+    },
+    "pcie": {
+      "value": "not_accessible",
+      "status": "not_accessible",
+      "note": "no PCI device is enumerated: /sys/bus/pci/devices is empty, /proc/bus/pci does not exist, and lspci is not installed. The complete-version specification lists PCIe Gen2 x4 and the lite version lists PCIe x1; neither could be confirmed on site.",
+      "official_spec_value": "Gen2 x4 (完整版) / x1 (轻量版)",
+      "evidence": ["raw_logs/pci_sysfs.txt", "raw_logs/lspci.txt", "../psdev.md"]
+    }
+  },
+  "peripherals": {
+    "ethernet": {
+      "controller": "fmql-dwmac e0047000 (Synopsys DWMAC1000)",
+      "ports": 1,
+      "status": "system_report",
+      "spec_link_modes": "10/100/1000baseT, auto-negotiation",
+      "spec_status": "official_spec",
+      "measured_link": "100 Mb/s, Full Duplex, MII, link detected yes",
+      "measured_status": "measured",
+      "note": "the PHY negotiated 100 Mb/s although 1000baseT is advertised and supported; the link partner also advertises only 10/100",
+      "evidence": ["raw_logs/dmesg_accel.txt", "raw_logs/net_ethtool.txt", "raw_logs/net_sysfs.txt", "raw_logs/dmesg_full.txt"]
+    },
+    "usb": {
+      "controller": "dwc2 e0045000 (host DMA enabled); e0046000 disabled in the device tree",
+      "usb2_ports": 4,
+      "status": "official_spec",
+      "observed_devices": "root hub 1d6b:0002, USB 2.0 hub 0424:2514, USB HID keyboard 17ef:a03b (Lenovo MCP01)",
+      "observed_status": "measured",
+      "evidence": ["raw_logs/dmesg_accel.txt", "raw_logs/lsusb.txt", "../board_extract/36_dtb_node_status.txt"]
+    },
+    "can": {
+      "controller": "fmql,sja1000 can@e0005000 (okay), can@e0006000 (disabled)",
+      "observed": "can0 present, operstate down",
+      "status": "measured",
+      "evidence": ["raw_logs/net_link.txt", "../board_extract/36_dtb_node_status.txt"]
+    },
+    "serial": {
+      "controller": "snps,dw-apb-uart serial@e0004000 (okay); serial@e0023000 disabled",
+      "console": "ttyPS0 115200n8",
+      "uart_count": 2,
+      "status": "official_spec",
+      "observed": "/dev/ttyPS0 through /dev/ttyPS9 present",
+      "observed_status": "measured",
+      "evidence": ["raw_logs/dev_list.txt", "raw_logs/dmesg_full.txt", "../board_extract/37_boot_uEnv.txt"]
+    },
+    "spi": {
+      "controllers": "cadence,qspi spi@e0000000 (okay), snps,dw-apb-ssi spi@e0021000 (okay), spi@e0001000 and spi@e0020000 disabled",
+      "status": "system_report",
+      "evidence": ["../board_extract/36_dtb_node_status.txt", "raw_logs/mtd_flash.txt"]
+    },
+    "i2c": {
+      "value": "both controllers disabled in the device tree",
+      "status": "system_report",
+      "evidence": ["../board_extract/36_dtb_node_status.txt"]
+    },
+    "gpio": {
+      "controllers": "4 x snps,dw-apb-gpio (e0003000, e0003100, e0003200, e0003400), all okay",
+      "status": "system_report",
+      "evidence": ["../board_extract/36_dtb_node_status.txt"]
+    },
+    "video": {
+      "value": "2 x SDI input, 1 x HDMI output (完整版/lite specification)",
+      "status": "official_spec",
+      "note": "not verifiable from the running system; the board currently runs an SDI capture workload (see resources.json background_load)",
+      "evidence": ["../psdev.md"]
+    },
+    "rtc": {
+      "value": "unknown",
+      "status": "unverified",
+      "note": "not read out during this collection"
+    }
+  }
+}

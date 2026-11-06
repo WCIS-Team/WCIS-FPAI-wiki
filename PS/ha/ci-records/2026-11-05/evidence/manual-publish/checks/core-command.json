@@ -1,0 +1,6 @@
+{
+  "name": "core",
+  "exit_code": 0,
+  "stdout": "Validated 72 Python files against Python 3.8 grammar\nPASSED contracts (4.51s)\nPASSED infrastructure (10.72s)\nPASSED split (3.00s)\nPASSED fsm (0.28s)\nPASSED npu-lifecycle (10.73s)\nPASSED host-soak (0.85s)\nPASSED calibration (18.68s)\nCI full: passed; /mnt/s/work/WCIS/workenv/ha4fpai-ci/manual-publish/checks/core\n",
+  "stderr": ""
+}

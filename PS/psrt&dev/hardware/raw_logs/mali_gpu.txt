@@ -1,0 +1,10 @@
+### mali_gpu
+cmd: ls -l /dev/mali* 2>/dev/null; echo '---sysfs misc:'; ls /sys/class/misc/ 2>/dev/null | grep -i mali; echo '---drm:'; ls /sys/class/drm/ 2>/dev/null; echo '---gpu props:'; for p in /sys/kernel/debug/gpu/*/; do echo "== $p"; cat $p/gpuinfo 2>/dev/null; done
+---
+crw-rw-rw- 1 root root 10, 57 Mar  2  2023 /dev/mali0
+---sysfs misc:
+mali0
+---drm:
+version
+---gpu props:
+== /sys/kernel/debug/gpu/*/

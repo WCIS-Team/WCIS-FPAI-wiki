@@ -1,0 +1,8 @@
+### cpu_topology
+cmd: cat /sys/devices/system/cpu/possible 2>/dev/null; echo '---online:'; cat /sys/devices/system/cpu/online 2>/dev/null; echo '---present:'; cat /sys/devices/system/cpu/present 2>/dev/null
+---
+0-3
+---online:
+0-3
+---present:
+0-3

@@ -1,0 +1,28 @@
+### partitions
+cmd: cat /proc/partitions
+---
+major minor  #blocks  name
+
+   1        0      65536 ram0
+   1        1      65536 ram1
+   1        2      65536 ram2
+   1        3      65536 ram3
+   1        4      65536 ram4
+   1        5      65536 ram5
+   1        6      65536 ram6
+   1        7      65536 ram7
+   1        8      65536 ram8
+   1        9      65536 ram9
+   1       10      65536 ram10
+   1       11      65536 ram11
+   1       12      65536 ram12
+   1       13      65536 ram13
+   1       14      65536 ram14
+   1       15      65536 ram15
+  31        0       4096 mtdblock0
+  31        1      16384 mtdblock1
+ 179        0   61253632 mmcblk0
+ 179        1    1048576 mmcblk0p1
+ 179        2   27343750 mmcblk0p2
+ 179        8   30535680 mmcblk1
+ 179        9   30534639 mmcblk1p1

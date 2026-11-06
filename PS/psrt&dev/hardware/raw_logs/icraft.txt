@@ -1,0 +1,9 @@
+### icraft
+cmd: which icraft 2>/dev/null && icraft --version 2>&1 | head -5 || echo 'icraft not found (unknown)'
+---
+/usr/bin/icraft
+Icraft 版本: 
+ * v3.39.0
+
+CLI 版本: 
+3.39.0.0-431be90(2608220046)

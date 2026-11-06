@@ -1,0 +1,18 @@
+{
+  "command": [
+    "C:\\Users\\takomi\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-I",
+    "-B",
+    "S:\\work\\WCIS\\repos\\HA4FPAI\\ci\\report.py",
+    "--baseline",
+    "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\baseline.json",
+    "--candidate",
+    "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\synthetic-regression.json",
+    "--output",
+    "S:\\work\\WCIS\\workenv\\ha4fpai-ci\\performance-linux-release\\synthetic-regression"
+  ],
+  "exit_code": 1,
+  "expected_exit_code": 1,
+  "stdout": "# HA4FPAI performance\n\nResult: **regression**\n\nSource fingerprints are unchanged; assess runtime/load variation before attributing the measured regression to code\n\nSource: `None`; dirty: `None`\n\n| Metric | Baseline | Candidate | Change | Gate |\n|---|---:|---:|---:|---|\n| process.peak_rss_kib.value | 52604.0000 | 52500.0000 | -0.20% | observe |\n| split-12.chain_ms.p50 | 56.2910 | 169.8730 | +201.78% | observe |\n| split-12.chain_ms.p95 | 69.8038 | 210.4114 | +201.43% | REGRESSION |\n| split-12.first_request_ms.value | 54.0898 | 70.6818 | +30.67% | observe |\n| split-12.split_ms.p50 | 0.0534 | 1.1603 | +2071.03% | observe |\n| split-12.split_ms.p95 | 0.0924 | 1.2773 | +1281.84% | REGRESSION |\n| split-20-16k.chain_ms.p50 | 55.5318 | 167.5955 | +201.80% | observe |\n| split-20-16k.chain_ms.p95 | 75.9464 | 228.8393 | +201.32% | REGRESSION |\n| split-20-16k.first_request_ms.value | 56.5230 | 46.8911 | -17.04% | observe |\n| split-20-16k.split_ms.p50 | 0.0503 | 1.1510 | +2186.69% | observe |\n| split-20-16k.split_ms.p95 | 0.0720 | 1.2159 | +1589.55% | REGRESSION |\n| split-20.chain_ms.p50 | 156.2358 | 469.7073 | +200.64% | observe |\n| split-20.chain_ms.p95 | 241.2691 | 724.8072 | +200.41% | REGRESSION |\n| split-20.first_request_ms.value | 318.0718 | 346.0392 | +8.79% | observe |\n| split-20.split_ms.p50 | 0.0659 | 1.1976 | +1718.27% | observe |\n| split-20.split_ms.p95 | 0.1508 | 1.4524 | +863.10% | REGRESSION |\n\nNegative change means faster for latency; verify the metric's direction for other units.\nA gate fails only when the regression exceeds both its relative and absolute tolerances.\nAll raw samples, conditions, source hashes and correctness checks remain in the JSON artifact.\n\n",
+  "stderr": ""
+}
