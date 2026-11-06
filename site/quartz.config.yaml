@@ -124,6 +124,8 @@ plugins:
   enabled: true
 - source: github:quartz-community/folder-page
   enabled: true
+  options:
+    prefixFolders: false
 - source: github:quartz-community/tag-page
   enabled: true
 - source: github:quartz-community/explorer
@@ -238,8 +240,6 @@ layout:
     folder:
       exclude:
       - reader-mode
-      positions:
-        right: []
     tag:
       exclude:
       - reader-mode
