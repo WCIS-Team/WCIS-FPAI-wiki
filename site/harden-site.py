@@ -31,6 +31,10 @@ META = '<meta name="robots" content="noindex, nofollow, noimageindex, noai, noim
 # costs a reader nothing it could reach; no page head carries an alternate link.
 CRAWLER_INDEXES = ("sitemap.xml", "sitemap-0.xml", "feed.xml", "rss.xml", "index.xml")
 HEAD_RE = re.compile(r"(<head[^>]*?>)", re.IGNORECASE)
+# Rename only the graph component heading, leaving article text untouched.
+GRAPH_TITLE_RE = re.compile(
+    r'(<div\b[^>]*\bclass="(?:[^"]*\s)?graph(?:\s[^"]*)?"[^>]*>\s*<h3>)Graph View(</h3>)'
+)
 CONTENT_INDEX = pathlib.PurePosixPath("static", "contentIndex.json")
 BASE_URL_RE = re.compile(r"^\s*baseUrl:\s*(\S+)\s*$", re.M)
 BUNDLE = "postscript.js"
@@ -205,8 +209,13 @@ def main():
 
     injected = 0
     already = 0
+    graph_labels = 0
     for page in pages:
         text = page.read_text(encoding="utf-8")
+        text, labels = GRAPH_TITLE_RE.subn(r"\1Graph View (Ctrl+G)\2", text)
+        if labels:
+            write(page, text)
+            graph_labels += labels
         if 'name="robots"' in text:
             already += 1
             continue
@@ -215,6 +224,10 @@ def main():
             sys.exit("%s has no <head> tag to inject into" % page)
         write(page, new)
         injected += 1
+
+    if not graph_labels:
+        sys.exit("no Graph View headings found - refusing to publish without the shortcut label")
+    print("Graph View shortcut labels: %d" % graph_labels)
 
     robots_src = pathlib.Path(__file__).resolve().parent / "robots.txt"
     shutil.copyfile(robots_src, public / "robots.txt")
