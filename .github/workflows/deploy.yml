@@ -82,15 +82,17 @@ jobs:
 
       # Each plugin is a separate Git repo that ships no compiled output, so the
       # first run clones 35 repos and runs npm install + npm run build in each.
-      # That is the slow part; cache it keyed on the pinned versions. The save is a
-      # separate always() step because a failed job does not save actions/cache.
+      # Cache by pinned versions, but only save after revision and output checks
+      # succeed so an incomplete plugin upgrade cannot become a trusted cache.
       - name: Restore built plugins
         id: plugin-cache
         uses: actions/cache/restore@v4
         with:
           path: qbuild/.quartz
-          key: quartz-plugins-${{ env.QUARTZ_REF }}-${{ hashFiles('site/quartz.lock.json') }}
-          restore-keys: quartz-plugins-${{ env.QUARTZ_REF }}-
+          key: quartz-plugins-v2-${{ env.QUARTZ_REF }}-${{ hashFiles('site/quartz.lock.json') }}
+          restore-keys: |
+            quartz-plugins-v2-${{ env.QUARTZ_REF }}-
+            quartz-plugins-${{ env.QUARTZ_REF }}-
 
       - name: Place site config and assemble content
         run: |
@@ -103,9 +105,17 @@ jobs:
         id: build
         working-directory: qbuild
         run: |
-          npx quartz plugin install
+          set -o pipefail
+          python -X utf8 ../site/check-plugins.py prepare
+          npx quartz plugin install 2>&1 | tee plugin-install.log
+          if grep -Eq 'failed to (update|clone)|build failed|[1-9][0-9]* failed' plugin-install.log; then
+            echo "::error::Quartz plugin installation reported a failure"
+            exit 1
+          fi
+          python -X utf8 ../site/check-plugins.py verify
           npx quartz plugin resolve
           npx quartz build -v
+          python -X utf8 ../site/check-plugins.py output
 
       # One page aborts the whole build, so the useful signal is which page and
       # which plugin. This drops the failing page, rebuilds, and repeats: pages
@@ -141,7 +151,7 @@ jobs:
           done
 
       - name: Save built plugins
-        if: always()
+        if: steps.build.outcome == 'success'
         uses: actions/cache/save@v4
         with:
           path: qbuild/.quartz
