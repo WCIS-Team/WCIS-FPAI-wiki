@@ -3,13 +3,10 @@ name: Build and publish wiki site
 # This workflow runs inside the document repository itself, so every page commit
 # rebuilds the site - no pointer bump and no cross-repository token (D-65).
 #
-# ⚠ 2026-11-02: this workflow is currently DISABLED on purpose (GitHub state
-# `disabled_manually`, workflow id 390042843) - pushes to main no longer build or
-# deploy the site, and manual workflow_dispatch is blocked too. The decision record
-# is D-1793566627 in wiki/archive/开发管理/状态源与决策记录.md. To resume: enable the
-# workflow (Settings -> Actions -> Workflows -> Build and publish wiki site) or
-# `PUT /repos/{owner}/{repo}/actions/workflows/390042843/enable`; no commit is
-# needed, and the PUBLISH gate described below applies again once re-enabled.
+# 2026-11-06: the user authorized restoring the organization Pages site and
+# manually running this workflow (decision D-1793969383). The former manual
+# disablement is superseded. Enable workflow 390042843, set PUBLISH=true and
+# configure GitHub Pages to use GitHub Actions before dispatching.
 #
 # Quartz is not vendored: the pinned upstream tag is fetched at build time, the
 # content folder is assembled from this repository's tree by site/make-content.py,
