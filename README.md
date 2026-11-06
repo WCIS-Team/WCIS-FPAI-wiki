@@ -66,7 +66,7 @@ Obsidian 打开 `wiki/` 作为 vault，双链按文件名解析；VS Code 可用
 - [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) 与 [FunASR](https://github.com/modelscope/FunASR)：语音上游参考，当前实际接线与可用档位仍看本仓源码与状态源。
 
 ## 参赛选手
-深圳技术大学 WCIS队 易之棣 余士诚
+深圳技术大学 WCIS队 [易之棣](https://github.com/takomitkm) [余士诚](https://github.com/anxianji11-pixel)
 
 ## 指导老师
 苏榕彬（[学校介绍](https://icoc.sztu.edu.cn/info/1015/1548.htm)）。
