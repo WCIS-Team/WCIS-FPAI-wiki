@@ -1,0 +1,327 @@
+{
+ "batch": "2026-11-08-npu-optimization",
+ "created_utc": "2026-11-08T04:20:00+08:00",
+ "board": "192.168.1.113 FMQL30TAI676H",
+ "description": "HA4FPAI 2026-11-07~08 优化轮原始证据：Qwen3-K128 编译与验证、npuserv resident 共享 device 裸测与双负载、HiFi-GAN NHWC 排布与 AB 验收、ERNIE 多轮、runtime 版本比对、视频压核/抢核/持久化。原始字节复制自 workenv/migrate-real-preview/，不删原文件。",
+ "chain": {
+  "main": "1c73561",
+  "repos": "6ba5b6d",
+  "HA4FPAI": "43830ee",
+  "ERNIE": "790afc5"
+ },
+ "missing_from_workenv": [],
+ "files": [
+  {
+   "file": "k128_step1.sh",
+   "bytes": 490,
+   "sha256": "4a2be0c3ea5998a3640684ec8304d1bf9e266fc73d5ca82dfee86db9d7a41ab5",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/k128_step1.sh"
+  },
+  {
+   "file": "k128_step2.sh",
+   "bytes": 699,
+   "sha256": "90821446694b3cfaa8ff5a4942325c31b044f0252daea99edaefe1e538787560",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/k128_step2.sh"
+  },
+  {
+   "file": "k128_step3.sh",
+   "bytes": 977,
+   "sha256": "a621634f98035f6d279660a6da5f25c43bd9f46359b5b0b0ad11b9a0fc3194a6",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/k128_step3.sh"
+  },
+  {
+   "file": "k128_step4.sh",
+   "bytes": 757,
+   "sha256": "32dbb74689f24627b0bdaed87bb0052ab0201b172d2ac204a962ef7a3f55898e",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/k128_step4.sh"
+  },
+  {
+   "file": "k128_step5.sh",
+   "bytes": 799,
+   "sha256": "27f416d819ce4ff0faa5aa4107c3161de7bf90a8000eedb54b39bde19cf80dbd",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/k128_step5.sh"
+  },
+  {
+   "file": "k128_step6.sh",
+   "bytes": 1516,
+   "sha256": "f377549947a428e735bdc509364e4daac96d5ab8d2c3fe9cb98c187bf0b5de94",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/k128_step6.sh"
+  },
+  {
+   "file": "k128_step7.sh",
+   "bytes": 1101,
+   "sha256": "a0ed6682c0d791497e80e0348d3f6fd17f0485830921e3be65df633cef6002fa",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/k128_step7.sh"
+  },
+  {
+   "file": "k128_semantic.sh",
+   "bytes": 337,
+   "sha256": "9822a13cac5979c3d96244c6b85c62dcaa5b955a50e49e118d795358b9e45599",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/k128_semantic.sh"
+  },
+  {
+   "file": "k128_board_test.sh",
+   "bytes": 972,
+   "sha256": "0f9d6abaca473a3d0983eee917e063b5a82b5c51724c0fc63ec4249f351c03fa",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/k128_board_test.sh"
+  },
+  {
+   "file": "cmp_k128_ref.py",
+   "bytes": 674,
+   "sha256": "850ec4927292b53233682084ac22b49c5247543211d5261532ae273496fd67bf",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/cmp_k128_ref.py"
+  },
+  {
+   "file": "ref_fix_chain.json",
+   "bytes": 12767,
+   "sha256": "28283786d97f8df814f594847619dacedcaf58fcae9963a7dcef00fc2ff7b4e4",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/ref_fix_chain.json"
+  },
+  {
+   "file": "k128_shared_test.py",
+   "bytes": 2759,
+   "sha256": "56dcb910eed3391839447ea359bd32bb7b7bae941c24607d04c1e5ed9e8d910c",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/k128_shared_test.py"
+  },
+  {
+   "file": "hf_shared_device_test.py",
+   "bytes": 2547,
+   "sha256": "4702b73d0fd83d8f688d411d6801873d645f49996c2fd46310b9c90801efbb14",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/hf_shared_device_test.py"
+  },
+  {
+   "file": "hf_reload_test.py",
+   "bytes": 1683,
+   "sha256": "add0ac36ae28f0c64415418a94ecb04f87f79a3becba4e7b1cd877a134db55ff",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/hf_reload_test.py"
+  },
+  {
+   "file": "hf_variants_probe.py",
+   "bytes": 1908,
+   "sha256": "cfbb8512184779c2faee886928176304d49363d690bb67462037d2ac8f427150",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/hf_variants_probe.py"
+  },
+  {
+   "file": "hf_chunk_probe.py",
+   "bytes": 2092,
+   "sha256": "8fc7925dd4d544c0706ab90efc4afa4269a2a2c86b8a1bbf94dcad3d6d7478c0",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/hf_chunk_probe.py"
+  },
+  {
+   "file": "hf_reset_probe.py",
+   "bytes": 1596,
+   "sha256": "70890ba638f876b9ead073f0bd6312b08a784337ab73a98eb84192f7fdc2eb8f",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/hf_reset_probe.py"
+  },
+  {
+   "file": "hf_layout_test.py",
+   "bytes": 2169,
+   "sha256": "9009048c258678962aec203b83f9fa7c0a3425a72360b49265198569ceef0e2a",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/hf_layout_test.py"
+  },
+  {
+   "file": "ab_npu_side.py",
+   "bytes": 1530,
+   "sha256": "5fcdd0c97a61bf73cfc4187808b6ba83e82f3e12a639d9c78661838227e84e91",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/ab_npu_side.py"
+  },
+  {
+   "file": "ab_cpu_side.py",
+   "bytes": 1633,
+   "sha256": "730e1f828fe1bb5ba233c4f54acccc4f36c5bb173867aa66cedf203de0bc0efc",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/ab_cpu_side.py"
+  },
+  {
+   "file": "hf_json_probe.py",
+   "bytes": 527,
+   "sha256": "50d6b70647c05254a878e068477eb346ca6a7c434fc38b8af8ddc04d8d09ff89",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/hf_json_probe.py"
+  },
+  {
+   "file": "hf_net_io.py",
+   "bytes": 555,
+   "sha256": "c7b2173cafd4b0d2518c9ed9465b93046c89ac68b159dff6c2d107dfdc4c060c",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/hf_net_io.py"
+  },
+  {
+   "file": "hf_sinks.py",
+   "bytes": 995,
+   "sha256": "4d03d017ebcf14c5c27ab3be162dd3de750f694072f1bf34cb64dd732bcaded3",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/hf_sinks.py"
+  },
+  {
+   "file": "resident_test.sh",
+   "bytes": 1873,
+   "sha256": "13382d9923822479d4bfb53d4607f4e843e4a89eb0da7735c15cd988f1d44692",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/resident_test.sh"
+  },
+  {
+   "file": "resident_order.sh",
+   "bytes": 1676,
+   "sha256": "e175de0c5a51045d7f017f4f1dbbe92fda10e938a5d1b26cd512bd922236c9fc",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/resident_order.sh"
+  },
+  {
+   "file": "ernie_resident_test.sh",
+   "bytes": 1557,
+   "sha256": "487801b0206c680b99896e513bd58ab7b28d60180d20db7bb87d2a5ec9527158",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/ernie_resident_test.sh"
+  },
+  {
+   "file": "ernie_mt_board.py",
+   "bytes": 1311,
+   "sha256": "7430e02a1cdbd606a61e995dd21a99a68613ae072a0a47576bcc7a63f06063db",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/ernie_mt_board.py"
+  },
+  {
+   "file": "mt_run2.sh",
+   "bytes": 447,
+   "sha256": "27b259e10f212149da0ef0fdd4a58a04116bc1991e60771bc840f030a49f7dc4",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/mt_run2.sh"
+  },
+  {
+   "file": "ernie_mt_acceptance.py",
+   "bytes": 1204,
+   "sha256": "6c8b16c2f23e83b4ea37dc3bb6a1a815e4d1cffb8e94752e64df26f89c0a4553",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/ernie_mt_acceptance.py"
+  },
+  {
+   "file": "probe_runtime_ver.py",
+   "bytes": 1184,
+   "sha256": "cd00ed7e5e8529298952dccd54fc7a771f22172c7453ef8d5f59b5fbdeb63b60",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/probe_runtime_ver.py"
+  },
+  {
+   "file": "cpu_probe.sh",
+   "bytes": 730,
+   "sha256": "efbbe19138cc50b962c72f85c7ee068489023cc43d329cd5f17ef50f29cff98f",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/cpu_probe.sh"
+  },
+  {
+   "file": "cpu_occupy.sh",
+   "bytes": 2160,
+   "sha256": "544ac18f3752a9ac6c9608b9eb4bc6a041cab699acbd4ff3f2621959c4449c7f",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/cpu_occupy.sh"
+  },
+  {
+   "file": "percore.py",
+   "bytes": 579,
+   "sha256": "ab99f0ebf1428f2c1ad383503dbc924beeefef52efac963c8cbba0904e04ff30",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/percore.py"
+  },
+  {
+   "file": "cpu_stress.sh",
+   "bytes": 1852,
+   "sha256": "e5989091c4beb2eb0db82b34c24ed0b2789fd3225f34a6fb37a9ebf8638bc964",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/cpu_stress.sh"
+  },
+  {
+   "file": "cpu_threads_repro.sh",
+   "bytes": 2671,
+   "sha256": "0457e871545aeb9912d874278bce080268603e1cc9770dc57e69de5452a2508c",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/cpu_threads_repro.sh"
+  },
+  {
+   "file": "cpu_affinity_test.sh",
+   "bytes": 2959,
+   "sha256": "5449210b68953f31903ad896e673cb8bfa75a3ea2fa308de49ebed71f9c1ba06",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/cpu_affinity_test.sh"
+  },
+  {
+   "file": "video_squeeze.sh",
+   "bytes": 1692,
+   "sha256": "abe3bf8be56385072fbf4a175f5f3c73a90fed1f50647a470e1ecb40a0950d59",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/video_squeeze.sh"
+  },
+  {
+   "file": "video_15core.sh",
+   "bytes": 1812,
+   "sha256": "cacff07584bd82229101f4489de5c20f1eab7d6d07a67140bfe3e312da13d917",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/video_15core.sh"
+  },
+  {
+   "file": "svc_cpu.sh",
+   "bytes": 1487,
+   "sha256": "a969090647870a6693e5da786fdea26bb0a5946cc3c4994ebd2eee5072b8c74a",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/svc_cpu.sh"
+  },
+  {
+   "file": "cpu_viewer.sh",
+   "bytes": 1343,
+   "sha256": "e8c04e840100034ee2325e9e5a84664e852d9b3e5e8d8ffc8c73afd56c63c749",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/cpu_viewer.sh"
+  },
+  {
+   "file": "pin_video_persist.sh",
+   "bytes": 823,
+   "sha256": "161eeee733e8aefe020206395d59e311fde909b530cf3df01ebedf970971bdf8",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/pin_video_persist.sh"
+  },
+  {
+   "file": "registry_k128.py",
+   "bytes": 1047,
+   "sha256": "a93a8b6fd43b13d0da6857b5f42a88cc66ee39b8abd13fba062001006b091f8b",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/registry_k128.py"
+  },
+  {
+   "file": "update_docs_k128.py",
+   "bytes": 3104,
+   "sha256": "35cd74bafc8d66bc1020da25e2caa18071a16170a7859505e0eb0d69009dd532",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/update_docs_k128.py"
+  },
+  {
+   "file": "rewrite_coex_resident.py",
+   "bytes": 3363,
+   "sha256": "11767286ef32a118b55490741e9b3e1203671e73b271457b28cd0897adf2130a",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/rewrite_coex_resident.py"
+  },
+  {
+   "file": "append_resident_readme.py",
+   "bytes": 1679,
+   "sha256": "51b02f31a5cf48e7e5c18504376eb1031e6bc81bb1b31ea73a083d8398bc8416",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/append_resident_readme.py"
+  },
+  {
+   "file": "rewrite_status_pass.py",
+   "bytes": 2505,
+   "sha256": "444827be53862fd071f324f0a29509e3b03c55f7ed65a38dc3cfbe3b736a094a",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/rewrite_status_pass.py"
+  },
+  {
+   "file": "patch_llm_multiturn2.py",
+   "bytes": 5164,
+   "sha256": "7ac8023d71652828f938a1e19840022116e9d95c07477630bee1e823c9dd8b78",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/patch_llm_multiturn2.py"
+  },
+  {
+   "file": "patch_llm_reply.py",
+   "bytes": 1725,
+   "sha256": "995718974965073ad76130bc488fd90c80f82c5971fe82e3d5c6b894aedffd35",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/patch_llm_reply.py"
+  },
+  {
+   "file": "patch_ernie_device2.py",
+   "bytes": 1344,
+   "sha256": "17396f711215349e378c2d3b48a853adfd3ef89893e18d6999a601ba0a540998",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/patch_ernie_device2.py"
+  },
+  {
+   "file": "patch_e41_paths.py",
+   "bytes": 820,
+   "sha256": "9d6b866552f996c10e85fda0420ea2ae51bd2aeefd6680c1c0e3d842bb792d27",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/patch_e41_paths.py"
+  },
+  {
+   "file": "fix_resident_models_id.py",
+   "bytes": 1448,
+   "sha256": "44c839054482f6696beb6b727a4457dc2d3e3214b6f94754f48eb50cc2fb4968",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/fix_resident_models_id.py"
+  },
+  {
+   "file": "patch_describe_compat.py",
+   "bytes": 1273,
+   "sha256": "a2142921e336b4a5e5ebfe8d2e31027999790aa081dd9beab11f264a51f400ac",
+   "source_path": "S:/work/WCIS/workenv/migrate-real-preview/patch_describe_compat.py"
+  }
+ ]
+}

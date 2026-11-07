@@ -1,0 +1,214 @@
+{
+ "all_verified": true,
+ "count": 52,
+ "results": [
+  {
+   "file": "k128_step1.sh",
+   "verified": true
+  },
+  {
+   "file": "k128_step2.sh",
+   "verified": true
+  },
+  {
+   "file": "k128_step3.sh",
+   "verified": true
+  },
+  {
+   "file": "k128_step4.sh",
+   "verified": true
+  },
+  {
+   "file": "k128_step5.sh",
+   "verified": true
+  },
+  {
+   "file": "k128_step6.sh",
+   "verified": true
+  },
+  {
+   "file": "k128_step7.sh",
+   "verified": true
+  },
+  {
+   "file": "k128_semantic.sh",
+   "verified": true
+  },
+  {
+   "file": "k128_board_test.sh",
+   "verified": true
+  },
+  {
+   "file": "cmp_k128_ref.py",
+   "verified": true
+  },
+  {
+   "file": "ref_fix_chain.json",
+   "verified": true
+  },
+  {
+   "file": "k128_shared_test.py",
+   "verified": true
+  },
+  {
+   "file": "hf_shared_device_test.py",
+   "verified": true
+  },
+  {
+   "file": "hf_reload_test.py",
+   "verified": true
+  },
+  {
+   "file": "hf_variants_probe.py",
+   "verified": true
+  },
+  {
+   "file": "hf_chunk_probe.py",
+   "verified": true
+  },
+  {
+   "file": "hf_reset_probe.py",
+   "verified": true
+  },
+  {
+   "file": "hf_layout_test.py",
+   "verified": true
+  },
+  {
+   "file": "ab_npu_side.py",
+   "verified": true
+  },
+  {
+   "file": "ab_cpu_side.py",
+   "verified": true
+  },
+  {
+   "file": "hf_json_probe.py",
+   "verified": true
+  },
+  {
+   "file": "hf_net_io.py",
+   "verified": true
+  },
+  {
+   "file": "hf_sinks.py",
+   "verified": true
+  },
+  {
+   "file": "resident_test.sh",
+   "verified": true
+  },
+  {
+   "file": "resident_order.sh",
+   "verified": true
+  },
+  {
+   "file": "ernie_resident_test.sh",
+   "verified": true
+  },
+  {
+   "file": "ernie_mt_board.py",
+   "verified": true
+  },
+  {
+   "file": "mt_run2.sh",
+   "verified": true
+  },
+  {
+   "file": "ernie_mt_acceptance.py",
+   "verified": true
+  },
+  {
+   "file": "probe_runtime_ver.py",
+   "verified": true
+  },
+  {
+   "file": "cpu_probe.sh",
+   "verified": true
+  },
+  {
+   "file": "cpu_occupy.sh",
+   "verified": true
+  },
+  {
+   "file": "percore.py",
+   "verified": true
+  },
+  {
+   "file": "cpu_stress.sh",
+   "verified": true
+  },
+  {
+   "file": "cpu_threads_repro.sh",
+   "verified": true
+  },
+  {
+   "file": "cpu_affinity_test.sh",
+   "verified": true
+  },
+  {
+   "file": "video_squeeze.sh",
+   "verified": true
+  },
+  {
+   "file": "video_15core.sh",
+   "verified": true
+  },
+  {
+   "file": "svc_cpu.sh",
+   "verified": true
+  },
+  {
+   "file": "cpu_viewer.sh",
+   "verified": true
+  },
+  {
+   "file": "pin_video_persist.sh",
+   "verified": true
+  },
+  {
+   "file": "registry_k128.py",
+   "verified": true
+  },
+  {
+   "file": "update_docs_k128.py",
+   "verified": true
+  },
+  {
+   "file": "rewrite_coex_resident.py",
+   "verified": true
+  },
+  {
+   "file": "append_resident_readme.py",
+   "verified": true
+  },
+  {
+   "file": "rewrite_status_pass.py",
+   "verified": true
+  },
+  {
+   "file": "patch_llm_multiturn2.py",
+   "verified": true
+  },
+  {
+   "file": "patch_llm_reply.py",
+   "verified": true
+  },
+  {
+   "file": "patch_ernie_device2.py",
+   "verified": true
+  },
+  {
+   "file": "patch_e41_paths.py",
+   "verified": true
+  },
+  {
+   "file": "fix_resident_models_id.py",
+   "verified": true
+  },
+  {
+   "file": "patch_describe_compat.py",
+   "verified": true
+  }
+ ]
+}
