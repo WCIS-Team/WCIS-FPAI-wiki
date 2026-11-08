@@ -33,7 +33,7 @@ podman run --rm --platform linux/arm64 python:3.14-slim \
 
 - 50+ 运行时依赖纯 Python 轮（pip download）
 - 2 个带 C++ 扩展的原生 aarch64 轮（上面步骤）
-- 总计 **118 集成对应全部依赖**可离线安装
+- 总计 **117 集成对应全部依赖**可离线安装
 
 ## deb安装+启动验证
 
