@@ -24,6 +24,9 @@ tags: [index]
 | [[tts4fpai]] | `repos/lang/tts/`（2026-11-04 由 `repos/tts4fpai/` 改名 `tts/` 并收进 `lang/`；神经系组件收在 `sherpa/` 子目录，VITS 候选在 `sherpa/VITS/`） | ZG330 中文 TTS 可复现内容（前端/mel、matcha、vocos、HiFi-GAN、piper、ekho-linux、CPU 基准） |
 | vpu-live | `repos/vpu-live/` | 板侧 VPU 视频编码与直播链路（H.264 泵＋HLS 打包） |
 | [[yuanma索引]] | `repos/yuanma/` | 竞赛提交快照包（2026-11-03 冻结，4481 件带 SHA-256）：源码工程＋冻结 DCP/BOOT＋板端运行配套＋复现脚本与逐项校验 |
+| fmql30tai-sdi-npu-face-recognition | `repos/fmql30tai-sdi-npu-face-recognition/`（子模块，公开仓 `WCIS-Team/fmql30tai-sdi-npu-face-recognition`，分支 `main`） | 视频交付工程公开形态（SDI 采集＋NPU 人脸身份/PAD）。**原作者 `anxianji11-pixel`，`takomitkm` 代上传**；署名正本见该仓 `NOTICE.md`。三组织库重建根历史后的贡献视图补记口径见 [[状态源与决策记录#D-1794150604 · 视频链路原作者署名以新提交补记，不改写重建后历史|状态源与决策记录——D-1794150604]] |
+
+> **子模块署名口径（2026-11-08）**：上表 `fmql30tai-sdi-npu-face-recognition` 一行是**代上传**关系，不是本仓原创；本仓只钉 gitlink，不含其源码。视频链路源码从未搬进重建后的三个组织库——2026-11-06 新根 `d191810`／`f07c4e8`／`d7be1d` 都是 `Initial clean snapshot`，作者字段只有 `takomitkm`，而视频子模块仓自身历史不在重建范围内（D-1793967893）、署名完好。因此旧历史里 `anxianji11-pixel` 对视频链路的提交只在本机 `workenv/history-reset-20261106/backup/` 的 bundle 里，未回推公开仓库。详见 [[状态源与决策记录#D-1794150604 · 视频链路原作者署名以新提交补记，不改写重建后历史|状态源与决策记录——D-1794150604]] 与主库 [`作品提交/fmql30tai-sdi-npu-face-recognition.md`](https://github.com/WCIS-Team/WCIS-FPAI/blob/main/作品提交/fmql30tai-sdi-npu-face-recognition.md)。
 
 ## official/（厂商 kit 快照，`repos/official/`）
 
