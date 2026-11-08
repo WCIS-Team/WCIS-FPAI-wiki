@@ -15,7 +15,7 @@ tags: [index]
 | [[ekho-linux]] | `repos/lang/tts/ekho-linux/`（子模块） | Ekho 开源 TTS 引擎的 Linux 专版 fork；文档已迁 `PS/Backend/` |
 | ERNIE-4.5-0.3B-PT4icraft430tai | `repos/lang/llm/ERNIE-4.5-0.3B-PT4icraft430tai/`（子模块） | ERNIE-4.5-0.3B 推到 ZG330 `_ZG` 件并上板（门 4 已通） |
 | [[FPAI30TAI图像FPGA索引]] | `repos/FPAI30TAI图像FPGA/` | 悟净 FMQL30TAI 图像 PL／ModelBackend／PS-NPU：视觉前端 RTL＋PS／网页链路 |
-| [[funasr]] | `repos/lang/asr/`（2026-11-04 由 `repos/funasr/` 改名 `asr_chain`、收进 `lang/` 并**压平**：`funasrarm/asr/` 与 `asr_chain.py` 提到顶层） | 顶层＝`asr_chain.py`＋`selftest.py`＋板端入口 `funasr-lite`／`funasr-onnx`；`asr/`＝板端链路件（backends、起链脚本）。`asr_chain.py` 采集→VAD→ASR→TTS，**在跑的 Python 链路**。⚠ 本行旧描述「C++ 链路规划，代码零行」与实际不符（D-78 的 C++ 规划是另一件事，待核清后拆行）；**旧 PC 侧 `.bat`＋venv 变体（原 `funasr/`）已丢弃**（她 2026-11-04 裁，D-1793752728；原件在 repos 仓 HEAD 里仍可取回） |
+| [[PS/ha/oldmainchain/Backend/funasr]] | `repos/lang/asr/`（2026-11-04 由 `repos/funasr/` 改名 `asr_chain`、收进 `lang/` 并**压平**：`funasrarm/asr/` 与 `asr_chain.py` 提到顶层） | 顶层＝`asr_chain.py`＋`selftest.py`＋板端入口 `funasr-lite`／`funasr-onnx`；`asr/`＝板端链路件（backends、起链脚本）。`asr_chain.py` 采集→VAD→ASR→TTS，**在跑的 Python 链路**。⚠ 本行旧描述「C++ 链路规划，代码零行」与实际不符（D-78 的 C++ 规划是另一件事，待核清后拆行）；**旧 PC 侧 `.bat`＋venv 变体（原 `funasr/`）已丢弃**（她 2026-11-04 裁，D-1793752728；原件在 repos 仓 HEAD 里仍可取回） |
 | HA4FPAI | `repos/HA4FPAI/`（子模块） | 悟净板上语音控制栈：klar-ha-nlu（NLU）＋sherpa-onnx |
 | num-audit | `repos/num-audit/` | 交付物数字错误的外置门禁工具（非零退出，A1/A2 复算） |
 | Qwen3-0.6B-Instruct | `repos/lang/llm/Qwen3-0.6B/`（目录真名 `Qwen3-0.6B`；交付线名沿 D-62） | Qwen3-0.6B 推到 ZG330 `_ZG` 件（NPU 迁移交付线） |
