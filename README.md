@@ -38,8 +38,8 @@ updated: 2026-11-05
 | `PS/ha/` | HA4FPAI 开发记录、CI 日志与性能图表；同目录保留联合规划和分阶段记录 | [[HA4FPAI-CI开发记录#归档内容与入口\|HA4FPAI-CI开发记录——归档内容与入口]] · [[HA4FPAI-2026-11-07-08-NPU优化轮]]（2026-11-08 优化轮：K128/resident/HiFi-GAN验收/ERNIE多轮/runtime比对） · [[HA4FPAI-运行时内存RSS实测]]（18MB 服务本体/290MB 装 qwen3/孤儿 worker 泄漏） · [[HA4FPAI-设计总览]]（整机设计梳理：control/语音/NPU/klar/视频域/预算线，含与 ha-small 的对比） |
 | `PS/WebFrontend/` | 语音试验台通信、网页与 HDMI 前端 | [[webapp#现有入口与验证范围\|webapp——现有入口与验证范围]] · [[lang语音链试验台与通信#二、十级编排与两次路由\|lang语音链试验台与通信——二、十级编排与两次路由]] |
 | `PS/Backend/` · `PS/OrchestrationLayer/` | 模型后端、TTS 与调度链路 | [[lang语音链试验台与通信#三、HTTP、Wyoming 与文件循环\|lang语音链试验台与通信——三、HTTP、Wyoming 与文件循环]] · [[repo项目索引#repo项目索引\|repo项目索引——repo项目索引]] |
-| `PS/psrt/` | 板端运行时、OS 改动及优化笔记 | [[os#os\|os——os]] |
-| `PS/hardware/` · `PS/board_extract/` | 硬件事实、采集来源与板端提取件 | [[硬件与基础运行环境档案#读法：四种来源必须分开看\|硬件与基础运行环境档案——读法：四种来源必须分开看]] · [[板端提取件台账#板端提取件台账\|板端提取件台账——板端提取件台账]] |
+| `PS/psrt/` | 板端运行时、OS 改动及优化笔记 | [[PS/psrt&dev/os#os\|os——os]] |
+| `PS/hardware/` · `PS/board_extract/` | 硬件事实、采集来源与板端提取件；平台能力边界总表 | [[硬件与基础运行环境档案#读法：四种来源必须分开看\|硬件与基础运行环境档案——读法：四种来源必须分开看]] · [[板端提取件台账#板端提取件台账\|板端提取件台账——板端提取件台账]] · [[ZG330平台能力边界#ZG330平台能力边界\|ZG330平台能力边界——ZG330平台能力边界]]（2026-11-08 五轮调查去重总表） |
 | `PL/` · `PL/FPGA/` | PL 器件、视频与网络路线、位流和工具链资料 | [[pldev#pldev\|pldev——pldev]] · [[plvid#intro\|plvid——intro]] · [[plnet#plnet\|plnet——plnet]] |
 | `PL/MOD/` | 模型编译、迁移与运行实测；厂商资料单独归档 | [[1-NPU模型部署#1-NPU模型部署\|1-NPU模型部署——1-NPU模型部署]] |
 | `repo2WCIS.repos/` | 我方工程与厂商参考代码的说明入口 | [[repo项目索引#repo项目索引\|repo项目索引——repo项目索引]] |

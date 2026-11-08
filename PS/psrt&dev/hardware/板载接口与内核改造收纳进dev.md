@@ -121,7 +121,7 @@
 
 ### 为什么不推荐用（三重否决，逐条独立成立）
 
-1. **出厂内核 `# CONFIG_IIO is not set`。** Linux 里所有 ADC/DAC/传感器读数都走 **IIO 子系统**，它没编进去，就意味着：没有 `/dev/iio:device*`，没有 sysfs 读数节点；XADC 驱动（`CONFIG_XILINX_XADC`）在配置里根本不出现，而 IIO 属 `not set` 一类，**出厂镜像里也没有对应模块可补**（镜像只随带 3 个 `.ko`，见 [[os#二、内核模块（含一条对镜像取证结论的更正）\|os——二、内核模块（含一条对镜像取证结论的更正）]]）。要用就得**重编内核打开 IIO + XADC 驱动**，还要在 dtb 里使能对应节点——而随镜像的 dtb 里**没有任何 XADC/amba 模拟节点**。
+1. **出厂内核 `# CONFIG_IIO is not set`。** Linux 里所有 ADC/DAC/传感器读数都走 **IIO 子系统**，它没编进去，就意味着：没有 `/dev/iio:device*`，没有 sysfs 读数节点；XADC 驱动（`CONFIG_XILINX_XADC`）在配置里根本不出现，而 IIO 属 `not set` 一类，**出厂镜像里也没有对应模块可补**（镜像只随带 3 个 `.ko`，见 [[PS/psrt&dev/os#二、内核模块（含一条对镜像取证结论的更正）\|os——二、内核模块（含一条对镜像取证结论的更正）]]）。要用就得**重编内核打开 IIO + XADC 驱动**，还要在 dtb 里使能对应节点——而随镜像的 dtb 里**没有任何 XADC/amba 模拟节点**。
 2. **完整版手册通篇没有 XADC 章节。** 它的**配置表**确实写了"5 路 XADC"（芯片侧能力），但**正文没有 §4.20 那样的引出说明**，J23／J24／J25 这三个座子的丝印只出现在 **Lite** 手册的接口图里。所以我们手上这块完整版到底把没把模拟输入引到连接器上，**属待验证**，到板目视。
 3. **即便可达，也只有 3 个用户可接**（另外 2 路被固定接去监测 VCC1V5／VCC1V8）。
 
@@ -143,7 +143,7 @@
 
 ## 五、SDI 与 SFP 一句话说明
 
-- **SDI**：完整版配置表登记 **4 路输入 + 1 路输出**（Lite 手册只写 2 路输入），BNC 座。输入侧前面是 **LMH0344** 自适应电缆均衡器，输出侧是 **LMH0302** 电缆驱动，支持 **125 Mbps–2.97 Gbps**、ST424／ST292／ST344／ST259 广播标准，75 Ω（Belden 1694A／8281）。厂商用 `amvx.ko`（linlon MVX VPU）承载，**那颗 `.ko` 本板已随开机加载**（见 [[os#二、内核模块（含一条对镜像取证结论的更正）\|os——二、内核模块（含一条对镜像取证结论的更正）]]；缺的是厂商那份 SDI 采集工程与配套比特流），日志里还留过 `mvx_v4l2_vidioc_streamon+0xb4 [amvx]` 的崩溃栈。→ 范围外，见 [[板级管线详图]] 页首偏差说明。
+- **SDI**：完整版配置表登记 **4 路输入 + 1 路输出**（Lite 手册只写 2 路输入），BNC 座。输入侧前面是 **LMH0344** 自适应电缆均衡器，输出侧是 **LMH0302** 电缆驱动，支持 **125 Mbps–2.97 Gbps**、ST424／ST292／ST344／ST259 广播标准，75 Ω（Belden 1694A／8281）。厂商用 `amvx.ko`（linlon MVX VPU）承载，**那颗 `.ko` 本板已随开机加载**（见 [[PS/psrt&dev/os#二、内核模块（含一条对镜像取证结论的更正）\|os——二、内核模块（含一条对镜像取证结论的更正）]]；缺的是厂商那份 SDI 采集工程与配套比特流），日志里还留过 `mvx_v4l2_vidioc_streamon+0xb4 [amvx]` 的崩溃栈。→ 范围外，见 [[板级管线详图]] 页首偏差说明。
 - **SFP**：完整版配置表登记 **2 路**光模块笼（SFP0／SFP1，跳线 `GTX_LANE_SEL1`／`SEL2`），默认全速率（Full BW）模式，同样吃 GT bank112。→ 范围外。
 - **一条算不平的账（待验证）**：4 收 + 1 发 = **5 对差分**，而 bank112 只有 4 lane（85 Mb/s 的 GT 通常是 4 lane 一组）。所以"4 路 SDI 输入 + 1 路输出"**不可能同时全速工作**，或者其中有 lane 走的是 PL 普通 IO 而非 GT。**本地资料无法判定**，不要按"能并行采 4 路 SDI"做设计。见 [[板子（除芯片）#四、源文件之间的口径差异（必须显式标注）|板子（除芯片）——四、源文件之间的口径差异（必须显式标注）]]。
 
@@ -176,13 +176,13 @@
 | QSPI ×2（各 256Mb，复旦微 EFM25QL256-E16） | `SPI_CADENCE_QUADSPI=y`、`SPI_DW_FMSH=y` | `spi@e0000000` okay／`spi@e0020000` **disabled** | PS 侧直连，不需要 PL | 缺 ② |
 | EEPROM 512Kb | `EEPROM_AT24=y`、`I2C=y`、`I2C_CHARDEV=y`、`I2C_XILINX=y`、`I2C_SLAVE_EEPROM=y` | `i2c@e0002000`、`i2c@e0022000` **都 disabled** | 完整版 EEPROM 走 **PL IIC** | 缺 ②③ |
 | RTC（完整版 1 路） | `RTC_CLASS=y`，但**全文没有任何一条 `CONFIG_RTC_DRV_*`** | **没有 rtc 节点** | 硬件挂在 I2C（`PS_RTC_SCL` B21／`PS_RTC_SDA` A18），而 I2C 在 dtb 里 disabled | **三层全缺**。现象已在日志里：每次启动 `hctosys: unable to open rtc device (rtc0)`，所以 RTC 不保存时间、时钟冻在 `2023-03-02 20:58` |
-| HDMI 输出 | `CONFIG_DRM_XLNX_PL_HDMI=m`，**这颗 `.ko` 镜像里没带**（见 [[os#二、内核模块（含一条对镜像取证结论的更正）\|os——二、内核模块（含一条对镜像取证结论的更正）]]）→ 在这块板上**等于没有** | — | 全部在 PL（IO 实现；720p60 标称，1080p60 的 748.5M TMDS 超 HR bank 710M 会闪） | 缺 ①②③，本项目不使用 |
+| HDMI 输出 | `CONFIG_DRM_XLNX_PL_HDMI=m`，**这颗 `.ko` 镜像里没带**（见 [[PS/psrt&dev/os#二、内核模块（含一条对镜像取证结论的更正）\|os——二、内核模块（含一条对镜像取证结论的更正）]]）→ 在这块板上**等于没有** | — | 全部在 PL（IO 实现；720p60 标称，1080p60 的 748.5M TMDS 超 HR bank 710M 会闪） | 缺 ①②③，本项目不使用 |
 | SDI／SFP／PCIe／SMA | `# CONFIG_PCI is not set`；GT 相关时钟驱动已 `=y` | 无 pcie 节点 | 要比特流 + **改跳线**，四者互斥 | 范围外，见第二、三、五节 |
 | PL 16 路 HEADER（4×3.3V + 12×1.8V） | `GPIO_SYSFS=y`、`GPIO_XILINX=y`、`GPIO_DWAPB=y`、`GPIO_PCA953X=y` 全内建 | 取决于自己的 dts | **要自己在 Procise 里做引脚约束并接 AXI GPIO** | 缺 ③——**这正是本项目自研的主场**，不需要动内核 |
 | I²S 麦克风／I²S 功放 | `# CONFIG_SND_SOC is not set`、`# CONFIG_PWM is not set` | 无 `sound` 节点 | 要 PL I²S RX／TX 逻辑 | 走第十节"绕开 ALSA"这条路可以**不动内核** |
 | XADC | `# CONFIG_IIO is not set` | 无节点 | 座子在不在待板看 | 三重否决，见第四节 |
 
-> 读法：**能不能用看板上有没有现成的 `.ko`**——出厂只随带 3 个（`u-dma-buf`／`mali_kbase`／`amvx`，见 [[os#二、内核模块（含一条对镜像取证结论的更正）\|os——二、内核模块（含一条对镜像取证结论的更正）]]），其余 `=m`／`not set` 在板上都没有模块文件、效果相同。所以判定"能不能用"时不要问"驱动在不在配置里"，要问"**是不是 `=y`**"。
+> 读法：**能不能用看板上有没有现成的 `.ko`**——出厂只随带 3 个（`u-dma-buf`／`mali_kbase`／`amvx`，见 [[PS/psrt&dev/os#二、内核模块（含一条对镜像取证结论的更正）\|os——二、内核模块（含一条对镜像取证结论的更正）]]），其余 `=m`／`not set` 在板上都没有模块文件、效果相同。所以判定"能不能用"时不要问"驱动在不在配置里"，要问"**是不是 `=y`**"。
 
 ### 第四层：其实存在一条"不重编内核也能动设备树"的路
 
@@ -193,7 +193,7 @@
 | 覆盖框架 | `CONFIG_OF_DYNAMIC=y`、`CONFIG_OF_RESOLVE=y`、`CONFIG_OF_OVERLAY=y`、**`CONFIG_OF_CONFIGFS=y`**、`CONFIG_CONFIGFS_FS=y` | 开机后可以往里**追加／修改节点**，不需要重编 `Image`，也不需要换掉出厂 `fmqlmp-verify.dtb` |
 | 用户态驱动 | `CONFIG_UIO=y`、`CONFIG_UIO_PDRV_GENIRQ=y`、`CONFIG_UIO_DMEM_GENIRQ=y` | 一个 `compatible = "uio_pdrv_genirq"` 的节点 = `/dev/uioN`，用户态 `mmap` 到 PL 的 AXI 寄存器、`read()` 阻塞等中断 |
 | Linux 侧下比特流 | `CONFIG_FPGA=y`、`CONFIG_FPGA_BRIDGE=y`、`CONFIG_FPGA_REGION=y`、`CONFIG_OF_FPGA_REGION=y`、`CONFIG_FPGA_MGR_FMQL_FPGA=y`；dtb 里 `devcfg@e0040000` **okay**；日志 `fpga_manager fpga0: FMSH FMQL FPGA Manager registered` | ~~不依赖 U-Boot 那行 `loadbit` 也能把 PL 装起来~~ → **2026-10-10 实测推翻：配置齐全但写不进去**，`echo > …/firmware` 恒 `Timeout waiting for PCFG_DONE`（**用出厂位流做对照同样失败**），见 [[PL位流重载通道失效]] |
-| 搬运 | dtb 里 `dma@f0010000`（`snps,axi-dma-1.01a`，PL 侧）**已经是 okay**，`CONFIG_XILINX_DMA=y`、`DW_DMAC=y`、`XILINX_FRMBUF=y` | `u-dma-buf` 那颗 `.ko` **本板已加载**（`/dev/udmabuf` 存在，见 [[os#二、内核模块（含一条对镜像取证结论的更正）\|os——二、内核模块（含一条对镜像取证结论的更正）]]），**但 AXI DMA 这条路不需要它** |
+| 搬运 | dtb 里 `dma@f0010000`（`snps,axi-dma-1.01a`，PL 侧）**已经是 okay**，`CONFIG_XILINX_DMA=y`、`DW_DMAC=y`、`XILINX_FRMBUF=y` | `u-dma-buf` 那颗 `.ko` **本板已加载**（`/dev/udmabuf` 存在，见 [[PS/psrt&dev/os#二、内核模块（含一条对镜像取证结论的更正）\|os——二、内核模块（含一条对镜像取证结论的更正）]]），**但 AXI DMA 这条路不需要它** |
 
 **于是"要动设备树"的接口，成本从"重编内核 + 换 dtb"降为"写一个 `.dtbo` 插进去"** —— 风险等级完全不同，可回滚（`rmdir` 那个 overlay 目录就撤销），而且**不动厂商那颗 `Image`**。
 
@@ -264,7 +264,7 @@ echo video_only.bin > /sys/class/fpga_manager/fpga0/firmware
 1. **备份**：把 SD 卡 FAT 分区整盘拷走（就几个文件，`Image`、`BOOT.bin`、`uEnv.txt`、`*.bit`、`*.dtb`）。这一步做了，后面怎么折腾都能回滚。2. **编译**：在交叉编译容器里用**厂商那份内核源码树**编，不要用上游原版（原因见第八节）。产物是 `arch/arm64/boot/Image`。
 3. **换文件**：把新 `Image` 拷进 FAT 分区，**先另存为 `Image.new`**，改 `uEnv.txt` 里加载内核那一行的文件名指向它；确认能起来之后再覆盖原 `Image`。这样一次改错还能改回来。
 4. **dtb 同步**：如果改了设备树，编出 `fmqlmp-verify.dtb` 同样按"先改名、再切 `uEnv.txt`"的方式换。
-5. **模块目录**：如果新内核的版本串变了（`uname -r` 的结果变了），**必须同时把 `/lib/modules/<新版本>` 建出来**，否则出厂那 3 个 `.ko`（`u-dma-buf`／`mali_kbase`／`amvx`）反而会失配、加载不了——现状是它们与运行内核同名所以都能加载（读数见 [[os#二、内核模块（含一条对镜像取证结论的更正）\|os——二、内核模块（含一条对镜像取证结论的更正）]]）。最省事的办法是内核里该开的都开成 `=y`，根本不依赖模块。
+5. **模块目录**：如果新内核的版本串变了（`uname -r` 的结果变了），**必须同时把 `/lib/modules/<新版本>` 建出来**，否则出厂那 3 个 `.ko`（`u-dma-buf`／`mali_kbase`／`amvx`）反而会失配、加载不了——现状是它们与运行内核同名所以都能加载（读数见 [[PS/psrt&dev/os#二、内核模块（含一条对镜像取证结论的更正）\|os——二、内核模块（含一条对镜像取证结论的更正）]]）。最省事的办法是内核里该开的都开成 `=y`，根本不依赖模块。
 6. **比特流**：自己的 `*.bit` 进 FAT 分区时注意上节"关键事实二"——默认那行 `loadbit` 指向的是 `mmc 0:2` 上并不存在的 `download.bit`。
 7. **串口看日志**：接 PS 端那个 UART 转 USB（完整版有 2 路），终端开 115200。`bootargs` 里已经是 `loglevel=8`，起不来时信息会很全。
 8. **兜底**：真起不来，用 **PS_JTAG** 直接下载启动（完整版还有 PL_JTAG），或者整卡重烧原镜像。两条退路都在，不会变砖。
@@ -310,7 +310,7 @@ echo video_only.bin > /sys/class/fpga_manager/fpga0/firmware
 | `fmql_uartps` 串口驱动 | 同上 | **控制台直接没有输出**，最危险的一项 |
 | fmsh 的 clk / dma / soc / firmware 驱动 | 同上 | 时钟树、DMA、固件接口缺失 |
 | Cadence media / i2c 补丁、`xilinx-v4l2-controls.h` | `17`、`uapi_headers/` | V4L2 通路行为不同 |
-| `mali_kbase`（GPU）、`amvx.ko`（VPU）、`u-dma-buf` | 提取件 `13`，是外部 `.ko` | 这三个在出厂镜像里已是可加载状态、本板都在跑（[[os#二、内核模块（含一条对镜像取证结论的更正）\|os——二、内核模块（含一条对镜像取证结论的更正）]]）；换内核后要跟着重出配套版本，否则失配 |
+| `mali_kbase`（GPU）、`amvx.ko`（VPU）、`u-dma-buf` | 提取件 `13`，是外部 `.ko` | 这三个在出厂镜像里已是可加载状态、本板都在跑（[[PS/psrt&dev/os#二、内核模块（含一条对镜像取证结论的更正）\|os——二、内核模块（含一条对镜像取证结论的更正）]]）；换内核后要跟着重出配套版本，否则失配 |
 | dtb `fmqlmp-verify.dts`（26 KB）及其节点 status | 提取件 `29`/`31`/`35`/`36` | 换 dtb 等于换一块板子的定义 |
 | `BOOT.bin`（FSBL + U-Boot + PMU 固件 `bl31.elf`） | 提取件 `boot_files/` | **FSBL/PMU 与内核必须配套**，不要顺手重编 FSBL |
 
@@ -447,4 +447,4 @@ echo video_only.bin > /sys/class/fpga_manager/fpga0/firmware
 
 ## 相关页面
 
-[[板卡镜像实测取证]] · [[板端提取件台账]] · [[板子（除芯片）]] · [[芯片]] · [[os]] · [[音频]] · [[外设与资金申报改成设备信息]] · [[接口契约与数据通路]] · [[板级管线详图]] · [[FPGA自研模块清单]] · [[PL网口bring-up与GEM1EMIO]] · [[工具链与素材进README]] · [[验证方法学]] · [[状态源与决策记录]]
+[[板卡镜像实测取证]] · [[板端提取件台账]] · [[板子（除芯片）]] · [[芯片]] · [[PS/psrt&dev/os]] · [[音频]] · [[外设与资金申报改成设备信息]] · [[接口契约与数据通路]] · [[板级管线详图]] · [[FPGA自研模块清单]] · [[PL网口bring-up与GEM1EMIO]] · [[工具链与素材进README]] · [[验证方法学]] · [[状态源与决策记录]]

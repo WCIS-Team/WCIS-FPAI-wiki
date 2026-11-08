@@ -93,4 +93,4 @@ sudo systemctl daemon-reload
 sudo systemctl enable --now lang-server-http lang-server-voice lang-server-loop
 ```
 
-配置原件和五组旧模型仍保留在旧lang树；备份目录是root-only，不将其中的密钥文件收进Git。系统改动归口见[[os#七、我方对板端 OS 的改动（归口，2026-10-11 起）|os——七、我方对板端OS的改动]]，产物登记见[[板端我方代码与产物台账#卅五、lang-server 0.1.1 deb接管旧手工服务|板端我方代码与产物台账——卅五]]。
+配置原件和五组旧模型仍保留在旧lang树；备份目录是root-only，不将其中的密钥文件收进Git。系统改动归口见[[PS/psrt&dev/os#七、我方对板端 OS 的改动（归口，2026-10-11 起）|os——七、我方对板端OS的改动]]，产物登记见[[板端我方代码与产物台账#卅五、lang-server 0.1.1 deb接管旧手工服务|板端我方代码与产物台账——卅五]]。

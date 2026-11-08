@@ -60,7 +60,7 @@
 | 选 SDI（数据）| **J26** 的 `GTX_LANE_SEL0~3` 全接**高**（PCIe/SFP0/SFP1/SMA 是 J12 上相应 `GTX_LANE_SELn` 接低）| [[板载接口与内核改造收纳进dev]] |
 | 选 SDI（时钟）| **J27** 把 **148.5 MHz** 送进 bank112 的 **CLK1**（J26 的 1、2 脚短接才是 PCIe 100M → CLK0）| 完整版手册跳线段；2026-10-16 核对原文（[[板载接口与内核改造收纳进dev]] 的 CLK0 误记已更正）|
 | 参考时钟引脚 | 本工程用 **lite** 变体：R6/R5（与厂商交付包生效那对一致）| `constrs/gt_refclk_lite.xdc` |
-| 承载模块 | `amvx.ko` 随开机加载 | [[os]] |
+| 承载模块 | `amvx.ko` 随开机加载 | [[PS/psrt&dev/os]] |
 
 ### 2.3 板载 LED 的判读（2026-10-16 更正）
 

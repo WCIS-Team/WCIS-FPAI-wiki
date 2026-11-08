@@ -1528,7 +1528,7 @@ jsonl 里没有对应行的那些行：`mixed1／split／first=0.6 ms` ／ `mixe
 
 ## 十七、相关页面
 
-[[板端我方代码与产物台账]]（§十＝TTS 文件与结论 1～17；§十二＝组件基准 `#125`～`#139`；§九／§十三＝ASR 链路）· [[板卡镜像实测取证]] · [[板端内存上限与心跳日志]] · [[组件选型与复用边界]] · [[交叉编译主机路由SOP]] · [[os]]
+[[板端我方代码与产物台账]]（§十＝TTS 文件与结论 1～17；§十二＝组件基准 `#125`～`#139`；§九／§十三＝ASR 链路）· [[板卡镜像实测取证]] · [[板端内存上限与心跳日志]] · [[组件选型与复用边界]] · [[交叉编译主机路由SOP]] · [[PS/psrt&dev/os]]
 
 **复跑方法**（全部只在板端，本机不跑链路）：`cd /root/compbench; setsid nohup bash run_wave_a.sh > logs/wave_a.log 2>&1 < /dev/null &`（`_DONE` 跳过已完成档）；单档＝`/root/funasr/venv/bin/python c1_src.py scipy_poly` 这种形式。TTS 侧＝`/root/ttsbench/run_all.sh` 与 `kokoro_resume.sh`（台账 `#88`～`#106`）。
 

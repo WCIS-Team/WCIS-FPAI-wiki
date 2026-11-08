@@ -278,4 +278,4 @@ curl -s http://127.0.0.1:10521/ | Select-String "localStorage.setItem"
 - [[校机无容器交叉编译]] — 校机没有容器的应对
 - [[交叉编译主机路由SOP]] — 三台机路由口径
 - [[板端磁盘清理SOP]] — 板端产物与清理纪律
-- [[os]] — 我方对板端 OS 的全部改动（journald 上限、swap 等）
+- [[PS/psrt&dev/os]] — 我方对板端 OS 的全部改动（journald 上限、swap 等）
