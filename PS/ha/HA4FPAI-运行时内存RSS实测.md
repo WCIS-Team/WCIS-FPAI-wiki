@@ -67,10 +67,20 @@ RSS 由加载了什么决定，裁剪代码几乎不省运行时内存）。不�
 
 （swap 掉 737 MB 是孤儿进程自己的换出页随进程退出被释放——不是 swapoff 的效果。）
 
-**教训 / 待办**：`server.py` 被强杀时不会回收 `--resident` 的 worker。需要给服务补一个
-“退出时回收 resident worker”的兜底（`atexit`/信号处理里 `terminate` worker，或让 worker
-以 `PR_SET_PDEATHSIG`/父进程看护方式启动）。在修好前，**清理手法**＝
-`pkill -f resident_worker.py`（先 TERM，复核残留再 KILL），清完 `free -m` 复核。
+**修复（2026-11-08 已落地并板端验证）**：
+
+1. `server.py`：装 `SIGTERM`/`SIGINT` 处理 → 在独立线程 `httpd.shutdown()`，`finally` 调
+   `ResidentSupervisor.shutdown()`（真 `_reap` worker 进程）。**根因**：旧 `unload()` 只卸模型
+   会话、**不杀 worker 进程**，所以即便优雅退出也留孤儿。
+2. `resident_worker.py`：加父进程看护守护线程——`getppid()` 变化（父死→重挂 PID 1）即
+   `os._exit(0)`，覆盖服务被 `SIGKILL`（信号处理跑不到）的路径。
+
+**验证（板 113，`tts-hifigan-v2` 0.4s 快装）**：`--resident` 起服 → `/load` 后 1 个 worker →
+① `kill -TERM` 服务，6s 后 worker=0；② `kill -KILL` 服务，6s 后 worker=0（看护自退）。
+两条路径都不再留孤儿。
+
+**清理手法**（修好前遗留或任何时侯手工清）：`pkill -f resident_worker.py`（先 TERM、复核残留
+再 KILL），清完 `free -m` 复核。
 
 ## 可动杠杆（省内存/磁盘往哪使劲）
 
