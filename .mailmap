@@ -1,0 +1,7 @@
+# Remap historical agent/typo identities back to the real author.
+# This only affects how git (and some GitHub views) display / group authorship.
+# It does NOT rewrite the author email stored in the commit object, so the
+# per-commit avatar on GitHub is still decided by the original email address.
+takomitkm <takomitkm@outlook.com> WCIS agent <agent@wcis.local>
+takomitkm <takomitkm@outlook.com> takomi <takomi@local>
+takomitkm <takomitkm@outlook.com> tkm <takomitkm@outlook.com>
