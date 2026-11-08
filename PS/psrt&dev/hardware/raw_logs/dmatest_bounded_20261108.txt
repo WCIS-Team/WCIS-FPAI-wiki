@@ -1,0 +1,86 @@
+
+===== PRE_STATE =====
+alignment=-1
+channel=
+device=
+dmatest=0
+iterations=0
+max_channels=0
+norandom=N
+noverify=N
+polled=N
+pq_sources=3
+run=N
+test_buf_size=16384
+test_list=threads_per_chan=1
+timeout=3000
+transfer_size=0
+verbose=N
+wait=Y
+xor_sources=3
+
+===== DMATEST_PS_DW_DMAC_dma0chan0 =====
+main: line 12: echo: write error: Device or resource busy
+main: line 15: /sys/module/dmatest/parameters/wait: Permission denied
+  start dma0chan0 ...
+  run_rc=0
+  --- dmesg dmatest (tail) ---
+[10889.857812] dmatest: dma1chan4-copy0: summary 20 tests, 0 failures 194.80 iops 6399 KB/s (0)
+[10889.861235] dmatest: dma1chan3-copy0: summary 20 tests, 0 failures 188.08 iops 5990 KB/s (0)
+[10889.861400] dmatest: dma0chan1-copy0: summary 20 tests, 0 failures 185.44 iops 6332 KB/s (0)
+[10889.862622] dmatest: dma0chan5-copy0: summary 20 tests, 0 failures 184.17 iops 4788 KB/s (0)
+[10889.866190] dmatest: dma0chan3-copy0: summary 20 tests, 0 failures 178.00 iops 6248 KB/s (0)
+[10889.866847] dmatest: dma0chan7-copy0: summary 20 tests, 0 failures 177.26 iops 3899 KB/s (0)
+[10889.867429] dmatest: dma1chan7-copy0: summary 20 tests, 0 failures 186.30 iops 6623 KB/s (0)
+[10889.867673] dmatest: dma1chan5-copy0: summary 20 tests, 0 failures 188.54 iops 6768 KB/s (0)
+[10889.868113] dmatest: dma0chan2-copy0: summary 20 tests, 0 failures 176.30 iops 5800 KB/s (0)
+[10889.868545] dmatest: dma0chan6-copy0: summary 20 tests, 0 failures 176.47 iops 6317 KB/s (0)
+[10889.868914] dmatest: dma1chan2-copy0: summary 20 tests, 0 failures 177.09 iops 4551 KB/s (0)
+[10889.869866] dmatest: dma1chan6-copy0: summary 20 tests, 0 failures 188.90 iops 6111 KB/s (0)
+
+===== DMATEST_PL_AXI_DMA_dma1chan0 =====
+  start dma1chan0 ...
+main: line 15: /sys/module/dmatest/parameters/wait: Permission denied
+  run_rc=0
+  --- dmesg dmatest (tail) ---
+[10889.862622] dmatest: dma0chan5-copy0: summary 20 tests, 0 failures 184.17 iops 4788 KB/s (0)
+[10889.866190] dmatest: dma0chan3-copy0: summary 20 tests, 0 failures 178.00 iops 6248 KB/s (0)
+[10889.866847] dmatest: dma0chan7-copy0: summary 20 tests, 0 failures 177.26 iops 3899 KB/s (0)
+[10889.867429] dmatest: dma1chan7-copy0: summary 20 tests, 0 failures 186.30 iops 6623 KB/s (0)
+[10889.867673] dmatest: dma1chan5-copy0: summary 20 tests, 0 failures 188.54 iops 6768 KB/s (0)
+[10889.868113] dmatest: dma0chan2-copy0: summary 20 tests, 0 failures 176.30 iops 5800 KB/s (0)
+[10889.868545] dmatest: dma0chan6-copy0: summary 20 tests, 0 failures 176.47 iops 6317 KB/s (0)
+[10889.868914] dmatest: dma1chan2-copy0: summary 20 tests, 0 failures 177.09 iops 4551 KB/s (0)
+[10889.869866] dmatest: dma1chan6-copy0: summary 20 tests, 0 failures 188.90 iops 6111 KB/s (0)
+[10893.768242] dmatest: Added 1 threads using dma1chan0
+[10893.771983] dmatest: Started 1 threads using dma1chan0
+[10893.816363] dmatest: dma1chan0-copy0: summary 20 tests, 0 failures 2462.14 iops 72263 KB/s (0)
+
+===== RESTORE_PARAMS =====
+bash: line 39: /sys/module/dmatest/parameters/wait: Permission denied
+alignment=-1
+channel=
+device=
+dmatest=0
+iterations=0
+max_channels=0
+norandom=N
+noverify=N
+polled=N
+pq_sources=3
+run=N
+test_buf_size=16384
+test_list=threads_per_chan=1
+timeout=3000
+transfer_size=0
+verbose=N
+wait=Y
+xor_sources=3
+
+===== POST_HEALTH =====
+operating
+MemAvailable:     717604 kB
+CmaFree:          130784 kB
+Sun Nov  8 08:53:58 UTC 2026
+bash: line 50: $'\r': command not found
+

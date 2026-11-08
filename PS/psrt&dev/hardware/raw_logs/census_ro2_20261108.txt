@@ -1,0 +1,254 @@
+
+===== A1_DEADLINE_CORRECTED =====
+--- DL valid: explicit prio 0, runtime 10ms / period 100ms / deadline 100ms
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+FileNotFoundError: [Errno 2] No such file or directory: '/proc/self/sched'
+rc=1
+--- DL admission negative: runtime > deadline (expect refuse)
+chrt: failed to set pid 0's policy: Invalid argument
+rc=1
+--- DL admission: 99% of one CPU /bin/true (expect accept or EBUSY)
+rc=0
+--- DL overcommit: 4 concurrent 90% DL tasks, short-lived (admission control)
+  task1 rc=0
+  task2 rc=0
+  task3 rc=0
+  task4 rc=0
+--- FIFO policy read
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+FileNotFoundError: [Errno 2] No such file or directory: '/proc/self/sched'
+rc=1
+--- RR policy read
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+FileNotFoundError: [Errno 2] No such file or directory: '/proc/self/sched'
+rc=1
+--- RLIMIT_RTPRIO / RTTIME of shell
+
+===== A2_SYNC_SEMANTICS =====
+--- u-dma-buf sync_mode enum from board source
+/root/udmabuf/u-dma-buf.c:178:    int                  sync_mode;
+/root/udmabuf/u-dma-buf.c:183:    u64                  sync_for_cpu;
+/root/udmabuf/u-dma-buf.c:194: * sync_mode(synchronous mode) value
+/root/udmabuf/u-dma-buf.c:196:#define SYNC_MODE_INVALID       (0x00)
+/root/udmabuf/u-dma-buf.c:197:#define SYNC_MODE_NONCACHED     (0x01)
+/root/udmabuf/u-dma-buf.c:198:#define SYNC_MODE_WRITECOMBINE  (0x02)
+/root/udmabuf/u-dma-buf.c:199:#define SYNC_MODE_DMACOHERENT   (0x03)
+/root/udmabuf/u-dma-buf.c:200:#define SYNC_MODE_MASK          (0x03)
+/root/udmabuf/u-dma-buf.c:201:#define SYNC_MODE_MIN           (0x01)
+/root/udmabuf/u-dma-buf.c:202:#define SYNC_MODE_MAX           (0x03)
+/root/udmabuf/u-dma-buf.c:216: * * /sys/class/udmabuf/<device-name>/sync_mode
+/root/udmabuf/u-dma-buf.c:221: * * /sys/class/udmabuf/<device-name>/sync_for_cpu
+/root/udmabuf/u-dma-buf.c:238: * @command     sync command (this->sync_for_cpu or this->sync_for_device)
+/root/udmabuf/u-dma-buf.c:276: * udmabuf_sync_for_cpu() - call dma_sync_single_for_cpu() when (sync_for_cpu != 0)
+/root/udmabuf/u-dma-buf.c:280:static int udmabuf_sync_for_cpu(struct udmabuf_device_data* this)
+/root/udmabuf/u-dma-buf.c:284:    if (this->sync_for_cpu) {
+/root/udmabuf/u-dma-buf.c:288:        status = udmabuf_sync_command_argments(this, this->sync_for_cpu, &phys_addr, &size, &direction);
+/root/udmabuf/u-dma-buf.c:291:            this->sync_for_cpu = 0;
+/root/udmabuf/u-dma-buf.c:356:DEF_ATTR_SHOW(sync_mode      , "%d\n"    , this->sync_mode                                );
+/root/udmabuf/u-dma-buf.c:357:DEF_ATTR_SET( sync_mode                  , 0, 7,        NO_ACTION, NO_ACTION              );
+/root/udmabuf/u-dma-buf.c:365:DEF_ATTR_SHOW(sync_for_cpu   , "%llu\n"  , this->sync_for_cpu                             );
+/root/udmabuf/u-dma-buf.c:366:DEF_ATTR_SET( sync_for_cpu               , 0, U64_MAX,  NO_ACTION, udmabuf_sync_for_cpu   );
+--- dma_coherent attr definition in source
+/root/udmabuf/u-dma-buf.c:85:#define IS_DMA_COHERENT(dev) dev_is_dma_coherent(dev)
+/root/udmabuf/u-dma-buf.c:87:#define IS_DMA_COHERENT(dev) is_device_dma_coherent(dev)
+/root/udmabuf/u-dma-buf.c:223: * * /sys/class/udmabuf/<device-name>/dma_coherent
+/root/udmabuf/u-dma-buf.c:369:#if defined(IS_DMA_COHERENT)
+/root/udmabuf/u-dma-buf.c:370:DEF_ATTR_SHOW(dma_coherent   , "%d\n"    , IS_DMA_COHERENT(this->dma_dev)                 );
+/root/udmabuf/u-dma-buf.c:388:#if defined(IS_DMA_COHERENT)
+/root/udmabuf/u-dma-buf.c:389:  __ATTR(dma_coherent   , 0444, udmabuf_show_dma_coherent    , NULL                       ),
+/root/udmabuf/u-dma-buf.c:1021:#if defined(IS_DMA_COHERENT)
+/root/udmabuf/u-dma-buf.c:1022:        dev_info(this->sys_dev, "dma coherent   = %d\n"       , IS_DMA_COHERENT(this->dma_dev));
+--- sysfs current sync window (live chain)
+sync_mode          = 1
+sync_direction     = 0
+sync_offset        = 0x10fd200
+sync_size          = 1036800
+sync_for_cpu       = 0
+sync_for_device    = 0
+dma_coherent       = 0
+sync_owner         = 0
+--- CacheSyncHostMemRegionNode exported methods (nm)
+00000000000902f0 W icraft::xrt::CacheSyncHostMemRegionNode::init()
+00000000000902f8 W icraft::xrt::CacheSyncHostMemRegionNode::deinit()
+000000000008d9d8 T icraft::xrt::CacheSyncHostMemRegionNode::read(char*, icraft::xrt::MemPtr const&, unsigned long) const
+000000000008d8f8 T icraft::xrt::CacheSyncHostMemRegionNode::write(icraft::xrt::MemPtr const&, char*, unsigned long) const
+000000000008d728 T icraft::xrt::CacheSyncHostMemRegionNode::memcpy(icraft::xrt::MemPtr const&, icraft::xrt::MemPtr const&, unsigned long) const
+--- mtime of sync_for_cpu vs sync_offset (who touched when)
+2026-11-08 13:52:52.473967000 +0800 /sys/class/u-dma-buf/udmabuf0/sync_for_cpu
+2026-11-08 13:52:52.473967000 +0800 /sys/class/u-dma-buf/udmabuf0/sync_offset
+2026-11-08 13:52:52.473967000 +0800 /sys/class/u-dma-buf/udmabuf0/sync_size
+
+===== A3_TIMEOUT_CONTEXT =====
+--- journal hits for 11015 / runtime timeout (this boot, bounded)
+--- DR_STATUS timeout / hardop sync failed context (this boot)
+--- vision chain stdout timeout lines
+484:WCIS_OWNER_RESULT {"frame":{"boot_id":"b227a89e-5f0c-4d75-860e-b22048641285","camera_buffers":2,"camera_drained":0,"camera_mapping_verified":true,"camera_pending":true,"camera_requests":11017,"capture_completion_observed_at":395.032157251,"capture_mode":"preallocated_ping_pong","capture_scheduler":"independent_worker","captured":11016,"captured_at":394.998630527,"codec":"raw_uyvy_external_test","commands":236,"encoded":0,"fps_limit":30,"frame_id":11016,"h264_bytes":0,"h264_encoded_at":0.0,"h264_origin":0.0,"height":540,"native_h264_encoding":false,"owner_protocol":1,"pid":211,"preview_height":540,"preview_mode":"continuous_vpu","preview_width":960,"raw_frames_submitted":11015,"sdk_calls_on_capture_thread":false,"source":"camera","source_view":"full_view_960x540","state":"ready","timestamp_basis":"capture_request_lower_bound","updated_at":395.053392849,"vpu_enabled":true,"width":960},"jpeg_file":"/dev/shm/wcis-owner-hmdo6n95/request-owfz4k5w/job/snapshot/preview.jpg","raw_file":"/dev/shm/wcis-owner-hmdo6n95/request-owfz4k5w/job/snapshot/source.rgb565","sdk_opened":false,"status":"snapshot"}
+
+===== A8_BANDWIDTH_FOLLOWUP =====
+--- CPU read bandwidth over udmabuf mmap (O_RDONLY, no writes, 8MiB x4)
+udmabuf mmap CPU read 8MiB x4: 21.5 MB/s (includes python per-byte sum overhead)
+--- PS DRAM read bandwidth via large buffer slice (python, 4 x 8MiB)
+PS DRAM read 8MiB x4: 21.9 MB/s
+--- DMA interrupt counters snapshot (t0)
+  9:      53233          0          0          0     GICv2  45 Level     dw:dmac-1
+ 10:          0          0          0          0     GICv2 110 Level     dw_axi_dmac_platform
+ 11:          0          0          0          0     GICv2 102 Level     dw_axi_dmac_platform channel
+ 12:          0          0          0          0     GICv2 103 Level     dw_axi_dmac_platform channel
+ 13:          0          0          0          0     GICv2 104 Level     dw_axi_dmac_platform channel
+ 14:          0          0          0          0     GICv2 105 Level     dw_axi_dmac_platform channel
+ 15:          0          0          0          0     GICv2 106 Level     dw_axi_dmac_platform channel
+ 16:          0          0          0          0     GICv2 107 Level     dw_axi_dmac_platform channel
+ 17:          0          0          0          0     GICv2 108 Level     dw_axi_dmac_platform channel
+ 18:          0          0          0          0     GICv2 109 Level     dw_axi_dmac_platform channel
+--- dmatest params (NOT triggered)
+alignment=-1
+channel=
+device=
+dmatest=0
+iterations=0
+max_channels=0
+norandom=N
+noverify=N
+polled=N
+pq_sources=3
+run=N
+test_buf_size=16384
+test_list=threads_per_chan=1
+timeout=3000
+transfer_size=0
+verbose=N
+wait=Y
+xor_sources=3
+
+===== A10_CPUIDLE_FOLLOWUP =====
+--- cpuidle sysfs tree existence
+NO_CPUIDLE_DIR
+---
+/sys/devices/system/cpu/cpuidle
+--- DT cpus / idle-states
+#address-cells
+#size-cells
+cpu@0
+cpu@1
+cpu@2
+cpu@3
+l2-cache
+name
+---
+/proc/device-tree/cpus/cpu@1/cpu-idle-states
+/proc/device-tree/cpus/cpu@2/cpu-idle-states
+/proc/device-tree/cpus/cpu@0/cpu-idle-states
+/proc/device-tree/cpus/cpu@3/cpu-idle-states
+---
+/proc/device-tree/cpus/idle-states/*
+--- dmesg cpuidle / PSCI idle
+[    0.176478] cpuidle: using governor menu
+--- wakeup jitter pinned to cpu2 (CFS, 2000 x 1ms)
+pinned cpu2: p50=1.064 p95=1.076 p99=1.099 max=10.803 ms
+--- wakeup jitter with FIFO prio 10 pinned cpu2 (2000 x 1ms)
+FIFO10 cpu2: p50=1.014 p95=1.022 p99=1.028 max=1.124 ms
+
+===== A11_WATCHDOG_FOLLOWUP =====
+--- platform driver bind dirs (empty = no device)
+[/sys/bus/platform/drivers/Xilinx Watchdog]
+total 0
+drwxr-xr-x  2 root root    0 Nov  8 16:04 .
+drwxr-xr-x 71 root root    0 Nov  8 16:04 ..
+--w-------  1 root root 4096 Nov  8 16:04 bind
+--w-------  1 root root 4096 Nov  8 16:04 uevent
+--w-------  1 root root 4096 Nov  8 16:04 unbind
+[/sys/bus/platform/drivers/dw_wdt]
+total 0
+drwxr-xr-x  2 root root    0 Nov  8 16:04 .
+drwxr-xr-x 71 root root    0 Nov  8 16:04 ..
+--w-------  1 root root 4096 Nov  8 16:04 bind
+--w-------  1 root root 4096 Nov  8 16:04 uevent
+--w-------  1 root root 4096 Nov  8 16:04 unbind
+--- DT top-level nodes with wdt-ish names
+--- DT __symbols__ watchdog entries
+main: line 5: /proc/device-tree/__symbols__/*: No such file or directory
+--- kernel watchdog config (read-only)
+CONFIG_WATCHDOG=y
+CONFIG_WATCHDOG_CORE=y
+CONFIG_WATCHDOG_HANDLE_BOOT_ENABLED=y
+CONFIG_XILINX_WATCHDOG=y
+CONFIG_DW_WATCHDOG=y
+
+===== B4_RESET_LEVEL_DISASM =====
+--- ZG330DeviceNode::reset(int) disassembly (level constants?)
+000000000009acd8 <_ZN6icraft3xrt15ZG330DeviceNode5resetEi>:
+   9acd8:	stp	x29, x30, [sp, #-80]!
+   9acdc:	mov	x29, sp
+   9ace0:	stp	x19, x20, [sp, #16]
+   9ace4:	adrp	x20, d3000 <_ZTIN6icraft3xir8NodeBaseINS_3xrt26CacheSyncHostMemRegionNodeENS2_13MemRegionNodeEEE@@Base+0x28>
+   9ace8:	mov	w19, w1
+   9acec:	stp	x21, x22, [sp, #32]
+   9acf0:	mov	x21, x0
+   9acf4:	ldr	x0, [x20, #2600]
+   9acf8:	ldr	x1, [x0]
+   9acfc:	str	x1, [sp, #72]
+   9ad00:	mov	x1, #0x0                   	// #0
+   9ad04:	cbz	w19, 9ad7c <_ZN6icraft3xrt15ZG330DeviceNode5resetEi+0xa4>
+   9ad08:	cmp	w19, #0x1
+   9ad0c:	b.ne	9ad54 <_ZN6icraft3xrt15ZG330DeviceNode5resetEi+0x7c>  // b.any
+   9ad10:	add	x22, x21, #0x90
+   9ad14:	mov	w3, w19
+   9ad18:	mov	x0, x22
+   9ad1c:	mov	x2, #0x1                   	// #1
+   9ad20:	mov	x1, #0x4                   	// #4
+   9ad24:	bl	34ac0 <_ZNK6icraft3xrt9RegRegion5writeEmmb@plt>
+   9ad28:	mov	w3, w19
+   9ad2c:	mov	x0, x22
+   9ad30:	mov	x2, #0x0                   	// #0
+   9ad34:	mov	x1, #0x4                   	// #4
+   9ad38:	bl	34ac0 <_ZNK6icraft3xrt9RegRegion5writeEmmb@plt>
+   9ad3c:	mov	x0, x21
+   9ad40:	mov	w4, #0xffff                	// #65535
+   9ad44:	mov	w3, #0x1b                  	// #27
+--- reset-related strings in xrt so
+
+===== B7_BITSTREAM_FOLLOWUP =====
+--- DT fpga/amba nodes + symbols
+#address-cells
+#size-cells
+aliases
+amba-apu@0
+chosen
+compatible
+cpus
+dcc
+idle-states
+memory@0
+model
+name
+psci
+timer
+udmabuf@0
+---
+devcfg@e0040000
+--- fpga0 device path and firmware name
+/sys/devices/platform/amba-apu@0/e0040000.devcfg
+---
+total 0
+drwxr-xr-x 3 root root    0 Nov  8 16:04 .
+drwxr-xr-x 3 root root    0 Nov  8 16:04 ..
+lrwxrwxrwx 1 root root    0 Nov  8 16:04 device -> ../../../e0040000.devcfg
+--w------- 1 root root 4096 Nov  8 16:04 firmware
+-rw-r--r-- 1 root root 4096 Nov  8 16:04 flags
+-rw-r--r-- 1 root root 4096 Nov  8 16:04 key
+-r--r--r-- 1 root root 4096 Nov  8 16:04 name
+lrwxrwxrwx 1 root root    0 Nov  8 16:04 of_node -> ../../../../../../firmware/devicetree/base/amba-apu@0/devcfg@e0040000
+drwxr-xr-x 2 root root    0 Nov  8 16:04 power
+-r--r--r-- 1 root root 4096 Nov  8 16:04 state
+-r--r--r-- 1 root root 4096 Nov  8 16:04 status
+--- uEnv / boot partition mount
+NO_BOOT_MOUNT
+total 0
+
+===== DONE =====
+Sun Nov  8 08:04:05 UTC 2026
+bash: line 116: $'\r': command not found
+

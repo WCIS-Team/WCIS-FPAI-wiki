@@ -1,0 +1,197 @@
+
+===== A1_POLICY_SYSCALL_CONFIRM =====
+--- sched_getscheduler under DL (expect 6)
+DL_POLICY=6
+rc=0
+--- sched_getscheduler under FIFO (expect 1)
+FIFO_POLICY=1
+rc=0
+--- sched_getscheduler under RR (expect 2)
+RR_POLICY=2
+rc=0
+--- DL admission real overcommit: 4 simultaneous 90% DL busy loops
+task0 rc=0
+task1 rc=0
+task2 rc=0
+task3 rc=0
+--- why /proc/self/sched missing (SCHED_DEBUG)
+ls: cannot access '/proc/self/sched': No such file or directory
+# CONFIG_SCHED_DEBUG is not set
+CONFIG_SCHED_INFO=y
+# CONFIG_SCHEDSTATS is not set
+
+===== A10_IDLE_STATES_DETAIL =====
+--- cpu-idle-states phandle content
+cpu@0 cpu-idle-states:  00 00 00 01 
+cpu@1 cpu-idle-states:  00 00 00 01 
+cpu@2 cpu-idle-states:  00 00 00 01 
+cpu@3 cpu-idle-states:  00 00 00 01 
+--- DT idle-states dir + PSCI
+NO_IDLE_STATES_NODE
+---
+compatible
+method
+name
+---
+arm,psci-0.2 
+--- global cpuidle sysfs
+/sys/devices/system/cpu/cpuidle/current_governor_ro
+/sys/devices/system/cpu/cpuidle/current_driver
+---
+/sys/devices/system/cpu/cpuidle/current_driver=none
+/sys/devices/system/cpu/cpuidle/current_governor_ro=menu
+--- current idle usage counters (proc)
+cpu  317756 1064 114543 2755379 7529 0 1542 0 0 0
+cpu0 265095 14 93691 434499 1385 0 1470 0 0 0
+cpu1 15989 696 6345 775754 1598 0 24 0 0 0
+
+===== A3_HISTORICAL_TIMEOUT_RECOVERY =====
+--- all-boot journal: timeout then continued? (bounded)
+--- vision logs: hardop sync failed occurrences + following lines
+/root/wcis-face/apps/vision-20261103/211-native-stdout.log hits=1
+
+===== B4_RESET_LEVEL_TAIL =====
+--- reset(int) branch end (level>=2 no-op tail)
+   9add4:	ldr	w0, [x0]
+   9add8:	cmp	w0, #0x4
+   9addc:	b.ne	9adf4 <_ZN6icraft3xrt15ZG330DeviceNode5resetEi+0x11c>  // b.any
+   9ade0:	mov	x1, x19
+   9ade4:	mov	x0, x19
+   9ade8:	bl	332a0 <nanosleep@plt>
+   9adec:	cmn	w0, #0x1
+   9adf0:	b.eq	9add0 <_ZN6icraft3xrt15ZG330DeviceNode5resetEi+0xf8>  // b.none
+   9adf4:	mov	x0, x22
+   9adf8:	mov	w3, #0x1                   	// #1
+   9adfc:	mov	x2, #0x0                   	// #0
+   9ae00:	mov	x1, #0x34                  	// #52
+   9ae04:	bl	34ac0 <_ZNK6icraft3xrt9RegRegion5writeEmmb@plt>
+   9ae08:	adrp	x0, ad000 <_ZTSUlPKN6icraft3xrt12SegTableNodeEPS1_RKNS_3xir13ReduceVisitorEE_+0x1220>
+   9ae0c:	ldr	q0, [x0, #1552]
+   9ae10:	str	q0, [sp, #48]
+   9ae14:	b	9ae28 <_ZN6icraft3xrt15ZG330DeviceNode5resetEi+0x150>
+   9ae18:	bl	33c70 <__errno_location@plt>
+   9ae1c:	ldr	w0, [x0]
+   9ae20:	cmp	w0, #0x4
+   9ae24:	b.ne	9ae3c <_ZN6icraft3xrt15ZG330DeviceNode5resetEi+0x164>  // b.any
+   9ae28:	mov	x1, x19
+   9ae2c:	mov	x0, x19
+   9ae30:	bl	332a0 <nanosleep@plt>
+   9ae34:	cmn	w0, #0x1
+   9ae38:	b.eq	9ae18 <_ZN6icraft3xrt15ZG330DeviceNode5resetEi+0x140>  // b.none
+   9ae3c:	add	x1, x21, #0x200
+   9ae40:	mov	x0, x21
+   9ae44:	stp	xzr, xzr, [x1, #-40]
+   9ae48:	bl	338c0 <_ZN6icraft3xrt15ZG330DeviceNode16initAfterRegionsEv@plt>
+   9ae4c:	b	9ad54 <_ZN6icraft3xrt15ZG330DeviceNode5resetEi+0x7c>
+   9ae50:	bl	327c0 <__stack_chk_fail@plt>
+   9ae54:	nop
+
+000000000009ae58 <_ZN6icraft3xrt11ZG330Device10getMMUModeEv>:
+
+===== A2_SYNC_WINDOW_CHECK =====
+--- live chain sync_size vs frame size 960x540 UYVY
+frame 960*540*2 = 1036800
+sync_size = 1036800
+--- sync_mode source semantics comment block
+#endif
+};
+
+/**
+ * sync_mode(synchronous mode) value
+ */
+#define SYNC_MODE_INVALID       (0x00)
+#define SYNC_MODE_NONCACHED     (0x01)
+#define SYNC_MODE_WRITECOMBINE  (0x02)
+#define SYNC_MODE_DMACOHERENT   (0x03)
+#define SYNC_MODE_MASK          (0x03)
+#define SYNC_MODE_MIN           (0x01)
+#define SYNC_MODE_MAX           (0x03)
+#define SYNC_ALWAYS             (0x04)
+
+/**
+ * DOC: Udmabuf System Class Device File Description
+ *
+ * This section define the device file created in system class when udmabuf is 
+ * loaded into the kernel.
+ *
+ * The device file created in system class is as follows.
+ *
+ * * /sys/class/udmabuf/<device-name>/driver_version
+ * * /sys/class/udmabuf/<device-name>/phys_addr
+ * * /sys/class/udmabuf/<device-name>/size
+ * * /sys/class/udmabuf/<device-name>/sync_mode
+ * * /sys/class/udmabuf/<device-name>/sync_offset
+ * * /sys/class/udmabuf/<device-name>/sync_size
+ * * /sys/class/udmabuf/<device-name>/sync_direction
+ * * /sys/class/udmabuf/<device-name>/sync_owner
+ * * /sys/class/udmabuf/<device-name>/sync_for_cpu
+ * * /sys/class/udmabuf/<device-name>/sync_for_device
+ * * /sys/class/udmabuf/<device-name>/dma_coherent
+ * * 
+ */
+
+#define  SYNC_COMMAND_DIR_MASK        (0x000000000000000C)
+#define  SYNC_COMMAND_DIR_SHIFT       (2)
+#define  SYNC_COMMAND_SIZE_MASK       (0x00000000FFFFFFF0)
+#define  SYNC_COMMAND_SIZE_SHIFT      (0)
+#define  SYNC_COMMAND_OFFSET_MASK     (0xFFFFFFFF00000000)
+#define  SYNC_COMMAND_OFFSET_SHIFT    (32)
+#define  SYNC_COMMAND_ARGMENT_MASK    (0xFFFFFFFFFFFFFFFE)
+/**
+ * udmabuf_sync_command_argments() - get argment for dma_sync_single_for_cpu() or dma_sync_single_for_device()
+ *                                  
+ * @this:       Pointer to the udmabuf device data structure.
+ * @command     sync command (this->sync_for_cpu or this->sync_for_device)
+ * @phys_addr   Pointer to the phys_addr for dma_sync_single_for_...()
+ * @size        Pointer to the size for dma_sync_single_for_...()
+--- sync_for_cpu / sync_for_device source bodies
+ * udmabuf_sync_for_cpu() - call dma_sync_single_for_cpu() when (sync_for_cpu != 0)
+ * @this:       Pointer to the udmabuf device data structure.
+ * Return:      Success(=0) or error status(<0).
+ */
+static int udmabuf_sync_for_cpu(struct udmabuf_device_data* this)
+{
+    int status = 0;
+
+    if (this->sync_for_cpu) {
+        dma_addr_t              phys_addr;
+        size_t                  size;
+        enum dma_data_direction direction;
+        status = udmabuf_sync_command_argments(this, this->sync_for_cpu, &phys_addr, &size, &direction);
+        if (status == 0) {
+            dma_sync_single_for_cpu(this->dma_dev, phys_addr, size, direction);
+            this->sync_for_cpu = 0;
+            this->sync_owner   = 0;
+        }
+    }
+    return status;
+}
+
+/**
+ * udmabuf_sync_for_device() - call dma_sync_single_for_device() when (sync_for_device != 0)
+ * @this:       Pointer to the udmabuf device data structure.
+ * Return:      Success(=0) or error status(<0).
+ */
+static int udmabuf_sync_for_device(struct udmabuf_device_data* this)
+{
+    int status = 0;
+
+    if (this->sync_for_device) {
+        dma_addr_t              phys_addr;
+        size_t                  size;
+        enum dma_data_direction direction;
+        status = udmabuf_sync_command_argments(this, this->sync_for_device, &phys_addr, &size, &direction);
+        if (status == 0) {
+            dma_sync_single_for_device(this->dma_dev, phys_addr, size, direction);
+            this->sync_for_device = 0;
+            this->sync_owner      = 1;
+        }
+    }
+    return status;
+}
+
+
+===== DONE =====
+Sun Nov  8 08:06:54 UTC 2026
+bash: line 55: $'\r': command not found
+

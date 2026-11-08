@@ -11,6 +11,7 @@ SOP 2 硬件与基础运行环境信息采集——信息来源登记。本页�
 - 传输工具：PuTTY plink 0.85 / pscp 0.85（Windows x86_64）
 - 采集脚本：`../collect.sh`、`../collect_followup.sh`、`../collect_gap3.sh`（三份都在 `../` 下，可复跑）
 - 原始输出：`raw_logs/`（共 92 个文件 = 85 份命令输出 + 6 个时间戳文件〔三轮各 2 个〕+ 1 个 `.keep` 占位）
+- **2026-11-08 补充**：A 类能力边界专项四轮只读探针＋停链后有界 `dmatest` 与组合基准（[[ZG330平台能力边界]]）另产出 `raw_logs/census_ro{,2,3,4}_20261108.txt`、`raw_logs/dmatest_bounded_20261108.txt`、`raw_logs/combined_bench_v4_20261109.txt` 共六份；一次性脚本在 `S:\work\WCIS\workenv\capability-census\`，按仓规不入库。本页第 6 节登记其读数和纪律。第 4 轮是对第 3 轮 DT 路径错误的更正（结论不变、机制改正），原件保留不删。
 
 ## 1. 官方资料（官方规格）
 
@@ -141,9 +142,33 @@ SOP 2 硬件与基础运行环境信息采集——信息来源登记。本页�
 - 登录口令仅用于本次 SSH 认证，未写入任何文件、日志或本档案。
 - 未把硬件信息推导为模型性能结论；所有算力数字要么标 `官方规格`，要么标 `未测量`。
 
+## 6. 2026-11-08 A 类能力边界专项探针（只读）
+
+来源：`root@192.168.1.113` 三轮只读 shell 探针，**板上活动视频链在场**（`wcis_camera_owner` pid 333 持 udmabuf 映射），未诱发故障、未触发 dmatest、未写 sync 节点。原始输出（已剔除 ELF note 二进制串）＝`raw_logs/census_ro_20261108.txt`／`census_ro2_20261108.txt`／`census_ro3_20261108.txt`；脚本＝`workenv/capability-census/census_ro{,2,3}.sh`。
+
+| 数据 | 原始日志 | 关键读数 |
+| --- | --- | --- |
+| RT/DEADLINE | `census_ro_20261108.txt` §A1、`census_ro3_20261108.txt` §A1 | `sched_rt_period/runtime=1000000/950000 us`；`sched_getscheduler` 实测 DL/FIFO/RR＝6/1/2；DL 负例 EINVAL、`/proc/self/sched` 不存在（`SCHED_DEBUG not set`） |
+| Cache 同步 | `census_ro_20261108.txt` §A2、`census_ro2_20261108.txt` §A2、`census_ro3_20261108.txt` §A2 | `udmabuf0/dma_coherent=0`、`sync_mode=1`（源码 `SYNC_MODE_NONCACHED`）、`sync_size=1036800`＝960×540×2 一帧；板上 `/root/udmabuf/u-dma-buf.c` 的 `sync_for_cpu/device → dma_sync_single_for_*` 源码直读；`libicraft_xrt.so` 导出 `CacheSyncHostMemRegionNode::read/write/memcpy` |
+| 超时旁证 | `census_ro_20261108.txt` §A3、`census_ro3_20261108.txt` §A3 | `libicraft_xrt.so` 含 `DR_STATUS timeout in writing DR_CFG0/23 (1000ms)!`；journal 无 11015 命中；日志里"11015"是帧计数误命中 |
+| 带宽 | `census_ro_20261108.txt` §A8、`census_ro2_20261108.txt` §A8 | PS DRAM memcpy 1359 MB/s（8 MiB×4）；`dw:dmac` IRQ 递增、`dw_axi_dmac` 8 通道 IRQ 全 0；⚠ 21.5/21.9 MB/s 是 python 逐字节 `sum` 的解释器开销，不是带宽 |
+| CPUIdle | `census_ro2_20261108.txt` §A10、`census_ro3_20261108.txt` §A10、`census_ro4_20261108.txt`（更正） | `current_driver=none`、无 `state*`；**DT `idle-states/cpu-sleep-0` 在，缺的是 `CONFIG_ARM_PSCI_CPUIDLE` 驱动**（第 3 轮查了错误路径 `cpus/idle-states` 而误报节点缺失，第 4 轮更正）；抖动 CFS max 10.803 ms vs FIFO 绑核 max 1.124 ms |
+| Watchdog | `census_ro_20261108.txt` §A11、`census_ro2_20261108.txt` §A11 | 无 `/dev/watchdog*`、class 空、DT 无节点、driver bind 目录无设备 ⇒ 驱动在、DT 未布线 |
+| Reset 等级 | `census_ro2_20261108.txt` §B4、`census_ro3_20261108.txt` §B4 | `ZG330DeviceNode::reset(int)` 反汇编：level 0 全量＋`initAfterRegions()`、level 1 轻量脉冲、≥2 静默 no-op |
+| IOMMU/Cache 板证 | `census_ro_20261108.txt` §B6 | DT `dma-coherent` count=0、无 `iommus`／`dma-ranges`；`udmabuf0/dma_coherent=0` |
+| 位流/FPGA | `census_ro_20261108.txt` §B7、`census_ro2_20261108.txt` §B7 | `fpga0 state=operating`，device→`e0040000.devcfg`；`/boot` 未挂载、文件系统零 `.bit` |
+| 停链后 dmatest | `dmatest_bounded_20261108.txt`（脚本 `workenv/capability-census/dmatest_bounded.sh`） | 停三条视频链后：`dma1chan0`（PL AXI DMA）单通道 64 KiB×20＝72.3 MB/s、1 MiB×10＝72.9 MB/s，0 failures；`dma0chan0` 因 channel 参数回滚未取到干净数；16 通道并发组是抢总线假象不作数；参数全复原、板健康 |
+| 组合基准（CacheSync 成本＋dma0chan0＋NPU 前向） | `combined_bench_v4_20261109.txt`（脚本 `workenv/capability-census/combined_bench_v4.sh`） | CacheSync sysfs 写 **0.088 µs/op**（三轮复现一致）；`dma0chan0` 仍取不到（channel 写不进）；Qwen2-0.5B decoder 编译件 **HardOpNode 11603 未绑定后端（11013）**、该算子不在 ZG 支持矩阵 |
+
+旧记录对照（不是本轮新测，只标正本位置）：`repos/sdi-psddr/…/docs/AXI速率实测.md` 的 **150.91 MB/s** 是 `S_AXI_HP2` 写帧器的门级/行为仿真（1080p30 需求 124.4 MB/s 的 121.3%，理论上限 800 MB/s）；`pl-jpeg-board-acceptance-20261017.md` 的 **198.92 MB/s** 是 PL 编码器读 PL DDR 的板测复算，该页明确写"不是 PS→PL 最大持续带宽"。两者与 dmatest 的 DMA 引擎带宽**口径不同，不混算**。
+| ROS | `census_ro_20261108.txt` §C | 板上无 `ros2`、零 `ros-` 包、apt 无候选 |
+
+结论与状态归口在 [[ZG330平台能力边界#七、现在真正未解决的问题（A/B/C 分类与 2026-11-08 实测状态）|ZG330平台能力边界——七]]（一个事实只写一处：本页只登记"读数从哪来"）。
+
 ## 相关页面
 
 - [[硬件与基础运行环境档案]]
+- [[ZG330平台能力边界]]
 - [[硬件与基础运行环境信息采集]]
 - [[psdev]]
 - [[板端提取件台账]]

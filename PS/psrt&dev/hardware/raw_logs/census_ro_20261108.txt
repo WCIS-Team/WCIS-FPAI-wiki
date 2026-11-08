@@ -1,0 +1,250 @@
+
+===== META =====
+Sun Nov  8 08:00:15 UTC 2026
+Linux U.FMSH 5.4.52 #3 SMP Fri Mar 13 13:44:29 CST 2026 aarch64 aarch64 aarch64 GNU/Linux
+ 16:00:15 up  2:07,  1 user,  load average: 1.33, 1.17, 1.20
+1.33 1.17 1.20 1/133 2948
+
+===== A1_RT_SYSCTL =====
+/proc/sys/kernel/sched_rt_period_us = 1000000
+/proc/sys/kernel/sched_rt_runtime_us = 950000
+/proc/sys/kernel/sched_rr_timeslice_ms = 100
+/proc/sys/kernel/sched_autogroup_enabled = NA
+/proc/sys/kernel/sched_min_granularity_ns = NA
+/proc/sys/kernel/sched_latency_ns = NA
+/proc/sys/kernel/sched_rt_throttle = NA
+--- chrt version
+chrt from util-linux 2.34
+--- chrt help deadline flags
+ -d, --deadline       set policy to SCHED_DEADLINE
+ -T, --sched-runtime <ns>  runtime parameter for DEADLINE
+ -P, --sched-period <ns>   period parameter for DEADLINE
+ -D, --sched-deadline <ns> deadline parameter for DEADLINE
+--- DL smoke: 10ms/100ms runtime/period, short-lived process
+chrt: invalid priority argument: 'sh'
+rc=1
+--- DL negative: runtime > deadline (admission must refuse)
+chrt: bad usage
+Try 'chrt --help' for more information.
+rc=1
+--- FIFO smoke on short-lived process
+grep: /proc/self/sched: No such file or directory
+FIFO_RC_OK
+rc=0
+--- RR smoke
+grep: /proc/self/sched: No such file or directory
+rc=2
+
+===== A2_CACHE_SYNC_SURFACE =====
+--- u-dma-buf sysfs listing
+total 0
+drwxr-xr-x 3 root root    0 Mar  2  2023 .
+drwxr-xr-x 3 root root    0 Mar  2  2023 ..
+-rw-rw-r-- 1 root root 4096 Nov  8 16:00 debug_vma
+-r--r--r-- 1 root root 4096 Nov  8 16:00 dev
+lrwxrwxrwx 1 root root    0 Nov  8 16:00 device -> ../../../udmabuf@0
+-r--r--r-- 1 root root 4096 Nov  8 16:00 dma_coherent
+-r--r--r-- 1 root root 4096 Nov  8 16:00 driver_version
+-r--r--r-- 1 root root 4096 Nov  8 16:00 phys_addr
+drwxr-xr-x 2 root root    0 Nov  8 16:00 power
+-r--r--r-- 1 root root 4096 Nov  8 16:00 size
+lrwxrwxrwx 1 root root    0 Nov  8 16:00 subsystem -> ../../../../../class/u-dma-buf
+-rw-rw-r-- 1 root root 4096 Nov  8 16:00 sync_direction
+-rw-rw-r-- 1 root root 4096 Nov  8 13:52 sync_for_cpu
+-rw-rw-r-- 1 root root 4096 Nov  8 13:52 sync_for_device
+-rw-rw-r-- 1 root root 4096 Nov  8 16:00 sync_mode
+-rw-rw-r-- 1 root root 4096 Nov  8 13:52 sync_offset
+-r--r--r-- 1 root root 4096 Nov  8 16:00 sync_owner
+-rw-rw-r-- 1 root root 4096 Nov  8 13:52 sync_size
+-rw-r--r-- 1 root root 4096 Nov  8 16:00 uevent
+udmabuf0/phys_addr = 0x0000000030100000
+udmabuf0/size = 134217728
+udmabuf0/sync_mode = 1
+udmabuf0/sync_direction = 0
+udmabuf0/sync_offset = 0x10fd200
+udmabuf0/sync_size = 1036800
+udmabuf0/sync_for_cpu = 0
+udmabuf0/sync_for_device = 0
+udmabuf0/sync_owner = 0
+udmabuf0/dma_coherent = 0
+--- u_dma_buf module params
+/sys/module/u_dma_buf/initsize: 0
+/sys/module/u_dma_buf/parameters/udmabuf7: 0
+/sys/module/u_dma_buf/parameters/udmabuf5: 0
+/sys/module/u_dma_buf/parameters/udmabuf3: 0
+/sys/module/u_dma_buf/parameters/udmabuf1: 0
+/sys/module/u_dma_buf/parameters/info_enable: 1
+/sys/module/u_dma_buf/parameters/udmabuf6: 0
+/sys/module/u_dma_buf/parameters/dma_mask_bit: 32
+/sys/module/u_dma_buf/parameters/udmabuf4: 0
+/sys/module/u_dma_buf/parameters/udmabuf2: 0
+/sys/module/u_dma_buf/parameters/udmabuf0: 0
+--- libicraft_xrt cache symbols
+/usr/lib/aarch64-linux-gnu/libicraft_utils.so
+/usr/lib/aarch64-linux-gnu/libicraft_xrt.so
+[/usr/lib/aarch64-linux-gnu/libicraft_xrt.so]
+0000000000084578 W _ZN3fmt2v86detail9dragonbox14cache_accessorIdE16get_cached_powerEi
+00000000000d2028 u _ZN6icraft3xir8NodeBaseINS_3xrt26CacheSyncHostMemRegionNodeENS2_13MemRegionNodeEE8type_keyE
+000000000009ae80 T _ZN6icraft3xrt11ZG330Device13clearMMUCacheEv
+00000000000902f0 W _ZN6icraft3xrt26CacheSyncHostMemRegionNode4initEv
+00000000000902f8 W _ZN6icraft3xrt26CacheSyncHostMemRegionNode6deinitEv
+00000000000908e0 W _ZN6icraft3xrt26CacheSyncHostMemRegionNodeD0Ev
+0000000000090810 W _ZN6icraft3xrt26CacheSyncHostMemRegionNodeD1Ev
+0000000000090810 W _ZN6icraft3xrt26CacheSyncHostMemRegionNodeD2Ev
+0000000000090358 W _ZNK6icraft3xir8NodeBaseINS_3xrt26CacheSyncHostMemRegionNodeENS2_13MemRegionNodeEE12reduceAcceptEPNS0_4NodeERKNS0_13ReduceVisitorE
+00000000000903d0 W _ZNK6icraft3xir8NodeBaseINS_3xrt26CacheSyncHostMemRegionNodeENS2_13MemRegionNodeEE18parentReduceAcceptEPNS0_4NodeERKNS0_13ReduceVisitorE
+_ZNSo5flushEv
+_ZN6icraft3xrt26CacheSyncHostMemRegionNode4initEv
+_ZN6icraft3xrt26CacheSyncHostMemRegionNode6deinitEv
+_ZNK6icraft3xir8NodeBaseINS_3xrt26CacheSyncHostMemRegionNodeENS2_13MemRegionNodeEE7typeKeyEv
+_ZNK6icraft3xir8NodeBaseINS_3xrt26CacheSyncHostMemRegionNodeENS2_13MemRegionNodeEE12reduceAcceptEPNS0_4NodeERKNS0_13ReduceVisitorE
+_ZN6icraft3xir8NodeBaseINS_3xrt26CacheSyncHostMemRegionNodeENS2_13MemRegionNodeEE8type_keyE
+_ZNK6icraft3xir8NodeBaseINS_3xrt26CacheSyncHostMemRegionNodeENS2_13MemRegionNodeEE18parentReduceAcceptEPNS0_4NodeERKNS0_13ReduceVisitorE
+_ZNK6icraft3xrt26CacheSyncHostMemRegionNode6memcpyERKNS0_6MemPtrES4_m
+_ZNK6icraft3xrt26CacheSyncHostMemRegionNode5writeERKNS0_6MemPtrEPcm
+_ZNK6icraft3xrt26CacheSyncHostMemRegionNode4readEPcRKNS0_6MemPtrEm
+--- XRT headers on board
+/usr/include/icraft-xrt/dev/host_device.h
+--- active udmabuf consumers (read-only count)
+1
+
+===== A3_TIMEOUT_ARTIFACTS =====
+--- existing 11015 / runtime timeout hits in logs (bounded)
+/var/log/journal/c18338d14c3049b3ab6cdaed8c0ee749/system@f0e678311928415ea0475870e598bc1a-000000000000017f-00065fab19fd40eb.journal
+/var/log/journal/c18338d14c3049b3ab6cdaed8c0ee749/system@571a98b8e8314bb3b49665bef44e6764-0000000000022056-00065f74dae7f8d1.journal
+/var/log/journal/c18338d14c3049b3ab6cdaed8c0ee749/system@0005f5ea6123e112-02f318ed207da566.journal~
+/var/log/journal/c18338d14c3049b3ab6cdaed8c0ee749/system@571a98b8e8314bb3b49665bef44e6764-00000000000448bb-00065f84886173c4.journal
+/var/log/journal/c18338d14c3049b3ab6cdaed8c0ee749/system@0005f5ea61220a5c-1931a3b8cabd2e27.journal~
+/var/log/journal/c18338d14c3049b3ab6cdaed8c0ee749/system@0005f5ea612fc53f-98ad4016a27b01a9.journal~
+/var/log/journal/c18338d14c3049b3ab6cdaed8c0ee749/system@0005f5ea61245207-c2fd152e10b90b09.journal~
+/var/log/journal/c18338d14c3049b3ab6cdaed8c0ee749/system@0005f5ea612332f1-0c7e104849dcba31.journal~
+/var/log/journal/c18338d14c3049b3ab6cdaed8c0ee749/system@571a98b8e8314bb3b49665bef44e6764-0000000000000170-00065f6daca3cd78.journal
+/root/wcis-face/apps/vision-20261103/211-native-stdout.log
+--- hardop sync failed in dmesg
+--- icraft error strings in runtime libs
+[/usr/lib/aarch64-linux-gnu/libicraft_xrt.so]
+DR_STATUS timeout in writing DR_CFG0 (1000ms)!
+DR_STATUS timeout in writing DR_CFG23 (1000ms)!
+[/usr/lib/aarch64-linux-gnu/libicraft_zg330backend.so]
+
+===== A8_BANDWIDTH_BOUNDARY =====
+--- DMA controller interrupts
+  9:      51563          0          0          0     GICv2  45 Level     dw:dmac-1
+ 10:          0          0          0          0     GICv2 110 Level     dw_axi_dmac_platform
+ 11:          0          0          0          0     GICv2 102 Level     dw_axi_dmac_platform channel
+ 12:          0          0          0          0     GICv2 103 Level     dw_axi_dmac_platform channel
+ 13:          0          0          0          0     GICv2 104 Level     dw_axi_dmac_platform channel
+ 14:          0          0          0          0     GICv2 105 Level     dw_axi_dmac_platform channel
+ 15:          0          0          0          0     GICv2 106 Level     dw_axi_dmac_platform channel
+ 16:          0          0          0          0     GICv2 107 Level     dw_axi_dmac_platform channel
+ 17:          0          0          0          0     GICv2 108 Level     dw_axi_dmac_platform channel
+ 18:          0          0          0          0     GICv2 109 Level     dw_axi_dmac_platform channel
+--- debugfs clk summary (top)
+                                 enable  prepare  protect                                duty
+   clock                          count    count    count        rate   accuracy phase  cycle
+---------------------------------------------------------------------------------------------
+--- DDR bandwidth: pure PS DRAM memcpy upper bound (python3, 2 s max)
+PS DRAM memcpy 8MiB x4: 1359.0 MB/s (CFS, live video chain on board)
+--- dmatest trigger availability (NOT triggered)
+alignment
+channel
+device
+dmatest
+iterations
+max_channels
+norandom
+noverify
+polled
+pq_sources
+
+===== A10_CPUIDLE =====
+--- governor/driver
+/sys/devices/system/cpu/cpu0/cpuidle/current_governor = NA
+/sys/devices/system/cpu/cpu0/cpuidle/current_driver = NA
+--- states
+[/sys/devices/system/cpu/cpu0/cpuidle/state*]
+  name=NA
+  latency=NA
+  residency=NA
+  usage=NA
+  time=NA
+  disable=NA
+--- wakeup jitter under live load (CFS, 2000 x 1ms sleep, 3 s max)
+n=2000 p50=1.064 p95=1.072 p99=1.081 max=1.209 ms
+--- cpu_dma_latency node
+crw------- 1 root root 10, 60 Jan  1  1970 /dev/cpu_dma_latency
+
+===== A11_WATCHDOG =====
+--- watchdog device nodes
+NO_DEV_NODE
+--- sysfs watchdog class
+total 0
+drwxr-xr-x  2 root root 0 Nov  8 16:01 .
+drwxr-xr-x 50 root root 0 Nov  8 16:01 ..
+--- DT watchdog nodes
+--- DT watchdog status/compatible
+--- dmesg watchdog probe
+[    2.033831] fmql-dwmac e0047000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+--- platform driver bindings
+drwxr-xr-x 2 root root 0 Nov  8 16:01 Xilinx Watchdog
+drwxr-xr-x 2 root root 0 Nov  8 16:01 dw_wdt
+
+===== B4_RESET_SYMBOLS =====
+--- libaxizg330aiu reset symbols
+[/usr/lib/aarch64-linux-gnu/libaxizg330aiu.so]
+00000000000330f0 W _ZN3fmt2v86detail16get_dynamic_specINS1_13width_checkerENS0_16basic_format_argINS0_20basic_format_contextINS0_8appenderEcEEEENS1_13error_handlerEEEiT0_T1_
+00000000000332a0 W _ZN3fmt2v86detail16get_dynamic_specINS1_17precision_checkerENS0_16basic_format_argINS0_20basic_format_contextINS0_8appenderEcEEEENS1_13error_handlerEEEiT0_T1_
+                 U _ZN6icraft3xrt15ZG330DeviceNode5resetEi
+                 U _ZNK6icraft3xrt15ZG330DeviceNode10showStatusEi
+                 U _ZNK6icraft3xrt15ZG330DeviceNode5checkEi
+
+===== B5_PLDDR_AND_RESERVED =====
+--- DT memory nodes
+--- DT memory reg (od, first 32 bytes)
+--- reserved-memory children
+--- iomem System RAM / reserved
+00000000-3fffffff : System RAM
+  0fff9000-0fffcfff : reserved
+  10bf0000-10c8ffff : reserved
+  2ec00000-2edfffff : reserved
+  2efff000-2fbfffff : reserved
+  2fc11000-2fde5fff : reserved
+  2fde8000-2fde8fff : reserved
+  2fde9000-2fde9fff : reserved
+  2fdea000-2fdecfff : reserved
+  2fded000-3fffffff : reserved
+
+===== B6_DMA_COHERENT =====
+--- dma-coherent attributes in DT (count + paths)
+count=0
+--- DT dma-ranges / iommu props
+--- kernel config coherency switches
+CONFIG_OF_IOMMU=y
+CONFIG_IOMMU_DMA=y
+CONFIG_ARM_SMMU=y
+CONFIG_DMA_DECLARE_COHERENT=y
+CONFIG_SWIOTLB=y
+CONFIG_DMA_CMA=y
+
+===== B7_BITSTREAM =====
+--- fpga manager
+/sys/class/fpga_manager/fpga0/name = FMSH FMQL FPGA Manager
+/sys/class/fpga_manager/fpga0/state = operating
+/sys/class/fpga_manager/fpga0/status = NA
+--- dmesg fpga/devcfg
+[    1.589214] FPGA manager framework
+[    2.524592] fpga_manager fpga0: FMSH FMQL FPGA Manager registered
+--- bit files on boot/fs
+--- fpga device tree node
+
+===== C_ITEMS_NOT_BOARD_MEASURABLE =====
+--- ROS installed?
+NO_ROS2
+0
+--- apt ROS candidates (no install)
+PCB silkscreen: physical inspection only, cannot read over SSH
+
+===== DONE =====
+Sun Nov  8 08:01:13 UTC 2026
+bash: line 113: $'\r': command not found
+

@@ -1,0 +1,53 @@
+
+===== META =====
+Sun Nov  8 10:12:00 UTC 2026
+operating
+MemAvailable:     770184 kB
+CmaFree:          130080 kB
+
+===== A2_CACHESYNC_COST =====
+sync write sync_for_cpu x20 ...
+  sync_for_cpu: 1.766 ms / 20 = 0.088 us/op
+sync write sync_for_device x20 ...
+  sync_for_device: 1.750 ms / 20 = 0.088 us/op
+
+===== DMA0CHAN0_BRUTE =====
+channel=
+try direct write to /sys/bus/dma/devices/dma0chan0/... if exists
+--- running on channel  1MiB x10 ---
+rc=0
+[15582.727043] dmatest: dma1chan7-copy0: summary 10 tests, 0 failures 12.62 iops 8452 KB/s (0)
+[15582.735786] dmatest: dma0chan4-copy0: summary 10 tests, 0 failures 12.26 iops 3875 KB/s (0)
+[15582.750259] dmatest: dma0chan5-copy0: summary 10 tests, 0 failures 12.87 iops 7401 KB/s (0)
+
+===== NPU_FORWARD_PROFILE =====
+=== profiling Qwen2-0.5B decoder ===
+INPUT 0 name=model.embed_tokens.weight shape=[] dtype={'_type_key': 'icraft::xir::TensorType', 'element_dtype': '@fp(16)', 'layout': '@layout(*C)', 'merged_distrs': [], 'shape': [151936, 896]}
+INPUT 1 name= shape=[] dtype={'_type_key': 'icraft::xir::TensorType', 'element_dtype': '@fp(32)', 'layout': '@layout(*C)', 'merged_distrs': [], 'shape': [1, 1]}
+scalar int32 bytes: 4
+--- icraft-run --log_time --dump_format HQB ---
+#5    Object "/usr/bin/icraft-run", at 0x559031b787, in _start
+#4    Object "/lib/aarch64-linux-gnu/libc.so.6", at 0x7fa974ae0f, in __libc_start_main
+#3    Object "/usr/bin/icraft-run", at 0x5590315877, in main
+#2    Object "/lib/aarch64-linux-gnu/libicraft_xrt.so", at 0x7faa2788ab, in icraft::xrt::Session::CreateByOrder(icraft::xir::NetworkView const&, std::vector<icraft::xrt::Backend, std::allocator<icraft::xrt::Backend> >, std::vector<icraft::xrt::Device, std::allocator<icraft::xrt::Device> > const&)
+#1    Object "/lib/aarch64-linux-gnu/libicraft_xrt.so", at 0x7faa27596f, in icraft::xrt::Session::bindToBackendsByOrder(icraft::xir::NetworkView const&, std::vector<icraft::xrt::Backend, std::allocator<icraft::xrt::Backend> >, std::vector<icraft::xrt::Device, std::allocator<icraft::xrt::Device> > const&, bool)
+#0    Object "/lib/aarch64-linux-gnu/libicraft_utils.so", at 0x7fa9b042c7, in icraft::detail::LogExcept::Entry::finalize()
+
+[11/08/26 18:15:04.809] [F] 11013
+
+===== FINAL_RESTORE =====
+channel=
+test_buf_size=16384
+iterations=0
+run=N
+wait=Y
+timeout=3000
+
+===== HEALTH =====
+operating
+MemAvailable:     783168 kB
+CmaFree:          130584 kB
+date: invalid option -- '
+'
+Try 'date --help' for more information.
+
