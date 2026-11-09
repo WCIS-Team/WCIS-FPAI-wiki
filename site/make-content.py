@@ -47,7 +47,7 @@ RAW_DIRS = {
     "modtest",
     "psrt",
     "fpai-blog",
-    "repo2WCIS.repos",
+    "repos",
     "board_extract",
     # image folder shipped with the FAQ DOCX dump below; keeping it raw means the
     # dump's pictures do not ride along as orphans once the dump is unpublished.

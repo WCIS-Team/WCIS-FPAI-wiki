@@ -21,7 +21,7 @@ VAULTS = EXPLICIT if EXPLICIT else [v for v in DEFAULT_ROOTS if os.path.isdir(v)
 # pages that should carry the authored-page shape. Its pages still ship on the
 # site - site/make-content.py drops only the dump itself, by RAW_FILES.
 RAW_DIRS = {"modellist", "modrt", "modtest", "psrt", "fpai-blog",
-            "repo2WCIS.repos", "board_extract", "man",
+            "repos", "board_extract", "man",
             # "schoolhardware" is the校机 (Windows host) SOP 2 archive: machine
             # output (JSON + raw_logs + generated md), added 2026-10-20. It keeps
             # two files named sources.md (live + archive-v1.0 snapshot), so
